@@ -1,0 +1,148 @@
+{
+  "student": "Anežka Mazánková",
+  "analysis_date": "2024-12-24",
+  "tests_analyzed": [
+    {"id": "M9PAD17C0T01", "year": 2017, "score": 13, "percentage": 26},
+    {"id": "M9PAD22C0T01", "year": 2022, "score": 24, "percentage": 48},
+    {"id": "M9PBD22C0T02", "year": 2022, "score": 27, "percentage": 54},
+    {"id": "M9PCD22C0T03", "year": 2022, "score": 17, "percentage": 34},
+    {"id": "M9PAD23C0T01", "year": 2023, "score": null, "percentage": null},
+    {"id": "M9PCD23C0T03", "year": 2023, "score": 23, "percentage": 46},
+    {"id": "M9PBD24C0T02", "year": 2024, "score": 10, "percentage": 20},
+    {"id": "M9PDD24C0T04", "year": 2024, "score": 21, "percentage": 42}
+  ],
+  "average_score": {
+    "points": 19.3,
+    "percentage": 38.6,
+    "note": "Průměr z testů s známým hodnocením (7 testů)"
+  },
+  "critical_error_patterns": [
+    {
+      "pattern": "o X více/méně - KRITICKÉ",
+      "description": "Nerozumí, že 'o třetinu více' znamená ×1.33, ne +1/3",
+      "examples": [
+        "Úloha 15.2 M9PBD24C0T02: 'o čtvrtinu více' - použila +1/4 místo ×1.25",
+        "Úloha 8 M9PCD22C0T03: 'o 25% kratší' - chyba ve výpočtu",
+        "Úloha 11 M9PAD17C0T01: 'o pětinu více' - zaměnila s přímým zlomkem"
+      ],
+      "frequency": "Velmi časté - objevuje se ve většině testů",
+      "impact": "Ztráta 4-8 bodů na test",
+      "recommendation": "PRIORITA 1: Procvičit rozdíl mezi 'o X více' (=×(1+X)) a '+ X'"
+    },
+    {
+      "pattern": "Konstrukce - SYSTEMATICKY PŘESKOČENÉ",
+      "description": "Vyhýbá se konstrukcím, což vede ke ztrátě 5-6 bodů na test",
+      "tests_affected": ["M9PAD17C0T01", "M9PBD22C0T02", "M9PCD22C0T03", "M9PAD23C0T01", "M9PCD23C0T03"],
+      "improvement_noted": "M9PDD24C0T04 - pokusila se o konstrukce (částečný úspěch)",
+      "frequency": "Téměř vždy přeskočeno",
+      "impact": "Ztráta 5-6 bodů na test (10-12%)",
+      "recommendation": "PRIORITA 2: Procvičit základní konstrukce (lichoběžník, obdélník, trojúhelník)"
+    },
+    {
+      "pattern": "Posloupnosti a vzorce",
+      "description": "Nepochopení vzorců pro n-tý člen, počet prvků v obrazcích",
+      "examples": [
+        "Úloha 16 M9PAD17C0T01: trojúhelníčky v kosočtverci",
+        "Úloha 16 M9PCD23C0T03: čtverečky v obrazci - přeskočeno",
+        "Úloha 16 M9PAD23C0T01: Sierpinski trojúhelník - částečně"
+      ],
+      "frequency": "Časté",
+      "impact": "Ztráta 2-4 bodů na test",
+      "recommendation": "Procvičit hledání vzorců pro posloupnosti"
+    },
+    {
+      "pattern": "Umocňování binomů",
+      "description": "Chyby ve vzorci (a±b)² = a² ± 2ab + b²",
+      "examples": [
+        "M9PDD24C0T04 úloha 4.2: (1/3 - 4b)² - zapomněla prostřední člen",
+        "M9PBD24C0T02: chyby v umocňování"
+      ],
+      "frequency": "Občas",
+      "impact": "Ztráta 1-2 bodů na test",
+      "recommendation": "Připomenout vzorec a procvičit"
+    },
+    {
+      "pattern": "Převody jednotek",
+      "description": "Nejistota v převodech m² ↔ cm², dm³ ↔ cm³",
+      "examples": [
+        "M9PAD17C0T01 úloha 7.1: 0,75 m² = 7500 cm², ne 70 cm²",
+        "M9PAD23C0T01 úloha 2.2: dm³ na cm³"
+      ],
+      "frequency": "Občas",
+      "impact": "Ztráta 1-2 bodů na test",
+      "recommendation": "Procvičit převody plošných a objemových jednotek"
+    }
+  ],
+  "strengths": [
+    {
+      "area": "Rovnice",
+      "description": "Lineární rovnice řeší většinou správně",
+      "note": "Úspěšnost cca 70-80%"
+    },
+    {
+      "area": "Základní zlomky",
+      "description": "Operace se zlomky zvládá dobře",
+      "note": "Chyby spíše ve složitějších úlohách"
+    },
+    {
+      "area": "Pythagorova věta",
+      "description": "Aplikace Pythagorovy věty většinou správně",
+      "note": "Úloha 8 M9PAD17C0T01 - bezchybně"
+    },
+    {
+      "area": "Uzavřené úlohy",
+      "description": "Výběrové úlohy zvládá lépe než otevřené",
+      "note": "Pravděpodobně díky metodě vylučování"
+    },
+    {
+      "area": "Slovní úlohy s proměnnými",
+      "description": "Vyjádření vztahů proměnnými zlepšující se trend",
+      "examples": ["M9PCD23C0T03 úloha 6: x/3 - 60 správně", "M9PDD24C0T04 úloha 7: soustavy správně"]
+    }
+  ],
+  "trend_analysis": {
+    "scores_by_year": {
+      "2017": [13],
+      "2022": [24, 27, 17],
+      "2023": [23],
+      "2024": [10, 21]
+    },
+    "observation": "Skóre kolísá mezi 10-27 body. Není jasný trend zlepšování.",
+    "best_performance": "M9PBD22C0T02 - 27b/50 (54%)",
+    "worst_performance": "M9PBD24C0T02 - 10b/50 (20%)",
+    "recent_trend": "2024: velký rozptyl (10b vs 21b) - nestabilní výkon"
+  },
+  "recommendations": {
+    "priority_1": {
+      "topic": "Procenta: 'o X více/méně'",
+      "action": "Intenzivní procvičování rozdílu mezi 'o třetinu více' (×4/3) a '+1/3'",
+      "expected_improvement": "+4-6 bodů na test"
+    },
+    "priority_2": {
+      "topic": "Konstrukce",
+      "action": "Systematické procvičování základních konstrukcí",
+      "subtopics": [
+        "Lichoběžník z daných podmínek",
+        "Obdélník s daným středem",
+        "Rovnoramenný trojúhelník"
+      ],
+      "expected_improvement": "+3-5 bodů na test"
+    },
+    "priority_3": {
+      "topic": "Posloupnosti",
+      "action": "Procvičit hledání vzorců pro n-tý člen",
+      "expected_improvement": "+2-4 body na test"
+    },
+    "priority_4": {
+      "topic": "Umocňování a převody jednotek",
+      "action": "Opakování vzorců a jednotek",
+      "expected_improvement": "+1-2 body na test"
+    }
+  },
+  "target": {
+    "minimum_pass": "25 bodů (50%)",
+    "realistic_goal": "30 bodů (60%)",
+    "current_gap": "Průměrně chybí ~11 bodů k 60%",
+    "achievable_with": "Zaměření na priority 1-3 může přinést +9-15 bodů"
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "version": "1.0",
+  "created": "2024-12-25",
+  "student": "anezka_mazankova",
+
+  "categories": [
+    {
+      "id": "NUM",
+      "name": "Numerické výpočty",
+      "name_en": "Numerical Computation",
+      "types": [
+        {
+          "id": "NUM-ZLOM",
+          "name": "Zlomky",
+          "status": "strong",
+          "variants": [
+            { "id": "NUM-ZLOM-ADD", "name": "Sčítání/odčítání", "status": "strong", "strategy": "Společný jmenovatel" },
+            { "id": "NUM-ZLOM-MUL", "name": "Násobení/dělení", "status": "strong", "strategy": "Násobit přímo, krátit" },
+            { "id": "NUM-ZLOM-COMP", "name": "Složené zlomky", "status": "neutral", "strategy": "Převést na dělení" }
+          ]
+        },
+        {
+          "id": "NUM-DEC",
+          "name": "Desetinná čísla",
+          "status": "strong",
+          "variants": [
+            { "id": "NUM-DEC-OP", "name": "Základní operace", "status": "strong", "strategy": "Pozor na desetinnou čárku" },
+            { "id": "NUM-DEC-ROUND", "name": "Zaokrouhlování", "status": "neutral", "strategy": "Pravidlo 5+ nahoru" }
+          ]
+        },
+        {
+          "id": "NUM-PROC",
+          "name": "Procenta",
+          "status": "neutral",
+          "variants": [
+            { "id": "NUM-PROC-FROM", "name": "Základ → procento", "status": "neutral", "strategy": "× (p/100)" },
+            { "id": "NUM-PROC-TO", "name": "Procento → základ", "status": "neutral", "strategy": "÷ (p/100)" },
+            { "id": "NUM-PROC-CHANGE", "name": "o X % více/méně", "status": "critical", "strategy": "× (1 ± p/100)" }
+          ]
+        },
+        {
+          "id": "NUM-POW",
+          "name": "Mocniny",
+          "status": "neutral",
+          "variants": [
+            { "id": "NUM-POW-BASIC", "name": "Základní", "status": "strong", "strategy": "Definice" },
+            { "id": "NUM-POW-BINOM", "name": "(a±b)²", "status": "critical", "strategy": "a² ± 2ab + b²" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ALG",
+      "name": "Algebra",
+      "name_en": "Algebra",
+      "types": [
+        {
+          "id": "ALG-EQ",
+          "name": "Lineární rovnice",
+          "status": "strong",
+          "variants": [
+            { "id": "ALG-EQ-SIMPLE", "name": "Bez závorek", "status": "strong", "strategy": "Izoluj x" },
+            { "id": "ALG-EQ-BRACKET", "name": "Se závorkami", "status": "strong", "strategy": "Roznásob NEBO vyděl" },
+            { "id": "ALG-EQ-FRAC", "name": "Se zlomky", "status": "neutral", "strategy": "Vynásob společným jmenovatelem" }
+          ]
+        },
+        {
+          "id": "ALG-EXPR",
+          "name": "Výrazy",
+          "status": "strong",
+          "variants": [
+            { "id": "ALG-EXPR-SIMP", "name": "Úpravy", "status": "strong", "strategy": "Vytýkání, roznásobování" },
+            { "id": "ALG-EXPR-SUB", "name": "Dosazování", "status": "strong", "strategy": "Dosaď a vypočítej" }
+          ]
+        },
+        {
+          "id": "ALG-INEQ",
+          "name": "Nerovnice",
+          "status": "neutral",
+          "variants": [
+            { "id": "ALG-INEQ-LIN", "name": "Lineární", "status": "neutral", "strategy": "Jako rovnice, pozor na × (-1)" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GEO",
+      "name": "Geometrie",
+      "name_en": "Geometry",
+      "types": [
+        {
+          "id": "GEO-AREA",
+          "name": "Obvod/obsah",
+          "status": "strong",
+          "variants": [
+            { "id": "GEO-AREA-BASIC", "name": "Základní tvary", "status": "strong", "strategy": "Vzorec" },
+            { "id": "GEO-AREA-COMP", "name": "Složené tvary", "status": "neutral", "strategy": "Rozložit na základní" }
+          ]
+        },
+        {
+          "id": "GEO-PYTH",
+          "name": "Pythagorova věta",
+          "status": "strong",
+          "variants": [
+            { "id": "GEO-PYTH-DIRECT", "name": "Přímé použití", "status": "strong", "strategy": "a² + b² = c²" },
+            { "id": "GEO-PYTH-WORD", "name": "V úlohách", "status": "strong", "strategy": "Najít pravý úhel" }
+          ]
+        },
+        {
+          "id": "GEO-CONST",
+          "name": "Konstrukce",
+          "status": "critical",
+          "variants": [
+            { "id": "GEO-CONST-TRI", "name": "Trojúhelník", "status": "critical", "strategy": "Postup: strana → oblouk → průsečík" },
+            { "id": "GEO-CONST-TRAP", "name": "Lichobežník", "status": "critical", "strategy": "Postup: základna → rovnoběžka → úhly" },
+            { "id": "GEO-CONST-CIRC", "name": "Kružnice", "status": "critical", "strategy": "Střed + poloměr" }
+          ]
+        },
+        {
+          "id": "GEO-TRANS",
+          "name": "Transformace",
+          "status": "neutral",
+          "variants": [
+            { "id": "GEO-TRANS-REFL", "name": "Osová souměrnost", "status": "neutral", "strategy": "Kolmice + stejná vzdálenost" },
+            { "id": "GEO-TRANS-MOVE", "name": "Posunutí", "status": "neutral", "strategy": "Vektor posunu" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WORD",
+      "name": "Slovní úlohy",
+      "name_en": "Word Problems",
+      "types": [
+        {
+          "id": "WORD-DIRECT",
+          "name": "Přímá úměrnost",
+          "status": "neutral",
+          "variants": [
+            { "id": "WORD-DIRECT-RULE", "name": "Trojčlenka", "status": "neutral", "strategy": "x/a = y/b" }
+          ]
+        },
+        {
+          "id": "WORD-INVERSE",
+          "name": "Nepřímá úměrnost",
+          "status": "neutral",
+          "variants": [
+            { "id": "WORD-INVERSE-RULE", "name": "Trojčlenka", "status": "neutral", "strategy": "x·a = y·b" }
+          ]
+        },
+        {
+          "id": "WORD-OXVICE",
+          "name": "o X více/méně",
+          "status": "critical",
+          "variants": [
+            { "id": "WORD-OXVICE-FRAC", "name": "Zlomky", "status": "critical", "strategy": "\"o třetinu více\" = ×(1+1/3) = ×4/3" },
+            { "id": "WORD-OXVICE-PERC", "name": "Procenta", "status": "critical", "strategy": "\"o 25% méně\" = ×0,75" }
+          ]
+        },
+        {
+          "id": "WORD-MOTION",
+          "name": "Pohyb",
+          "status": "neutral",
+          "variants": [
+            { "id": "WORD-MOTION-STD", "name": "Rychlost/čas/dráha", "status": "neutral", "strategy": "s = v·t" }
+          ]
+        },
+        {
+          "id": "WORD-MIX",
+          "name": "Směsi",
+          "status": "neutral",
+          "variants": [
+            { "id": "WORD-MIX-CONC", "name": "Koncentrace", "status": "neutral", "strategy": "m₁·c₁ + m₂·c₂ = m·c" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SEQ",
+      "name": "Posloupnosti a vzory",
+      "name_en": "Sequences and Patterns",
+      "types": [
+        {
+          "id": "SEQ-ARITH",
+          "name": "Aritmetická",
+          "status": "critical",
+          "variants": [
+            { "id": "SEQ-ARITH-NTH", "name": "Najít n-tý člen", "status": "critical", "strategy": "aₙ = a₁ + (n-1)·d" },
+            { "id": "SEQ-ARITH-FORM", "name": "Najít vzorec", "status": "critical", "strategy": "Najít d, pak dosazovat" }
+          ]
+        },
+        {
+          "id": "SEQ-GEOM",
+          "name": "Geometrická",
+          "status": "neutral",
+          "variants": [
+            { "id": "SEQ-GEOM-NTH", "name": "Najít n-tý člen", "status": "neutral", "strategy": "aₙ = a₁ · qⁿ⁻¹" }
+          ]
+        },
+        {
+          "id": "SEQ-VISUAL",
+          "name": "Obrazce",
+          "status": "critical",
+          "variants": [
+            { "id": "SEQ-VISUAL-COUNT", "name": "Počítání prvků", "status": "critical", "strategy": "Nakreslit, najít vzor" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CONV",
+      "name": "Převody jednotek",
+      "name_en": "Unit Conversions",
+      "types": [
+        {
+          "id": "CONV-LEN",
+          "name": "Délka",
+          "status": "strong",
+          "variants": [
+            { "id": "CONV-LEN-STD", "name": "m, cm, mm", "status": "strong", "strategy": "×10 nebo ÷10" }
+          ]
+        },
+        {
+          "id": "CONV-AREA",
+          "name": "Plocha",
+          "status": "critical",
+          "variants": [
+            { "id": "CONV-AREA-STD", "name": "m², cm², dm²", "status": "critical", "strategy": "×100 nebo ÷100 (druhá mocnina!)" }
+          ]
+        },
+        {
+          "id": "CONV-VOL",
+          "name": "Objem",
+          "status": "critical",
+          "variants": [
+            { "id": "CONV-VOL-STD", "name": "m³, dm³, cm³", "status": "critical", "strategy": "×1000 nebo ÷1000 (třetí mocnina!)" }
+          ]
+        },
+        {
+          "id": "CONV-TIME",
+          "name": "Čas",
+          "status": "neutral",
+          "variants": [
+            { "id": "CONV-TIME-STD", "name": "h, min, s", "status": "neutral", "strategy": "×60 nebo ÷60" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "decision_tree": {
+    "phase1_keywords": [
+      {
+        "patterns": ["o třetinu více", "o čtvrtinu více", "o pětinu více", "o polovinu více", "o X % více"],
+        "type": "WORD-OXVICE",
+        "strategy": "NÁSOBENÍ ×(1 + zlomek)",
+        "example": "\"o třetinu více\" = ×(1 + 1/3) = ×(4/3)",
+        "priority": "critical"
+      },
+      {
+        "patterns": ["o třetinu méně", "o čtvrtinu méně", "o pětinu méně", "o polovinu méně", "o X % méně"],
+        "type": "WORD-OXVICE",
+        "strategy": "NÁSOBENÍ ×(1 - zlomek)",
+        "example": "\"o čtvrtinu méně\" = ×(1 - 1/4) = ×(3/4)",
+        "priority": "critical"
+      },
+      {
+        "patterns": ["sestrojte", "narýsujte", "zkonstruujte"],
+        "type": "GEO-CONST",
+        "strategy": "KONSTRUKCE: 1. Co je dáno? 2. Postup slovně 3. Krok za krokem",
+        "priority": "critical"
+      },
+      {
+        "patterns": ["kolikrát více", "kolikrát méně", "poměr"],
+        "type": "ratio",
+        "strategy": "DĚLENÍ: větší ÷ menší",
+        "priority": "normal"
+      },
+      {
+        "patterns": ["n-tý člen", "vzorec pro", "posloupnost"],
+        "type": "SEQ",
+        "strategy": "1. Najdi d nebo q, 2. Použij vzorec aₙ",
+        "priority": "critical"
+      },
+      {
+        "patterns": ["m²", "cm²", "dm²"],
+        "type": "CONV-AREA",
+        "strategy": "PŘEVOD PLOŠNÝ: ×100 nebo ÷100 (pozor: druhá mocnina!)",
+        "priority": "critical"
+      },
+      {
+        "patterns": ["m³", "dm³", "cm³", "litr"],
+        "type": "CONV-VOL",
+        "strategy": "PŘEVOD OBJEMOVÝ: ×1000 nebo ÷1000 (pozor: třetí mocnina!)",
+        "priority": "critical"
+      }
+    ],
+    "phase2_objects": [
+      {
+        "indicator": "= ? nebo x = ?",
+        "type": "ALG-EQ",
+        "strategy": "ROVNICE: Izoluj neznámou. Se závorkou? Vyděl NEBO roznásob.",
+        "priority": "normal"
+      },
+      {
+        "indicator": "zlomek a/b mimo rovnici",
+        "type": "NUM-ZLOM",
+        "strategy": "ZLOMKY: +/- společný jmenov., ×/÷ přímo",
+        "priority": "normal"
+      },
+      {
+        "indicator": "geometrický obrazec",
+        "type": "GEO",
+        "strategy": "GEOMETRIE: Vzorec pro obvod/obsah, hledej pravý úhel pro Pythagoras",
+        "priority": "normal"
+      },
+      {
+        "indicator": "výraz bez =",
+        "type": "ALG-EXPR",
+        "strategy": "VÝRAZ: Zjednodušit → vytýkej, krať. Dosadit → nahraď proměnnou.",
+        "priority": "normal"
+      },
+      {
+        "indicator": "tabulka nebo řada čísel",
+        "type": "SEQ",
+        "strategy": "POSLOUPNOST: Spočítej rozdíly d nebo podíly q, pak vzorec.",
+        "priority": "normal"
+      },
+      {
+        "indicator": "(a + b)² nebo (a - b)²",
+        "type": "NUM-POW-BINOM",
+        "strategy": "BINOM: (a±b)² = a² ± 2ab + b² - NEZAPOMEŇ prostřední člen!",
+        "priority": "critical"
+      }
+    ]
+  },
+
+  "status_legend": {
+    "critical": "Systematické chyby - priorita pro trénink",
+    "neutral": "Průměrný výkon",
+    "strong": "Konzistentní úspěch"
+  }
+}

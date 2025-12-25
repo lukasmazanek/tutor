@@ -1,0 +1,264 @@
+{
+  "test_id": "M9PDD24C0T04",
+  "student": "Anežka Mazánková",
+  "date_taken": "2024",
+  "term": "2. náhradní termín",
+  "total_points": 50,
+  "teacher_score": 21,
+  "teacher_score_note": "Zakroužkované 21 na titulní straně",
+  "questions": [
+    {
+      "number": "1",
+      "topic": "Slovní úlohy - délka",
+      "task": "Adam a Naďa - o kolik kroků více",
+      "max_points": 1,
+      "correct_answer": "900",
+      "student_answer": "900",
+      "student_work": "2700000cm / 75cm = 36000 kroků (Adam), 2700000/60 = 45000 kroků (Naďa), 45000-36000 = 9000",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "2",
+      "topic": "Procenta - slevy",
+      "task": "O kolik % byla konečná cena nižší než původní",
+      "max_points": 2,
+      "correct_answer": "35%",
+      "student_answer": "35%",
+      "student_work": "P=1000, -15%→850, -200→650, (1000-650)/1000 = 35%",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "3.1",
+      "topic": "Zlomky",
+      "task": "((1/6 - 1/3) : (-5/3)) / 0,3",
+      "max_points": 2,
+      "correct_answer": "1/3",
+      "student_answer": "1/3",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "3.2",
+      "topic": "Zlomky",
+      "task": "1/6 + 1/3 · (2/5 - 1)",
+      "max_points": 2,
+      "correct_answer": "-1/30",
+      "student_answer": "-1/30",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "4.1",
+      "topic": "Rozklad vytknutím",
+      "task": "a·(-a) - 2²·3a + 6a²",
+      "max_points": 1,
+      "correct_answer": "a(5a - 12)",
+      "student_answer": "a(5a - 12)",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "4.2",
+      "topic": "Umocňování",
+      "task": "(1/3 - 4b)²",
+      "max_points": 1,
+      "correct_answer": "1/9 - 8b/3 + 16b²",
+      "student_answer": "1/9 + 40b/3",
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "concept",
+      "error_detail": "Chyba ve vzorci (a-b)² - zapomněla prostřední člen a kvadratický člen"
+    },
+    {
+      "number": "4.3",
+      "topic": "Algebraické výrazy",
+      "task": "(2x+3)² - x·6 - 4·(x-1)²",
+      "max_points": 2,
+      "correct_answer": "5 + 14x",
+      "student_answer": "5 + 14x",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "5.1",
+      "topic": "Rovnice",
+      "task": "x - (x-2)/2 = 2x/3 - 2",
+      "max_points": 2,
+      "correct_answer": "x = 18",
+      "student_answer": "18",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "5.2",
+      "topic": "Rovnice",
+      "task": "2·(3x - 2,5) = -5 + 3·(3x - 2)",
+      "max_points": 2,
+      "correct_answer": "x = 2",
+      "student_answer": "2",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "6.1",
+      "topic": "Slovní úlohy",
+      "task": "Kolik vagónů 2. třídy v rychlíku",
+      "max_points": 2,
+      "correct_answer": "4",
+      "student_answer": "x = 2",
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "concept",
+      "error_detail": "Špatně sestavila rovnici - zaměnila proměnné"
+    },
+    {
+      "number": "6.2",
+      "topic": "Slovní úlohy",
+      "task": "Kolik míst k sezení v 1. třídě",
+      "max_points": 2,
+      "correct_answer": "120",
+      "student_answer": "120",
+      "is_correct": true,
+      "earned_points": 2,
+      "note": "Správný výsledek i přes chybu v 6.1"
+    },
+    {
+      "number": "7.1",
+      "topic": "Soustava rovnic",
+      "task": "Cena oběda B",
+      "max_points": 2,
+      "correct_answer": "280 Kč",
+      "student_answer": "280 Kč",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "7.2",
+      "topic": "Soustava rovnic",
+      "task": "Cena oběda C",
+      "max_points": 2,
+      "correct_answer": "300 Kč",
+      "student_answer": "300 Kč",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "8.1",
+      "topic": "Grafy - procenta",
+      "task": "Kolik hodin denně v zaměstnání",
+      "max_points": 2,
+      "correct_answer": "6 h",
+      "student_answer": "6 h",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "8.2",
+      "topic": "Grafy - procenta",
+      "task": "Kolik minut denně sportuje",
+      "max_points": 2,
+      "correct_answer": "58 min (zaokr.)",
+      "student_answer": "10 min",
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "calculation",
+      "error_detail": "Špatně vypočítala procenta z procent (volný čas 10% z 24h = 2,4h, sport 40% z 2,4h ≈ 58 min)"
+    },
+    {
+      "number": "9",
+      "topic": "Konstrukce",
+      "task": "Sestrojit obdélník ABCD (střed S, vrchol D na přímce p)",
+      "max_points": 3,
+      "earned_points": 1,
+      "note": "Částečná konstrukce - pokusila se, ale nedokončila správně"
+    },
+    {
+      "number": "10",
+      "topic": "Konstrukce",
+      "task": "Sestrojit pravoúhlý trojúhelník ABC",
+      "max_points": 3,
+      "earned_points": 1,
+      "note": "Částečná konstrukce"
+    },
+    {
+      "number": "11",
+      "topic": "Procenta - slovní úloha",
+      "task": "Kolik triček zůstalo v obchodě",
+      "max_points": 2,
+      "correct_answer": "E (více než 220)",
+      "student_answer": "E",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "12",
+      "topic": "Procenta",
+      "task": "Kolik procent stran zbývá dočíst",
+      "max_points": 2,
+      "correct_answer": "B (30%)",
+      "student_answer": "B",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "13",
+      "topic": "Slovní úlohy - práce",
+      "task": "Za kolik minut oškrabou 1 kg brambor dohromady",
+      "max_points": 2,
+      "correct_answer": "C (za 15 minut)",
+      "student_answer": "C",
+      "is_correct": true,
+      "earned_points": 2,
+      "student_work": "1/24 + 1/40 = 8/120 = 1/15"
+    },
+    {
+      "number": "14",
+      "topic": "Úhly",
+      "task": "Součet úhlů α+β+γ",
+      "max_points": 2,
+      "correct_answer": "A (126°30')",
+      "student_answer": "A",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "15",
+      "topic": "Slovní úlohy - logika",
+      "task": "Jablka v obchodě - 3 tvrzení A/N",
+      "max_points": 3,
+      "earned_points": 1,
+      "note": "1-2 ze 3 správně"
+    },
+    {
+      "number": "16",
+      "topic": "Procenta - přiřazení",
+      "task": "3 úlohy s procenty a poměry",
+      "max_points": 6,
+      "earned_points": 0,
+      "is_correct": false,
+      "error_type": "incomplete",
+      "error_detail": "Většina úloh nevyřešena nebo chybně"
+    }
+  ],
+  "error_analysis": {
+    "main_patterns": [
+      "Konstrukce: pokusila se, ale pouze částečně (2/6 bodů)",
+      "Procenta z procent - chyba ve složeném výpočtu (8.2)",
+      "Umocňování binomů - zapomíná na vzorec (a-b)²",
+      "Přiřazovací úlohy s procenty - obtížné"
+    ],
+    "strengths": [
+      "Rovnice - obě správně",
+      "Zlomky - výborně",
+      "Slovní úlohy s proměnnými - lepší",
+      "Uzavřené úlohy (11-14) - většina správně"
+    ],
+    "improvement": "Oproti předchozím testům: pokusila se o konstrukce (i když částečně)"
+  },
+  "summary": {
+    "percentage": 42,
+    "note": "Zlepšení v konstrukcích (alespoň pokus). Algebra a rovnice dobře. Slabé: procenta z procent, umocňování."
+  }
+}

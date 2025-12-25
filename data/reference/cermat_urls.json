@@ -1,0 +1,40 @@
+{
+  "base_url": "https://prijimacky.cermat.cz/files/files/dokumenty/testova-zadani/4lete-mat/",
+  "main_page": "https://prijimacky.cermat.cz/menu/testova-zadani-k-procvicovani/testova-zadani-v-pdf/ctyrlete-obory-matematika",
+  "test_id_mapping": {
+    "M9PAD": {"suffix": "A", "term": "1. řádný termín"},
+    "M9PBD": {"suffix": "B", "term": "1. náhradní termín"},
+    "M9PCD": {"suffix": "C", "term": "2. náhradní termín"},
+    "M9PDD": {"suffix": "D", "term": "3. náhradní termín"}
+  },
+  "file_patterns": {
+    "didakticky_test": "M9{suffix}_{year}_DT.pdf",
+    "klic_reseni": "M9{suffix}_{year}_KLIC.pdf",
+    "vzorove_reseni": "M9{suffix}_{year}_vzorove_reseni.pdf"
+  },
+  "examples": {
+    "M9PAD22C0T01": {
+      "test": "https://prijimacky.cermat.cz/files/files/dokumenty/testova-zadani/4lete-mat/2022/M9A_2022_DT.pdf",
+      "klic": "https://prijimacky.cermat.cz/files/files/dokumenty/testova-zadani/4lete-mat/2022/M9A_2022_KLIC.pdf",
+      "vzorove": "https://prijimacky.cermat.cz/files/files/dokumenty/testova-zadani/4lete-mat/2022/M9A_2022_vzorove_reseni.pdf"
+    },
+    "M9PBD22C0T02": {
+      "test": "https://prijimacky.cermat.cz/files/files/dokumenty/testova-zadani/4lete-mat/2022/M9B_2022_DT.pdf",
+      "klic": "https://prijimacky.cermat.cz/files/files/dokumenty/testova-zadani/4lete-mat/2022/M9B_2022_KLIC.pdf"
+    },
+    "M9PAD23C0T01": {
+      "test": "https://prijimacky.cermat.cz/files/files/dokumenty/testova-zadani/4lete-mat/2023/M9A_2023_DT.pdf",
+      "klic": "https://prijimacky.cermat.cz/files/files/dokumenty/testova-zadani/4lete-mat/2023/M9A_2023_KLIC.pdf"
+    }
+  },
+  "tests_for_anezka": [
+    {"id": "M9PAD17C0T01", "year": 2017, "suffix": "A"},
+    {"id": "M9PAD22C0T01", "year": 2022, "suffix": "A"},
+    {"id": "M9PBD22C0T02", "year": 2022, "suffix": "B"},
+    {"id": "M9PCD22C0T03", "year": 2022, "suffix": "C"},
+    {"id": "M9PAD23C0T01", "year": 2023, "suffix": "A"},
+    {"id": "M9PCD23C0T03", "year": 2023, "suffix": "C"},
+    {"id": "M9PBD24C0T02", "year": 2024, "suffix": "B"},
+    {"id": "M9PDD24C0T04", "year": 2024, "suffix": "D"}
+  ]
+}

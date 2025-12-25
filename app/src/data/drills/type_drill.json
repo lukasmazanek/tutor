@@ -1,0 +1,517 @@
+{
+  "version": "1.0",
+  "created": "2024-12-25",
+  "description": "Problem type and strategy recognition drill",
+  "questions": [
+    {
+      "id": "TD-001",
+      "prompt": "Cena vzrostla o třetinu. Původní cena byla 120 Kč. Kolik stojí nyní?",
+      "type": {
+        "correct": "WORD-OXVICE",
+        "correct_label": "o X více/méně",
+        "distractors": [
+          {"id": "NUM-PROC", "label": "Procenta"},
+          {"id": "ALG-EQ", "label": "Rovnice"}
+        ]
+      },
+      "strategy": {
+        "correct": "× (1 + 1/3) = × 4/3",
+        "distractors": ["+ 1/3 z ceny", "÷ 3"]
+      },
+      "explanation": "\"o třetinu více\" = násobení ×(1 + 1/3) = ×(4/3). Výsledek: 120 × 4/3 = 160 Kč"
+    },
+    {
+      "id": "TD-002",
+      "prompt": "Počet žáků se snížil o čtvrtinu. Původně bylo 80 žáků.",
+      "type": {
+        "correct": "WORD-OXVICE",
+        "correct_label": "o X více/méně",
+        "distractors": [
+          {"id": "NUM-PROC", "label": "Procenta"},
+          {"id": "NUM-ZLOM", "label": "Zlomky"}
+        ]
+      },
+      "strategy": {
+        "correct": "× (1 - 1/4) = × 3/4",
+        "distractors": ["- 1/4 z počtu", "÷ 4"]
+      },
+      "explanation": "\"o čtvrtinu méně\" = násobení ×(1 - 1/4) = ×(3/4). Výsledek: 80 × 3/4 = 60 žáků"
+    },
+    {
+      "id": "TD-003",
+      "prompt": "Cena se zvýšila o 25 %. Nová cena je 500 Kč. Jaká byla původní cena?",
+      "type": {
+        "correct": "WORD-OXVICE",
+        "correct_label": "o X % více/méně",
+        "distractors": [
+          {"id": "NUM-PROC", "label": "Základní procenta"},
+          {"id": "ALG-EQ", "label": "Rovnice"}
+        ]
+      },
+      "strategy": {
+        "correct": "÷ 1,25 (zpětný výpočet)",
+        "distractors": ["- 25 %", "× 0,75"]
+      },
+      "explanation": "Původní × 1,25 = 500. Tedy původní = 500 ÷ 1,25 = 400 Kč"
+    },
+    {
+      "id": "TD-004",
+      "prompt": "Sestrojte trojúhelník ABC, je-li dáno: a = 5 cm, b = 4 cm, c = 6 cm.",
+      "type": {
+        "correct": "GEO-CONST",
+        "correct_label": "Konstrukce",
+        "distractors": [
+          {"id": "GEO-AREA", "label": "Obvod/obsah"},
+          {"id": "GEO-PYTH", "label": "Pythagorova věta"}
+        ]
+      },
+      "strategy": {
+        "correct": "1) Narýsuj stranu 2) Kružnice z koncových bodů 3) Průsečík",
+        "distractors": ["Spočítej obvod", "Použij vzorec pro obsah"]
+      },
+      "explanation": "Konstrukce SSS: narýsuj jednu stranu, z jejích koncových bodů veď kružnice o poloměrech zbývajících stran, průsečík je třetí vrchol."
+    },
+    {
+      "id": "TD-005",
+      "prompt": "V posloupnosti 3, 7, 11, 15, ... najděte 20. člen.",
+      "type": {
+        "correct": "SEQ-ARITH",
+        "correct_label": "Aritmetická posloupnost",
+        "distractors": [
+          {"id": "SEQ-GEOM", "label": "Geometrická posloupnost"},
+          {"id": "ALG-EXPR", "label": "Výraz"}
+        ]
+      },
+      "strategy": {
+        "correct": "aₙ = a₁ + (n-1)·d, kde d = 4",
+        "distractors": ["Sečíst všechny členy", "aₙ = a₁ · qⁿ⁻¹"]
+      },
+      "explanation": "Rozdíl d = 4 (konstantní). a₂₀ = 3 + (20-1)·4 = 3 + 76 = 79"
+    },
+    {
+      "id": "TD-006",
+      "prompt": "Převeďte 3,5 m² na cm².",
+      "type": {
+        "correct": "CONV-AREA",
+        "correct_label": "Převod plochy",
+        "distractors": [
+          {"id": "CONV-LEN", "label": "Převod délky"},
+          {"id": "CONV-VOL", "label": "Převod objemu"}
+        ]
+      },
+      "strategy": {
+        "correct": "× 10 000 (protože 100² = 10 000)",
+        "distractors": ["× 100", "× 1000"]
+      },
+      "explanation": "1 m² = 100 cm × 100 cm = 10 000 cm². Tedy 3,5 m² = 35 000 cm²"
+    },
+    {
+      "id": "TD-007",
+      "prompt": "Vypočítejte: (2x - 3)²",
+      "type": {
+        "correct": "NUM-POW-BINOM",
+        "correct_label": "Binomická formule",
+        "distractors": [
+          {"id": "ALG-EXPR", "label": "Úprava výrazu"},
+          {"id": "NUM-POW", "label": "Mocnina"}
+        ]
+      },
+      "strategy": {
+        "correct": "(a-b)² = a² - 2ab + b²",
+        "distractors": ["(a-b)² = a² - b²", "(a-b)² = a² + b²"]
+      },
+      "explanation": "(2x - 3)² = (2x)² - 2·(2x)·3 + 3² = 4x² - 12x + 9. Nezapomeň prostřední člen!"
+    },
+    {
+      "id": "TD-008",
+      "prompt": "Řešte rovnici: 4(x - 2) = 20",
+      "type": {
+        "correct": "ALG-EQ",
+        "correct_label": "Lineární rovnice",
+        "distractors": [
+          {"id": "ALG-EXPR", "label": "Úprava výrazu"},
+          {"id": "NUM-ZLOM", "label": "Zlomky"}
+        ]
+      },
+      "strategy": {
+        "correct": "Vyděl 4 NEBO roznásob závorku",
+        "distractors": ["Sečti 2 na obou stranách", "Vynásob závorku"]
+      },
+      "explanation": "Dvě cesty: 1) Vydělit 4: x - 2 = 5, x = 7. 2) Roznásobit: 4x - 8 = 20, 4x = 28, x = 7"
+    },
+    {
+      "id": "TD-009",
+      "prompt": "Kolik je 30 % z 250?",
+      "type": {
+        "correct": "NUM-PROC",
+        "correct_label": "Procenta (základ → část)",
+        "distractors": [
+          {"id": "WORD-OXVICE", "label": "o X více/méně"},
+          {"id": "NUM-ZLOM", "label": "Zlomky"}
+        ]
+      },
+      "strategy": {
+        "correct": "250 × 0,30 nebo 250 × 30/100",
+        "distractors": ["250 ÷ 30", "250 + 30"]
+      },
+      "explanation": "30 % z 250 = 250 × 0,30 = 75"
+    },
+    {
+      "id": "TD-010",
+      "prompt": "Délka strany čtverce je 5 cm. Jaký je jeho obsah?",
+      "type": {
+        "correct": "GEO-AREA",
+        "correct_label": "Obvod/obsah",
+        "distractors": [
+          {"id": "GEO-PYTH", "label": "Pythagorova věta"},
+          {"id": "NUM-POW", "label": "Mocniny"}
+        ]
+      },
+      "strategy": {
+        "correct": "S = a² = 5² = 25 cm²",
+        "distractors": ["S = 4a", "S = a × b"]
+      },
+      "explanation": "Obsah čtverce = strana². S = 5² = 25 cm²"
+    },
+    {
+      "id": "TD-011",
+      "prompt": "Třída má 24 žáků. Kolik je to, když počet vzrostl o polovinu?",
+      "type": {
+        "correct": "WORD-OXVICE",
+        "correct_label": "o X více/méně",
+        "distractors": [
+          {"id": "NUM-ZLOM", "label": "Zlomky"},
+          {"id": "NUM-PROC", "label": "Procenta"}
+        ]
+      },
+      "strategy": {
+        "correct": "× (1 + 1/2) = × 1,5",
+        "distractors": ["+ 1/2", "× 2"]
+      },
+      "explanation": "\"o polovinu více\" = ×(1 + 0,5) = ×1,5. Výsledek: 24 × 1,5 = 36 žáků"
+    },
+    {
+      "id": "TD-012",
+      "prompt": "Převeďte 2,5 dm³ na cm³.",
+      "type": {
+        "correct": "CONV-VOL",
+        "correct_label": "Převod objemu",
+        "distractors": [
+          {"id": "CONV-AREA", "label": "Převod plochy"},
+          {"id": "CONV-LEN", "label": "Převod délky"}
+        ]
+      },
+      "strategy": {
+        "correct": "× 1000 (protože 10³ = 1000)",
+        "distractors": ["× 100", "× 10"]
+      },
+      "explanation": "1 dm³ = 10 cm × 10 cm × 10 cm = 1000 cm³. Tedy 2,5 dm³ = 2500 cm³"
+    },
+    {
+      "id": "TD-013",
+      "prompt": "Pravoúhlý trojúhelník má odvěsny 3 cm a 4 cm. Jaká je přepona?",
+      "type": {
+        "correct": "GEO-PYTH",
+        "correct_label": "Pythagorova věta",
+        "distractors": [
+          {"id": "GEO-AREA", "label": "Obvod/obsah"},
+          {"id": "ALG-EQ", "label": "Rovnice"}
+        ]
+      },
+      "strategy": {
+        "correct": "c² = a² + b², c = √(9+16) = 5",
+        "distractors": ["c = a + b", "c = (a + b) / 2"]
+      },
+      "explanation": "Pythagorova věta: c² = 3² + 4² = 9 + 16 = 25. c = √25 = 5 cm"
+    },
+    {
+      "id": "TD-014",
+      "prompt": "Zjednodušte zlomek: 12/18",
+      "type": {
+        "correct": "NUM-ZLOM",
+        "correct_label": "Zlomky",
+        "distractors": [
+          {"id": "NUM-PROC", "label": "Procenta"},
+          {"id": "ALG-EXPR", "label": "Výraz"}
+        ]
+      },
+      "strategy": {
+        "correct": "Najdi NSD a zkrať: 12÷6 / 18÷6 = 2/3",
+        "distractors": ["Sečti čitatel a jmenovatel", "Převeď na desetinné číslo"]
+      },
+      "explanation": "NSD(12, 18) = 6. Zkrácením: 12/18 = 2/3"
+    },
+    {
+      "id": "TD-015",
+      "prompt": "V obrazci je 1, 4, 9, 16, ... teček. Kolik teček bude v 7. obrazci?",
+      "type": {
+        "correct": "SEQ-VISUAL",
+        "correct_label": "Posloupnost v obrazcích",
+        "distractors": [
+          {"id": "SEQ-ARITH", "label": "Aritmetická posloupnost"},
+          {"id": "NUM-POW", "label": "Mocniny"}
+        ]
+      },
+      "strategy": {
+        "correct": "Vzor: n² → 7² = 49",
+        "distractors": ["Přičti 7", "Vynásob 2"]
+      },
+      "explanation": "Posloupnost 1, 4, 9, 16 = 1², 2², 3², 4². Sedmý člen = 7² = 49"
+    },
+    {
+      "id": "TD-016",
+      "prompt": "Plat se snížil o 20 %. Nový plat je 32 000 Kč. Jaký byl původní?",
+      "type": {
+        "correct": "WORD-OXVICE",
+        "correct_label": "o X % více/méně",
+        "distractors": [
+          {"id": "NUM-PROC", "label": "Základní procenta"},
+          {"id": "ALG-EQ", "label": "Rovnice"}
+        ]
+      },
+      "strategy": {
+        "correct": "÷ 0,8 (zpětný výpočet z 80 %)",
+        "distractors": ["+ 20 %", "× 1,2"]
+      },
+      "explanation": "Původní × 0,8 = 32 000. Tedy původní = 32 000 ÷ 0,8 = 40 000 Kč"
+    },
+    {
+      "id": "TD-017",
+      "prompt": "Narýsujte rovnoběžník ABCD, je-li dáno: a = 6 cm, b = 4 cm, úhel α = 60°.",
+      "type": {
+        "correct": "GEO-CONST",
+        "correct_label": "Konstrukce",
+        "distractors": [
+          {"id": "GEO-AREA", "label": "Obvod/obsah"},
+          {"id": "GEO-TRANS", "label": "Transformace"}
+        ]
+      },
+      "strategy": {
+        "correct": "1) Strana a 2) Úhel 60° 3) Strana b 4) Rovnoběžky",
+        "distractors": ["Spočítej úhlopříčky", "Použij Pythagoras"]
+      },
+      "explanation": "Narýsuj stranu a, z bodu A úhel 60°, na rameni vynes délku b, dokonči rovnoběžkami."
+    },
+    {
+      "id": "TD-018",
+      "prompt": "Dosaďte x = 2 do výrazu: 3x² - 2x + 1",
+      "type": {
+        "correct": "ALG-EXPR",
+        "correct_label": "Dosazování do výrazu",
+        "distractors": [
+          {"id": "ALG-EQ", "label": "Rovnice"},
+          {"id": "NUM-POW", "label": "Mocniny"}
+        ]
+      },
+      "strategy": {
+        "correct": "Nahraď x hodnotou 2 a vypočítej",
+        "distractors": ["Řeš jako rovnici", "Vytýkej x"]
+      },
+      "explanation": "3·(2)² - 2·(2) + 1 = 3·4 - 4 + 1 = 12 - 4 + 1 = 9"
+    },
+    {
+      "id": "TD-019",
+      "prompt": "Vzdálenost 150 km auto ujelo za 2 hodiny. Jaká byla průměrná rychlost?",
+      "type": {
+        "correct": "WORD-MOTION",
+        "correct_label": "Pohyb (rychlost/čas/dráha)",
+        "distractors": [
+          {"id": "WORD-DIRECT", "label": "Přímá úměrnost"},
+          {"id": "NUM-ZLOM", "label": "Zlomky"}
+        ]
+      },
+      "strategy": {
+        "correct": "v = s ÷ t = 150 ÷ 2 = 75 km/h",
+        "distractors": ["v = s × t", "v = t ÷ s"]
+      },
+      "explanation": "Rychlost = dráha ÷ čas. v = 150 ÷ 2 = 75 km/h"
+    },
+    {
+      "id": "TD-020",
+      "prompt": "Kolikrát je 48 větší než 12?",
+      "type": {
+        "correct": "ratio",
+        "correct_label": "Poměr (kolikrát)",
+        "distractors": [
+          {"id": "WORD-OXVICE", "label": "o X více/méně"},
+          {"id": "NUM-ZLOM", "label": "Zlomky"}
+        ]
+      },
+      "strategy": {
+        "correct": "48 ÷ 12 = 4",
+        "distractors": ["48 - 12 = 36", "48 × 12"]
+      },
+      "explanation": "\"Kolikrát větší\" = dělení. 48 ÷ 12 = 4 (čtyřikrát větší)"
+    },
+    {
+      "id": "TD-021",
+      "prompt": "Množství se zvětšilo o dvě třetiny. Původně bylo 90.",
+      "type": {
+        "correct": "WORD-OXVICE",
+        "correct_label": "o X více/méně",
+        "distractors": [
+          {"id": "NUM-ZLOM", "label": "Zlomky"},
+          {"id": "WORD-DIRECT", "label": "Přímá úměrnost"}
+        ]
+      },
+      "strategy": {
+        "correct": "× (1 + 2/3) = × 5/3",
+        "distractors": ["× 2/3", "+ 2/3"]
+      },
+      "explanation": "\"o 2/3 více\" = ×(1 + 2/3) = ×(5/3). Výsledek: 90 × 5/3 = 150"
+    },
+    {
+      "id": "TD-022",
+      "prompt": "Řešte rovnici: x/3 + 2 = 5",
+      "type": {
+        "correct": "ALG-EQ",
+        "correct_label": "Rovnice se zlomkem",
+        "distractors": [
+          {"id": "NUM-ZLOM", "label": "Zlomky"},
+          {"id": "ALG-EXPR", "label": "Výraz"}
+        ]
+      },
+      "strategy": {
+        "correct": "Odečti 2, pak vynásob 3",
+        "distractors": ["Vynásob 3 hned", "Převeď na společný jmenovatel"]
+      },
+      "explanation": "x/3 + 2 = 5 → x/3 = 3 → x = 9"
+    },
+    {
+      "id": "TD-023",
+      "prompt": "Vypočítejte: (a + 5)²",
+      "type": {
+        "correct": "NUM-POW-BINOM",
+        "correct_label": "Binomická formule",
+        "distractors": [
+          {"id": "ALG-EXPR", "label": "Úprava výrazu"},
+          {"id": "NUM-POW", "label": "Mocnina"}
+        ]
+      },
+      "strategy": {
+        "correct": "(a+b)² = a² + 2ab + b²",
+        "distractors": ["(a+b)² = a² + b²", "a² + 5"]
+      },
+      "explanation": "(a + 5)² = a² + 2·a·5 + 5² = a² + 10a + 25. Nezapomeň prostřední člen 10a!"
+    },
+    {
+      "id": "TD-024",
+      "prompt": "Obsah obdélníku je 48 cm². Jedna strana měří 8 cm. Jaká je druhá strana?",
+      "type": {
+        "correct": "GEO-AREA",
+        "correct_label": "Obvod/obsah",
+        "distractors": [
+          {"id": "ALG-EQ", "label": "Rovnice"},
+          {"id": "NUM-ZLOM", "label": "Zlomky"}
+        ]
+      },
+      "strategy": {
+        "correct": "S = a × b → b = S ÷ a = 48 ÷ 8 = 6",
+        "distractors": ["b = S - a", "b = S × a"]
+      },
+      "explanation": "Obsah obdélníku S = a × b. Tedy b = 48 ÷ 8 = 6 cm"
+    },
+    {
+      "id": "TD-025",
+      "prompt": "Posloupnost: 2, 6, 18, 54, ... Jaký je 6. člen?",
+      "type": {
+        "correct": "SEQ-GEOM",
+        "correct_label": "Geometrická posloupnost",
+        "distractors": [
+          {"id": "SEQ-ARITH", "label": "Aritmetická posloupnost"},
+          {"id": "NUM-POW", "label": "Mocniny"}
+        ]
+      },
+      "strategy": {
+        "correct": "aₙ = a₁ · qⁿ⁻¹, kde q = 3",
+        "distractors": ["aₙ = a₁ + (n-1)·d", "Sečti všechny členy"]
+      },
+      "explanation": "Kvocient q = 3 (každý člen 3× větší). a₆ = 2 · 3⁵ = 2 · 243 = 486"
+    },
+    {
+      "id": "TD-026",
+      "prompt": "Objem kvádru je 60 cm³. Rozměry jsou 3 cm, 4 cm a ?.",
+      "type": {
+        "correct": "GEO-AREA",
+        "correct_label": "Objem tělesa",
+        "distractors": [
+          {"id": "CONV-VOL", "label": "Převod objemu"},
+          {"id": "ALG-EQ", "label": "Rovnice"}
+        ]
+      },
+      "strategy": {
+        "correct": "V = a × b × c → c = V ÷ (a × b)",
+        "distractors": ["c = V - a - b", "c = V ÷ a"]
+      },
+      "explanation": "V = 3 × 4 × c = 60. Tedy 12c = 60, c = 5 cm"
+    },
+    {
+      "id": "TD-027",
+      "prompt": "Cena klesla o pětinu. Nová cena je 400 Kč.",
+      "type": {
+        "correct": "WORD-OXVICE",
+        "correct_label": "o X více/méně",
+        "distractors": [
+          {"id": "NUM-PROC", "label": "Procenta"},
+          {"id": "NUM-ZLOM", "label": "Zlomky"}
+        ]
+      },
+      "strategy": {
+        "correct": "÷ (1 - 1/5) = ÷ 4/5 = × 5/4",
+        "distractors": ["+ 1/5", "× 5"]
+      },
+      "explanation": "Původní × 4/5 = 400. Původní = 400 × 5/4 = 500 Kč"
+    },
+    {
+      "id": "TD-028",
+      "prompt": "Převeďte 0,25 m² na dm².",
+      "type": {
+        "correct": "CONV-AREA",
+        "correct_label": "Převod plochy",
+        "distractors": [
+          {"id": "CONV-LEN", "label": "Převod délky"},
+          {"id": "CONV-VOL", "label": "Převod objemu"}
+        ]
+      },
+      "strategy": {
+        "correct": "× 100 (protože 10² = 100)",
+        "distractors": ["× 10", "× 1000"]
+      },
+      "explanation": "1 m² = 10 dm × 10 dm = 100 dm². Tedy 0,25 m² = 25 dm²"
+    },
+    {
+      "id": "TD-029",
+      "prompt": "Trojúhelník má strany 5, 12 a 13 cm. Je pravoúhlý?",
+      "type": {
+        "correct": "GEO-PYTH",
+        "correct_label": "Pythagorova věta",
+        "distractors": [
+          {"id": "GEO-AREA", "label": "Obvod/obsah"},
+          {"id": "SEQ-ARITH", "label": "Posloupnost"}
+        ]
+      },
+      "strategy": {
+        "correct": "Ověř: a² + b² = c² → 25 + 144 = 169 ✓",
+        "distractors": ["Sečti všechny strany", "Spočítej obsah"]
+      },
+      "explanation": "5² + 12² = 25 + 144 = 169 = 13². Ano, je pravoúhlý."
+    },
+    {
+      "id": "TD-030",
+      "prompt": "Vytýkejte: 6x² + 9x",
+      "type": {
+        "correct": "ALG-EXPR",
+        "correct_label": "Úprava výrazu",
+        "distractors": [
+          {"id": "ALG-EQ", "label": "Rovnice"},
+          {"id": "NUM-POW", "label": "Mocniny"}
+        ]
+      },
+      "strategy": {
+        "correct": "Najdi společný faktor: 3x(2x + 3)",
+        "distractors": ["Roznásob", "Dosaď hodnotu"]
+      },
+      "explanation": "NSD(6x², 9x) = 3x. Vytýkáním: 6x² + 9x = 3x(2x + 3)"
+    }
+  ]
+}

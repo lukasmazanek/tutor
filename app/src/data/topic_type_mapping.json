@@ -1,0 +1,35 @@
+{
+  "description": "Maps problem topics to taxonomy types and strategies for type recognition prompts",
+  "mappings": {
+    "equations": {
+      "type_id": "ALG-EQ",
+      "type_label": "Lineární rovnice",
+      "strategy": "Izoluj x (převeď na jednu stranu)",
+      "distractors_type": [
+        {"id": "ALG-EXPR", "label": "Úprava výrazu"},
+        {"id": "NUM-ZLOM", "label": "Zlomky"}
+      ],
+      "distractors_strategy": ["Vytýkej", "Společný jmenovatel"]
+    },
+    "fractions": {
+      "type_id": "NUM-ZLOM",
+      "type_label": "Zlomky",
+      "strategy": "Společný jmenovatel / násobit přímo",
+      "distractors_type": [
+        {"id": "NUM-PROC", "label": "Procenta"},
+        {"id": "ALG-EQ", "label": "Rovnice"}
+      ],
+      "distractors_strategy": ["Izoluj x", "× (1 + X)"]
+    },
+    "o_x_vice": {
+      "type_id": "WORD-OXVICE",
+      "type_label": "o X více/méně",
+      "strategy": "× (1 ± zlomek) - násobení!",
+      "distractors_type": [
+        {"id": "NUM-PROC", "label": "Procenta"},
+        {"id": "NUM-ZLOM", "label": "Zlomky"}
+      ],
+      "distractors_strategy": ["+ zlomek", "÷ jmenovatelem"]
+    }
+  }
+}

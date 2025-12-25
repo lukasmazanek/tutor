@@ -1,0 +1,102 @@
+{
+  "deck_name": "Anežčiny typické chyby",
+  "description": "Flashcards zaměřené na konkrétní chyby z CERMAT testů",
+  "cards": [
+    {
+      "id": "fc-001",
+      "topic_id": 14,
+      "front": "√(7²) = ?",
+      "back": "**7** (ne 49!)\n\nOdmocnina RUŠÍ druhou mocninu:\n√(x²) = |x|\n\nPROČ: √(7²) = √49 = 7",
+      "difficulty": 1,
+      "tags": ["odmocniny", "kritická-chyba"]
+    },
+    {
+      "id": "fc-002",
+      "topic_id": 14,
+      "front": "Jaký je rozdíl mezi √(x²) a x²?",
+      "back": "**√(x²) = |x|** (odmocnina)\n**x² = x·x** (mocnina)\n\nPříklad pro x=5:\n- √(5²) = √25 = 5\n- 5² = 25\n\nNEJSOU STEJNÉ!",
+      "difficulty": 2,
+      "tags": ["odmocniny", "pojem"]
+    },
+    {
+      "id": "fc-003",
+      "topic_id": 25,
+      "front": "(a + b)² = ?",
+      "back": "**a² + 2ab + b²**\n\n'První na druhou, dvakrát oba, druhý na druhou'\n\nPOZOR: (a+b)² ≠ a² + b²\nChybí prostřední člen 2ab!",
+      "difficulty": 1,
+      "tags": ["vzorce", "kritická-chyba"]
+    },
+    {
+      "id": "fc-004",
+      "topic_id": 25,
+      "front": "(x/7 + 3/2)² = ?\n\n(první člen)",
+      "back": "První člen: **(x/7)² = x²/49**\n\nNe jen x nebo x/7!\n\nMusíš umocnit CELÝ zlomek:\n(x/7)² = x²/7² = x²/49",
+      "difficulty": 2,
+      "tags": ["vzorce", "kritická-chyba"]
+    },
+    {
+      "id": "fc-005",
+      "topic_id": 13,
+      "front": "A je o 50% VÍCE než B.\nB = 200.\nKolik je A?",
+      "back": "**A = 300**\n\nVýpočet:\nA = B + 50% z B\nA = 200 + 100 = 300\n\nNebo: A = B × 1,5 = 300\n\nPOZOR: Ne 400! (to by bylo 100% více)",
+      "difficulty": 2,
+      "tags": ["procenta", "kritická-chyba"]
+    },
+    {
+      "id": "fc-006",
+      "topic_id": 13,
+      "front": "Dívky = o 50% více než chlapci\nCelkem = 1200 kg\nKolik chlapci?",
+      "back": "**Chlapci = 480 kg**\n\nŘešení:\nD = 1,5 × CH\nD + CH = 1200\n1,5CH + CH = 1200\n2,5CH = 1200\nCH = 480\n\nPOZOR: Ne 400! (800 by bylo o 100% více)",
+      "difficulty": 3,
+      "tags": ["procenta", "kritická-chyba"]
+    },
+    {
+      "id": "fc-007",
+      "topic_id": 13,
+      "front": "Co znamená 'o 100% více'?",
+      "back": "**DVOJNÁSOBEK**\n\nPříklad:\nA je o 100% více než B=50\nA = 50 + 100% z 50\nA = 50 + 50 = 100\n\nTakže A = 2×B",
+      "difficulty": 2,
+      "tags": ["procenta", "pojem"]
+    },
+    {
+      "id": "fc-008",
+      "topic_id": 13,
+      "front": "Po zvýšení o 25% je cena 500 Kč.\nKolik byla PŘED zvýšením?",
+      "back": "**400 Kč**\n\nŘešení:\nPůvodní × 1,25 = 500\nPůvodní = 500 / 1,25 = 400\n\nPOZOR: Ne 375! (to je 500 × 0,75)",
+      "difficulty": 3,
+      "tags": ["procenta", "obrácený-postup"]
+    },
+    {
+      "id": "fc-009",
+      "topic_id": 52,
+      "front": "Jak spočítám aritmetický průměr?\n\n(3 skupiny: 15 lidí po 0b, 30 po 1b, 5 po 2b)",
+      "back": "**Průměr = 0,8 bodu**\n\nVýpočet:\nSoučet = 15×0 + 30×1 + 5×2 = 40\nPočet = 15 + 30 + 5 = 50\nPrůměr = 40/50 = 0,8\n\nPOZOR: Ne prostý průměr 0,1,2!",
+      "difficulty": 3,
+      "tags": ["průměry", "kritická-chyba"]
+    },
+    {
+      "id": "fc-010",
+      "topic_id": 25,
+      "front": "(a - b)² = ?",
+      "back": "**a² - 2ab + b²**\n\nStejné jako (a+b)², ale prostřední člen je MÍNUS!\n\nPříklad:\n(x-3)² = x² - 6x + 9",
+      "difficulty": 2,
+      "tags": ["vzorce"]
+    },
+    {
+      "id": "fc-011",
+      "topic_id": 32,
+      "front": "Objem trojbokého hranolu?\n\n(podstava = trojúhelník)",
+      "back": "**V = S_podstavy × výška**\n\nPro pravoúhlý trojúhelník:\nV = (a × b / 2) × h\n\nPříklad (odvěsny 6,8 cm, výška 20):\nV = (6×8/2) × 20 = 24 × 20 = 480 cm³",
+      "difficulty": 2,
+      "tags": ["objemy"]
+    },
+    {
+      "id": "fc-012",
+      "topic_id": 44,
+      "front": "TIP: Nevynechávej úlohy!\n\nCo dělat, když nevím?",
+      "back": "1. **Napiš aspoň něco** - můžeš dostat body za postup\n\n2. **Zkus dosadit** - konkrétní čísla místo x\n\n3. **Nakresli obrázek** - pomáhá u geometrie\n\n4. **Zkontroluj jednotky** - mm³ vs cm³ vs dm³",
+      "difficulty": 1,
+      "tags": ["strategie"]
+    }
+  ]
+}

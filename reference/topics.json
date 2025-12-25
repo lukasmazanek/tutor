@@ -1,0 +1,64 @@
+{
+  "version": "1.0",
+  "description": "Taxonomie témat CERMAT matematika 9. třída",
+  "topics": [
+    {
+      "id": 1,
+      "slug": "numbers",
+      "name": "Čísla a počítání",
+      "children": [
+        {"id": 11, "slug": "fractions", "name": "Zlomky"},
+        {"id": 12, "slug": "decimals", "name": "Desetinná čísla"},
+        {"id": 13, "slug": "percentages", "name": "Procenta"},
+        {"id": 14, "slug": "square-roots", "name": "Odmocniny"},
+        {"id": 15, "slug": "ratios", "name": "Poměry a měřítko"}
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "algebra",
+      "name": "Algebra",
+      "children": [
+        {"id": 21, "slug": "expressions", "name": "Výrazy s proměnnou"},
+        {"id": 22, "slug": "linear-equations", "name": "Lineární rovnice"},
+        {"id": 23, "slug": "factoring", "name": "Vytýkání a rozklad"},
+        {"id": 24, "slug": "powers", "name": "Mocniny a umocňování"},
+        {"id": 25, "slug": "binomial", "name": "Vzorce (a+b)², (a-b)², a²-b²"}
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "geometry",
+      "name": "Geometrie",
+      "children": [
+        {"id": 31, "slug": "area-perimeter", "name": "Obsah a obvod"},
+        {"id": 32, "slug": "volume", "name": "Objem těles"},
+        {"id": 33, "slug": "angles", "name": "Úhly a přímky"},
+        {"id": 34, "slug": "constructions", "name": "Konstrukce"},
+        {"id": 35, "slug": "pythagorean", "name": "Pythagorova věta"},
+        {"id": 36, "slug": "circle", "name": "Kružnice a kruh"}
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "word-problems",
+      "name": "Slovní úlohy",
+      "children": [
+        {"id": 41, "slug": "motion", "name": "Pohyb a rychlost"},
+        {"id": 42, "slug": "work", "name": "Společná práce"},
+        {"id": 43, "slug": "mixtures", "name": "Směsi a směšování"},
+        {"id": 44, "slug": "sequences", "name": "Posloupnosti a řady"}
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "data",
+      "name": "Data a statistika",
+      "children": [
+        {"id": 51, "slug": "graphs", "name": "Grafy a diagramy"},
+        {"id": 52, "slug": "averages", "name": "Průměry"},
+        {"id": 53, "slug": "probability", "name": "Pravděpodobnost"}
+      ]
+    }
+  ]
+}

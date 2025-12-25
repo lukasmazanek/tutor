@@ -1,0 +1,377 @@
+{
+  "test_id": "M9PAD17C0T01",
+  "student": "Anežka Mazánková",
+  "date_taken": "2017",
+  "term": "1. řádný termín",
+  "total_points": 50,
+  "teacher_score": 13,
+  "teacher_score_note": "Zakroužkované 13 na titulní straně",
+  "questions": [
+    {
+      "number": "1",
+      "topic": "Desetinná čísla",
+      "task": "Kolikrát větší jsou 4 setiny než 8 tisícin",
+      "max_points": 1,
+      "correct_answer": "5krát",
+      "student_answer": "5krát",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "2.1",
+      "topic": "Odmocniny",
+      "task": "√(4·0,25)",
+      "max_points": 1,
+      "correct_answer": "1",
+      "student_answer": "1",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "2.2",
+      "topic": "Mocniny a dělení",
+      "task": "1 : 0,2²",
+      "max_points": 1,
+      "correct_answer": "25",
+      "student_answer": "0,4",
+      "student_work": "0,4",
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "calculation",
+      "error_detail": "Špatně vypočítala 0,2² = 0,04, pak 1:0,04 = 25. Místo toho napsala 0,4."
+    },
+    {
+      "number": "3.1",
+      "topic": "Zlomky",
+      "task": "0,2 : 27/25 - 2/3",
+      "max_points": 2,
+      "correct_answer": "-13/27",
+      "student_answer": "-13/27",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "3.2",
+      "topic": "Zlomky",
+      "task": "1/5 - 3/10 + 1/4 · 1/2",
+      "max_points": 2,
+      "correct_answer": "1/10",
+      "student_answer": "1/10",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "4.1",
+      "topic": "Algebraické výrazy",
+      "task": "(a²+a)·(1-a) - a·a",
+      "max_points": 2,
+      "correct_answer": "2a - 3a²",
+      "student_answer": "2a - 3a²",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "4.2",
+      "topic": "Algebraické výrazy",
+      "task": "(n-1)/2 - (2n-3)/4",
+      "max_points": 2,
+      "correct_answer": "-1/4",
+      "student_answer": "-5",
+      "student_work": "2N-2-2N-3=-5",
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "calculation",
+      "error_detail": "Chyba při práci se společným jmenovatelem, zapomněla dosadit správně"
+    },
+    {
+      "number": "5.1",
+      "topic": "Rovnice",
+      "task": "-2x/3 · x/2 = 5/12",
+      "max_points": 2,
+      "correct_answer": "x = -5/4",
+      "student_answer": "-5/4",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "5.2",
+      "topic": "Rovnice",
+      "task": "(x-2)/2 - x = 2 - 2x/3",
+      "max_points": 2,
+      "correct_answer": "x = 18",
+      "student_answer": "18",
+      "student_work": "3x+4x-x=2+6, 6x=8",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "6.1",
+      "topic": "Lineární funkce",
+      "task": "Cena vody města A v závislosti na x",
+      "max_points": 1,
+      "correct_answer": "72x Kč",
+      "student_answer": "72x Kč",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "6.2",
+      "topic": "Lineární funkce",
+      "task": "Cena vody města B v závislosti na x",
+      "max_points": 1,
+      "correct_answer": "(61x + 990) Kč",
+      "student_answer": "(990+61x) Kč",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "6.3",
+      "topic": "Slovní úlohy",
+      "task": "Při jaké spotřebě stejná cena",
+      "max_points": 2,
+      "correct_answer": "90 m³",
+      "student_answer": null,
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "incomplete",
+      "error_detail": "Nevyřešila rovnici 72x = 61x + 990"
+    },
+    {
+      "number": "7.1",
+      "topic": "Převody jednotek",
+      "task": "0,75 m² = 25 cm² + ? cm²",
+      "max_points": 1,
+      "correct_answer": "7475",
+      "student_answer": "70",
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "calculation",
+      "error_detail": "Chyba v převodu m² na cm² (1 m² = 10000 cm²)"
+    },
+    {
+      "number": "7.2",
+      "topic": "Převody jednotek",
+      "task": "0,2 dm³ + ? cm³ = 1 litr",
+      "max_points": 1,
+      "correct_answer": "800",
+      "student_answer": "800",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "7.3",
+      "topic": "Převody jednotek",
+      "task": "? · 20 minut = 8 · 0,75 hodiny",
+      "max_points": 1,
+      "correct_answer": "18",
+      "student_answer": "18",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "8.1",
+      "topic": "Pythagorova věta",
+      "task": "Délka strany AB",
+      "max_points": 1,
+      "correct_answer": "4 cm",
+      "student_answer": "4 cm",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "8.2",
+      "topic": "Pythagorova věta",
+      "task": "Délka strany CD",
+      "max_points": 1,
+      "correct_answer": "13 cm",
+      "student_answer": "13 cm",
+      "student_work": "√169 = 13",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "8.3",
+      "topic": "Obsah čtyřúhelníku",
+      "task": "Obsah čtyřúhelníku ABCD",
+      "max_points": 1,
+      "correct_answer": "36 cm²",
+      "student_answer": "36 cm²",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "9",
+      "topic": "Konstrukce",
+      "task": "Sestrojit trojúhelník KLM (rovnoramenný, osa souměrnosti)",
+      "max_points": 3,
+      "correct_answer": "konstrukce",
+      "student_answer": "částečná konstrukce",
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "incomplete",
+      "error_detail": "Konstrukce není dokončena nebo není správná"
+    },
+    {
+      "number": "10",
+      "topic": "Konstrukce",
+      "task": "Sestrojit pravoúhlý lichoběžník ABCD",
+      "max_points": 2,
+      "correct_answer": "konstrukce",
+      "student_answer": null,
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "incomplete",
+      "error_detail": "Konstrukce přeskočena"
+    },
+    {
+      "number": "11.1",
+      "topic": "Slovní úlohy - logika",
+      "task": "Ema s Otou váží dohromady 70 kg",
+      "max_points": 0,
+      "correct_answer": "A (pravdivé)",
+      "student_answer": "N",
+      "is_correct": false,
+      "error_detail": "Odpověděla N místo A"
+    },
+    {
+      "number": "11.2",
+      "topic": "Slovní úlohy - logika",
+      "task": "Maminka váží o 20 kg více než Ema",
+      "max_points": 0,
+      "correct_answer": "N (nepravdivé)",
+      "student_answer": "N",
+      "is_correct": true
+    },
+    {
+      "number": "11.3",
+      "topic": "Slovní úlohy - logika",
+      "task": "Tatínek váží 86 kg",
+      "max_points": 0,
+      "correct_answer": "A (pravdivé)",
+      "student_answer": "A",
+      "is_correct": true
+    },
+    {
+      "number": "11",
+      "topic": "Slovní úlohy - logika",
+      "task": "Váhy rodiny - 3 podúlohy",
+      "max_points": 4,
+      "earned_points": 2,
+      "note": "2 ze 3 správně (11.2 a 11.3)"
+    },
+    {
+      "number": "12",
+      "topic": "Úhly",
+      "task": "Velikost úhlu δ",
+      "max_points": 2,
+      "correct_answer": "B (214°)",
+      "student_answer": "B",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "13",
+      "topic": "Objem - kvádr",
+      "task": "O kolik cm klesla hladina v nádrži",
+      "max_points": 2,
+      "correct_answer": "B (o 9 cm)",
+      "student_answer": "B",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "14",
+      "topic": "Zlomky - slovní úloha",
+      "task": "Jakou část objemu skleničky vyplní zbytek",
+      "max_points": 2,
+      "correct_answer": "A (1/2)",
+      "student_answer": "A",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "15.1",
+      "topic": "Procenta",
+      "task": "Kolik důchodců nepoužívá kartu",
+      "max_points": 2,
+      "correct_answer": "D (156)",
+      "student_answer": "D",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "15.2",
+      "topic": "Procenta",
+      "task": "Kolik členů má nyní oddíl",
+      "max_points": 2,
+      "correct_answer": "C (153)",
+      "student_answer": "C",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "15.3",
+      "topic": "Procenta",
+      "task": "Kolik dívek navštěvuje gymnázium",
+      "max_points": 2,
+      "correct_answer": "E (160)",
+      "student_answer": "E",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "16.1",
+      "topic": "Posloupnosti",
+      "task": "Počet tmavých trojúhelníčků (4 bílé v řadě)",
+      "max_points": 1,
+      "correct_answer": "30",
+      "student_answer": "30",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "16.2",
+      "topic": "Posloupnosti",
+      "task": "Počet všech trojúhelníčků (6 tmavých v řadě)",
+      "max_points": 1,
+      "correct_answer": "50",
+      "student_answer": "70",
+      "student_work": "5·6=30, +30=70",
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "concept",
+      "error_detail": "Nepochopila vztah mezi počtem tmavých a bílých trojúhelníků"
+    },
+    {
+      "number": "16.3",
+      "topic": "Posloupnosti",
+      "task": "Počet všech trojúhelníčků (21 tmavých v řadě)",
+      "max_points": 2,
+      "correct_answer": "800",
+      "student_answer": "105",
+      "student_work": "5·21=105",
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "concept",
+      "error_detail": "Nepochopila vzorec pro celkový počet trojúhelníčků v kosočtverci"
+    }
+  ],
+  "calculated_score": 35,
+  "error_analysis": {
+    "main_patterns": [
+      "Konstrukce přeskočeny - ztráta 5 bodů",
+      "Převody jednotek - nejistota (m² na cm²)",
+      "Posloupnosti/vzorce - nepochopení vztahů"
+    ],
+    "strengths": [
+      "Zlomky - výborně",
+      "Pythagorova věta - bezchybně",
+      "Procenta (uzavřené úlohy) - všechny správně",
+      "Rovnice - dobře"
+    ]
+  },
+  "summary": {
+    "percentage": 26,
+    "note": "Nejslabší test. Učitel hodnotil přísněji - mnoho bodů ztraceno za neúplné postupy."
+  }
+}

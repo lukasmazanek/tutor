@@ -1,0 +1,412 @@
+{
+  "categories": {
+    "OXV": {
+      "id": "OXV",
+      "name": "o X více/méně",
+      "description": "Převod na násobitel",
+      "icon": "fire",
+      "questions": [
+        {
+          "id": "OXV-01",
+          "question": "o polovinu více = ×?",
+          "correct": "1,5",
+          "distractors": ["0,5", "2"],
+          "hint": {
+            "rule": "o X více = ×(1 + X)",
+            "explanation": "o polovinu = o 1/2 → ×(1 + 0,5) = ×1,5"
+          }
+        },
+        {
+          "id": "OXV-02",
+          "question": "o polovinu méně = ×?",
+          "correct": "0,5",
+          "distractors": ["1,5", "2"],
+          "hint": {
+            "rule": "o X méně = ×(1 − X)",
+            "explanation": "o polovinu méně = ×(1 − 0,5) = ×0,5"
+          }
+        },
+        {
+          "id": "OXV-03",
+          "question": "o třetinu více = ×?",
+          "correct": "4/3",
+          "distractors": ["1/3", "3"],
+          "hint": {
+            "rule": "o X více = ×(1 + X)",
+            "explanation": "o třetinu = o 1/3 → ×(1 + 1/3) = ×4/3"
+          }
+        },
+        {
+          "id": "OXV-04",
+          "question": "o třetinu méně = ×?",
+          "correct": "2/3",
+          "distractors": ["1/3", "4/3"],
+          "hint": {
+            "rule": "o X méně = ×(1 − X)",
+            "explanation": "o třetinu méně = ×(1 − 1/3) = ×2/3"
+          }
+        },
+        {
+          "id": "OXV-05",
+          "question": "o čtvrtinu více = ×?",
+          "correct": "1,25",
+          "distractors": ["0,25", "4"],
+          "hint": {
+            "rule": "o X více = ×(1 + X)",
+            "explanation": "o čtvrtinu = o 0,25 → ×(1 + 0,25) = ×1,25"
+          }
+        },
+        {
+          "id": "OXV-06",
+          "question": "o čtvrtinu méně = ×?",
+          "correct": "0,75",
+          "distractors": ["0,25", "1,25"],
+          "hint": {
+            "rule": "o X méně = ×(1 − X)",
+            "explanation": "o čtvrtinu méně = ×(1 − 0,25) = ×0,75"
+          }
+        },
+        {
+          "id": "OXV-07",
+          "question": "o pětinu více = ×?",
+          "correct": "1,2",
+          "distractors": ["0,2", "5"],
+          "hint": {
+            "rule": "o X více = ×(1 + X)",
+            "explanation": "o pětinu = o 0,2 → ×(1 + 0,2) = ×1,2"
+          }
+        },
+        {
+          "id": "OXV-08",
+          "question": "o pětinu méně = ×?",
+          "correct": "0,8",
+          "distractors": ["0,2", "1,2"],
+          "hint": {
+            "rule": "o X méně = ×(1 − X)",
+            "explanation": "o pětinu méně = ×(1 − 0,2) = ×0,8"
+          }
+        },
+        {
+          "id": "OXV-09",
+          "question": "o desetinu více = ×?",
+          "correct": "1,1",
+          "distractors": ["0,1", "10"],
+          "hint": {
+            "rule": "o X více = ×(1 + X)",
+            "explanation": "o desetinu = o 0,1 → ×(1 + 0,1) = ×1,1"
+          }
+        },
+        {
+          "id": "OXV-10",
+          "question": "o desetinu méně = ×?",
+          "correct": "0,9",
+          "distractors": ["0,1", "1,1"],
+          "hint": {
+            "rule": "o X méně = ×(1 − X)",
+            "explanation": "o desetinu méně = ×(1 − 0,1) = ×0,9"
+          }
+        },
+        {
+          "id": "OXV-11",
+          "question": "o dvě třetiny více = ×?",
+          "correct": "5/3",
+          "distractors": ["2/3", "3/2"],
+          "hint": {
+            "rule": "o X více = ×(1 + X)",
+            "explanation": "o 2/3 více → ×(1 + 2/3) = ×5/3"
+          }
+        },
+        {
+          "id": "OXV-12",
+          "question": "o dvě třetiny méně = ×?",
+          "correct": "1/3",
+          "distractors": ["2/3", "5/3"],
+          "hint": {
+            "rule": "o X méně = ×(1 − X)",
+            "explanation": "o 2/3 méně → ×(1 − 2/3) = ×1/3"
+          }
+        },
+        {
+          "id": "OXV-13",
+          "question": "o tři čtvrtiny více = ×?",
+          "correct": "1,75",
+          "distractors": ["0,75", "4/3"],
+          "hint": {
+            "rule": "o X více = ×(1 + X)",
+            "explanation": "o 3/4 více → ×(1 + 0,75) = ×1,75"
+          }
+        },
+        {
+          "id": "OXV-14",
+          "question": "o tři čtvrtiny méně = ×?",
+          "correct": "0,25",
+          "distractors": ["0,75", "1,75"],
+          "hint": {
+            "rule": "o X méně = ×(1 − X)",
+            "explanation": "o 3/4 méně → ×(1 − 0,75) = ×0,25"
+          }
+        },
+        {
+          "id": "OXV-15",
+          "question": "o 10 % více = ×?",
+          "correct": "1,1",
+          "distractors": ["0,1", "10"],
+          "hint": {
+            "rule": "o X % více = ×(1 + X/100)",
+            "explanation": "o 10 % více → ×(1 + 0,1) = ×1,1"
+          }
+        },
+        {
+          "id": "OXV-16",
+          "question": "o 10 % méně = ×?",
+          "correct": "0,9",
+          "distractors": ["0,1", "1,1"],
+          "hint": {
+            "rule": "o X % méně = ×(1 − X/100)",
+            "explanation": "o 10 % méně → ×(1 − 0,1) = ×0,9"
+          }
+        },
+        {
+          "id": "OXV-17",
+          "question": "o 25 % více = ×?",
+          "correct": "1,25",
+          "distractors": ["0,25", "25"],
+          "hint": {
+            "rule": "o X % více = ×(1 + X/100)",
+            "explanation": "o 25 % více → ×(1 + 0,25) = ×1,25"
+          }
+        },
+        {
+          "id": "OXV-18",
+          "question": "o 25 % méně = ×?",
+          "correct": "0,75",
+          "distractors": ["0,25", "1,25"],
+          "hint": {
+            "rule": "o X % méně = ×(1 − X/100)",
+            "explanation": "o 25 % méně → ×(1 − 0,25) = ×0,75"
+          }
+        },
+        {
+          "id": "OXV-19",
+          "question": "o 50 % více = ×?",
+          "correct": "1,5",
+          "distractors": ["0,5", "50"],
+          "hint": {
+            "rule": "o X % více = ×(1 + X/100)",
+            "explanation": "o 50 % více → ×(1 + 0,5) = ×1,5"
+          }
+        },
+        {
+          "id": "OXV-20",
+          "question": "o 50 % méně = ×?",
+          "correct": "0,5",
+          "distractors": ["1,5", "50"],
+          "hint": {
+            "rule": "o X % méně = ×(1 − X/100)",
+            "explanation": "o 50 % méně → ×(1 − 0,5) = ×0,5"
+          }
+        },
+        {
+          "id": "OXV-21",
+          "question": "o 20 % více = ×?",
+          "correct": "1,2",
+          "distractors": ["0,2", "20"],
+          "hint": {
+            "rule": "o X % více = ×(1 + X/100)",
+            "explanation": "o 20 % více → ×(1 + 0,2) = ×1,2"
+          }
+        },
+        {
+          "id": "OXV-22",
+          "question": "o 20 % méně = ×?",
+          "correct": "0,8",
+          "distractors": ["0,2", "1,2"],
+          "hint": {
+            "rule": "o X % méně = ×(1 − X/100)",
+            "explanation": "o 20 % méně → ×(1 − 0,2) = ×0,8"
+          }
+        },
+        {
+          "id": "OXV-23",
+          "question": "o 100 % více = ×?",
+          "correct": "2",
+          "distractors": ["1", "100"],
+          "hint": {
+            "rule": "o X % více = ×(1 + X/100)",
+            "explanation": "o 100 % více → ×(1 + 1) = ×2 (dvojnásobek)"
+          }
+        },
+        {
+          "id": "OXV-24",
+          "question": "o 75 % více = ×?",
+          "correct": "1,75",
+          "distractors": ["0,75", "75"],
+          "hint": {
+            "rule": "o X % více = ×(1 + X/100)",
+            "explanation": "o 75 % více → ×(1 + 0,75) = ×1,75"
+          }
+        },
+        {
+          "id": "OXV-25",
+          "question": "o 75 % méně = ×?",
+          "correct": "0,25",
+          "distractors": ["0,75", "1,75"],
+          "hint": {
+            "rule": "o X % méně = ×(1 − X/100)",
+            "explanation": "o 75 % méně → ×(1 − 0,75) = ×0,25"
+          }
+        },
+        {
+          "id": "OXV-26",
+          "question": "o šestinu více = ×?",
+          "correct": "7/6",
+          "distractors": ["1/6", "6"],
+          "hint": {
+            "rule": "o X více = ×(1 + X)",
+            "explanation": "o 1/6 více → ×(1 + 1/6) = ×7/6"
+          }
+        },
+        {
+          "id": "OXV-27",
+          "question": "o šestinu méně = ×?",
+          "correct": "5/6",
+          "distractors": ["1/6", "7/6"],
+          "hint": {
+            "rule": "o X méně = ×(1 − X)",
+            "explanation": "o 1/6 méně → ×(1 − 1/6) = ×5/6"
+          }
+        },
+        {
+          "id": "OXV-28",
+          "question": "o dvě pětiny více = ×?",
+          "correct": "1,4",
+          "distractors": ["0,4", "5/2"],
+          "hint": {
+            "rule": "o X více = ×(1 + X)",
+            "explanation": "o 2/5 více → ×(1 + 0,4) = ×1,4"
+          }
+        },
+        {
+          "id": "OXV-29",
+          "question": "o dvě pětiny méně = ×?",
+          "correct": "0,6",
+          "distractors": ["0,4", "1,4"],
+          "hint": {
+            "rule": "o X méně = ×(1 − X)",
+            "explanation": "o 2/5 méně → ×(1 − 0,4) = ×0,6"
+          }
+        },
+        {
+          "id": "OXV-30",
+          "question": "o tři pětiny více = ×?",
+          "correct": "1,6",
+          "distractors": ["0,6", "5/3"],
+          "hint": {
+            "rule": "o X více = ×(1 + X)",
+            "explanation": "o 3/5 více → ×(1 + 0,6) = ×1,6"
+          }
+        },
+        {
+          "id": "OXV-31",
+          "question": "o tři pětiny méně = ×?",
+          "correct": "0,4",
+          "distractors": ["0,6", "1,6"],
+          "hint": {
+            "rule": "o X méně = ×(1 − X)",
+            "explanation": "o 3/5 méně → ×(1 − 0,6) = ×0,4"
+          }
+        },
+        {
+          "id": "OXV-32",
+          "question": "o 5 % více = ×?",
+          "correct": "1,05",
+          "distractors": ["0,05", "5"],
+          "hint": {
+            "rule": "o X % více = ×(1 + X/100)",
+            "explanation": "o 5 % více → ×(1 + 0,05) = ×1,05"
+          }
+        },
+        {
+          "id": "OXV-33",
+          "question": "o 5 % méně = ×?",
+          "correct": "0,95",
+          "distractors": ["0,05", "1,05"],
+          "hint": {
+            "rule": "o X % méně = ×(1 − X/100)",
+            "explanation": "o 5 % méně → ×(1 − 0,05) = ×0,95"
+          }
+        },
+        {
+          "id": "OXV-34",
+          "question": "o 30 % více = ×?",
+          "correct": "1,3",
+          "distractors": ["0,3", "30"],
+          "hint": {
+            "rule": "o X % více = ×(1 + X/100)",
+            "explanation": "o 30 % více → ×(1 + 0,3) = ×1,3"
+          }
+        },
+        {
+          "id": "OXV-35",
+          "question": "o 30 % méně = ×?",
+          "correct": "0,7",
+          "distractors": ["0,3", "1,3"],
+          "hint": {
+            "rule": "o X % méně = ×(1 − X/100)",
+            "explanation": "o 30 % méně → ×(1 − 0,3) = ×0,7"
+          }
+        },
+        {
+          "id": "OXV-36",
+          "question": "o čtyři pětiny více = ×?",
+          "correct": "1,8",
+          "distractors": ["0,8", "5/4"],
+          "hint": {
+            "rule": "o X více = ×(1 + X)",
+            "explanation": "o 4/5 více → ×(1 + 0,8) = ×1,8"
+          }
+        },
+        {
+          "id": "OXV-37",
+          "question": "o čtyři pětiny méně = ×?",
+          "correct": "0,2",
+          "distractors": ["0,8", "1,8"],
+          "hint": {
+            "rule": "o X méně = ×(1 − X)",
+            "explanation": "o 4/5 méně → ×(1 − 0,8) = ×0,2"
+          }
+        },
+        {
+          "id": "OXV-38",
+          "question": "o osminu více = ×?",
+          "correct": "1,125",
+          "distractors": ["0,125", "8"],
+          "hint": {
+            "rule": "o X více = ×(1 + X)",
+            "explanation": "o 1/8 více → ×(1 + 0,125) = ×1,125"
+          }
+        },
+        {
+          "id": "OXV-39",
+          "question": "o osminu méně = ×?",
+          "correct": "0,875",
+          "distractors": ["0,125", "1,125"],
+          "hint": {
+            "rule": "o X méně = ×(1 − X)",
+            "explanation": "o 1/8 méně → ×(1 − 0,125) = ×0,875"
+          }
+        },
+        {
+          "id": "OXV-40",
+          "question": "o 40 % více = ×?",
+          "correct": "1,4",
+          "distractors": ["0,4", "40"],
+          "hint": {
+            "rule": "o X % více = ×(1 + X/100)",
+            "explanation": "o 40 % více → ×(1 + 0,4) = ×1,4"
+          }
+        }
+      ]
+    }
+  }
+}

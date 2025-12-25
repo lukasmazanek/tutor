@@ -1,0 +1,148 @@
+{
+  "topic_id": 14,
+  "topic": "Odmocniny",
+  "description": "Cvičení zaměřená na pochopení odmocnin a jejich vztahu k mocninám",
+  "target_misconception": "√x² = x (ne x²)",
+  "exercises": [
+    {
+      "id": "sr-001",
+      "difficulty": 1,
+      "type": "calculation",
+      "question": "Vypočtěte: √49",
+      "correct_answer": "7",
+      "solution_steps": [
+        "√49 = √(7²) = 7",
+        "Hledáme číslo, které po umocnění dá 49"
+      ],
+      "hint": "Jaké číslo krát samo sebe dá 49?",
+      "common_mistake": "Někteří píší 49/2 nebo zaměňují s 49²"
+    },
+    {
+      "id": "sr-002",
+      "difficulty": 1,
+      "type": "calculation",
+      "question": "Vypočtěte: √(5²)",
+      "correct_answer": "5",
+      "solution_steps": [
+        "√(5²) = √25 = 5",
+        "Odmocnina ruší druhou mocninu: √(x²) = |x|"
+      ],
+      "hint": "Odmocnina a druhá mocnina se vzájemně ruší",
+      "common_mistake": "Psaní 5² = 25 jako výsledek (ne! musíme ještě odmocnit)"
+    },
+    {
+      "id": "sr-003",
+      "difficulty": 2,
+      "type": "calculation",
+      "question": "Vypočtěte: √(7²) - 7",
+      "correct_answer": "0",
+      "solution_steps": [
+        "√(7²) = 7",
+        "7 - 7 = 0"
+      ],
+      "hint": "Nejdřív vypočti √(7²), pak odečti 7",
+      "common_mistake": "Psaní √(7²) = 49 místo 7"
+    },
+    {
+      "id": "sr-004",
+      "difficulty": 2,
+      "type": "calculation",
+      "question": "Vypočtěte: (7² - √(7²)) / √49",
+      "correct_answer": "6",
+      "solution_steps": [
+        "7² = 49",
+        "√(7²) = 7",
+        "√49 = 7",
+        "(49 - 7) / 7 = 42 / 7 = 6"
+      ],
+      "hint": "√(7²) = 7, ne 49! Odmocnina ruší mocninu.",
+      "common_mistake": "Záměna √(7²) za 7² → (49+49)/7 = 14 (ŠPATNĚ!)"
+    },
+    {
+      "id": "sr-005",
+      "difficulty": 2,
+      "type": "calculation",
+      "question": "Vypočtěte: √100 + √(10²)",
+      "correct_answer": "20",
+      "solution_steps": [
+        "√100 = 10",
+        "√(10²) = 10",
+        "10 + 10 = 20"
+      ],
+      "hint": "Obě odmocniny dávají stejný výsledek",
+      "common_mistake": null
+    },
+    {
+      "id": "sr-006",
+      "difficulty": 3,
+      "type": "calculation",
+      "question": "Vypočtěte: (√81 - √(9²)) · √16",
+      "correct_answer": "0",
+      "solution_steps": [
+        "√81 = 9",
+        "√(9²) = 9",
+        "9 - 9 = 0",
+        "0 · √16 = 0"
+      ],
+      "hint": "√81 = √(9²) = 9",
+      "common_mistake": null
+    },
+    {
+      "id": "sr-007",
+      "difficulty": 3,
+      "type": "calculation",
+      "question": "Zjednodušte: √(x²) pro x > 0",
+      "correct_answer": "x",
+      "solution_steps": [
+        "√(x²) = |x|",
+        "Protože x > 0, tak |x| = x"
+      ],
+      "hint": "Obecně √(x²) = |x| (absolutní hodnota)",
+      "common_mistake": "Psaní x² jako výsledek"
+    },
+    {
+      "id": "sr-008",
+      "difficulty": 3,
+      "type": "true_false",
+      "question": "Je √(3²) = 3² pravdivý výrok?",
+      "correct_answer": "N",
+      "solution_steps": [
+        "√(3²) = √9 = 3",
+        "3² = 9",
+        "3 ≠ 9, tedy NE"
+      ],
+      "hint": "Vypočti obě strany zvlášť",
+      "common_mistake": "Záměna odmocniny s mocninou"
+    },
+    {
+      "id": "sr-009",
+      "difficulty": 4,
+      "type": "calculation",
+      "question": "Vypočtěte: (12² - √(12²)) / √144",
+      "correct_answer": "11",
+      "solution_steps": [
+        "12² = 144",
+        "√(12²) = 12",
+        "√144 = 12",
+        "(144 - 12) / 12 = 132 / 12 = 11"
+      ],
+      "hint": "Stejný vzorec jako v testu, jen jiná čísla",
+      "common_mistake": "Záměna √(12²) za 144"
+    },
+    {
+      "id": "sr-010",
+      "difficulty": 4,
+      "type": "calculation",
+      "question": "Vypočtěte: √((5+3)²) - √(5² + 3²)",
+      "correct_answer": "8 - √34",
+      "solution_steps": [
+        "√((5+3)²) = √(8²) = 8",
+        "5² + 3² = 25 + 9 = 34",
+        "√34 ≈ 5,83",
+        "8 - √34 ≈ 2,17"
+      ],
+      "hint": "POZOR: (a+b)² ≠ a² + b²",
+      "common_mistake": "Myšlení že √(a²+b²) = a+b"
+    }
+  ]
+}

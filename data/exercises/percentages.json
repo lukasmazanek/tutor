@@ -1,0 +1,149 @@
+{
+  "topic_id": 13,
+  "topic": "Procenta - o X% více/méně",
+  "description": "Cvičení zaměřená na správné počítání s procenty, zejména 'o X% více/méně'",
+  "target_misconception": "'o 50% více' znamená násobit 1,5, ne 1,5× více",
+  "exercises": [
+    {
+      "id": "pct-001",
+      "difficulty": 1,
+      "type": "calculation",
+      "question": "Cena je 100 Kč. Zvýšila se o 20%. Kolik je nová cena?",
+      "correct_answer": "120",
+      "solution_steps": [
+        "20% ze 100 = 20",
+        "100 + 20 = 120 Kč",
+        "Nebo: 100 · 1,20 = 120 Kč"
+      ],
+      "hint": "O 20% více = základ + 20% ze základu",
+      "common_mistake": null
+    },
+    {
+      "id": "pct-002",
+      "difficulty": 1,
+      "type": "calculation",
+      "question": "Cena je 200 Kč. Snížila se o 25%. Kolik je nová cena?",
+      "correct_answer": "150",
+      "solution_steps": [
+        "25% z 200 = 50",
+        "200 - 50 = 150 Kč",
+        "Nebo: 200 · 0,75 = 150 Kč"
+      ],
+      "hint": "O 25% méně = základ · 0,75",
+      "common_mistake": null
+    },
+    {
+      "id": "pct-003",
+      "difficulty": 2,
+      "type": "calculation",
+      "question": "A je o 50% více než B. B = 200. Kolik je A?",
+      "correct_answer": "300",
+      "solution_steps": [
+        "A = B + 50% z B",
+        "A = 200 + 100 = 300",
+        "Nebo: A = 200 · 1,5 = 300"
+      ],
+      "hint": "O 50% více = násobíme 1,5",
+      "common_mistake": "400 (myšlení že 50% více = dvojnásobek)"
+    },
+    {
+      "id": "pct-004",
+      "difficulty": 2,
+      "type": "calculation",
+      "question": "A je o 50% více než B. A = 300. Kolik je B?",
+      "correct_answer": "200",
+      "solution_steps": [
+        "A = 1,5 · B",
+        "300 = 1,5 · B",
+        "B = 300 / 1,5 = 200"
+      ],
+      "hint": "Obrácený směr: B = A / 1,5",
+      "common_mistake": "150 (myšlení že B = A · 0,5)"
+    },
+    {
+      "id": "pct-005",
+      "difficulty": 3,
+      "type": "calculation",
+      "question": "Dívky nasbíraly o 50% více papíru než chlapci. Celkem 1200 kg. Kolik chlapci?",
+      "correct_answer": "480",
+      "solution_steps": [
+        "D = 1,5 · CH (dívky je o 50% více)",
+        "D + CH = 1200",
+        "1,5CH + CH = 1200",
+        "2,5CH = 1200",
+        "CH = 480 kg"
+      ],
+      "hint": "Označ CH=x, pak D=1,5x, součet = 1200",
+      "common_mistake": "400 (špatně: D=800, CH=400, ale 800 je o 100% více!)"
+    },
+    {
+      "id": "pct-006",
+      "difficulty": 3,
+      "type": "calculation",
+      "question": "Třída 1.B nasbírala o 20% více než 2.B. 1.B = 600 kg. Kolik 2.B?",
+      "correct_answer": "500",
+      "solution_steps": [
+        "1.B = 1,2 · 2.B",
+        "600 = 1,2 · 2.B",
+        "2.B = 600 / 1,2 = 500 kg"
+      ],
+      "hint": "Když A je o 20% více než B, pak A = 1,2 · B",
+      "common_mistake": "480 (špatně odečtení 20%)"
+    },
+    {
+      "id": "pct-007",
+      "difficulty": 2,
+      "type": "calculation",
+      "question": "Třída 2.A nasbírala o 25% méně než 1.A. 1.A = 600 kg. Kolik 2.A?",
+      "correct_answer": "450",
+      "solution_steps": [
+        "O 25% méně = násobíme 0,75",
+        "2.A = 600 · 0,75 = 450 kg"
+      ],
+      "hint": "O 25% méně = 75% z původního = 0,75×",
+      "common_mistake": null
+    },
+    {
+      "id": "pct-008",
+      "difficulty": 3,
+      "type": "true_false",
+      "question": "Jestliže A je o 100% více než B, pak A = 2B. Pravda nebo ne?",
+      "correct_answer": "A",
+      "solution_steps": [
+        "O 100% více = základ + 100% ze základu",
+        "= základ + základ = 2× základ",
+        "Ano, A = 2B je správně"
+      ],
+      "hint": "100% více = dvojnásobek",
+      "common_mistake": "N"
+    },
+    {
+      "id": "pct-009",
+      "difficulty": 4,
+      "type": "calculation",
+      "question": "Po zvýšení o 25% stojí zboží 500 Kč. Kolik stálo před zvýšením?",
+      "correct_answer": "400",
+      "solution_steps": [
+        "Nová cena = 1,25 · původní",
+        "500 = 1,25 · x",
+        "x = 500 / 1,25 = 400 Kč"
+      ],
+      "hint": "Původní × 1,25 = 500",
+      "common_mistake": "375 (špatně: 500 × 0,75)"
+    },
+    {
+      "id": "pct-010",
+      "difficulty": 4,
+      "type": "calculation",
+      "question": "Cena se nejdřív zvýšila o 20%, pak snížila o 20%. Původně 100 Kč. Kolik je teď?",
+      "correct_answer": "96",
+      "solution_steps": [
+        "Po zvýšení: 100 · 1,2 = 120 Kč",
+        "Po snížení: 120 · 0,8 = 96 Kč",
+        "POZOR: Není to 100! Procenta se nepočítají ze stejného základu."
+      ],
+      "hint": "Nejdřív +20%, pak -20% z NOVÉ ceny",
+      "common_mistake": "100 (myšlení že se to 'vyruší')"
+    }
+  ]
+}

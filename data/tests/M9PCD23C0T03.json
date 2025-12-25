@@ -1,0 +1,282 @@
+{
+  "test_id": "M9PCD23C0T03",
+  "student": "Anežka Mazánková",
+  "date_taken": "2023",
+  "term": "1. náhradní termín",
+  "total_points": 50,
+  "teacher_score": 23,
+  "teacher_score_note": "Zakroužkované 23 na titulní straně",
+  "questions": [
+    {
+      "number": "1",
+      "topic": "Desetinná čísla",
+      "task": "Kolikrát je součet 0,2 a 0,5 větší než jejich součin",
+      "max_points": 1,
+      "correct_answer": "7",
+      "student_answer": "7",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "2.1",
+      "topic": "Pořadí operací",
+      "task": "4+6:2-5·(-3+5)",
+      "max_points": 1,
+      "correct_answer": "-3",
+      "student_answer": "-3",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "2.2",
+      "topic": "Odmocniny",
+      "task": "√(1,3² - 1,2²)",
+      "max_points": 1,
+      "correct_answer": "0,5",
+      "student_answer": "0,55",
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "calculation",
+      "error_detail": "Drobná chyba ve výpočtu pod odmocninou"
+    },
+    {
+      "number": "3.1",
+      "topic": "Zlomky",
+      "task": "3·2/7 - 2/7",
+      "max_points": 1,
+      "correct_answer": "4/7",
+      "student_answer": "4/7",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "3.2",
+      "topic": "Zlomky",
+      "task": "1 - 14/5 : 2",
+      "max_points": 1,
+      "correct_answer": "-2/5",
+      "student_answer": "2/5",
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "calculation",
+      "error_detail": "Chyba ve znaménku - zapomněla záporné znaménko"
+    },
+    {
+      "number": "3.3",
+      "topic": "Zlomky - složené",
+      "task": "Složený zlomek",
+      "max_points": 2,
+      "earned_points": 1,
+      "note": "Částečný postup"
+    },
+    {
+      "number": "4.1",
+      "topic": "Rozklad na součin",
+      "task": "4a² - 9",
+      "max_points": 1,
+      "correct_answer": "(2a-3)(2a+3)",
+      "student_answer": "(2a-3)(2a+3)",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "4.2",
+      "topic": "Algebraické výrazy",
+      "task": "(2x-1)·1/2 - x",
+      "max_points": 1,
+      "correct_answer": "-1/2",
+      "student_answer": "x - 1/2",
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "calculation",
+      "error_detail": "Nevykrátila x, výsledek měl být pouze -1/2"
+    },
+    {
+      "number": "4.3",
+      "topic": "Algebraické výrazy",
+      "task": "(4n-3)² - 4n(4n-3)",
+      "max_points": 2,
+      "correct_answer": "9 - 12n",
+      "student_answer": "9 - 12n",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "5.1",
+      "topic": "Rovnice",
+      "task": "0,3·(2x+1) = 0,2x - 0,7",
+      "max_points": 2,
+      "correct_answer": "x = -5/2",
+      "student_answer": "-5/2",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "5.2",
+      "topic": "Rovnice se zlomky",
+      "task": "y + 5y/6 = (2y-1)/4 + (y+1)/2",
+      "max_points": 2,
+      "correct_answer": "y = 3/10",
+      "student_answer": "3/10",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "6.1",
+      "topic": "Slovní úlohy - výrazy",
+      "task": "Kolik km odřídil Rudolf (x/3 - 60)",
+      "max_points": 1,
+      "correct_answer": "x/3 - 60",
+      "student_answer": "x/3 - 60 km",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "6.2",
+      "topic": "Slovní úlohy",
+      "task": "Kolik km měřila celá trasa",
+      "max_points": 2,
+      "correct_answer": "900 km",
+      "student_answer": "900 km",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "7.1",
+      "topic": "Tělesa - válec",
+      "task": "Poloměr podstavy válce",
+      "max_points": 1,
+      "correct_answer": "5 cm",
+      "student_answer": "8 cm",
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "concept",
+      "error_detail": "Nepochopila, že poloměr = polovina úhlopříčky čtverce 6x8 (√100/2 = 5)"
+    },
+    {
+      "number": "7.2",
+      "topic": "Objem válce",
+      "task": "Objem válce v cm³",
+      "max_points": 2,
+      "correct_answer": "942 cm³",
+      "student_answer": "804 cm³",
+      "is_correct": false,
+      "earned_points": 0,
+      "error_type": "calculation",
+      "error_detail": "Navazující chyba z 7.1 - použila špatný poloměr"
+    },
+    {
+      "number": "8.1",
+      "topic": "Směsi - ceny",
+      "task": "Cena 1 kg směsi arašídů a mandlí",
+      "max_points": 1,
+      "correct_answer": "152 Kč",
+      "student_answer": "152 Kč",
+      "is_correct": true,
+      "earned_points": 1
+    },
+    {
+      "number": "8.2",
+      "topic": "Směsi - hmotnost",
+      "task": "Kolik gramů kešu ve velkém balení",
+      "max_points": 2,
+      "earned_points": 0,
+      "is_correct": false,
+      "error_type": "incomplete"
+    },
+    {
+      "number": "9",
+      "topic": "Konstrukce",
+      "task": "Sestrojit lichoběžník ABCD",
+      "max_points": 3,
+      "earned_points": 0,
+      "is_correct": false,
+      "error_type": "incomplete",
+      "error_detail": "Konstrukce přeskočena"
+    },
+    {
+      "number": "10",
+      "topic": "Konstrukce",
+      "task": "Sestrojit trojúhelník ABC",
+      "max_points": 3,
+      "earned_points": 0,
+      "is_correct": false,
+      "error_type": "incomplete",
+      "error_detail": "Konstrukce přeskočena"
+    },
+    {
+      "number": "11",
+      "topic": "Slovní úlohy - logika",
+      "task": "Tábor - oddíly A, B, C (3 tvrzení A/N)",
+      "max_points": 4,
+      "earned_points": 2,
+      "note": "Částečně správně"
+    },
+    {
+      "number": "12",
+      "topic": "Slovní úlohy",
+      "task": "Počet vagonů ve vlaku",
+      "max_points": 2,
+      "correct_answer": "C (12)",
+      "student_answer": "C",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "13",
+      "topic": "Úhly",
+      "task": "Velikost úhlu ω",
+      "max_points": 2,
+      "correct_answer": "D (80°)",
+      "student_answer": "D",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "14",
+      "topic": "Objem hranolu",
+      "task": "Objem pravidelného čtyřbokého hranolu",
+      "max_points": 2,
+      "correct_answer": "B (108 cm³)",
+      "student_answer": "B",
+      "is_correct": true,
+      "earned_points": 2
+    },
+    {
+      "number": "15",
+      "topic": "Procenta - přiřazení",
+      "task": "3 úlohy s procenty",
+      "max_points": 6,
+      "earned_points": 2,
+      "note": "Částečně správně - problémy s 'o X více' vs '×(1+X)'"
+    },
+    {
+      "number": "16",
+      "topic": "Posloupnosti",
+      "task": "Počty čtverečků v obrazcích",
+      "max_points": 4,
+      "earned_points": 0,
+      "is_correct": false,
+      "error_type": "incomplete",
+      "error_detail": "Úloha přeskočena - nepochopení vzorce pro posloupnost"
+    }
+  ],
+  "error_analysis": {
+    "main_patterns": [
+      "Konstrukce systematicky přeskočeny - ztráta 6 bodů",
+      "Posloupnosti/vzorce přeskočeny - ztráta 4 bodů",
+      "Problémy s objemem válce (navazující chyba z poloměru)",
+      "Procenta 'o X více' stále problematické"
+    ],
+    "strengths": [
+      "Rovnice - obě správně",
+      "Slovní úlohy s proměnnými - výborně (6.1, 6.2)",
+      "Rozklad na součin - správně",
+      "Uzavřené úlohy (12, 13, 14) - správně"
+    ]
+  },
+  "summary": {
+    "percentage": 46,
+    "note": "Hlavní problém: vyhýbání se konstrukcím a posloupnostem. Algebra a slovní úlohy lepší."
+  }
+}

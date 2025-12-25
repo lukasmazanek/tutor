@@ -1,0 +1,538 @@
+{
+  "version": "1.1",
+  "created": "2024-12-24",
+  "updated": "2024-12-24",
+  "description": "MVP problem bank for CERMAT math tutor - equations, fractions, 'o X více/méně'",
+  "hint_principles": {
+    "metacognitive_choice": {
+      "description": "When multiple solution paths exist, first hint asks student to consider which is simpler",
+      "pattern": [
+        "Hint 1: Present choice ('Jsou dvě cesty - obě fungují!')",
+        "Hint 2: Guide toward simpler path with specific step"
+      ],
+      "psychological_rationale": [
+        "Normalizes both paths - no 'wrong' approach",
+        "Gives agency - student chooses",
+        "Reduces cognitive load - shorter path = less working memory",
+        "Less material for inner critic when path is simpler"
+      ],
+      "applies_to": ["eq-005", "eq-006", "eq-008", "fr-003", "ox-009"]
+    },
+    "question_before_answer": {
+      "description": "Ask a guiding question before giving direct instruction",
+      "pattern": "What is X? → rather than → Do X",
+      "examples": ["Co je opak dělení?", "Jaký je společný jmenovatel?"],
+      "applies_to": ["eq-003", "fr-001"]
+    }
+  },
+  "topics": {
+    "equations": {
+      "id": "equations",
+      "name_cs": "Rovnice",
+      "name_en": "Equations",
+      "is_strength": true,
+      "description": "Linear equations - confidence building"
+    },
+    "fractions": {
+      "id": "fractions",
+      "name_cs": "Zlomky",
+      "name_en": "Fractions",
+      "is_strength": true,
+      "description": "Fraction operations - confidence building"
+    },
+    "o_x_vice": {
+      "id": "o_x_vice",
+      "name_cs": "O X více/méně",
+      "name_en": "Multiplicative change",
+      "is_strength": false,
+      "is_critical": true,
+      "description": "Critical misconception - 'o třetinu více' = ×1.33, not +1/3"
+    }
+  },
+  "problems": [
+    {
+      "id": "eq-001",
+      "topic": "equations",
+      "difficulty": 1,
+      "type": "number",
+      "problem_cs": "Vyřeš rovnici: 2x + 5 = 13",
+      "answer": 4,
+      "answer_unit": null,
+      "hints": [
+        "Nejdřív odečti 5 od obou stran.",
+        "Dostaneš 2x = 8. Teď vyděl obě strany 2."
+      ],
+      "solution_steps": ["2x + 5 = 13", "2x = 13 - 5", "2x = 8", "x = 4"]
+    },
+    {
+      "id": "eq-002",
+      "topic": "equations",
+      "difficulty": 1,
+      "type": "number",
+      "problem_cs": "Vyřeš rovnici: 3x - 7 = 11",
+      "answer": 6,
+      "answer_unit": null,
+      "hints": [
+        "Přičti 7 k oběma stranám.",
+        "Dostaneš 3x = 18. Vyděl obě strany 3."
+      ],
+      "solution_steps": ["3x - 7 = 11", "3x = 11 + 7", "3x = 18", "x = 6"]
+    },
+    {
+      "id": "eq-003",
+      "topic": "equations",
+      "difficulty": 1,
+      "type": "number",
+      "problem_cs": "Vyřeš rovnici: x/4 = 5",
+      "answer": 20,
+      "answer_unit": null,
+      "hints": [
+        "x je děleno 4. Co je opak dělení?",
+        "Vynásob obě strany 4."
+      ],
+      "solution_steps": ["x/4 = 5", "x = 5 × 4", "x = 20"]
+    },
+    {
+      "id": "eq-004",
+      "topic": "equations",
+      "difficulty": 2,
+      "type": "number",
+      "problem_cs": "Vyřeš rovnici: 5x + 3 = 2x + 15",
+      "answer": 4,
+      "answer_unit": null,
+      "hints": [
+        "Přesuň všechna x na jednu stranu. Odečti 2x od obou stran.",
+        "Dostaneš 3x + 3 = 15. Teď odečti 3 a vyděl."
+      ],
+      "solution_steps": ["5x + 3 = 2x + 15", "5x - 2x = 15 - 3", "3x = 12", "x = 4"]
+    },
+    {
+      "id": "eq-005",
+      "topic": "equations",
+      "difficulty": 2,
+      "type": "number",
+      "problem_cs": "Vyřeš rovnici: 4(x - 2) = 20",
+      "answer": 7,
+      "answer_unit": null,
+      "hint_approach": "metacognitive_choice",
+      "hints": [
+        "Jsou dvě cesty - obě fungují! Roznásobit závorku, nebo nejdřív vydělit obě strany. Která je kratší?",
+        "Zkus vydělit obě strany 4. Co ti zbyde?"
+      ],
+      "solution_steps": ["4(x - 2) = 20", "x - 2 = 5", "x = 7"]
+    },
+    {
+      "id": "eq-006",
+      "topic": "equations",
+      "difficulty": 2,
+      "type": "number",
+      "problem_cs": "Vyřeš rovnici: 2(3x + 1) = 14",
+      "answer": 2,
+      "answer_unit": null,
+      "hint_approach": "metacognitive_choice",
+      "hints": [
+        "Jsou dvě cesty - obě fungují! Roznásobit závorku, nebo nejdřív vydělit obě strany 2. Co bude jednodušší?",
+        "Zkus vydělit obě strany 2. Dostaneš 3x + 1 = 7. Co dál?"
+      ],
+      "solution_steps": ["2(3x + 1) = 14", "3x + 1 = 7", "3x = 6", "x = 2"]
+    },
+    {
+      "id": "eq-007",
+      "topic": "equations",
+      "difficulty": 2,
+      "type": "number",
+      "problem_cs": "Vyřeš rovnici: x/3 + 2 = 5",
+      "answer": 9,
+      "answer_unit": null,
+      "hints": [
+        "Odečti 2 od obou stran.",
+        "Dostaneš x/3 = 3. Vynásob obě strany 3."
+      ],
+      "solution_steps": ["x/3 + 2 = 5", "x/3 = 3", "x = 9"]
+    },
+    {
+      "id": "eq-008",
+      "topic": "equations",
+      "difficulty": 3,
+      "type": "number",
+      "problem_cs": "Vyřeš rovnici: (x + 3)/2 = (x - 1)/4 + 3",
+      "answer": 5,
+      "answer_unit": null,
+      "hint_approach": "metacognitive_choice",
+      "hints": [
+        "Zlomky v rovnici můžeš odstranit vynásobením. Čím vynásobíš, aby zmizely oba jmenovatele (2 a 4)?",
+        "Vynásob celou rovnici 4. Dostaneš 2(x + 3) = (x - 1) + 12. Teď roznásob závorky."
+      ],
+      "solution_steps": ["(x + 3)/2 = (x - 1)/4 + 3", "2(x + 3) = (x - 1) + 12", "2x + 6 = x + 11", "x = 5"]
+    },
+    {
+      "id": "eq-009",
+      "topic": "equations",
+      "difficulty": 3,
+      "type": "number",
+      "problem_cs": "Vyřeš rovnici: 3(2x - 1) - 2(x + 3) = 7",
+      "answer": 4,
+      "answer_unit": null,
+      "hints": [
+        "Roznásob obě závorky: 6x - 3 a -2x - 6",
+        "Spoj: 6x - 3 - 2x - 6 = 4x - 9 = 7"
+      ],
+      "solution_steps": ["3(2x - 1) - 2(x + 3) = 7", "6x - 3 - 2x - 6 = 7", "4x - 9 = 7", "4x = 16", "x = 4"]
+    },
+    {
+      "id": "eq-010",
+      "topic": "equations",
+      "difficulty": 3,
+      "type": "number",
+      "problem_cs": "Vyřeš rovnici: 0,5x + 1,5 = 2x - 3",
+      "answer": 3,
+      "answer_unit": null,
+      "hints": [
+        "Můžeš vynásobit 2, abys odstranil/a desetinná čísla: x + 3 = 4x - 6",
+        "Přesuň x na jednu stranu: 3 + 6 = 4x - x"
+      ],
+      "solution_steps": ["0,5x + 1,5 = 2x - 3", "x + 3 = 4x - 6", "9 = 3x", "x = 3"]
+    },
+    {
+      "id": "fr-001",
+      "topic": "fractions",
+      "difficulty": 1,
+      "type": "fraction",
+      "problem_cs": "Vypočítej: 1/2 + 1/4",
+      "answer": "3/4",
+      "answer_decimal": 0.75,
+      "hints": [
+        "Potřebuješ společného jmenovatele. Jaký je nejmenší společný násobek 2 a 4?",
+        "Převeď 1/2 na ?/4. Kolik čtvrtin je polovina?"
+      ],
+      "solution_steps": ["1/2 + 1/4", "2/4 + 1/4", "3/4"]
+    },
+    {
+      "id": "fr-002",
+      "topic": "fractions",
+      "difficulty": 1,
+      "type": "fraction",
+      "problem_cs": "Vypočítej: 2/3 - 1/6",
+      "answer": "1/2",
+      "answer_decimal": 0.5,
+      "hints": [
+        "Společný jmenovatel pro 3 a 6 je 6.",
+        "2/3 = 4/6. Teď odečti 1/6."
+      ],
+      "solution_steps": ["2/3 - 1/6", "4/6 - 1/6", "3/6", "1/2"]
+    },
+    {
+      "id": "fr-003",
+      "topic": "fractions",
+      "difficulty": 1,
+      "type": "fraction",
+      "problem_cs": "Vypočítej: 3/4 × 2/5",
+      "answer": "3/10",
+      "answer_decimal": 0.3,
+      "hint_approach": "metacognitive_choice",
+      "hints": [
+        "Jsou dvě cesty! Můžeš rovnou násobit a pak zkrátit, nebo nejdřív zkrátit křížem. Co je jednodušší?",
+        "Zkus zkrátit: 4 a 2 jsou dělitelné 2. Dostaneš 3/2 × 1/5. Teď násob."
+      ],
+      "solution_steps": ["3/4 × 2/5", "3/2 × 1/5 (zkráceno)", "3/10"]
+    },
+    {
+      "id": "fr-004",
+      "topic": "fractions",
+      "difficulty": 1,
+      "type": "fraction",
+      "problem_cs": "Vypočítej: 2/3 : 4",
+      "answer": "1/6",
+      "answer_decimal": 0.167,
+      "hints": [
+        "Dělení číslem = násobení převrácenou hodnotou. 4 = 4/1, převrácená je 1/4.",
+        "2/3 × 1/4 = ?"
+      ],
+      "solution_steps": ["2/3 : 4", "2/3 × 1/4", "2/12", "1/6"]
+    },
+    {
+      "id": "fr-005",
+      "topic": "fractions",
+      "difficulty": 2,
+      "type": "fraction",
+      "problem_cs": "Vypočítej: 5/6 - 1/4 + 1/3",
+      "answer": "11/12",
+      "answer_decimal": 0.917,
+      "hints": [
+        "Nejdřív najdi společného jmenovatele pro 6, 4 a 3. Je to 12.",
+        "5/6 = 10/12, 1/4 = 3/12, 1/3 = 4/12"
+      ],
+      "solution_steps": ["5/6 - 1/4 + 1/3", "10/12 - 3/12 + 4/12", "11/12"]
+    },
+    {
+      "id": "fr-006",
+      "topic": "fractions",
+      "difficulty": 2,
+      "type": "fraction",
+      "problem_cs": "Vypočítej: (2/5) : (4/15)",
+      "answer": "3/2",
+      "answer_decimal": 1.5,
+      "hints": [
+        "Dělení zlomkem = násobení převráceným zlomkem.",
+        "2/5 × 15/4 = ? Zkus před násobením zkrátit."
+      ],
+      "solution_steps": ["(2/5) : (4/15)", "2/5 × 15/4", "30/20", "3/2"]
+    },
+    {
+      "id": "fr-007",
+      "topic": "fractions",
+      "difficulty": 2,
+      "type": "number",
+      "problem_cs": "Kolik je 3/4 z 80?",
+      "answer": 60,
+      "answer_unit": null,
+      "hints": [
+        "'Z' znamená násobení. 3/4 × 80 = ?",
+        "Můžeš nejdřív vydělit 80 : 4 = 20, pak násobit 20 × 3."
+      ],
+      "solution_steps": ["3/4 × 80", "80 : 4 = 20", "20 × 3 = 60"]
+    },
+    {
+      "id": "fr-008",
+      "topic": "fractions",
+      "difficulty": 2,
+      "type": "fraction",
+      "problem_cs": "Zjednodušte: 24/36",
+      "answer": "2/3",
+      "answer_decimal": 0.667,
+      "hints": [
+        "Najdi největšího společného dělitele 24 a 36.",
+        "Oba jsou dělitelné 12. 24:12 = 2, 36:12 = 3."
+      ],
+      "solution_steps": ["24/36", "NSD(24,36) = 12", "24:12 / 36:12", "2/3"]
+    },
+    {
+      "id": "fr-009",
+      "topic": "fractions",
+      "difficulty": 3,
+      "type": "fraction",
+      "problem_cs": "Vypočítej: 1 - 2/3 × 3/4",
+      "answer": "1/2",
+      "answer_decimal": 0.5,
+      "hints": [
+        "Pozor na pořadí operací! Nejdřív násobení, pak odčítání.",
+        "2/3 × 3/4 = 6/12 = 1/2. Pak 1 - 1/2 = ?"
+      ],
+      "solution_steps": ["1 - 2/3 × 3/4", "1 - 6/12", "1 - 1/2", "1/2"]
+    },
+    {
+      "id": "fr-010",
+      "topic": "fractions",
+      "difficulty": 3,
+      "type": "number",
+      "problem_cs": "Třetina čísla je 15. Jaké je to číslo?",
+      "answer": 45,
+      "answer_unit": null,
+      "hints": [
+        "Když třetina je 15, kolik jsou tři třetiny (celé číslo)?",
+        "x/3 = 15, takže x = 15 × 3"
+      ],
+      "solution_steps": ["x/3 = 15", "x = 15 × 3", "x = 45"]
+    },
+    {
+      "id": "ox-001",
+      "topic": "o_x_vice",
+      "difficulty": 1,
+      "type": "number",
+      "problem_cs": "Měl jsem 100 Kč. Teď mám o polovinu více. Kolik mám?",
+      "answer": 150,
+      "answer_unit": "Kč",
+      "visual_hint": "100 + (polovina ze 100) = 100 + 50",
+      "hints": [
+        "\"O polovinu více\" znamená: původní + polovina z původního.",
+        "Polovina ze 100 je 50. Přičti to k původním 100."
+      ],
+      "common_mistake": {
+        "wrong_answer": 50,
+        "explanation": "Toto je jen polovina. 'O polovinu více' = původní + polovina."
+      },
+      "solution_steps": ["Původní: 100", "Polovina: 100 × 1/2 = 50", "O polovinu více: 100 + 50 = 150"]
+    },
+    {
+      "id": "ox-002",
+      "topic": "o_x_vice",
+      "difficulty": 1,
+      "type": "number",
+      "problem_cs": "Cena byla 80 Kč. Zlevnila o čtvrtinu. Jaká je nová cena?",
+      "answer": 60,
+      "answer_unit": "Kč",
+      "visual_hint": "80 - (čtvrtina z 80) = 80 - 20",
+      "hints": [
+        "\"O čtvrtinu méně\" znamená: původní - čtvrtina z původního.",
+        "Čtvrtina z 80 je 20. Odečti od původních 80."
+      ],
+      "common_mistake": {
+        "wrong_answer": 20,
+        "explanation": "Toto je jen čtvrtina. 'O čtvrtinu méně' = původní - čtvrtina."
+      },
+      "solution_steps": ["Původní: 80", "Čtvrtina: 80 × 1/4 = 20", "O čtvrtinu méně: 80 - 20 = 60"]
+    },
+    {
+      "id": "ox-003",
+      "topic": "o_x_vice",
+      "difficulty": 2,
+      "type": "number",
+      "problem_cs": "Táta vydělává 30 000 Kč měsíčně. Dostal přidáno o třetinu. Kolik vydělává teď?",
+      "answer": 40000,
+      "answer_unit": "Kč",
+      "visual_hint": "30000 + (třetina z 30000) = 30000 + 10000",
+      "hints": [
+        "\"O třetinu více\" = původní + třetina z původního.",
+        "Třetina z 30 000 je 10 000. Přičti k původnímu platu."
+      ],
+      "common_mistake": {
+        "wrong_answer": 10000,
+        "explanation": "Toto je jen třetina. Nový plat = starý + třetina."
+      },
+      "solution_steps": ["Původní: 30 000", "Třetina: 30 000 : 3 = 10 000", "Nový plat: 30 000 + 10 000 = 40 000"]
+    },
+    {
+      "id": "ox-004",
+      "topic": "o_x_vice",
+      "difficulty": 2,
+      "type": "number",
+      "problem_cs": "Obchod má slevu: cena je o pětinu nižší. Původní cena byla 500 Kč. Kolik zaplatíš?",
+      "answer": 400,
+      "answer_unit": "Kč",
+      "hints": [
+        "\"O pětinu méně\" = původní - pětina z původního.",
+        "Pětina z 500 je 100. Nová cena = 500 - 100."
+      ],
+      "common_mistake": {
+        "wrong_answer": 100,
+        "explanation": "Toto je sleva (pětina). Platíš zbytek: 500 - 100 = 400."
+      },
+      "solution_steps": ["Původní: 500", "Pětina: 500 : 5 = 100", "Nová cena: 500 - 100 = 400"]
+    },
+    {
+      "id": "ox-005",
+      "topic": "o_x_vice",
+      "difficulty": 2,
+      "type": "number",
+      "problem_cs": "Délka tyče je 120 cm. Prodloužili ji o čtvrtinu. Jaká je nová délka?",
+      "answer": 150,
+      "answer_unit": "cm",
+      "hints": [
+        "\"O čtvrtinu více\" = původní + čtvrtina.",
+        "Čtvrtina ze 120 je 30. Nová délka = 120 + 30."
+      ],
+      "solution_steps": ["Původní: 120", "Čtvrtina: 120 : 4 = 30", "Nová délka: 120 + 30 = 150"]
+    },
+    {
+      "id": "ox-006",
+      "topic": "o_x_vice",
+      "difficulty": 2,
+      "type": "multiple_choice",
+      "problem_cs": "Co znamená \"o třetinu více\"?",
+      "options": [
+        {"id": "a", "text": "× 1/3"},
+        {"id": "b", "text": "+ 1/3"},
+        {"id": "c", "text": "× 4/3 (neboli původní + třetina)"},
+        {"id": "d", "text": "× 3"}
+      ],
+      "answer": "c",
+      "hints": [
+        "\"O třetinu více\" = dostaneš původní + ještě třetinu navíc.",
+        "Matematicky: původní × (1 + 1/3) = původní × 4/3"
+      ],
+      "solution_steps": ["'O třetinu více' = původní + třetina z původního", "= původní × 1 + původní × 1/3", "= původní × (1 + 1/3)", "= původní × 4/3"]
+    },
+    {
+      "id": "ox-007",
+      "topic": "o_x_vice",
+      "difficulty": 3,
+      "type": "number",
+      "problem_cs": "Po zvýšení o čtvrtinu má Jan 750 Kč. Kolik měl původně?",
+      "answer": 600,
+      "answer_unit": "Kč",
+      "hints": [
+        "Po zvýšení o čtvrtinu má 5/4 původní částky.",
+        "750 = původní × 5/4. Původní = 750 : 5 × 4 = 750 × 4/5"
+      ],
+      "common_mistake": {
+        "wrong_answer": 562.5,
+        "explanation": "Pozor! Čtvrtina z výsledku ≠ čtvrtina z původního. Musíš dělit 5/4."
+      },
+      "solution_steps": ["Nová = Původní × 5/4", "750 = Původní × 5/4", "Původní = 750 × 4/5", "Původní = 600"]
+    },
+    {
+      "id": "ox-008",
+      "topic": "o_x_vice",
+      "difficulty": 3,
+      "type": "number",
+      "problem_cs": "Cena po slevě o třetinu je 240 Kč. Jaká byla původní cena?",
+      "answer": 360,
+      "answer_unit": "Kč",
+      "hints": [
+        "Po slevě o třetinu zbývá 2/3 původní ceny.",
+        "240 = původní × 2/3. Původní = 240 : 2 × 3 = 240 × 3/2"
+      ],
+      "common_mistake": {
+        "wrong_answer": 320,
+        "explanation": "Třetina z 240 ≠ třetina z původní ceny. Původní = 240 × 3/2."
+      },
+      "solution_steps": ["Nová = Původní × 2/3", "240 = Původní × 2/3", "Původní = 240 × 3/2", "Původní = 360"]
+    },
+    {
+      "id": "ox-009",
+      "topic": "o_x_vice",
+      "difficulty": 3,
+      "type": "number",
+      "problem_cs": "Kniha stála 280 Kč. Nejdřív zdražila o čtvrtinu, pak zlevnila o pětinu. Kolik stojí teď?",
+      "answer": 280,
+      "answer_unit": "Kč",
+      "hint_approach": "metacognitive_choice",
+      "hints": [
+        "Dvě změny za sebou - jak na to? Tip: rozděl na dva kroky. Nejdřív spočítej cenu po zdražení.",
+        "Po zdražení o čtvrtinu: 280 + 70 = 350 Kč. Teď z této nové ceny spočítej zlevnění o pětinu."
+      ],
+      "solution_steps": ["Po zdražení: 280 × 5/4 = 350", "Po zlevnění: 350 × 4/5 = 280", "Zajímavé: vrátila se na původní cenu!"]
+    },
+    {
+      "id": "ox-010",
+      "topic": "o_x_vice",
+      "difficulty": 2,
+      "type": "multiple_choice",
+      "problem_cs": "Objem nádrže se zvětšil o polovinu. Původně měla 200 litrů. Jaký je nový objem?",
+      "options": [
+        {"id": "a", "text": "100 litrů"},
+        {"id": "b", "text": "250 litrů"},
+        {"id": "c", "text": "300 litrů"},
+        {"id": "d", "text": "400 litrů"}
+      ],
+      "answer": "c",
+      "hints": [
+        "\"O polovinu více\" = původní + polovina z původního.",
+        "Polovina z 200 je 100. Nový objem = 200 + 100."
+      ],
+      "solution_steps": ["Původní: 200 l", "Polovina: 100 l", "Nový objem: 200 + 100 = 300 l"]
+    }
+  ],
+  "session_templates": {
+    "confidence_sandwich": {
+      "description": "Start with strengths, introduce challenge, end with success",
+      "structure": [
+        {"slot": 1, "type": "strength", "difficulty": 1},
+        {"slot": 2, "type": "strength", "difficulty": 1},
+        {"slot": 3, "type": "strength", "difficulty": 2},
+        {"slot": 4, "type": "challenge", "difficulty": 1},
+        {"slot": 5, "type": "strength", "difficulty": 1},
+        {"slot": 6, "type": "strength", "difficulty": 1}
+      ],
+      "notes": "Session always ends on success (strength problem)"
+    }
+  },
+  "ui_strings": {
+    "hint_button": "Ukaž mi jak",
+    "try_again": "Zkus jiný přístup",
+    "correct": "Přesně tak!",
+    "session_complete": "Skvělé prozkoumávání!",
+    "problems_explored": "Dnes prozkoumáno",
+    "next_problem": "Další úloha"
+  }
+}

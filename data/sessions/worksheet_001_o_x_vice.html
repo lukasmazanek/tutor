@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pracovní list: O X více/méně</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1.5cm;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 1cm;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2563eb;
+            font-size: 24px;
+            margin-bottom: 0.5cm;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 0.3cm;
+        }
+
+        h2 {
+            color: #1e40af;
+            font-size: 16px;
+            margin-top: 0.8cm;
+            margin-bottom: 0.3cm;
+            background: #eff6ff;
+            padding: 0.2cm 0.4cm;
+            border-radius: 4px;
+        }
+
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5cm;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .name-field {
+            border-bottom: 1px solid #999;
+            min-width: 5cm;
+            display: inline-block;
+        }
+
+        .box {
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 0.4cm;
+            margin: 0.3cm 0;
+            background: #fafafa;
+        }
+
+        .box-blue {
+            border-color: #93c5fd;
+            background: #eff6ff;
+        }
+
+        .box-green {
+            border-color: #86efac;
+            background: #f0fdf4;
+        }
+
+        .box-yellow {
+            border-color: #fde047;
+            background: #fefce8;
+        }
+
+        .box-purple {
+            border-color: #c4b5fd;
+            background: #f5f3ff;
+        }
+
+        .answer-line {
+            border-bottom: 1.5px solid #2563eb;
+            min-width: 3cm;
+            display: inline-block;
+            margin: 0 0.2cm;
+        }
+
+        .answer-box {
+            border: 2px solid #2563eb;
+            border-radius: 4px;
+            min-width: 2.5cm;
+            min-height: 1cm;
+            display: inline-block;
+            margin: 0 0.2cm;
+            vertical-align: middle;
+        }
+
+        .big-answer {
+            min-width: 4cm;
+            min-height: 1.2cm;
+        }
+
+        .diagram-space {
+            min-height: 3cm;
+            border: 1px dashed #ccc;
+            margin: 0.3cm 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-style: italic;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5cm;
+        }
+
+        .task {
+            margin: 0.4cm 0;
+            padding: 0.3cm;
+            background: white;
+            border-radius: 4px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .task-number {
+            font-weight: bold;
+            color: #2563eb;
+            margin-right: 0.3cm;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.3cm 0;
+        }
+
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.25cm;
+            text-align: center;
+        }
+
+        th {
+            background: #f3f4f6;
+            font-weight: bold;
+        }
+
+        .hint {
+            font-size: 12px;
+            color: #6b7280;
+            font-style: italic;
+            margin-top: 0.2cm;
+        }
+
+        .emoji {
+            font-size: 18px;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        .check-box {
+            width: 0.5cm;
+            height: 0.5cm;
+            border: 2px solid #666;
+            display: inline-block;
+            margin-right: 0.2cm;
+            vertical-align: middle;
+        }
+
+        .money-visual {
+            font-family: monospace;
+            font-size: 13px;
+            background: #f9fafb;
+            padding: 0.3cm;
+            border-radius: 4px;
+            margin: 0.2cm 0;
+        }
+
+        .reflection-box {
+            min-height: 2cm;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            margin: 0.2cm 0;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- STRANA 1 -->
+<h1>O X více / O X méně</h1>
+
+<div class="header-info">
+    <span>Jméno: <span class="name-field"></span></span>
+    <span>Datum: <span class="name-field" style="min-width: 3cm;"></span></span>
+</div>
+
+<h2><span class="emoji">🎯</span> Co se dnes naučíme</h2>
+<div class="box box-blue">
+    <strong>Rozdíl mezi:</strong>
+    <ul style="margin: 0.2cm 0;">
+        <li>"Přidej třetinu" → prostě přičti</li>
+        <li>"O třetinu více" → přičti třetinu Z PŮVODNÍHO</li>
+    </ul>
+</div>
+
+<h2><span class="emoji">💰</span> Část 1: Práce s penězi</h2>
+
+<div class="box">
+    <p><strong>Příklad:</strong> Máš <strong>100 Kč</strong>. Teď máš <strong>o třetinu více</strong>. Kolik máš?</p>
+
+    <div class="task">
+        <span class="task-number">Krok 1:</span>
+        Co je třetina ze 100 Kč? <span class="answer-line"></span> Kč
+    </div>
+
+    <div class="task">
+        <span class="task-number">Krok 2:</span>
+        Přičti k původním 100 Kč: 100 + <span class="answer-line"></span> = <span class="answer-line"></span> Kč
+    </div>
+
+    <div class="task">
+        <span class="task-number">Krok 3:</span>
+        Kontrola násobením: 100 × <sup>4</sup>/<sub>3</sub> = <span class="answer-line"></span> Kč
+    </div>
+
+    <p class="hint">Souhlasí výsledky? <span class="check-box"></span> ANO <span class="check-box"></span> NE</p>
+</div>
+
+<h2><span class="emoji">📊</span> Část 2: Nakresli diagram</h2>
+
+<div class="box box-green">
+    <p><strong>Úkol:</strong> Znázorni, co znamená "o čtvrtinu více"</p>
+
+    <div class="diagram-space" style="min-height: 4cm;">
+        (nakresli obdélník rozdělený na části)
+    </div>
+
+    <div class="two-column">
+        <div>
+            <strong>PŮVODNÍ:</strong> <span class="answer-line"></span> %
+        </div>
+        <div>
+            <strong>PŘIDÁME:</strong> <span class="answer-line"></span> %
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 0.3cm;">
+        <strong>CELKEM:</strong> <span class="answer-line"></span> % = násobit <span class="answer-box"></span>
+    </div>
+</div>
+
+<h2><span class="emoji">📝</span> Část 3: Důležitá tabulka</h2>
+
+<div class="box box-yellow">
+    <p><strong>Doplň tabulku:</strong></p>
+
+    <table>
+        <tr>
+            <th>Fráze</th>
+            <th>Kolik % celkem?</th>
+            <th>Čím násobíme?</th>
+        </tr>
+        <tr>
+            <td>o polovinu více</td>
+            <td>150%</td>
+            <td>× 3/2 (nebo 1,5)</td>
+        </tr>
+        <tr>
+            <td>o třetinu více</td>
+            <td></td>
+            <td>× 4/3 (nebo 1,33)</td>
+        </tr>
+        <tr>
+            <td>o čtvrtinu více</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>o polovinu méně</td>
+            <td>50%</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>o třetinu méně</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>o čtvrtinu méně</td>
+            <td></td>
+            <td>× 3/4 (nebo 0,75)</td>
+        </tr>
+    </table>
+</div>
+
+<!-- STRANA 2 -->
+<div class="page-break"></div>
+
+<h1 style="font-size: 20px;">Procvičování</h1>
+
+<h2><span class="emoji">🛒</span> Část 4: Slovní úlohy</h2>
+
+<div class="box">
+    <div class="task">
+        <span class="task-number">1.</span>
+        <strong>Kniha stála 200 Kč. Zdražila o polovinu.</strong><br>
+        Kolik stojí teď?
+
+        <div style="margin-top: 0.3cm;">
+            Moje řešení: <span class="answer-line" style="min-width: 6cm;"></span>
+        </div>
+        <div style="margin-top: 0.2cm;">
+            Odpověď: <span class="answer-box big-answer"></span> Kč
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="task">
+        <span class="task-number">2.</span>
+        <strong>Táta vydělává 30 000 Kč měsíčně. Dostal přidáno o třetinu.</strong><br>
+        Kolik vydělává teď?
+
+        <div style="margin-top: 0.3cm;">
+            Moje řešení: <span class="answer-line" style="min-width: 6cm;"></span>
+        </div>
+        <div style="margin-top: 0.2cm;">
+            Odpověď: <span class="answer-box big-answer"></span> Kč
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="task">
+        <span class="task-number">3.</span>
+        <strong>Svetr stál 600 Kč. Ve slevě je o čtvrtinu levnější.</strong><br>
+        Kolik stojí ve slevě?
+
+        <div style="margin-top: 0.3cm;">
+            Moje řešení: <span class="answer-line" style="min-width: 6cm;"></span>
+        </div>
+        <div style="margin-top: 0.2cm;">
+            Odpověď: <span class="answer-box big-answer"></span> Kč
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="task">
+        <span class="task-number">4.</span>
+        <strong>Cena jízdenky byla 24 Kč. Zdražila o čtvrtinu.</strong><br>
+        Kolik stojí teď?
+
+        <div style="margin-top: 0.3cm;">
+            Moje řešení: <span class="answer-line" style="min-width: 6cm;"></span>
+        </div>
+        <div style="margin-top: 0.2cm;">
+            Odpověď: <span class="answer-box big-answer"></span> Kč
+        </div>
+    </div>
+</div>
+
+<h2><span class="emoji">🧠</span> Část 5: Dvě cesty</h2>
+
+<div class="box box-purple">
+    <p><strong>Jsou DVĚ CESTY - obě fungují!</strong></p>
+
+    <div class="two-column">
+        <div class="box" style="background: white;">
+            <strong>CESTA 1: Po krocích</strong>
+            <ol style="margin: 0.2cm 0; padding-left: 1cm;">
+                <li>Spočítej třetinu</li>
+                <li>Přičti k původnímu</li>
+            </ol>
+            <p style="font-size: 13px;">Příklad: 100 + 33 = 133</p>
+        </div>
+        <div class="box" style="background: white;">
+            <strong>CESTA 2: Zkratka</strong>
+            <ol style="margin: 0.2cm 0; padding-left: 1cm;">
+                <li>Vynásob rovnou</li>
+            </ol>
+            <p style="font-size: 13px;">Příklad: 100 × 4/3 = 133</p>
+        </div>
+    </div>
+
+    <p style="margin-top: 0.3cm;"><strong>Která cesta mi víc sedí?</strong>
+        <span class="check-box"></span> Cesta 1
+        <span class="check-box"></span> Cesta 2
+    </p>
+</div>
+
+<h2><span class="emoji">💭</span> Část 6: Reflexe</h2>
+
+<div class="box">
+    <p><strong>Co bylo dnes pro mě nové?</strong></p>
+    <div class="reflection-box"></div>
+
+    <p><strong>Co mi pomohlo to pochopit?</strong></p>
+    <div class="reflection-box"></div>
+
+    <p><strong>Kdybych to měla vysvětlit kamarádce, řekla bych:</strong></p>
+    <div class="reflection-box" style="min-height: 2.5cm;"></div>
+</div>
+
+<div class="box box-green" style="margin-top: 0.5cm;">
+    <p style="text-align: center; margin: 0;">
+        <strong><span class="emoji">⭐</span> Samostatně vyřešeno:</strong>
+        <span class="answer-box" style="min-width: 1cm;"></span> / 4 úloh
+    </p>
+</div>
+
+</body>
+</html>

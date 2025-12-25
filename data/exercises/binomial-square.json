@@ -1,0 +1,151 @@
+{
+  "topic_id": 25,
+  "topic": "Vzorce (a+b)², (a-b)², a²-b²",
+  "description": "Cvičení na umocňování dvojčlenu a rozklad",
+  "target_misconception": "(a+b)² = a² + 2ab + b² (ne a² + b²!)",
+  "exercises": [
+    {
+      "id": "bs-001",
+      "difficulty": 1,
+      "type": "calculation",
+      "question": "Umocněte: (a + b)²",
+      "correct_answer": "a² + 2ab + b²",
+      "solution_steps": [
+        "(a + b)² = (a + b)(a + b)",
+        "= a·a + a·b + b·a + b·b",
+        "= a² + 2ab + b²"
+      ],
+      "hint": "První na druhou, dvakrát oba, druhý na druhou",
+      "common_mistake": "(a+b)² = a² + b² (chybí prostřední člen 2ab!)"
+    },
+    {
+      "id": "bs-002",
+      "difficulty": 1,
+      "type": "calculation",
+      "question": "Umocněte: (x + 3)²",
+      "correct_answer": "x² + 6x + 9",
+      "solution_steps": [
+        "(x + 3)² = x² + 2·x·3 + 3²",
+        "= x² + 6x + 9"
+      ],
+      "hint": "a = x, b = 3, použij vzorec",
+      "common_mistake": "x² + 9 (chybí 6x)"
+    },
+    {
+      "id": "bs-003",
+      "difficulty": 2,
+      "type": "calculation",
+      "question": "Umocněte: (2x + 5)²",
+      "correct_answer": "4x² + 20x + 25",
+      "solution_steps": [
+        "(2x + 5)² = (2x)² + 2·(2x)·5 + 5²",
+        "= 4x² + 20x + 25"
+      ],
+      "hint": "a = 2x, b = 5",
+      "common_mistake": "2x² místo 4x² (zapomíná se umocnit i koeficient)"
+    },
+    {
+      "id": "bs-004",
+      "difficulty": 2,
+      "type": "calculation",
+      "question": "Umocněte: (x/2 + 4)²",
+      "correct_answer": "x²/4 + 4x + 16",
+      "solution_steps": [
+        "(x/2 + 4)² = (x/2)² + 2·(x/2)·4 + 4²",
+        "= x²/4 + 4x + 16"
+      ],
+      "hint": "a = x/2, b = 4. POZOR: (x/2)² = x²/4",
+      "common_mistake": "x/2 místo x²/4 jako první člen"
+    },
+    {
+      "id": "bs-005",
+      "difficulty": 3,
+      "type": "calculation",
+      "question": "Umocněte: (x/7 + 3/2)²",
+      "correct_answer": "x²/49 + 3x/7 + 9/4",
+      "solution_steps": [
+        "a = x/7, b = 3/2",
+        "a² = (x/7)² = x²/49",
+        "2ab = 2·(x/7)·(3/2) = 3x/7",
+        "b² = (3/2)² = 9/4",
+        "Výsledek: x²/49 + 3x/7 + 9/4"
+      ],
+      "hint": "POZOR: (x/7)² = x²/49, ne x/7!",
+      "common_mistake": "x + 6x/7 + 9/4 (Anežčina chyba - zapomněla umocnit x/7)"
+    },
+    {
+      "id": "bs-006",
+      "difficulty": 2,
+      "type": "calculation",
+      "question": "Umocněte: (a - b)²",
+      "correct_answer": "a² - 2ab + b²",
+      "solution_steps": [
+        "(a - b)² = a² - 2ab + b²",
+        "Prostřední člen je MÍNUS 2ab"
+      ],
+      "hint": "Stejné jako (a+b)², jen prostřední člen má mínus",
+      "common_mistake": "a² + 2ab + b² (špatné znaménko)"
+    },
+    {
+      "id": "bs-007",
+      "difficulty": 2,
+      "type": "calculation",
+      "question": "Umocněte: (x - 4)²",
+      "correct_answer": "x² - 8x + 16",
+      "solution_steps": [
+        "(x - 4)² = x² - 2·x·4 + 16",
+        "= x² - 8x + 16"
+      ],
+      "hint": "Prostřední člen je záporný: -2·x·4 = -8x",
+      "common_mistake": "x² + 8x + 16"
+    },
+    {
+      "id": "bs-008",
+      "difficulty": 3,
+      "type": "multiple_choice",
+      "question": "Které vyjádření je SPRÁVNÉ?",
+      "options": [
+        "A: (x+5)² = x² + 25",
+        "B: (x+5)² = x² + 5x + 25",
+        "C: (x+5)² = x² + 10x + 25",
+        "D: (x+5)² = 2x + 10"
+      ],
+      "correct_answer": "C",
+      "solution_steps": [
+        "(x+5)² = x² + 2·x·5 + 25 = x² + 10x + 25"
+      ],
+      "hint": "Použij vzorec (a+b)² = a² + 2ab + b²",
+      "common_mistake": "A nebo B"
+    },
+    {
+      "id": "bs-009",
+      "difficulty": 3,
+      "type": "calculation",
+      "question": "Rozložte na součin: x² + 6x + 9",
+      "correct_answer": "(x + 3)²",
+      "solution_steps": [
+        "Hledáme číslo a takové, že 2a = 6 a a² = 9",
+        "a = 3 (protože 2·3 = 6 a 3² = 9)",
+        "x² + 6x + 9 = (x + 3)²"
+      ],
+      "hint": "Najdi číslo, jehož dvojnásobek je 6 a druhá mocnina 9",
+      "common_mistake": null
+    },
+    {
+      "id": "bs-010",
+      "difficulty": 4,
+      "type": "calculation",
+      "question": "Zjednodušte: (x + 2)² - (x - 2)²",
+      "correct_answer": "8x",
+      "solution_steps": [
+        "(x + 2)² = x² + 4x + 4",
+        "(x - 2)² = x² - 4x + 4",
+        "(x² + 4x + 4) - (x² - 4x + 4)",
+        "= x² + 4x + 4 - x² + 4x - 4",
+        "= 8x"
+      ],
+      "hint": "Rozpiš oba výrazy a odečti",
+      "common_mistake": null
+    }
+  ]
+}

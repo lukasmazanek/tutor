@@ -1,0 +1,377 @@
+{
+  "student": {
+    "name": "Anezka Mazankova",
+    "age_range": "14-15",
+    "grade": 9,
+    "context": "CERMAT math entrance exam preparation",
+    "profile_created": "2024-12-24",
+    "profile_version": "1.1",
+    "last_updated": "2024-12-24"
+  },
+  "assessment_basis": {
+    "tests_analyzed": 8,
+    "date_range": "2017-2024",
+    "score_range": {"min": 10, "max": 27, "out_of": 50},
+    "average_score": {"points": 19.3, "percentage": 38.6}
+  },
+  "family_context": {
+    "source": "Interview with father, 2024-12-24",
+    "parental_support": {
+      "level": "high",
+      "description": "Both parents supportive, have repeatedly told her they're proud of her effort",
+      "father_attitude": "Sees her improvement, proud of her persistence, believes she will succeed"
+    },
+    "pressure_source": {
+      "external": false,
+      "internal": true,
+      "note": "Parents have explained 'mistakes are learning opportunities' many times - verbal reassurance doesn't reach her. She puts pressure on herself."
+    },
+    "communication": {
+      "parents_expressed": ["Pride in her effort", "Belief in her success", "Unconditional support"],
+      "child_received": "Knows parents support her, but internal critic is louder"
+    }
+  },
+  "inner_critic": {
+    "severity": "high",
+    "source": "Father's direct observation",
+    "verbatim_statements": [
+      "Jsem blbá",
+      "Tohle nikdy nepochopím",
+      "Zase jsem to pokazila",
+      "Ostatní to umí, jen já ne"
+    ],
+    "pattern_analysis": {
+      "global_attribution": "'Jsem blbá' - judges SELF, not the task",
+      "permanent_framing": "'Nikdy' - not 'yet', but 'never'",
+      "self_blame": "'Já jsem to pokazila' - not 'this is tricky'",
+      "social_comparison": "'Ostatní umí' - always compares unfavorably"
+    },
+    "intervention_note": "Cannot be argued away. Needs experiential change, not verbal reassurance."
+  },
+  "behavioral_patterns": {
+    "avoidance_behaviors": {
+      "constructions": {
+        "pattern": "Systematically skipped in 5 out of 7 tests (2017-2023)",
+        "recent_change": "First attempt in M9PDD24C0T04 (2024) - partial success (2/6 points)",
+        "interpretation": "Not inability - fear of visible, unjudgeable failure. Constructions leave evidence of mistakes that cannot be hidden or 'tipnut' (guessed).",
+        "severity": "high"
+      },
+      "sequences": {
+        "pattern": "Frequently skipped or incomplete",
+        "interpretation": "Open-ended problems without safety net cause anxiety",
+        "severity": "medium"
+      },
+      "open_questions": {
+        "pattern": "Prefers multiple choice over open answers",
+        "interpretation": "Safety in elimination method - reduces risk of complete failure",
+        "severity": "medium"
+      }
+    },
+    "consistency": {
+      "score_variance": "High (10-27 points, range of 17)",
+      "interpretation": "Performance heavily dependent on psychological state, not knowledge level",
+      "implication": "Same child, same knowledge, vastly different outcomes = anxiety factor"
+    },
+    "risk_tolerance": {
+      "level": "low",
+      "evidence": [
+        "Skips uncertain problems rather than attempting",
+        "Better at multiple choice (safety net exists)",
+        "Avoids problems where error is visible"
+      ]
+    },
+    "response_to_difficulty": {
+      "pattern": "flight",
+      "evidence": "Blank answers on hard problems rather than partial attempts",
+      "note": "Recent improvement: 2024 test shows first construction attempts"
+    },
+    "social_comparison": {
+      "pattern": "Compares self to everyone",
+      "bias": "Only compares in areas where she is 'losing'",
+      "trend": "Improving (per father)",
+      "intervention_needed": true
+    },
+    "perfectionism": {
+      "general": false,
+      "academic_specific": true,
+      "note": "Not a perfectionist in general life, but treats mistakes as personal failure in academic context"
+    }
+  },
+  "emotional_indicators": {
+    "performance_anxiety": {
+      "present": true,
+      "evidence": [
+        "17-point score variance (10 vs 27) with same knowledge base",
+        "Systematic avoidance of high-visibility tasks",
+        "Better performance on 'safe' question types"
+      ],
+      "severity": "moderate_to_high"
+    },
+    "learned_helplessness": {
+      "areas": ["constructions", "sequence formulas", "open-ended problems"],
+      "pattern": "'I can't do this' = 'I fear to try this'",
+      "evidence": "Years of skipping same problem types",
+      "note": "Breaking in 2024 - first construction attempts"
+    },
+    "self_efficacy": {
+      "general": "low_to_moderate",
+      "domain_specific": {
+        "equations": "high",
+        "fractions": "high",
+        "pythagorean_theorem": "high",
+        "multiple_choice": "moderate_to_high",
+        "constructions": "very_low",
+        "open_problems": "low",
+        "sequences": "low"
+      }
+    },
+    "attribution_style": {
+      "pattern": "internal_global_stable_for_failures",
+      "evidence": "Verbatim: 'Jsem blbá' (global), 'nikdy' (stable), 'já jsem pokazila' (internal)",
+      "intervention_target": "Shift to specific, temporary, external for failures"
+    }
+  },
+  "cognitive_patterns": {
+    "misconceptions": {
+      "critical": {
+        "o_x_vice_mene": {
+          "description": "Systematic confusion: 'o tretinu vice' interpreted as +1/3 instead of x1.33",
+          "persistence": "Present across all tests from 2017-2024",
+          "interpretation": "Fixed misconception never properly corrected. Needs concrete, manipulable re-teaching.",
+          "impact_points": "4-8 per test"
+        }
+      },
+      "moderate": {
+        "binomial_expansion": {
+          "description": "Forgets middle term in (a+b)^2",
+          "frequency": "occasional",
+          "interpretation": "Procedural gap, not conceptual - needs practice and mnemonic"
+        },
+        "unit_conversions": {
+          "description": "Uncertainty in area/volume unit conversions",
+          "interpretation": "Visualization difficulty - needs concrete examples"
+        }
+      }
+    },
+    "transfer_ability": {
+      "observation": "Good within familiar contexts, poor to new contexts",
+      "evidence": "Can solve equations but struggles when same logic appears in word problems",
+      "interpretation": "Needs explicit bridging between learned skills and new applications"
+    },
+    "metacognition": {
+      "level": "developing",
+      "evidence": "Some self-correction visible in work, but limited strategic thinking",
+      "intervention": "Build 'thinking about thinking' - What do I know? What do I need?"
+    },
+    "working_memory": {
+      "indicators": "adequate",
+      "evidence": "Multi-step problems handled when familiar format",
+      "note": "Breaks down when anxiety is high"
+    }
+  },
+  "strengths": {
+    "cognitive": [
+      {
+        "area": "Logical reasoning",
+        "evidence": "Successful elimination method in multiple choice",
+        "leverage": "Build on this systematic thinking for other problem types"
+      },
+      {
+        "area": "Equation solving",
+        "evidence": "70-80% success rate on linear equations",
+        "leverage": "Use equations as confidence anchor"
+      },
+      {
+        "area": "Fraction operations",
+        "evidence": "Consistent success across tests",
+        "leverage": "Start sessions with fraction work for confidence building"
+      },
+      {
+        "area": "Pythagorean theorem",
+        "evidence": "Usually correct when applied",
+        "leverage": "Example of successful concept learning"
+      }
+    ],
+    "behavioral": [
+      {
+        "area": "Persistence in safe contexts",
+        "evidence": "Completes familiar problem types thoroughly"
+      },
+      {
+        "area": "Willingness to try (emerging)",
+        "evidence": "2024 test: First construction attempts after years of skipping"
+      },
+      {
+        "area": "Hard work",
+        "evidence": "Father: 'hrozně dře' - works very hard despite difficulties",
+        "source": "Parent interview 2024-12-24"
+      }
+    ],
+    "support_system": [
+      {
+        "area": "Supportive family",
+        "evidence": "Both parents express pride and belief, unconditional support",
+        "leverage": "Safe home environment for interventions"
+      }
+    ],
+    "potential": {
+      "assessment": "High",
+      "evidence": "Best score of 27/50 (54%) demonstrates capability when conditions are right",
+      "gap": "10-27 range shows potential unrealized due to psychological factors"
+    }
+  },
+  "risk_factors": [
+    {
+      "factor": "Fixed misconceptions",
+      "risk": "Without correction, will continue losing 4-8 points per test",
+      "mitigation": "Targeted re-teaching with concrete examples"
+    },
+    {
+      "factor": "Avoidance patterns",
+      "risk": "Self-reinforcing: skip -> don't learn -> fear more -> skip more",
+      "mitigation": "Gradual exposure with guaranteed success experiences"
+    },
+    {
+      "factor": "Performance anxiety",
+      "risk": "Exam conditions may trigger worst-case performance",
+      "mitigation": "Stress inoculation, practice under simulated conditions"
+    },
+    {
+      "factor": "Score variance",
+      "risk": "Unpredictable exam day performance",
+      "mitigation": "Build stable baseline through consistent practice in safe environment"
+    },
+    {
+      "factor": "Internal pressure / harsh self-critic",
+      "risk": "External reassurance ineffective; self-sabotage under stress",
+      "mitigation": "Experiential interventions (Chyba dne), externalization of critic, 'zatím' reframing"
+    }
+  ],
+  "active_interventions": [
+    {
+      "name": "Chyba dne",
+      "file": "data/psychology/interventions/chyba_dne.md",
+      "target": "Fear of mistakes, self-criticism",
+      "status": "recommended",
+      "assigned": "2024-12-24"
+    },
+    {
+      "name": "Intervence pro srovnávání",
+      "file": "data/psychology/interventions/srovnavani.md",
+      "target": "Social comparison, unfavorable self-comparison",
+      "status": "recommended",
+      "assigned": "2024-12-24"
+    }
+  ],
+  "intervention_plan": {
+    "phase_1_safety": {
+      "duration": "2-3 weeks",
+      "goals": [
+        "Reduce threat perception",
+        "Normalize mistakes",
+        "Build trust",
+        "Celebrate attempts"
+      ],
+      "language": {
+        "avoid": ["That's wrong", "Try harder", "It's easy", "Nejsi blbá (arguing with critic)"],
+        "use": ["Let's see what happened", "Interesting approach", "What would help?", "Slyším, že jsi na sebe naštvaná", "Zatím"]
+      },
+      "activities": [
+        "Start with strength areas (equations, fractions)",
+        "Error analysis as curiosity, not judgment",
+        "Chyba dne ritual at dinner",
+        "Add 'zatím' to permanent statements"
+      ],
+      "parent_guidance": {
+        "when_she_says_jsem_blba": [
+          "Don't argue ('Nejsi blbá!')",
+          "Name the feeling: 'Slyším, že jsi na sebe naštvaná'",
+          "Externalize: 'Ten kritik v hlavě je dneska hlasitej'",
+          "Wait - don't fix"
+        ]
+      }
+    },
+    "phase_2_misconception_repair": {
+      "priority_1": {
+        "topic": "'o X vice/mene'",
+        "approach": "Concrete, manipulable examples with money/objects",
+        "goal": "Student explains difference in own words",
+        "expected_gain": "+4-6 points"
+      },
+      "priority_2": {
+        "topic": "Constructions",
+        "approach": "Gradual exposure: steps only -> guided -> partial -> independent",
+        "goal": "Attempt all construction problems, even partially",
+        "expected_gain": "+3-5 points"
+      },
+      "priority_3": {
+        "topic": "Sequences",
+        "approach": "Pattern recognition games, visual representations",
+        "goal": "Systematic approach to finding formulas",
+        "expected_gain": "+2-4 points"
+      }
+    },
+    "phase_3_consolidation": {
+      "activities": [
+        "Mixed practice with new and familiar",
+        "Simulated test conditions (gradually)",
+        "Self-assessment and reflection",
+        "Transfer to unfamiliar problem formats"
+      ],
+      "progress_tracking": {
+        "not_grades": true,
+        "metrics": [
+          "Number of problems attempted (not just correct)",
+          "Reduction in skipped problems",
+          "Construction completion rate",
+          "Self-correction frequency",
+          "Reduction in self-critical statements",
+          "Use of 'zatím' in self-talk"
+        ]
+      }
+    }
+  },
+  "prognosis": {
+    "potential": "30+ points achievable (currently averages 19.3)",
+    "evidence": "Best performance of 27 points demonstrates capability",
+    "key_insight": "Problem is not primarily mathematical - it's harsh internal critic + fear of visible failure",
+    "positive_factors": [
+      "Supportive family environment",
+      "Strong work ethic ('hrozně dře')",
+      "Recent breakthrough in constructions (2024)",
+      "Social comparison improving",
+      "Parents understand psychological dimension"
+    ],
+    "timeline": "2-3 months of systematic work for stable 25-30 point performance",
+    "critical_success_factor": "Silencing/managing inner critic before academic content focus"
+  },
+  "session_log": [
+    {
+      "date": "2024-12-24",
+      "type": "Parent consultation",
+      "with": "Father",
+      "key_findings": [
+        "Pressure is internal, not from parents",
+        "Parents have tried verbal reassurance many times - ineffective",
+        "Verbatim self-critical statements obtained",
+        "Not a general perfectionist - academic specific",
+        "Improving in social comparison",
+        "Father very supportive, realistic, wants to help"
+      ],
+      "interventions_assigned": ["Chyba dne", "Srovnávání interventions"],
+      "next_steps": [
+        "Father to try 'Ten kritik v hlavě' externalization",
+        "Start 'Chyba dne' dinner ritual",
+        "Use 'zatím' addition technique",
+        "Report back on her response"
+      ]
+    }
+  ],
+  "notes": [
+    "Profile based on analysis of 8 CERMAT tests from 2017-2024",
+    "Teacher scores used (not calculated) as they reflect actual grading standards",
+    "Positive signal: 2024 tests show first construction attempts - breaking avoidance pattern",
+    "Ultimate goal: Build app that implements these psychological principles",
+    "2024-12-24: Profile updated with parent interview data - v1.1"
+  ]
+}
