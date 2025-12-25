@@ -1,6 +1,6 @@
 {
   "version": "3.0",
-  "generated": "2025-12-25T12:50:48.102Z",
+  "generated": "2025-12-25T16:19:17.810Z",
   "description": "Unified question format - presentation layer decides MC vs open answer",
   "topics": {
     "binomial_squares": {

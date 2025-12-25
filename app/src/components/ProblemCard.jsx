@@ -149,6 +149,21 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
     } else if (problem.type === 'multiple_choice') {
       const normalized = userAnswer.trim().toLowerCase()
       isCorrect = normalized === problem.answer
+    } else if (problem.type === 'text') {
+      // Normalize both user answer and correct answer for comparison
+      const normalizeExpr = (s) => s
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, '')           // remove all spaces
+        .replace(/\^2/g, '²')          // x^2 → x²
+        .replace(/\^3/g, '³')          // x^3 → x³
+        .replace(/\*\*/g, '^')         // ** → ^
+        .replace(/\*/g, '·')           // * → ·
+
+      const userNorm = normalizeExpr(userAnswer)
+      const correctNorm = normalizeExpr(problem.answer)
+
+      isCorrect = userNorm === correctNorm
     }
 
     if (isCorrect) {
