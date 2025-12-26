@@ -31,11 +31,17 @@ function loadAllQuestions() {
   return questions;
 }
 
-// Transform to unified output format
+// Transform to unified output format (ADR-016: single value field)
 function toUnifiedFormat(q) {
   const hasDistractors = q.distractors && q.distractors.length >= 2;
   const hasQuestion = !!(q.question.context || q.question.stem);
   const hasNumericAnswer = q.answer.numeric !== null && q.answer.numeric !== undefined;
+  const isSymbolicAnswer = q.answer.correct && q.answer.correct.toString().toLowerCase().includes('x');
+
+  // ADR-016: Use single value field
+  // - Symbolic answers (containing x): use correct string
+  // - Numeric answers: use numeric if available, else correct
+  const answerValue = isSymbolicAnswer ? q.answer.correct : (hasNumericAnswer ? q.answer.numeric : q.answer.correct);
 
   return {
     id: q.id,
@@ -46,8 +52,7 @@ function toUnifiedFormat(q) {
       context: q.question.context || null
     },
     answer: {
-      correct: String(q.answer.correct),
-      numeric: q.answer.numeric,
+      value: answerValue,
       unit: q.answer.unit || null
     },
     distractors: hasDistractors ? q.distractors.map(d => d.value) : [],

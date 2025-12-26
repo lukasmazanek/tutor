@@ -3,6 +3,70 @@ import { LightBulbIcon, TagIcon } from '@heroicons/react/24/outline'
 import DiagramRenderer from './diagrams/DiagramRenderer'
 import BottomBar from './BottomBar'
 import topicTypeMapping from '../data/topic_type_mapping.json'
+import { evaluateAnswer } from '@lib/mathParser'
+
+// Format answer for display (Czech locale for numbers)
+function formatAnswer(value) {
+  if (typeof value === 'number') {
+    return value.toLocaleString('cs-CZ')
+  }
+  return value
+}
+
+// Adapter: transform problem format to format expected by mathParser
+function adaptProblemForParser(problem) {
+  // Format 1: New format with explicit answer.type
+  if (problem.answer?.type) {
+    return {
+      question: {
+        originalValue: problem.question?.originalValue || problem.originalValue || null
+      },
+      answer: problem.answer
+    }
+  }
+
+  // Format 2: Unified format (has answer.value but no answer.type)
+  if (problem.answer?.value !== undefined) {
+    const value = problem.answer.value
+    // Infer type: if answer contains 'x', it's symbolic
+    const isSymbolic = typeof value === 'string' && value.toLowerCase().includes('x')
+    return {
+      question: {
+        originalValue: problem.question?.originalValue || null
+      },
+      answer: {
+        type: isSymbolic ? 'symbolic' : 'numeric',
+        value: value,
+        unit: problem.answer.unit || null
+      }
+    }
+  }
+
+  // Format 3: Old format (problem.type + problem.answer)
+  let answerType, answerValue
+
+  if (problem.type === 'text') {
+    answerType = 'symbolic'
+    answerValue = problem.answer
+  } else if (problem.type === 'fraction') {
+    answerType = 'numeric'
+    answerValue = problem.answer_decimal
+  } else {
+    answerType = 'numeric'
+    answerValue = problem.answer
+  }
+
+  return {
+    question: {
+      originalValue: problem.originalValue || null
+    },
+    answer: {
+      type: answerType,
+      value: answerValue,
+      unit: problem.answer_unit || null
+    }
+  }
+}
 
 function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, typePromptEnabled, onToggleTypePrompt }) {
   const [userAnswer, setUserAnswer] = useState('')
@@ -14,18 +78,18 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
   // Get type mapping for current problem
   const typeMapping = topicTypeMapping.mappings[problem.topic] || null
 
-  // Type prompt state (when typePromptEnabled AND mapping exists)
-  // Phase: null (not started) | 'type' | 'strategy' | 'done'
+  // Strategy prompt state (when typePromptEnabled AND mapping exists)
+  // Phase: 'strategy' | 'done' (type phase removed - user already knows type from topic selection)
   const [promptPhase, setPromptPhase] = useState(
-    (typePromptEnabled && typeMapping) ? 'type' : 'done'
+    (typePromptEnabled && typeMapping) ? 'strategy' : 'done'
   )
-  const [typePromptResult, setTypePromptResult] = useState({ typeCorrect: null, strategyCorrect: null })
+  const [strategyPromptResult, setStrategyPromptResult] = useState(null) // true/false/null
 
   // Reset prompt phase when problem changes
   useEffect(() => {
     if (typePromptEnabled && typeMapping) {
-      setPromptPhase('type')
-      setTypePromptResult({ typeCorrect: null, strategyCorrect: null })
+      setPromptPhase('strategy')
+      setStrategyPromptResult(null)
     } else {
       setPromptPhase('done')
     }
@@ -57,119 +121,14 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
     setProblemStartTime(Date.now())
   }, [problem.id])
 
-  // Parse and evaluate user input flexibly
-  const parseUserAnswer = (input) => {
-    let normalized = input.trim().replace(',', '.').toLowerCase()
-
-    // Remove "x=" or "x =" prefix (for equations)
-    normalized = normalized.replace(/^x\s*=\s*/, '')
-
-    // Remove units (Kč, kg, cm, l, g, etc.)
-    normalized = normalized.replace(/\s*(kč|kg|cm|m|l|g|litrů|litru)\.?$/i, '')
-
-    // Convert math notation to JavaScript
-    // √(x) -> Math.sqrt(x)
-    let mathExpr = normalized.replace(/√\(/g, 'Math.sqrt(')
-    // sqrt(x) -> Math.sqrt(x) (text alternative for desktop)
-    mathExpr = mathExpr.replace(/sqrt\(/gi, 'Math.sqrt(')
-    // x^y -> Math.pow(x,y) - handle simple cases like 3^2
-    mathExpr = mathExpr.replace(/(\d+)\^(\d+)/g, 'Math.pow($1,$2)')
-
-    // Try to evaluate expressions with math functions
-    try {
-      const result = Function('"use strict"; return (' + mathExpr + ')')()
-      if (typeof result === 'number' && !isNaN(result)) {
-        return { value: result, type: 'number' }
-      }
-    } catch (e) {
-      // If evaluation fails, continue with other parsing
-    }
-
-    // Check if it's a fraction (e.g., "3/4", "6/8")
-    const fractionMatch = normalized.match(/^(-?\d+)\s*\/\s*(\d+)$/)
-    if (fractionMatch) {
-      const numerator = parseInt(fractionMatch[1])
-      const denominator = parseInt(fractionMatch[2])
-      if (denominator !== 0) {
-        return { value: numerator / denominator, type: 'fraction', original: normalized }
-      }
-    }
-
-    // Try parsing as a plain number
-    const num = parseFloat(normalized)
-    if (!isNaN(num)) {
-      return { value: num, type: 'number' }
-    }
-
-    return { value: normalized, type: 'string' }
-  }
-
-  // Check if two fraction strings are equivalent
-  const fractionsEqual = (userFraction, correctFraction) => {
-    const userMatch = userFraction.match(/^(-?\d+)\s*\/\s*(\d+)$/)
-    const correctMatch = correctFraction.match(/^(-?\d+)\s*\/\s*(\d+)$/)
-
-    if (userMatch && correctMatch) {
-      const userVal = parseInt(userMatch[1]) / parseInt(userMatch[2])
-      const correctVal = parseInt(correctMatch[1]) / parseInt(correctMatch[2])
-      return Math.abs(userVal - correctVal) < 0.0001
-    }
-    return false
-  }
-
+  // Check answer using mathParser (ADR-017)
   const checkAnswer = () => {
-    const parsed = parseUserAnswer(userAnswer)
-    let isCorrect = false
+    const adaptedProblem = adaptProblemForParser(problem)
+    const result = evaluateAnswer(userAnswer, adaptedProblem)
 
-    if (problem.type === 'number') {
-      // Accept number or evaluated expression
-      // Tolerance 0.01 allows for rounding (e.g., √108 ≈ 10.39)
-      if (parsed.type === 'number' || parsed.type === 'fraction') {
-        isCorrect = Math.abs(parsed.value - problem.answer) < 0.01
-      }
-    } else if (problem.type === 'fraction') {
-      // Accept exact fraction, equivalent fraction, or decimal
-      const correctDecimal = problem.answer_decimal
-
-      if (parsed.type === 'fraction' || parsed.type === 'number') {
-        // Check decimal equivalence
-        isCorrect = Math.abs(parsed.value - correctDecimal) < 0.001
-      }
-
-      // Also check exact fraction string match
-      if (!isCorrect && parsed.original) {
-        isCorrect = fractionsEqual(parsed.original, problem.answer)
-      }
-
-      // Check if user typed the exact answer string
-      if (!isCorrect) {
-        const normalized = userAnswer.trim().replace(',', '.').toLowerCase()
-        isCorrect = normalized === problem.answer.toLowerCase()
-      }
-    } else if (problem.type === 'multiple_choice') {
-      const normalized = userAnswer.trim().toLowerCase()
-      isCorrect = normalized === problem.answer
-    } else if (problem.type === 'text') {
-      // Normalize both user answer and correct answer for comparison
-      const normalizeExpr = (s) => s
-        .trim()
-        .toLowerCase()
-        .replace(/\s+/g, '')           // remove all spaces
-        .replace(/\^2/g, '²')          // x^2 → x²
-        .replace(/\^3/g, '³')          // x^3 → x³
-        .replace(/\*\*/g, '^')         // ** → ^
-        .replace(/\*/g, '·')           // * → ·
-
-      const userNorm = normalizeExpr(userAnswer)
-      const correctNorm = normalizeExpr(problem.answer)
-
-      isCorrect = userNorm === correctNorm
-    }
-
-    if (isCorrect) {
+    if (result.isCorrect) {
       setFeedback('correct')
       setTimeout(() => {
-        // Pass rich attempt data for progress tracking
         onAnswer({
           correct: true,
           hintsUsed: revealedSteps.length,
@@ -203,30 +162,15 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
     setProblemStartTime(Date.now())
     // Reset prompt phase for next problem
     if (typePromptEnabled && typeMapping) {
-      setPromptPhase('type')
-      setTypePromptResult({ typeCorrect: null, strategyCorrect: null })
+      setPromptPhase('strategy')
+      setStrategyPromptResult(null)
     }
-  }
-
-  // Handle type prompt answer
-  const handleTypePromptAnswer = (answerId, isCorrect) => {
-    setTypePromptResult(prev => ({ ...prev, typeCorrect: isCorrect }))
-    setTimeout(() => setPromptPhase('strategy'), 300)
   }
 
   // Handle strategy prompt answer
   const handleStrategyPromptAnswer = (answer, isCorrect) => {
-    setTypePromptResult(prev => ({ ...prev, strategyCorrect: isCorrect }))
+    setStrategyPromptResult(isCorrect)
     setTimeout(() => setPromptPhase('done'), 300)
-  }
-
-  // Build shuffled type options
-  const getTypeOptions = () => {
-    if (!typeMapping) return []
-    return [
-      { id: typeMapping.type_id, label: typeMapping.type_label, isCorrect: true },
-      ...typeMapping.distractors_type.map(d => ({ id: d.id, label: d.label, isCorrect: false }))
-    ].sort(() => Math.random() - 0.5)
   }
 
   // Build shuffled strategy options
@@ -265,7 +209,7 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
   }
 
   return (
-    <div className="h-screen h-[100dvh] flex flex-col -mx-4 -mt-2 overflow-hidden">
+    <div className="h-screen h-[100dvh] bg-slate-50 flex flex-col overflow-hidden">
       {/* Progress bar */}
       {progress && (
         <div className="mb-3 px-4 pt-2">
@@ -290,79 +234,57 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
         </p>
       </div>
 
-      {/* Type prompt phase */}
-      {promptPhase === 'type' && typeMapping && (
-        <div className="flex-1 flex flex-col px-1">
-          <h3 className="text-lg font-medium text-indigo-700 mb-4">
-            Jaký je to typ úlohy?
-          </h3>
-          <div className="space-y-3">
-            {getTypeOptions().map((option) => (
-              <button
-                key={option.id}
-                onClick={() => handleTypePromptAnswer(option.id, option.isCorrect)}
-                className="w-full p-4 rounded-xl text-left transition-all duration-200
-                  bg-white border-2 border-slate-200 text-slate-700 hover:border-indigo-300
-                  active:scale-[0.98]"
-              >
-                <span className="font-medium">{option.label}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Strategy prompt phase */}
+      {/* Strategy prompt phase - SELECTION category */}
       {promptPhase === 'strategy' && typeMapping && (
-        <div className="flex-1 flex flex-col px-1">
-          {/* Type result */}
-          <div className={`flex items-center gap-2 mb-4 px-3 py-2 rounded-lg ${
-            typePromptResult.typeCorrect ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'
-          }`}>
-            <span>{typePromptResult.typeCorrect ? '✓' : '○'}</span>
-            <span className="text-sm">
-              Typ: {typeMapping.type_label}
-            </span>
-          </div>
+        <>
+          <div className="flex-1 min-h-0 overflow-y-auto px-4 pb-20">
+            {/* Show type label as context */}
+            <div className="flex items-center gap-2 mb-4 px-3 py-2 rounded-lg bg-indigo-50 text-indigo-700">
+              <TagIcon className="w-4 h-4" />
+              <span className="text-sm font-medium">{typeMapping.type_label}</span>
+            </div>
 
-          <h3 className="text-lg font-medium text-indigo-700 mb-4">
-            Jaká je správná strategie?
-          </h3>
-          <div className="space-y-3">
-            {getStrategyOptions().map((option, index) => (
-              <button
-                key={index}
-                onClick={() => handleStrategyPromptAnswer(option.value, option.isCorrect)}
-                className="w-full p-4 rounded-xl text-left transition-all duration-200
-                  bg-white border-2 border-slate-200 text-slate-700 hover:border-indigo-300
-                  active:scale-[0.98]"
-              >
-                <span className="font-mono">{option.value}</span>
-              </button>
-            ))}
+            <h3 className="text-lg font-medium text-indigo-700 mb-4">
+              Jaká je správná strategie?
+            </h3>
+            <div className="space-y-3">
+              {getStrategyOptions().map((option, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleStrategyPromptAnswer(option.value, option.isCorrect)}
+                  className="w-full p-4 rounded-xl text-left transition-all duration-200
+                    bg-white border-2 border-slate-200 text-slate-700 hover:border-indigo-300
+                    active:scale-[0.98]"
+                >
+                  <span className="font-mono">{option.value}</span>
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+          {/* BottomBar - ADR-015 SELECTION */}
+          <BottomBar
+            slots={{
+              1: { onClick: onExit },
+              2: { onClick: onViewProgress },
+              5: { action: 'skip', onClick: () => setPromptPhase('done') }
+            }}
+          />
+        </>
       )}
 
       {/* Content area - scrollable with padding for fixed bottom bar */}
       {promptPhase === 'done' && (
       <div className="flex-1 flex flex-col overflow-auto px-4 pb-64">
-        {/* Type/Strategy result from prompt (shown in hint style) */}
-        {typePromptEnabled && typeMapping && typePromptResult.typeCorrect !== null && (
+        {/* Strategy result from prompt (shown in hint style) */}
+        {typePromptEnabled && typeMapping && strategyPromptResult !== null && (
           <div className="bg-indigo-50 border border-indigo-100 rounded-xl p-4 mb-4 flex-shrink-0">
             <div className="flex items-start gap-3">
               <TagIcon className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
-              <div className="space-y-1 text-sm">
-                <p className="text-indigo-800">
-                  <span className="font-medium">Typ:</span> {typeMapping.type_label}
-                  <span className={`ml-2 ${typePromptResult.typeCorrect ? 'text-green-600' : 'text-amber-600'}`}>
-                    {typePromptResult.typeCorrect ? '✓' : '○'}
-                  </span>
-                </p>
+              <div className="text-sm">
                 <p className="text-indigo-800">
                   <span className="font-medium">Strategie:</span> {typeMapping.strategy}
-                  <span className={`ml-2 ${typePromptResult.strategyCorrect ? 'text-green-600' : 'text-amber-600'}`}>
-                    {typePromptResult.strategyCorrect ? '✓' : '○'}
+                  <span className={`ml-2 ${strategyPromptResult ? 'text-green-600' : 'text-amber-600'}`}>
+                    {strategyPromptResult ? '✓' : '○'}
                   </span>
                 </p>
               </div>
@@ -395,7 +317,7 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
         {solutionRevealed && (
           <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-4">
             <p className="text-green-800 font-medium">
-              Správná odpověď: {problem.answer}{problem.answer_unit ? ` ${problem.answer_unit}` : ''}
+              Správná odpověď: {formatAnswer(problem.answer)}{problem.answer_unit ? ` ${problem.answer_unit}` : ''}
             </p>
           </div>
         )}
@@ -523,14 +445,14 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
                     {key === '/' ? '÷' : key}
                   </button>
                 ))}
-                {/* Row 2: 4 5 6 × ^ */}
-                {['4', '5', '6', '*', '^'].map((key) => (
+                {/* Row 2: 4 5 6 × x */}
+                {['4', '5', '6', '*', 'x'].map((key) => (
                   <button
                     key={key}
                     type="button"
                     onClick={() => setUserAnswer(prev => prev + key)}
                     className={`h-11 rounded-xl text-base font-medium transition-gentle active:scale-95
-                      ${key === '*' || key === '^' ? 'bg-purple-100 text-purple-700' : 'bg-slate-100 text-slate-800'}`}
+                      ${key === '*' || key === 'x' ? 'bg-purple-100 text-purple-700' : 'bg-slate-100 text-slate-800'}`}
                   >
                     {key === '*' ? '×' : key}
                   </button>
@@ -590,6 +512,7 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
             {!isMobile && !solutionRevealed && problem.type !== 'multiple_choice' && (
               <div className="flex gap-2 mb-2">
                 {[
+                  { symbol: 'x', display: 'x' },
                   { symbol: '√(', display: '√(' },
                   { symbol: '^', display: '^' },
                   { symbol: '(', display: '(' },

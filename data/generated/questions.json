@@ -1,6 +1,6 @@
 {
   "version": "3.0",
-  "generated": "2025-12-25T18:04:57.670Z",
+  "generated": "2025-12-26T06:17:33.246Z",
   "description": "Unified question format - presentation layer decides MC vs open answer",
   "topics": {
     "binomial_squares": {
@@ -1587,11 +1587,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o polovinu více = ×?",
+        "stem": "o polovinu více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.5,
+        "value": "1,5x",
         "unit": null
       },
       "distractors": [
@@ -1620,11 +1620,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o polovinu méně = ×?",
+        "stem": "o polovinu méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.5,
+        "value": "0,5x",
         "unit": null
       },
       "distractors": [
@@ -1653,11 +1653,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o třetinu více = ×?",
+        "stem": "o třetinu více = ?",
         "context": null
       },
       "answer": {
-        "value": 4,
+        "value": "4/3x",
         "unit": null
       },
       "distractors": [
@@ -1686,11 +1686,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o třetinu méně = ×?",
+        "stem": "o třetinu méně = ?",
         "context": null
       },
       "answer": {
-        "value": 2,
+        "value": "2/3x",
         "unit": null
       },
       "distractors": [
@@ -1719,11 +1719,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o čtvrtinu více = ×?",
+        "stem": "o čtvrtinu více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.25,
+        "value": "1,25x",
         "unit": null
       },
       "distractors": [
@@ -1752,11 +1752,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o čtvrtinu méně = ×?",
+        "stem": "o čtvrtinu méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.75,
+        "value": "0,75x",
         "unit": null
       },
       "distractors": [
@@ -1785,11 +1785,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o pětinu více = ×?",
+        "stem": "o pětinu více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.2,
+        "value": "1,2x",
         "unit": null
       },
       "distractors": [
@@ -1818,11 +1818,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o pětinu méně = ×?",
+        "stem": "o pětinu méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.8,
+        "value": "0,8x",
         "unit": null
       },
       "distractors": [
@@ -1851,11 +1851,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o desetinu více = ×?",
+        "stem": "o desetinu více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.1,
+        "value": "1,1x",
         "unit": null
       },
       "distractors": [
@@ -1884,11 +1884,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o desetinu méně = ×?",
+        "stem": "o desetinu méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.9,
+        "value": "0,9x",
         "unit": null
       },
       "distractors": [
@@ -1917,11 +1917,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o dvě třetiny více = ×?",
+        "stem": "o dvě třetiny více = ?",
         "context": null
       },
       "answer": {
-        "value": 5,
+        "value": "5/3x",
         "unit": null
       },
       "distractors": [
@@ -1950,11 +1950,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o dvě třetiny méně = ×?",
+        "stem": "o dvě třetiny méně = ?",
         "context": null
       },
       "answer": {
-        "value": 1,
+        "value": "1/3x",
         "unit": null
       },
       "distractors": [
@@ -1983,11 +1983,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o tři čtvrtiny více = ×?",
+        "stem": "o tři čtvrtiny více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.75,
+        "value": "1,75x",
         "unit": null
       },
       "distractors": [
@@ -2016,11 +2016,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o tři čtvrtiny méně = ×?",
+        "stem": "o tři čtvrtiny méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.25,
+        "value": "0,25x",
         "unit": null
       },
       "distractors": [
@@ -2049,11 +2049,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 10 % více = ×?",
+        "stem": "o 10 % více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.1,
+        "value": "1,1x",
         "unit": null
       },
       "distractors": [
@@ -2082,11 +2082,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 10 % méně = ×?",
+        "stem": "o 10 % méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.9,
+        "value": "0,9x",
         "unit": null
       },
       "distractors": [
@@ -2115,11 +2115,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 25 % více = ×?",
+        "stem": "o 25 % více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.25,
+        "value": "1,25x",
         "unit": null
       },
       "distractors": [
@@ -2148,11 +2148,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 25 % méně = ×?",
+        "stem": "o 25 % méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.75,
+        "value": "0,75x",
         "unit": null
       },
       "distractors": [
@@ -2181,11 +2181,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 50 % více = ×?",
+        "stem": "o 50 % více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.5,
+        "value": "1,5x",
         "unit": null
       },
       "distractors": [
@@ -2214,11 +2214,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 50 % méně = ×?",
+        "stem": "o 50 % méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.5,
+        "value": "0,5x",
         "unit": null
       },
       "distractors": [
@@ -2247,11 +2247,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 20 % více = ×?",
+        "stem": "o 20 % více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.2,
+        "value": "1,2x",
         "unit": null
       },
       "distractors": [
@@ -2280,11 +2280,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 20 % méně = ×?",
+        "stem": "o 20 % méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.8,
+        "value": "0,8x",
         "unit": null
       },
       "distractors": [
@@ -2313,11 +2313,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 100 % více = ×?",
+        "stem": "o 100 % více = ?",
         "context": null
       },
       "answer": {
-        "value": 2,
+        "value": "2x",
         "unit": null
       },
       "distractors": [
@@ -2346,11 +2346,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 75 % více = ×?",
+        "stem": "o 75 % více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.75,
+        "value": "1,75x",
         "unit": null
       },
       "distractors": [
@@ -2379,11 +2379,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 75 % méně = ×?",
+        "stem": "o 75 % méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.25,
+        "value": "0,25x",
         "unit": null
       },
       "distractors": [
@@ -2412,11 +2412,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o šestinu více = ×?",
+        "stem": "o šestinu více = ?",
         "context": null
       },
       "answer": {
-        "value": 7,
+        "value": "7/6x",
         "unit": null
       },
       "distractors": [
@@ -2445,11 +2445,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o šestinu méně = ×?",
+        "stem": "o šestinu méně = ?",
         "context": null
       },
       "answer": {
-        "value": 5,
+        "value": "5/6x",
         "unit": null
       },
       "distractors": [
@@ -2478,11 +2478,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o dvě pětiny více = ×?",
+        "stem": "o dvě pětiny více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.4,
+        "value": "1,4x",
         "unit": null
       },
       "distractors": [
@@ -2511,11 +2511,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o dvě pětiny méně = ×?",
+        "stem": "o dvě pětiny méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.6,
+        "value": "0,6x",
         "unit": null
       },
       "distractors": [
@@ -2544,11 +2544,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o tři pětiny více = ×?",
+        "stem": "o tři pětiny více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.6,
+        "value": "1,6x",
         "unit": null
       },
       "distractors": [
@@ -2577,11 +2577,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o tři pětiny méně = ×?",
+        "stem": "o tři pětiny méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.4,
+        "value": "0,4x",
         "unit": null
       },
       "distractors": [
@@ -2610,11 +2610,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 5 % více = ×?",
+        "stem": "o 5 % více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.05,
+        "value": "1,05x",
         "unit": null
       },
       "distractors": [
@@ -2643,11 +2643,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 5 % méně = ×?",
+        "stem": "o 5 % méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.95,
+        "value": "0,95x",
         "unit": null
       },
       "distractors": [
@@ -2676,11 +2676,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 30 % více = ×?",
+        "stem": "o 30 % více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.3,
+        "value": "1,3x",
         "unit": null
       },
       "distractors": [
@@ -2709,11 +2709,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 30 % méně = ×?",
+        "stem": "o 30 % méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.7,
+        "value": "0,7x",
         "unit": null
       },
       "distractors": [
@@ -2742,11 +2742,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o čtyři pětiny více = ×?",
+        "stem": "o čtyři pětiny více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.8,
+        "value": "1,8x",
         "unit": null
       },
       "distractors": [
@@ -2775,11 +2775,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o čtyři pětiny méně = ×?",
+        "stem": "o čtyři pětiny méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.2,
+        "value": "0,2x",
         "unit": null
       },
       "distractors": [
@@ -2808,11 +2808,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o osminu více = ×?",
+        "stem": "o osminu více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.125,
+        "value": "1,125x",
         "unit": null
       },
       "distractors": [
@@ -2841,11 +2841,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o osminu méně = ×?",
+        "stem": "o osminu méně = ?",
         "context": null
       },
       "answer": {
-        "value": 0.875,
+        "value": "0,875x",
         "unit": null
       },
       "distractors": [
@@ -2874,11 +2874,11 @@
       "topic": "o_x_vice",
       "difficulty": 1,
       "question": {
-        "stem": "o 40 % více = ×?",
+        "stem": "o 40 % více = ?",
         "context": null
       },
       "answer": {
-        "value": 1.4,
+        "value": "1,4x",
         "unit": null
       },
       "distractors": [

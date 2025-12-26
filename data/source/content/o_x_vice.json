@@ -892,13 +892,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o polovinu více = ×?",
+        "stem": "o polovinu více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,5",
-        "numeric": 1,
+        "correct": "1,5x",
+        "numeric": 1.5,
         "unit": null,
         "variants": []
       },
@@ -943,13 +943,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o polovinu méně = ×?",
+        "stem": "o polovinu méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,5",
-        "numeric": null,
+        "correct": "0,5x",
+        "numeric": 0.5,
         "unit": null,
         "variants": []
       },
@@ -994,12 +994,12 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o třetinu více = ×?",
+        "stem": "o třetinu více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "4/3",
+        "correct": "4/3x",
         "numeric": 4,
         "unit": null,
         "variants": []
@@ -1045,12 +1045,12 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o třetinu méně = ×?",
+        "stem": "o třetinu méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "2/3",
+        "correct": "2/3x",
         "numeric": 2,
         "unit": null,
         "variants": []
@@ -1096,13 +1096,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o čtvrtinu více = ×?",
+        "stem": "o čtvrtinu více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,25",
-        "numeric": 1,
+        "correct": "1,25x",
+        "numeric": 1.25,
         "unit": null,
         "variants": []
       },
@@ -1147,13 +1147,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o čtvrtinu méně = ×?",
+        "stem": "o čtvrtinu méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,75",
-        "numeric": null,
+        "correct": "0,75x",
+        "numeric": 0.75,
         "unit": null,
         "variants": []
       },
@@ -1198,13 +1198,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o pětinu více = ×?",
+        "stem": "o pětinu více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,2",
-        "numeric": 1,
+        "correct": "1,2x",
+        "numeric": 1.2,
         "unit": null,
         "variants": []
       },
@@ -1249,13 +1249,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o pětinu méně = ×?",
+        "stem": "o pětinu méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,8",
-        "numeric": null,
+        "correct": "0,8x",
+        "numeric": 0.8,
         "unit": null,
         "variants": []
       },
@@ -1300,13 +1300,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o desetinu více = ×?",
+        "stem": "o desetinu více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,1",
-        "numeric": 1,
+        "correct": "1,1x",
+        "numeric": 1.1,
         "unit": null,
         "variants": []
       },
@@ -1351,13 +1351,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o desetinu méně = ×?",
+        "stem": "o desetinu méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,9",
-        "numeric": null,
+        "correct": "0,9x",
+        "numeric": 0.9,
         "unit": null,
         "variants": []
       },
@@ -1402,12 +1402,12 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o dvě třetiny více = ×?",
+        "stem": "o dvě třetiny více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "5/3",
+        "correct": "5/3x",
         "numeric": 5,
         "unit": null,
         "variants": []
@@ -1453,12 +1453,12 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o dvě třetiny méně = ×?",
+        "stem": "o dvě třetiny méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1/3",
+        "correct": "1/3x",
         "numeric": 1,
         "unit": null,
         "variants": []
@@ -1504,13 +1504,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o tři čtvrtiny více = ×?",
+        "stem": "o tři čtvrtiny více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,75",
-        "numeric": 1,
+        "correct": "1,75x",
+        "numeric": 1.75,
         "unit": null,
         "variants": []
       },
@@ -1555,13 +1555,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o tři čtvrtiny méně = ×?",
+        "stem": "o tři čtvrtiny méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,25",
-        "numeric": null,
+        "correct": "0,25x",
+        "numeric": 0.25,
         "unit": null,
         "variants": []
       },
@@ -1606,13 +1606,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 10 % více = ×?",
+        "stem": "o 10 % více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,1",
-        "numeric": 1,
+        "correct": "1,1x",
+        "numeric": 1.1,
         "unit": null,
         "variants": []
       },
@@ -1657,13 +1657,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 10 % méně = ×?",
+        "stem": "o 10 % méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,9",
-        "numeric": null,
+        "correct": "0,9x",
+        "numeric": 0.9,
         "unit": null,
         "variants": []
       },
@@ -1708,13 +1708,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 25 % více = ×?",
+        "stem": "o 25 % více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,25",
-        "numeric": 1,
+        "correct": "1,25x",
+        "numeric": 1.25,
         "unit": null,
         "variants": []
       },
@@ -1759,13 +1759,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 25 % méně = ×?",
+        "stem": "o 25 % méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,75",
-        "numeric": null,
+        "correct": "0,75x",
+        "numeric": 0.75,
         "unit": null,
         "variants": []
       },
@@ -1810,13 +1810,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 50 % více = ×?",
+        "stem": "o 50 % více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,5",
-        "numeric": 1,
+        "correct": "1,5x",
+        "numeric": 1.5,
         "unit": null,
         "variants": []
       },
@@ -1861,13 +1861,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 50 % méně = ×?",
+        "stem": "o 50 % méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,5",
-        "numeric": null,
+        "correct": "0,5x",
+        "numeric": 0.5,
         "unit": null,
         "variants": []
       },
@@ -1912,13 +1912,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 20 % více = ×?",
+        "stem": "o 20 % více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,2",
-        "numeric": 1,
+        "correct": "1,2x",
+        "numeric": 1.2,
         "unit": null,
         "variants": []
       },
@@ -1963,13 +1963,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 20 % méně = ×?",
+        "stem": "o 20 % méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,8",
-        "numeric": null,
+        "correct": "0,8x",
+        "numeric": 0.8,
         "unit": null,
         "variants": []
       },
@@ -2014,12 +2014,12 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 100 % více = ×?",
+        "stem": "o 100 % více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "2",
+        "correct": "2x",
         "numeric": 2,
         "unit": null,
         "variants": []
@@ -2065,13 +2065,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 75 % více = ×?",
+        "stem": "o 75 % více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,75",
-        "numeric": 1,
+        "correct": "1,75x",
+        "numeric": 1.75,
         "unit": null,
         "variants": []
       },
@@ -2116,13 +2116,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 75 % méně = ×?",
+        "stem": "o 75 % méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,25",
-        "numeric": null,
+        "correct": "0,25x",
+        "numeric": 0.25,
         "unit": null,
         "variants": []
       },
@@ -2167,12 +2167,12 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o šestinu více = ×?",
+        "stem": "o šestinu více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "7/6",
+        "correct": "7/6x",
         "numeric": 7,
         "unit": null,
         "variants": []
@@ -2218,12 +2218,12 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o šestinu méně = ×?",
+        "stem": "o šestinu méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "5/6",
+        "correct": "5/6x",
         "numeric": 5,
         "unit": null,
         "variants": []
@@ -2269,13 +2269,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o dvě pětiny více = ×?",
+        "stem": "o dvě pětiny více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,4",
-        "numeric": 1,
+        "correct": "1,4x",
+        "numeric": 1.4,
         "unit": null,
         "variants": []
       },
@@ -2320,13 +2320,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o dvě pětiny méně = ×?",
+        "stem": "o dvě pětiny méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,6",
-        "numeric": null,
+        "correct": "0,6x",
+        "numeric": 0.6,
         "unit": null,
         "variants": []
       },
@@ -2371,13 +2371,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o tři pětiny více = ×?",
+        "stem": "o tři pětiny více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,6",
-        "numeric": 1,
+        "correct": "1,6x",
+        "numeric": 1.6,
         "unit": null,
         "variants": []
       },
@@ -2422,13 +2422,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o tři pětiny méně = ×?",
+        "stem": "o tři pětiny méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,4",
-        "numeric": null,
+        "correct": "0,4x",
+        "numeric": 0.4,
         "unit": null,
         "variants": []
       },
@@ -2473,13 +2473,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 5 % více = ×?",
+        "stem": "o 5 % více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,05",
-        "numeric": 1,
+        "correct": "1,05x",
+        "numeric": 1.05,
         "unit": null,
         "variants": []
       },
@@ -2524,13 +2524,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 5 % méně = ×?",
+        "stem": "o 5 % méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,95",
-        "numeric": null,
+        "correct": "0,95x",
+        "numeric": 0.95,
         "unit": null,
         "variants": []
       },
@@ -2575,13 +2575,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 30 % více = ×?",
+        "stem": "o 30 % více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,3",
-        "numeric": 1,
+        "correct": "1,3x",
+        "numeric": 1.3,
         "unit": null,
         "variants": []
       },
@@ -2626,13 +2626,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 30 % méně = ×?",
+        "stem": "o 30 % méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,7",
-        "numeric": null,
+        "correct": "0,7x",
+        "numeric": 0.7,
         "unit": null,
         "variants": []
       },
@@ -2677,13 +2677,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o čtyři pětiny více = ×?",
+        "stem": "o čtyři pětiny více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,8",
-        "numeric": 1,
+        "correct": "1,8x",
+        "numeric": 1.8,
         "unit": null,
         "variants": []
       },
@@ -2728,13 +2728,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o čtyři pětiny méně = ×?",
+        "stem": "o čtyři pětiny méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,2",
-        "numeric": null,
+        "correct": "0,2x",
+        "numeric": 0.2,
         "unit": null,
         "variants": []
       },
@@ -2779,13 +2779,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o osminu více = ×?",
+        "stem": "o osminu více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,125",
-        "numeric": 1,
+        "correct": "1,125x",
+        "numeric": 1.125,
         "unit": null,
         "variants": []
       },
@@ -2830,13 +2830,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o osminu méně = ×?",
+        "stem": "o osminu méně = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "0,875",
-        "numeric": null,
+        "correct": "0,875x",
+        "numeric": 0.875,
         "unit": null,
         "variants": []
       },
@@ -2881,13 +2881,13 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "o 40 % více = ×?",
+        "stem": "o 40 % více = ?",
         "context": null,
         "image": null
       },
       "answer": {
-        "correct": "1,4",
-        "numeric": 1,
+        "correct": "1,4x",
+        "numeric": 1.4,
         "unit": null,
         "variants": []
       },
