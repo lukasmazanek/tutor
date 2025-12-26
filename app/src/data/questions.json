@@ -1,6 +1,6 @@
 {
   "version": "3.0",
-  "generated": "2025-12-25T16:19:17.810Z",
+  "generated": "2025-12-25T18:04:57.670Z",
   "description": "Unified question format - presentation layer decides MC vs open answer",
   "topics": {
     "binomial_squares": {
@@ -56,8 +56,7 @@
         "context": "Rozviň: (x + 3)²"
       },
       "answer": {
-        "correct": "x² + 6x + 9",
-        "numeric": null,
+        "value": "x² + 6x + 9",
         "unit": null
       },
       "distractors": [
@@ -92,8 +91,7 @@
         "context": "Rozviň: (x - 5)²"
       },
       "answer": {
-        "correct": "x² - 10x + 25",
-        "numeric": null,
+        "value": "x² - 10x + 25",
         "unit": null
       },
       "distractors": [
@@ -128,8 +126,7 @@
         "context": "Rozviň: (2x + 1)²"
       },
       "answer": {
-        "correct": "4x² + 4x + 1",
-        "numeric": null,
+        "value": "4x² + 4x + 1",
         "unit": null
       },
       "distractors": [
@@ -164,8 +161,7 @@
         "context": "Rozviň: (3a - 2)²"
       },
       "answer": {
-        "correct": "9a² - 12a + 4",
-        "numeric": null,
+        "value": "9a² - 12a + 4",
         "unit": null
       },
       "distractors": [
@@ -200,8 +196,7 @@
         "context": "Rozviň: (1/3 - 4b)²"
       },
       "answer": {
-        "correct": "1/9 - 8b/3 + 16b²",
-        "numeric": null,
+        "value": "1/9 - 8b/3 + 16b²",
         "unit": null
       },
       "distractors": [
@@ -236,8 +231,7 @@
         "context": "Rozviň: (4n - 3)²"
       },
       "answer": {
-        "correct": "16n² - 24n + 9",
-        "numeric": null,
+        "value": "16n² - 24n + 9",
         "unit": null
       },
       "distractors": [
@@ -272,8 +266,7 @@
         "context": "Rozviň (x + 7)² a urči prostřední člen."
       },
       "answer": {
-        "correct": "14x",
-        "numeric": null,
+        "value": "14x",
         "unit": null
       },
       "distractors": [
@@ -308,8 +301,7 @@
         "context": "Zjednodušte: (x + 2)² - (x - 2)²"
       },
       "answer": {
-        "correct": "8x",
-        "numeric": null,
+        "value": "8x",
         "unit": null
       },
       "distractors": [
@@ -345,8 +337,7 @@
         "context": "Vyřeš rovnici: 2x + 5 = 13"
       },
       "answer": {
-        "correct": "4",
-        "numeric": 4,
+        "value": 4,
         "unit": null
       },
       "distractors": [],
@@ -380,8 +371,7 @@
         "context": "Vyřeš rovnici: 3x - 7 = 11"
       },
       "answer": {
-        "correct": "6",
-        "numeric": 6,
+        "value": 6,
         "unit": null
       },
       "distractors": [],
@@ -415,8 +405,7 @@
         "context": "Vyřeš rovnici: x/4 = 5"
       },
       "answer": {
-        "correct": "20",
-        "numeric": 20,
+        "value": 20,
         "unit": null
       },
       "distractors": [],
@@ -449,8 +438,7 @@
         "context": "Vyřeš rovnici: 5x + 3 = 2x + 15"
       },
       "answer": {
-        "correct": "4",
-        "numeric": 4,
+        "value": 4,
         "unit": null
       },
       "distractors": [],
@@ -484,8 +472,7 @@
         "context": "Vyřeš rovnici: 4(x - 2) = 20"
       },
       "answer": {
-        "correct": "7",
-        "numeric": 7,
+        "value": 7,
         "unit": null
       },
       "distractors": [],
@@ -518,8 +505,7 @@
         "context": "Vyřeš rovnici: 2(3x + 1) = 14"
       },
       "answer": {
-        "correct": "2",
-        "numeric": 2,
+        "value": 2,
         "unit": null
       },
       "distractors": [],
@@ -553,8 +539,7 @@
         "context": "Vyřeš rovnici: x/3 + 2 = 5"
       },
       "answer": {
-        "correct": "9",
-        "numeric": 9,
+        "value": 9,
         "unit": null
       },
       "distractors": [],
@@ -587,8 +572,7 @@
         "context": "Vyřeš rovnici: (x + 3)/2 = (x - 1)/4 + 3"
       },
       "answer": {
-        "correct": "5",
-        "numeric": 5,
+        "value": 5,
         "unit": null
       },
       "distractors": [],
@@ -622,8 +606,7 @@
         "context": "Vyřeš rovnici: 3(2x - 1) - 2(x + 3) = 7"
       },
       "answer": {
-        "correct": "4",
-        "numeric": 4,
+        "value": 4,
         "unit": null
       },
       "distractors": [],
@@ -658,8 +641,7 @@
         "context": "Vyřeš rovnici: 0,5x + 1,5 = 2x - 3"
       },
       "answer": {
-        "correct": "3",
-        "numeric": 3,
+        "value": 3,
         "unit": null
       },
       "distractors": [],
@@ -693,8 +675,7 @@
         "context": "Vypočítej: 1/2 + 1/4"
       },
       "answer": {
-        "correct": "3/4",
-        "numeric": 0.75,
+        "value": 0.75,
         "unit": null
       },
       "distractors": [],
@@ -727,8 +708,7 @@
         "context": "Vypočítej: 2/3 - 1/6"
       },
       "answer": {
-        "correct": "1/2",
-        "numeric": 0.5,
+        "value": 0.5,
         "unit": null
       },
       "distractors": [],
@@ -762,8 +742,7 @@
         "context": "Vypočítej: 3/4 × 2/5"
       },
       "answer": {
-        "correct": "3/10",
-        "numeric": 0.3,
+        "value": 0.3,
         "unit": null
       },
       "distractors": [],
@@ -796,8 +775,7 @@
         "context": "Vypočítej: 2/3 : 4"
       },
       "answer": {
-        "correct": "1/6",
-        "numeric": 0.167,
+        "value": 0.167,
         "unit": null
       },
       "distractors": [],
@@ -831,8 +809,7 @@
         "context": "Vypočítej: 5/6 - 1/4 + 1/3"
       },
       "answer": {
-        "correct": "11/12",
-        "numeric": 0.917,
+        "value": 0.917,
         "unit": null
       },
       "distractors": [],
@@ -865,8 +842,7 @@
         "context": "Vypočítej: (2/5) : (4/15)"
       },
       "answer": {
-        "correct": "3/2",
-        "numeric": 1.5,
+        "value": 1.5,
         "unit": null
       },
       "distractors": [],
@@ -900,8 +876,7 @@
         "context": "Kolik je 3/4 z 80?"
       },
       "answer": {
-        "correct": "60",
-        "numeric": 60,
+        "value": 60,
         "unit": null
       },
       "distractors": [],
@@ -934,8 +909,7 @@
         "context": "Zjednodušte: 24/36"
       },
       "answer": {
-        "correct": "2/3",
-        "numeric": 0.667,
+        "value": 0.667,
         "unit": null
       },
       "distractors": [],
@@ -969,8 +943,7 @@
         "context": "Vypočítej: 1 - 2/3 × 3/4"
       },
       "answer": {
-        "correct": "1/2",
-        "numeric": 0.5,
+        "value": 0.5,
         "unit": null
       },
       "distractors": [],
@@ -1004,8 +977,7 @@
         "context": "Třetina čísla je 15. Jaké je to číslo?"
       },
       "answer": {
-        "correct": "45",
-        "numeric": 45,
+        "value": 45,
         "unit": null
       },
       "distractors": [],
@@ -1038,8 +1010,7 @@
         "context": "Měl jsem 100 Kč. Teď mám o polovinu více. Kolik mám?"
       },
       "answer": {
-        "correct": "150",
-        "numeric": 150,
+        "value": 150,
         "unit": "Kč"
       },
       "distractors": [],
@@ -1072,8 +1043,7 @@
         "context": "Cena byla 80 Kč. Zlevnila o čtvrtinu. Jaká je nová cena?"
       },
       "answer": {
-        "correct": "60",
-        "numeric": 60,
+        "value": 60,
         "unit": "Kč"
       },
       "distractors": [],
@@ -1106,8 +1076,7 @@
         "context": "Táta vydělává 30 000 Kč měsíčně. Dostal přidáno o třetinu. Kolik vydělává teď?"
       },
       "answer": {
-        "correct": "40000",
-        "numeric": 40000,
+        "value": 40000,
         "unit": "Kč"
       },
       "distractors": [],
@@ -1140,8 +1109,7 @@
         "context": "Obchod má slevu: cena je o pětinu nižší. Původní cena byla 500 Kč. Kolik zaplatíš?"
       },
       "answer": {
-        "correct": "400",
-        "numeric": 400,
+        "value": 400,
         "unit": "Kč"
       },
       "distractors": [],
@@ -1174,8 +1142,7 @@
         "context": "Délka tyče je 120 cm. Prodloužili ji o čtvrtinu. Jaká je nová délka?"
       },
       "answer": {
-        "correct": "150",
-        "numeric": 150,
+        "value": 150,
         "unit": "cm"
       },
       "distractors": [],
@@ -1208,8 +1175,7 @@
         "context": "Co znamená \"o třetinu více\"?"
       },
       "answer": {
-        "correct": "× 4/3 (neboli původní + třetina)",
-        "numeric": null,
+        "value": "× 4/3 (neboli původní + třetina)",
         "unit": null
       },
       "distractors": [
@@ -1247,8 +1213,7 @@
         "context": "Po zvýšení o čtvrtinu má Jan 750 Kč. Kolik měl původně?"
       },
       "answer": {
-        "correct": "600",
-        "numeric": 600,
+        "value": 600,
         "unit": "Kč"
       },
       "distractors": [],
@@ -1282,8 +1247,7 @@
         "context": "Cena po slevě o třetinu je 240 Kč. Jaká byla původní cena?"
       },
       "answer": {
-        "correct": "360",
-        "numeric": 360,
+        "value": 360,
         "unit": "Kč"
       },
       "distractors": [],
@@ -1317,8 +1281,7 @@
         "context": "Kniha stála 280 Kč. Nejdřív zdražila o čtvrtinu, pak zlevnila o pětinu. Kolik stojí teď?"
       },
       "answer": {
-        "correct": "280",
-        "numeric": 280,
+        "value": 280,
         "unit": "Kč"
       },
       "distractors": [],
@@ -1351,8 +1314,7 @@
         "context": "Objem nádrže se zvětšil o polovinu. Původně měla 200 litrů. Jaký je nový objem?"
       },
       "answer": {
-        "correct": "300 litrů",
-        "numeric": null,
+        "value": "300 litrů",
         "unit": null
       },
       "distractors": [
@@ -1389,8 +1351,7 @@
         "context": null
       },
       "answer": {
-        "correct": "x × 4/3",
-        "numeric": null,
+        "value": "x × 4/3",
         "unit": null
       },
       "distractors": [],
@@ -1420,8 +1381,7 @@
         "context": null
       },
       "answer": {
-        "correct": "x × 2/3",
-        "numeric": null,
+        "value": "x × 2/3",
         "unit": null
       },
       "distractors": [],
@@ -1451,8 +1411,7 @@
         "context": null
       },
       "answer": {
-        "correct": "x × 5/4",
-        "numeric": null,
+        "value": "x × 5/4",
         "unit": null
       },
       "distractors": [],
@@ -1482,8 +1441,7 @@
         "context": null
       },
       "answer": {
-        "correct": "x × 3/4",
-        "numeric": null,
+        "value": "x × 3/4",
         "unit": null
       },
       "distractors": [],
@@ -1513,8 +1471,7 @@
         "context": null
       },
       "answer": {
-        "correct": "x × 3/2",
-        "numeric": null,
+        "value": "x × 3/2",
         "unit": null
       },
       "distractors": [],
@@ -1544,8 +1501,7 @@
         "context": null
       },
       "answer": {
-        "correct": "x × 1/2",
-        "numeric": null,
+        "value": "x × 1/2",
         "unit": null
       },
       "distractors": [],
@@ -1575,8 +1531,7 @@
         "context": null
       },
       "answer": {
-        "correct": "x × 6/5",
-        "numeric": null,
+        "value": "x × 6/5",
         "unit": null
       },
       "distractors": [],
@@ -1606,8 +1561,7 @@
         "context": null
       },
       "answer": {
-        "correct": "x × 4/5",
-        "numeric": null,
+        "value": "x × 4/5",
         "unit": null
       },
       "distractors": [],
@@ -1637,8 +1591,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,5",
-        "numeric": 1,
+        "value": 1.5,
         "unit": null
       },
       "distractors": [
@@ -1671,8 +1624,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,5",
-        "numeric": null,
+        "value": 0.5,
         "unit": null
       },
       "distractors": [
@@ -1693,7 +1645,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,5"
+        "supports_open": true
       }
     },
     {
@@ -1705,8 +1657,7 @@
         "context": null
       },
       "answer": {
-        "correct": "4/3",
-        "numeric": 4,
+        "value": 4,
         "unit": null
       },
       "distractors": [
@@ -1739,8 +1690,7 @@
         "context": null
       },
       "answer": {
-        "correct": "2/3",
-        "numeric": 2,
+        "value": 2,
         "unit": null
       },
       "distractors": [
@@ -1773,8 +1723,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,25",
-        "numeric": 1,
+        "value": 1.25,
         "unit": null
       },
       "distractors": [
@@ -1807,8 +1756,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,75",
-        "numeric": null,
+        "value": 0.75,
         "unit": null
       },
       "distractors": [
@@ -1829,7 +1777,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,75"
+        "supports_open": true
       }
     },
     {
@@ -1841,8 +1789,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,2",
-        "numeric": 1,
+        "value": 1.2,
         "unit": null
       },
       "distractors": [
@@ -1875,8 +1822,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,8",
-        "numeric": null,
+        "value": 0.8,
         "unit": null
       },
       "distractors": [
@@ -1897,7 +1843,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,8"
+        "supports_open": true
       }
     },
     {
@@ -1909,8 +1855,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,1",
-        "numeric": 1,
+        "value": 1.1,
         "unit": null
       },
       "distractors": [
@@ -1943,8 +1888,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,9",
-        "numeric": null,
+        "value": 0.9,
         "unit": null
       },
       "distractors": [
@@ -1965,7 +1909,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,9"
+        "supports_open": true
       }
     },
     {
@@ -1977,8 +1921,7 @@
         "context": null
       },
       "answer": {
-        "correct": "5/3",
-        "numeric": 5,
+        "value": 5,
         "unit": null
       },
       "distractors": [
@@ -2011,8 +1954,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1/3",
-        "numeric": 1,
+        "value": 1,
         "unit": null
       },
       "distractors": [
@@ -2045,8 +1987,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,75",
-        "numeric": 1,
+        "value": 1.75,
         "unit": null
       },
       "distractors": [
@@ -2079,8 +2020,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,25",
-        "numeric": null,
+        "value": 0.25,
         "unit": null
       },
       "distractors": [
@@ -2101,7 +2041,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,25"
+        "supports_open": true
       }
     },
     {
@@ -2113,8 +2053,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,1",
-        "numeric": 1,
+        "value": 1.1,
         "unit": null
       },
       "distractors": [
@@ -2147,8 +2086,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,9",
-        "numeric": null,
+        "value": 0.9,
         "unit": null
       },
       "distractors": [
@@ -2169,7 +2107,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,9"
+        "supports_open": true
       }
     },
     {
@@ -2181,8 +2119,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,25",
-        "numeric": 1,
+        "value": 1.25,
         "unit": null
       },
       "distractors": [
@@ -2215,8 +2152,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,75",
-        "numeric": null,
+        "value": 0.75,
         "unit": null
       },
       "distractors": [
@@ -2237,7 +2173,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,75"
+        "supports_open": true
       }
     },
     {
@@ -2249,8 +2185,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,5",
-        "numeric": 1,
+        "value": 1.5,
         "unit": null
       },
       "distractors": [
@@ -2283,8 +2218,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,5",
-        "numeric": null,
+        "value": 0.5,
         "unit": null
       },
       "distractors": [
@@ -2305,7 +2239,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,5"
+        "supports_open": true
       }
     },
     {
@@ -2317,8 +2251,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,2",
-        "numeric": 1,
+        "value": 1.2,
         "unit": null
       },
       "distractors": [
@@ -2351,8 +2284,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,8",
-        "numeric": null,
+        "value": 0.8,
         "unit": null
       },
       "distractors": [
@@ -2373,7 +2305,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,8"
+        "supports_open": true
       }
     },
     {
@@ -2385,8 +2317,7 @@
         "context": null
       },
       "answer": {
-        "correct": "2",
-        "numeric": 2,
+        "value": 2,
         "unit": null
       },
       "distractors": [
@@ -2419,8 +2350,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,75",
-        "numeric": 1,
+        "value": 1.75,
         "unit": null
       },
       "distractors": [
@@ -2453,8 +2383,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,25",
-        "numeric": null,
+        "value": 0.25,
         "unit": null
       },
       "distractors": [
@@ -2475,7 +2404,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,25"
+        "supports_open": true
       }
     },
     {
@@ -2487,8 +2416,7 @@
         "context": null
       },
       "answer": {
-        "correct": "7/6",
-        "numeric": 7,
+        "value": 7,
         "unit": null
       },
       "distractors": [
@@ -2521,8 +2449,7 @@
         "context": null
       },
       "answer": {
-        "correct": "5/6",
-        "numeric": 5,
+        "value": 5,
         "unit": null
       },
       "distractors": [
@@ -2555,8 +2482,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,4",
-        "numeric": 1,
+        "value": 1.4,
         "unit": null
       },
       "distractors": [
@@ -2589,8 +2515,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,6",
-        "numeric": null,
+        "value": 0.6,
         "unit": null
       },
       "distractors": [
@@ -2611,7 +2536,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,6"
+        "supports_open": true
       }
     },
     {
@@ -2623,8 +2548,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,6",
-        "numeric": 1,
+        "value": 1.6,
         "unit": null
       },
       "distractors": [
@@ -2657,8 +2581,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,4",
-        "numeric": null,
+        "value": 0.4,
         "unit": null
       },
       "distractors": [
@@ -2679,7 +2602,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,4"
+        "supports_open": true
       }
     },
     {
@@ -2691,8 +2614,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,05",
-        "numeric": 1,
+        "value": 1.05,
         "unit": null
       },
       "distractors": [
@@ -2725,8 +2647,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,95",
-        "numeric": null,
+        "value": 0.95,
         "unit": null
       },
       "distractors": [
@@ -2747,7 +2668,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,95"
+        "supports_open": true
       }
     },
     {
@@ -2759,8 +2680,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,3",
-        "numeric": 1,
+        "value": 1.3,
         "unit": null
       },
       "distractors": [
@@ -2793,8 +2713,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,7",
-        "numeric": null,
+        "value": 0.7,
         "unit": null
       },
       "distractors": [
@@ -2815,7 +2734,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,7"
+        "supports_open": true
       }
     },
     {
@@ -2827,8 +2746,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,8",
-        "numeric": 1,
+        "value": 1.8,
         "unit": null
       },
       "distractors": [
@@ -2861,8 +2779,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,2",
-        "numeric": null,
+        "value": 0.2,
         "unit": null
       },
       "distractors": [
@@ -2883,7 +2800,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,2"
+        "supports_open": true
       }
     },
     {
@@ -2895,8 +2812,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,125",
-        "numeric": 1,
+        "value": 1.125,
         "unit": null
       },
       "distractors": [
@@ -2929,8 +2845,7 @@
         "context": null
       },
       "answer": {
-        "correct": "0,875",
-        "numeric": null,
+        "value": 0.875,
         "unit": null
       },
       "distractors": [
@@ -2951,7 +2866,7 @@
         "type_label": "o X více/méně",
         "original_type": "calculation",
         "supports_mc": true,
-        "supports_open": "0,875"
+        "supports_open": true
       }
     },
     {
@@ -2963,8 +2878,7 @@
         "context": null
       },
       "answer": {
-        "correct": "1,4",
-        "numeric": 1,
+        "value": 1.4,
         "unit": null
       },
       "distractors": [
@@ -2997,8 +2911,7 @@
         "context": null
       },
       "answer": {
-        "correct": "5",
-        "numeric": 5,
+        "value": 5,
         "unit": null
       },
       "distractors": [
@@ -3031,8 +2944,7 @@
         "context": null
       },
       "answer": {
-        "correct": "13",
-        "numeric": 13,
+        "value": 13,
         "unit": null
       },
       "distractors": [
@@ -3065,8 +2977,7 @@
         "context": null
       },
       "answer": {
-        "correct": "10",
-        "numeric": 10,
+        "value": 10,
         "unit": null
       },
       "distractors": [
@@ -3099,8 +3010,7 @@
         "context": null
       },
       "answer": {
-        "correct": "17",
-        "numeric": 17,
+        "value": 17,
         "unit": null
       },
       "distractors": [
@@ -3133,8 +3043,7 @@
         "context": null
       },
       "answer": {
-        "correct": "25",
-        "numeric": 25,
+        "value": 25,
         "unit": null
       },
       "distractors": [
@@ -3167,8 +3076,7 @@
         "context": null
       },
       "answer": {
-        "correct": "41",
-        "numeric": 41,
+        "value": 41,
         "unit": null
       },
       "distractors": [
@@ -3201,8 +3109,7 @@
         "context": null
       },
       "answer": {
-        "correct": "3",
-        "numeric": 3,
+        "value": 3,
         "unit": null
       },
       "distractors": [
@@ -3235,8 +3142,7 @@
         "context": null
       },
       "answer": {
-        "correct": "12",
-        "numeric": 12,
+        "value": 12,
         "unit": null
       },
       "distractors": [
@@ -3269,8 +3175,7 @@
         "context": null
       },
       "answer": {
-        "correct": "6",
-        "numeric": 6,
+        "value": 6,
         "unit": null
       },
       "distractors": [
@@ -3303,8 +3208,7 @@
         "context": null
       },
       "answer": {
-        "correct": "15",
-        "numeric": 15,
+        "value": 15,
         "unit": null
       },
       "distractors": [
@@ -3337,8 +3241,7 @@
         "context": null
       },
       "answer": {
-        "correct": "5",
-        "numeric": 5,
+        "value": 5,
         "unit": null
       },
       "distractors": [
@@ -3371,8 +3274,7 @@
         "context": null
       },
       "answer": {
-        "correct": "13",
-        "numeric": 13,
+        "value": 13,
         "unit": null
       },
       "distractors": [
@@ -3405,8 +3307,7 @@
         "context": null
       },
       "answer": {
-        "correct": "4",
-        "numeric": 4,
+        "value": 4,
         "unit": null
       },
       "distractors": [
@@ -3439,8 +3340,7 @@
         "context": null
       },
       "answer": {
-        "correct": "12",
-        "numeric": 12,
+        "value": 12,
         "unit": null
       },
       "distractors": [
@@ -3473,8 +3373,7 @@
         "context": null
       },
       "answer": {
-        "correct": "√2",
-        "numeric": null,
+        "value": "√2",
         "unit": null
       },
       "distractors": [
@@ -3507,8 +3406,7 @@
         "context": null
       },
       "answer": {
-        "correct": "√13",
-        "numeric": null,
+        "value": "√13",
         "unit": null
       },
       "distractors": [
@@ -3541,8 +3439,7 @@
         "context": null
       },
       "answer": {
-        "correct": "√29",
-        "numeric": null,
+        "value": "√29",
         "unit": null
       },
       "distractors": [
@@ -3575,8 +3472,7 @@
         "context": null
       },
       "answer": {
-        "correct": "√41",
-        "numeric": null,
+        "value": "√41",
         "unit": null
       },
       "distractors": [
@@ -3609,8 +3505,7 @@
         "context": null
       },
       "answer": {
-        "correct": "√(a² + b²)",
-        "numeric": null,
+        "value": "√(a² + b²)",
         "unit": null
       },
       "distractors": [],
@@ -3640,8 +3535,7 @@
         "context": null
       },
       "answer": {
-        "correct": "√(c² - b²)",
-        "numeric": null,
+        "value": "√(c² - b²)",
         "unit": null
       },
       "distractors": [],
@@ -3671,8 +3565,7 @@
         "context": null
       },
       "answer": {
-        "correct": "√(c² - a²)",
-        "numeric": null,
+        "value": "√(c² - a²)",
         "unit": null
       },
       "distractors": [],
@@ -3702,8 +3595,7 @@
         "context": null
       },
       "answer": {
-        "correct": "√(a² + b²)",
-        "numeric": null,
+        "value": "√(a² + b²)",
         "unit": null
       },
       "distractors": [],
@@ -3733,8 +3625,7 @@
         "context": null
       },
       "answer": {
-        "correct": "√(c² - b²)",
-        "numeric": null,
+        "value": "√(c² - b²)",
         "unit": null
       },
       "distractors": [],
@@ -3764,8 +3655,7 @@
         "context": null
       },
       "answer": {
-        "correct": "√(3² + 4²)",
-        "numeric": null,
+        "value": "√(3² + 4²)",
         "unit": null
       },
       "distractors": [],
@@ -3795,8 +3685,7 @@
         "context": null
       },
       "answer": {
-        "correct": "√(5² - 4²)",
-        "numeric": null,
+        "value": "√(5² - 4²)",
         "unit": null
       },
       "distractors": [],
@@ -3826,8 +3715,7 @@
         "context": null
       },
       "answer": {
-        "correct": "čtverci stran",
-        "numeric": null,
+        "value": "čtverci stran",
         "unit": null
       },
       "distractors": [],
@@ -3857,8 +3745,7 @@
         "context": null
       },
       "answer": {
-        "correct": "Pythagorova věta",
-        "numeric": null,
+        "value": "Pythagorova věta",
         "unit": null
       },
       "distractors": [
@@ -3891,8 +3778,7 @@
         "context": null
       },
       "answer": {
-        "correct": "Pythagorova věta",
-        "numeric": null,
+        "value": "Pythagorova věta",
         "unit": null
       },
       "distractors": [
@@ -3925,8 +3811,7 @@
         "context": null
       },
       "answer": {
-        "correct": "Pythagorova věta",
-        "numeric": null,
+        "value": "Pythagorova věta",
         "unit": null
       },
       "distractors": [
@@ -3959,8 +3844,7 @@
         "context": null
       },
       "answer": {
-        "correct": "Pythagorova věta",
-        "numeric": null,
+        "value": "Pythagorova věta",
         "unit": null
       },
       "distractors": [
@@ -3993,8 +3877,7 @@
         "context": null
       },
       "answer": {
-        "correct": "Pythagorova věta",
-        "numeric": null,
+        "value": "Pythagorova věta",
         "unit": null
       },
       "distractors": [
@@ -4027,8 +3910,7 @@
         "context": null
       },
       "answer": {
-        "correct": "Pythagorova věta",
-        "numeric": null,
+        "value": "Pythagorova věta",
         "unit": null
       },
       "distractors": [
@@ -4061,8 +3943,7 @@
         "context": null
       },
       "answer": {
-        "correct": "Pythagorova věta",
-        "numeric": null,
+        "value": "Pythagorova věta",
         "unit": null
       },
       "distractors": [
@@ -4095,8 +3976,7 @@
         "context": null
       },
       "answer": {
-        "correct": "Pythagorova věta",
-        "numeric": null,
+        "value": "Pythagorova věta",
         "unit": null
       },
       "distractors": [
@@ -4129,8 +4009,7 @@
         "context": "V kosočtverci jsou trojúhelníčky. Když jsou v řadě 4 bílé trojúhelníčky, kolik je tmavých?"
       },
       "answer": {
-        "correct": "30",
-        "numeric": 30,
+        "value": 30,
         "unit": null
       },
       "distractors": [
@@ -4165,8 +4044,7 @@
         "context": "V kosočtverci jsou trojúhelníčky. Když je v řadě 6 tmavých trojúhelníčků, kolik je trojúhelníčků celkem?"
       },
       "answer": {
-        "correct": "50",
-        "numeric": 50,
+        "value": 50,
         "unit": null
       },
       "distractors": [
@@ -4203,8 +4081,7 @@
         "context": "V kosočtverci jsou trojúhelníčky. Když je v řadě 21 tmavých trojúhelníčků, kolik je trojúhelníčků celkem?"
       },
       "answer": {
-        "correct": "800",
-        "numeric": 800,
+        "value": 800,
         "unit": null
       },
       "distractors": [
@@ -4239,8 +4116,7 @@
         "context": "V posloupnosti 2, 5, 8, 11, ... najdi 10. člen."
       },
       "answer": {
-        "correct": "29",
-        "numeric": 29,
+        "value": 29,
         "unit": null
       },
       "distractors": [
@@ -4275,8 +4151,7 @@
         "context": "V posloupnosti 1, 4, 9, 16, ... najdi 7. člen."
       },
       "answer": {
-        "correct": "49",
-        "numeric": 49,
+        "value": 49,
         "unit": null
       },
       "distractors": [
@@ -4311,8 +4186,7 @@
         "context": "V posloupnosti 3, 6, 12, 24, ... najdi 6. člen."
       },
       "answer": {
-        "correct": "96",
-        "numeric": 96,
+        "value": 96,
         "unit": null
       },
       "distractors": [
@@ -4347,8 +4221,7 @@
         "context": "Obrazce z čtverečků: 1. obrazec má 4 čtverečky, 2. má 7, 3. má 10. Kolik čtverečků má 10. obrazec?"
       },
       "answer": {
-        "correct": "31",
-        "numeric": 31,
+        "value": 31,
         "unit": null
       },
       "distractors": [
@@ -4383,8 +4256,7 @@
         "context": "Posloupnost 5, 9, 13, 17, ... Který člen je roven 101?"
       },
       "answer": {
-        "correct": "25",
-        "numeric": 25,
+        "value": 25,
         "unit": null
       },
       "distractors": [
@@ -4421,8 +4293,7 @@
         "context": "Převeď: 1 m² = ? cm²"
       },
       "answer": {
-        "correct": "10000",
-        "numeric": 10000,
+        "value": 10000,
         "unit": "cm²"
       },
       "distractors": [
@@ -4457,8 +4328,7 @@
         "context": "Doplň: 0,75 m² = 25 cm² + ? cm²"
       },
       "answer": {
-        "correct": "7475",
-        "numeric": 7475,
+        "value": 7475,
         "unit": "cm²"
       },
       "distractors": [
@@ -4493,8 +4363,7 @@
         "context": "Převeď: 1 dm³ = ? cm³"
       },
       "answer": {
-        "correct": "1000",
-        "numeric": 1000,
+        "value": 1000,
         "unit": "cm³"
       },
       "distractors": [
@@ -4529,8 +4398,7 @@
         "context": "Doplň: 0,2 dm³ + ? cm³ = 1 litr"
       },
       "answer": {
-        "correct": "800",
-        "numeric": 800,
+        "value": 800,
         "unit": "cm³"
       },
       "distractors": [
@@ -4566,8 +4434,7 @@
         "context": "Doplň: ? · 20 minut = 8 · 0,75 hodiny"
       },
       "answer": {
-        "correct": "18",
-        "numeric": 18,
+        "value": 18,
         "unit": null
       },
       "distractors": [
@@ -4603,8 +4470,7 @@
         "context": "Převeď: 2,5 m² = ? dm²"
       },
       "answer": {
-        "correct": "250",
-        "numeric": 250,
+        "value": 250,
         "unit": "dm²"
       },
       "distractors": [
@@ -4639,8 +4505,7 @@
         "context": "Převeď: 0,5 m³ = ? litrů"
       },
       "answer": {
-        "correct": "500",
-        "numeric": 500,
+        "value": 500,
         "unit": "l"
       },
       "distractors": [
@@ -4675,8 +4540,7 @@
         "context": "Převeď: 450 cm² = ? m²"
       },
       "answer": {
-        "correct": "0,045",
-        "numeric": 0.045,
+        "value": 0.045,
         "unit": "m²"
       },
       "distractors": [
