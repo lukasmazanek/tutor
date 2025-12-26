@@ -1,6 +1,7 @@
 import { AcademicCapIcon } from '@heroicons/react/24/outline'
+import BottomBar from '../BottomBar'
 
-function Summary({ results, questions, onExit }) {
+function Summary({ results, questions, onExit, onViewProgress, onRestart }) {
   // Calculate stats
   const totalQuestions = results.length
   const typeCorrect = results.filter(r => r.typeCorrect).length
@@ -25,88 +26,55 @@ function Summary({ results, questions, onExit }) {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 px-4 py-6 flex flex-col">
-      {/* Header */}
-      <div className="text-center mb-8">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
-          <AcademicCapIcon className="w-8 h-8 text-indigo-600" />
-        </div>
-        <h1 className="text-2xl font-bold text-slate-800">Hotovo!</h1>
-        <p className="text-slate-600 mt-2">{getMessage()}</p>
-      </div>
+    <div className="h-screen h-[100dvh] bg-slate-50 flex flex-col overflow-hidden">
+      {/* Scrollable centered content - ADR-015 CENTERED template */}
+      <div className="flex-1 min-h-0 overflow-y-auto flex items-center justify-center px-4 py-6 pb-20">
+        <div className="bg-white rounded-2xl shadow-sm p-6 sm:p-8 max-w-sm w-full text-center">
+          {/* Header */}
+          <div className="flex justify-center mb-4">
+            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-indigo-100 rounded-full">
+              <AcademicCapIcon className="w-6 h-6 sm:w-8 sm:h-8 text-indigo-600" />
+            </div>
+          </div>
+          <h1 className="text-xl sm:text-2xl font-bold text-slate-800 mb-2">Hotovo!</h1>
+          <p className="text-slate-600 mb-6">{getMessage()}</p>
 
-      {/* Stats */}
-      <div className="bg-white rounded-2xl shadow-sm p-5 mb-6">
-        <div className="grid grid-cols-2 gap-4">
           {/* Overall score */}
-          <div className="col-span-2 text-center pb-4 border-b border-slate-100">
+          <div className="bg-indigo-50 rounded-xl p-4 mb-4">
             <div className="text-4xl font-bold text-indigo-600">{overallPercentage}%</div>
-            <div className="text-slate-500 text-sm">Celková úspěšnost</div>
-            <div className="text-slate-400 text-xs mt-1">
+            <div className="text-sm text-indigo-700">Celková úspěšnost</div>
+            <div className="text-xs text-indigo-500 mt-1">
               (typ i strategie správně: {bothCorrect}/{totalQuestions})
             </div>
           </div>
 
-          {/* Type accuracy */}
-          <div className="text-center">
-            <div className="text-2xl font-semibold text-slate-700">{typePercentage}%</div>
-            <div className="text-slate-500 text-sm">Rozpoznání typu</div>
-            <div className="text-slate-400 text-xs">{typeCorrect}/{totalQuestions}</div>
+          {/* Type & Strategy accuracy */}
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="bg-slate-50 rounded-xl p-3">
+              <div className="text-2xl font-semibold text-slate-700">{typePercentage}%</div>
+              <div className="text-slate-500 text-xs">Rozpoznání typu</div>
+            </div>
+            <div className="bg-slate-50 rounded-xl p-3">
+              <div className="text-2xl font-semibold text-slate-700">{strategyPercentage}%</div>
+              <div className="text-slate-500 text-xs">Volba strategie</div>
+            </div>
           </div>
 
-          {/* Strategy accuracy */}
-          <div className="text-center">
-            <div className="text-2xl font-semibold text-slate-700">{strategyPercentage}%</div>
-            <div className="text-slate-500 text-sm">Volba strategie</div>
-            <div className="text-slate-400 text-xs">{strategyCorrect}/{totalQuestions}</div>
+          {/* Average time */}
+          <div className="text-sm text-slate-500">
+            Průměrný čas: <span className="text-slate-700 font-medium">{avgTime}s</span>
           </div>
         </div>
-
-        {/* Average time */}
-        <div className="mt-4 pt-4 border-t border-slate-100 text-center">
-          <span className="text-slate-500 text-sm">Průměrný čas: </span>
-          <span className="text-slate-700 font-medium">{avgTime}s</span>
-        </div>
       </div>
 
-      {/* Problem types breakdown */}
-      <div className="bg-white rounded-2xl shadow-sm p-5 mb-6">
-        <h3 className="font-medium text-slate-700 mb-3">Výsledky podle úloh</h3>
-        <div className="space-y-2 max-h-48 overflow-y-auto">
-          {results.map((result, index) => {
-            const question = questions.find(q => q.id === result.questionId)
-            return (
-              <div
-                key={index}
-                className="flex items-center justify-between text-sm py-2 border-b border-slate-50 last:border-0"
-              >
-                <span className="text-slate-600 truncate flex-1 mr-2">
-                  {question?.type.correct_label || 'Úloha ' + (index + 1)}
-                </span>
-                <div className="flex items-center gap-2">
-                  <span className={result.typeCorrect ? 'text-green-600' : 'text-amber-500'}>
-                    {result.typeCorrect ? '✓' : '○'}
-                  </span>
-                  <span className={result.strategyCorrect ? 'text-green-600' : 'text-amber-500'}>
-                    {result.strategyCorrect ? '✓' : '○'}
-                  </span>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-
-      {/* Actions */}
-      <div className="mt-auto space-y-3">
-        <button
-          onClick={onExit}
-          className="w-full py-4 px-6 bg-safe-blue text-white rounded-xl
-            font-medium transition-gentle active:scale-[0.98]"
-        >
-          Zpět na úvod
-        </button>
-      </div>
+      {/* BottomBar - ADR-015 */}
+      <BottomBar
+        slots={{
+          1: { onClick: onExit },
+          2: { onClick: onViewProgress },
+          5: { action: 'restart', onClick: onRestart }
+        }}
+      />
     </div>
   )
 }

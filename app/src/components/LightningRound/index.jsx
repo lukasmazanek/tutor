@@ -8,12 +8,20 @@ import BottomBar from '../BottomBar'
 
 const QUESTIONS_PER_ROUND = 10
 
+// Format answer value for display (Czech locale for numbers)
+function formatAnswerValue(value) {
+  if (typeof value === 'number') {
+    return value.toLocaleString('cs-CZ')
+  }
+  return value
+}
+
 // Transform unified format to Lightning format for subcomponents
 function toLightningFormat(q) {
   return {
     id: q.id,
     question: q.question.stem || q.question.context,
-    correct: q.answer.correct,
+    correct: formatAnswerValue(q.answer.value),
     distractors: q.distractors,
     type: q.meta.original_type || 'calculation',
     hint: {
@@ -224,11 +232,12 @@ function LightningRound({ onExit, onViewProgress }) {
             stats={getSummaryStats()}
             onRestart={handleRestart}
             onExit={onExit}
+            onViewProgress={onViewProgress}
           />
         )}
       </div>
 
-      {/* Bottom bar - ADR-009 centralized (except in summary) */}
+      {/* Bottom bar - ADR-009 centralized (except in summary - it has its own) */}
       {phase !== 'summary' && (
         <BottomBar
           slots={{

@@ -40,8 +40,8 @@ function Slot({ position, onClick, disabled = false, active = false, action = nu
     style = getToggleStyle(active)
   }
 
-  // Handle action slot (position 5)
-  if (position === 5 && action && ACTIONS[action]) {
+  // Handle action override (any slot can use actions)
+  if (action && ACTIONS[action]) {
     const actionDef = ACTIONS[action]
     Icon = actionDef.icon
     style = actionDef.style

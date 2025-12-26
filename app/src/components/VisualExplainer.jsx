@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { LightBulbIcon } from '@heroicons/react/24/outline'
+import BottomBar from './BottomBar'
 
-function VisualExplainer({ problem, onContinue }) {
+function VisualExplainer({ problem, onContinue, onHome, onViewProgress }) {
   const [step, setStep] = useState(0)
 
   // Parse the problem to extract key info
@@ -68,146 +69,132 @@ function VisualExplainer({ problem, onContinue }) {
 
   const currentStep = steps[step]
 
-  return (
-    <div className="min-h-screen bg-slate-50 px-4 py-6 flex flex-col">
-      {/* Header */}
-      <div className="mb-6">
-        <span className="text-sm text-purple-600 font-medium flex items-center gap-1">
-          <LightBulbIcon className="w-4 h-4" />
-          Vizuální nápověda
-        </span>
-        <h2 className="text-xl font-semibold text-slate-800 mt-1">
-          {currentStep.title}
-        </h2>
-        <p className="text-slate-600 mt-1">{currentStep.description}</p>
-      </div>
+  const isLastStep = step === steps.length - 1
 
-      {/* Visual representation */}
-      <div className="flex-1 flex flex-col items-center justify-center">
-        <div className="bg-white rounded-2xl shadow-sm p-6 w-full max-w-sm">
-          {/* Original blocks */}
-          <div className="mb-4">
-            <p className="text-xs text-slate-400 mb-2 uppercase tracking-wide">Původní</p>
-            <div className="flex gap-1">
-              {originalBlocks.map((_, i) => (
-                <div
-                  key={i}
-                  className={`flex-1 h-12 rounded-lg transition-all duration-300
-                    ${currentStep.highlight === i
-                      ? 'bg-purple-500 ring-2 ring-purple-300'
-                      : 'bg-safe-blue'
-                    }
-                    ${!currentStep.showOriginal ? 'opacity-30' : ''}
-                  `}
-                />
-              ))}
+  return (
+    <div className="h-screen h-[100dvh] bg-slate-50 flex flex-col overflow-hidden">
+      {/* Scrollable content - ADR-015 TUTORIAL template */}
+      <div className="flex-1 min-h-0 overflow-y-auto px-4 py-6 pb-20">
+        {/* Header */}
+        <div className="mb-6">
+          <span className="text-sm text-purple-600 font-medium flex items-center gap-1">
+            <LightBulbIcon className="w-4 h-4" />
+            Vizuální nápověda
+          </span>
+          <h2 className="text-xl font-semibold text-slate-800 mt-1">
+            {currentStep.title}
+          </h2>
+          <p className="text-slate-600 mt-1">{currentStep.description}</p>
+        </div>
+
+        {/* Visual representation */}
+        <div className="flex-1 flex flex-col items-center justify-center">
+          <div className="bg-white rounded-2xl shadow-sm p-6 w-full max-w-sm">
+            {/* Original blocks */}
+            <div className="mb-4">
+              <p className="text-xs text-slate-400 mb-2 uppercase tracking-wide">Původní</p>
+              <div className="flex gap-1">
+                {originalBlocks.map((_, i) => (
+                  <div
+                    key={i}
+                    className={`flex-1 h-12 rounded-lg transition-all duration-300
+                      ${currentStep.highlight === i
+                        ? 'bg-purple-500 ring-2 ring-purple-300'
+                        : 'bg-safe-blue'
+                      }
+                      ${!currentStep.showOriginal ? 'opacity-30' : ''}
+                    `}
+                  />
+                ))}
+              </div>
             </div>
+
+            {/* Change visualization */}
+            {(currentStep.showChange || step >= 2) && (
+              <div className="mb-4 transition-all duration-300">
+                <p className="text-xs text-slate-400 mb-2 uppercase tracking-wide">
+                  {isIncrease ? 'Přidáno' : 'Odebráno'}
+                </p>
+                <div className="flex gap-1">
+                  <div
+                    className={`h-12 rounded-lg transition-all duration-300
+                      ${isIncrease ? 'bg-green-500' : 'bg-red-400'}
+                      ${currentStep.showChange ? 'opacity-100' : 'opacity-0'}
+                    `}
+                    style={{ width: `${100 / fractionInfo.blocks}%` }}
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Result */}
+            {currentStep.showResult && (
+              <div className="pt-4 border-t border-slate-100">
+                <p className="text-xs text-slate-400 mb-2 uppercase tracking-wide">Výsledek</p>
+                <div className="flex gap-1">
+                  {isIncrease ? (
+                    // Show original + 1 block
+                    <>
+                      {originalBlocks.map((_, i) => (
+                        <div key={i} className="flex-1 h-12 rounded-lg bg-safe-blue" />
+                      ))}
+                      <div
+                        className="h-12 rounded-lg bg-green-500"
+                        style={{ width: `${100 / (fractionInfo.blocks + 1)}%` }}
+                      />
+                    </>
+                  ) : (
+                    // Show original - 1 block (faded)
+                    originalBlocks.slice(0, -1).map((_, i) => (
+                      <div key={i} className="flex-1 h-12 rounded-lg bg-safe-blue" />
+                    ))
+                  )}
+                </div>
+                <p className="text-center text-lg font-medium text-slate-700 mt-4">
+                  {isIncrease
+                    ? `${fractionInfo.blocks + 1}/${fractionInfo.blocks} × původní`
+                    : `${fractionInfo.blocks - 1}/${fractionInfo.blocks} × původní`
+                  }
+                </p>
+              </div>
+            )}
           </div>
 
-          {/* Change visualization */}
-          {(currentStep.showChange || step >= 2) && (
-            <div className="mb-4 transition-all duration-300">
-              <p className="text-xs text-slate-400 mb-2 uppercase tracking-wide">
-                {isIncrease ? 'Přidáno' : 'Odebráno'}
-              </p>
-              <div className="flex gap-1">
-                <div
-                  className={`h-12 rounded-lg transition-all duration-300
-                    ${isIncrease ? 'bg-green-500' : 'bg-red-400'}
-                    ${currentStep.showChange ? 'opacity-100' : 'opacity-0'}
-                  `}
-                  style={{ width: `${100 / fractionInfo.blocks}%` }}
-                />
-              </div>
-            </div>
-          )}
-
-          {/* Result */}
-          {currentStep.showResult && (
-            <div className="pt-4 border-t border-slate-100">
-              <p className="text-xs text-slate-400 mb-2 uppercase tracking-wide">Výsledek</p>
-              <div className="flex gap-1">
-                {isIncrease ? (
-                  // Show original + 1 block
-                  <>
-                    {originalBlocks.map((_, i) => (
-                      <div key={i} className="flex-1 h-12 rounded-lg bg-safe-blue" />
-                    ))}
-                    <div
-                      className="h-12 rounded-lg bg-green-500"
-                      style={{ width: `${100 / (fractionInfo.blocks + 1)}%` }}
-                    />
-                  </>
-                ) : (
-                  // Show original - 1 block (faded)
-                  originalBlocks.slice(0, -1).map((_, i) => (
-                    <div key={i} className="flex-1 h-12 rounded-lg bg-safe-blue" />
-                  ))
-                )}
-              </div>
-              <p className="text-center text-lg font-medium text-slate-700 mt-4">
-                {isIncrease
-                  ? `${fractionInfo.blocks + 1}/${fractionInfo.blocks} × původní`
-                  : `${fractionInfo.blocks - 1}/${fractionInfo.blocks} × původní`
-                }
+          {/* Key insight box */}
+          {isLastStep && (
+            <div className="mt-6 bg-amber-50 border border-amber-200 rounded-xl p-4 w-full max-w-sm">
+              <p className="text-amber-800 text-sm">
+                <strong>Klíčové:</strong> "{isIncrease ? 'O X více' : 'O X méně'}" =
+                původní {isIncrease ? '+' : '-'} X z původního
               </p>
             </div>
           )}
         </div>
 
-        {/* Key insight box */}
-        {step === steps.length - 1 && (
-          <div className="mt-6 bg-amber-50 border border-amber-200 rounded-xl p-4 w-full max-w-sm">
-            <p className="text-amber-800 text-sm">
-              <strong>Klíčové:</strong> "{isIncrease ? 'O X více' : 'O X méně'}" =
-              původní {isIncrease ? '+' : '-'} X z původního
-            </p>
-          </div>
-        )}
+        {/* Step indicator */}
+        <div className="flex justify-center gap-2 mt-6">
+          {steps.map((_, i) => (
+            <div
+              key={i}
+              className={`w-2 h-2 rounded-full transition-colors
+                ${i === step ? 'bg-safe-blue' : 'bg-slate-300'}
+              `}
+            />
+          ))}
+        </div>
       </div>
 
-      {/* Navigation */}
-      <div className="flex gap-3 mt-6">
-        {step > 0 && (
-          <button
-            onClick={() => setStep(step - 1)}
-            className="flex-1 py-4 px-6 rounded-xl bg-slate-200 text-slate-700
-              font-medium touch-target transition-gentle active:scale-[0.98]"
-          >
-            Zpět
-          </button>
-        )}
-
-        {step < steps.length - 1 ? (
-          <button
-            onClick={() => setStep(step + 1)}
-            className="flex-1 py-4 px-6 rounded-xl bg-safe-blue text-white
-              font-medium touch-target transition-gentle active:scale-[0.98]"
-          >
-            Další
-          </button>
-        ) : (
-          <button
-            onClick={onContinue}
-            className="flex-1 py-4 px-6 rounded-xl bg-green-600 text-white
-              font-medium touch-target transition-gentle active:scale-[0.98]"
-          >
-            Rozumím, pokračovat
-          </button>
-        )}
-      </div>
-
-      {/* Step indicator */}
-      <div className="flex justify-center gap-2 mt-4">
-        {steps.map((_, i) => (
-          <div
-            key={i}
-            className={`w-2 h-2 rounded-full transition-colors
-              ${i === step ? 'bg-safe-blue' : 'bg-slate-300'}
-            `}
-          />
-        ))}
-      </div>
+      {/* BottomBar - ADR-015 */}
+      <BottomBar
+        slots={{
+          1: { onClick: onHome || onContinue },
+          2: { onClick: onViewProgress },
+          4: step > 0
+            ? { action: 'back', onClick: () => setStep(step - 1) }
+            : null,
+          5: { action: 'continue', onClick: isLastStep ? onContinue : () => setStep(step + 1) }
+        }}
+      />
     </div>
   )
 }

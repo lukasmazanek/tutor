@@ -68,17 +68,31 @@ function TypeDrill({ onExit, onViewProgress }) {
   // Timing
   const [questionStartTime, setQuestionStartTime] = useState(Date.now())
 
-  // Shuffle and pick 10 questions on mount
-  useEffect(() => {
-    // Filter questions with context and type_id for TypeDrill
+  // Initialize questions
+  const initQuestions = () => {
     const typeDrillQuestions = questionsData.questions
       .filter(q => q.question.context && q.meta.type_id)
       .map(toTypeDrillFormat)
 
     const shuffled = [...typeDrillQuestions].sort(() => Math.random() - 0.5)
-    setQuestions(shuffled.slice(0, 10))
+    return shuffled.slice(0, 10)
+  }
+
+  // Shuffle and pick 10 questions on mount
+  useEffect(() => {
+    setQuestions(initQuestions())
     setQuestionStartTime(Date.now())
   }, [])
+
+  // Restart handler
+  const handleRestart = () => {
+    setQuestions(initQuestions())
+    setCurrentIndex(0)
+    setPhase('type')
+    setResults([])
+    setCurrentResult(null)
+    setQuestionStartTime(Date.now())
+  }
 
   const currentQuestion = questions[currentIndex]
 
@@ -160,6 +174,8 @@ function TypeDrill({ onExit, onViewProgress }) {
         results={results}
         questions={questions}
         onExit={onExit}
+        onViewProgress={onViewProgress}
+        onRestart={handleRestart}
       />
     )
   }

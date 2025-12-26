@@ -1,7 +1,8 @@
 import questionsData from '../data/questions.json'
-import { TrophyIcon, ChartBarIcon } from '@heroicons/react/24/outline'
+import { TrophyIcon } from '@heroicons/react/24/outline'
+import BottomBar from './BottomBar'
 
-function SessionSummary({ attempts, totalProblems, topic, sessionMetrics, onNewSession, onViewProgress }) {
+function SessionSummary({ attempts, totalProblems, topic, sessionMetrics, onNewSession, onViewProgress, onHome }) {
   // Calculate total explored (not "correct" - that's judgmental)
   const totalExplored = attempts.length
   const problemsWithoutHints = sessionMetrics?.problemsWithoutHints || 0
@@ -65,82 +66,76 @@ function SessionSummary({ attempts, totalProblems, topic, sessionMetrics, onNewS
   const stats = getTotalStats()
 
   return (
-    <div className="min-h-screen bg-slate-50 px-4 py-6 flex flex-col items-center justify-center">
-      <div className="bg-white rounded-2xl shadow-sm p-8 max-w-sm w-full text-center">
-        {/* Celebration - not about score */}
-        <div className="flex justify-center mb-4">
-          <TrophyIcon className="w-16 h-16 text-amber-500" />
-        </div>
-
-        <h1 className="text-2xl font-semibold text-slate-800 mb-2">
-          Skvělé prozkoumávání!
-        </h1>
-
-        <p className="text-slate-600 mb-6">
-          Dnes jsi prozkoumala {totalExplored} {totalExplored === 1 ? 'úlohu' : totalExplored < 5 ? 'úlohy' : 'úloh'}
-          {topicName && <span className="text-slate-400"> z tématu {topicName}</span>}
-        </p>
-
-        {/* Hint independence - key "závod sama se sebou" metric */}
-        <div className="bg-green-50 rounded-xl p-4 mb-4">
-          <div className="text-4xl font-bold text-green-600">
-            {problemsWithoutHints}
+    <div className="h-screen h-[100dvh] bg-slate-50 flex flex-col overflow-hidden">
+      {/* Scrollable centered content - ADR-015 CENTERED template */}
+      <div className="flex-1 min-h-0 overflow-y-auto flex items-center justify-center px-4 py-6 pb-20">
+        <div className="bg-white rounded-2xl shadow-sm p-6 sm:p-8 max-w-sm w-full text-center">
+          {/* Celebration - not about score */}
+          <div className="flex justify-center mb-4">
+            <TrophyIcon className="w-12 h-12 sm:w-16 sm:h-16 text-amber-500" />
           </div>
-          <div className="text-sm text-green-700">
-            samostatně (bez nápovědy)
-          </div>
-          {comparisonMessage && (
-            <div className="text-sm text-green-600 mt-2 font-medium">
-              {comparisonMessage}
+
+          <h1 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-2">
+            Skvělé prozkoumávání!
+          </h1>
+
+          <p className="text-slate-600 mb-6">
+            Dnes jsi prozkoumala {totalExplored} {totalExplored === 1 ? 'úlohu' : totalExplored < 5 ? 'úlohy' : 'úloh'}
+            {topicName && <span className="text-slate-400"> z tématu {topicName}</span>}
+          </p>
+
+          {/* Hint independence - key "závod sama se sebou" metric */}
+          <div className="bg-green-50 rounded-xl p-4 mb-4">
+            <div className="text-4xl font-bold text-green-600">
+              {problemsWithoutHints}
             </div>
-          )}
-        </div>
-
-        {/* Session stats */}
-        <div className="bg-slate-50 rounded-xl p-4 mb-4">
-          <div className="text-4xl font-bold text-safe-blue">
-            {totalExplored}
-          </div>
-          <div className="text-sm text-slate-500">
-            prozkoumáno dnes
-          </div>
-        </div>
-
-        {/* Total progress - "race against yourself" */}
-        {stats.problems > 0 && (
-          <div className="bg-purple-50 rounded-xl p-4 mb-4">
-            <div className="text-lg font-medium text-purple-700">
-              {stats.problems} úloh celkem
+            <div className="text-sm text-green-700">
+              samostatně (bez nápovědy)
             </div>
-            <div className="text-sm text-purple-500">
-              za {stats.sessions} cvičení
-            </div>
-            {stats.withoutHints > 0 && (
-              <div className="text-sm text-purple-600 mt-1">
-                {stats.withoutHints} samostatně
+            {comparisonMessage && (
+              <div className="text-sm text-green-600 mt-2 font-medium">
+                {comparisonMessage}
               </div>
             )}
           </div>
-        )}
 
-        {/* View full progress */}
-        <button
-          onClick={onViewProgress}
-          className="w-full py-3 px-4 rounded-xl bg-purple-100 text-purple-700
-            font-medium mb-3 transition-gentle active:scale-[0.98] flex items-center justify-center gap-2"
-        >
-          <ChartBarIcon className="w-5 h-5" />
-          Můj pokrok
-        </button>
+          {/* Session stats */}
+          <div className="bg-slate-50 rounded-xl p-4 mb-4">
+            <div className="text-4xl font-bold text-safe-blue">
+              {totalExplored}
+            </div>
+            <div className="text-sm text-slate-500">
+              prozkoumáno dnes
+            </div>
+          </div>
 
-        <button
-          onClick={onNewSession}
-          className="w-full py-4 px-6 rounded-xl bg-safe-blue text-white
-            font-medium touch-target transition-gentle active:scale-[0.98]"
-        >
-          Pokračovat
-        </button>
+          {/* Total progress - "race against yourself" */}
+          {stats.problems > 0 && (
+            <div className="bg-purple-50 rounded-xl p-4">
+              <div className="text-lg font-medium text-purple-700">
+                {stats.problems} úloh celkem
+              </div>
+              <div className="text-sm text-purple-500">
+                za {stats.sessions} cvičení
+              </div>
+              {stats.withoutHints > 0 && (
+                <div className="text-sm text-purple-600 mt-1">
+                  {stats.withoutHints} samostatně
+                </div>
+              )}
+            </div>
+          )}
+        </div>
       </div>
+
+      {/* BottomBar - ADR-015 */}
+      <BottomBar
+        slots={{
+          1: { onClick: onHome || onNewSession },
+          2: { onClick: onViewProgress },
+          5: { action: 'continue', onClick: onNewSession }
+        }}
+      />
     </div>
   )
 }

@@ -16,7 +16,9 @@ import {
   LightBulbIcon,
   CheckIcon,
   ArrowRightIcon,
-  ForwardIcon
+  ForwardIcon,
+  ArrowLeftIcon,
+  ArrowPathIcon
 } from '@heroicons/react/24/outline'
 
 // ============================================
@@ -150,6 +152,22 @@ export const ACTIONS = {
     icon: ForwardIcon,
     title: 'Přeskočit',
     style: 'secondary'
+  },
+
+  // Go back (arrow left)
+  back: {
+    id: 'back',
+    icon: ArrowLeftIcon,
+    title: 'Zpět',
+    style: 'secondary'
+  },
+
+  // Restart/Try again (circular arrow)
+  restart: {
+    id: 'restart',
+    icon: ArrowPathIcon,
+    title: 'Znovu',
+    style: 'primary'
   }
 }
 
