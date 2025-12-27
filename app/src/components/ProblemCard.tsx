@@ -18,6 +18,32 @@ function formatAnswer(value: string | number): string {
   return value
 }
 
+// Detect variable used in question (for dynamic keyboard)
+function detectVariable(text: string): string {
+  // Look for common variable patterns: (4n - 3), 3a, 2x, etc.
+  // Order matters - check less common first
+  const patterns = [
+    /\d*[n]\b/i,  // n (as in 4n)
+    /\d*[b]\b/i,  // b (as in 4b)
+    /\d*[a]\b/i,  // a (as in 3a)
+    /\d*[y]\b/i,  // y
+    /\d*[x]\b/i,  // x (most common, check last)
+  ]
+
+  for (const pattern of patterns) {
+    if (pattern.test(text)) {
+      const match = text.match(pattern)
+      if (match) {
+        // Extract just the letter
+        const letter = match[0].replace(/\d/g, '').toLowerCase()
+        if (letter) return letter
+      }
+    }
+  }
+
+  return 'x' // default
+}
+
 interface ProblemCardProps {
   problem: UnifiedQuestion
   onAnswer: (result: AttemptResult) => void
@@ -185,6 +211,7 @@ function ProblemCard({
   // UNIFIED FORMAT: Get display text
   const problemText = problem.question.context || problem.question.stem || ''
   const answerUnit = problem.answer.unit
+  const variableKey = detectVariable(problemText)
 
   return (
     <div className="h-screen h-[100dvh] bg-slate-50 flex flex-col overflow-hidden">
@@ -367,13 +394,13 @@ function ProblemCard({
                     {key === '/' ? '÷' : key}
                   </button>
                 ))}
-                {['4', '5', '6', '*', 'x'].map((key) => (
+                {['4', '5', '6', '*', variableKey].map((key) => (
                   <button
                     key={key}
                     type="button"
                     onClick={() => setUserAnswer(prev => prev + key)}
                     className={`h-11 rounded-xl text-base font-medium transition-gentle active:scale-95
-                      ${key === '*' || key === 'x' ? 'bg-purple-100 text-purple-700' : 'bg-slate-100 text-slate-800'}`}
+                      ${key === '*' || key === variableKey ? 'bg-purple-100 text-purple-700' : 'bg-slate-100 text-slate-800'}`}
                   >
                     {key === '*' ? '×' : key}
                   </button>
@@ -431,7 +458,7 @@ function ProblemCard({
             {!isMobile && !solutionRevealed && (
               <div className="flex gap-2 mb-2">
                 {[
-                  { symbol: 'x', display: 'x' },
+                  { symbol: variableKey, display: variableKey },
                   { symbol: '√(', display: '√(' },
                   { symbol: '^', display: '^' },
                   { symbol: '(', display: '(' },
