@@ -1,9 +1,10 @@
 import { DiagramProps } from './types'
 
-function RectangleDiagram({ labels = {}, highlight }: DiagramProps) {
-  const width = labels.width || 'a'
-  const height = labels.height || 'b'
-  const diagonal = labels.diagonal || 'd'
+function RectangleDiagram({ labels, highlight }: DiagramProps) {
+  const safeLabels = labels ?? {}
+  const width = safeLabels.width || 'a'
+  const height = safeLabels.height || 'b'
+  const diagonal = safeLabels.diagonal || 'd'
 
   const normalColor = '#475569'
   const highlightColor = '#7c3aed'

@@ -4,6 +4,7 @@
  * Run: node scripts/generate-formats.js
  *
  * ADR-014: Single output format, presentation layer decides MC vs open answer
+ * ADR-022: Multi-mode questions and keyboard enhancement
  */
 
 const fs = require('fs');
@@ -44,14 +45,92 @@ function getPythagoreanHighlight(stem) {
   return 'c'; // default
 }
 
-// Transform to unified output format (ADR-016, ADR-020)
-function toUnifiedFormat(q) {
-  const hasDistractors = q.distractors && q.distractors.length >= 2;
-  const hasQuestion = !!(q.question.context || q.question.stem);
-  const hasAnswer = !!q.answer.correct;
+// Generate diagram labels from pythagorean stem
+// Parses patterns like "a = 3, b = 4, c = ?" or "Odvěsny 3 a 4. Přepona?"
+function getPythagoreanLabels(stem) {
+  if (!stem) return null;
 
-  // ADR-020: Always use correct - parser can evaluate expressions like "1/6"
-  const answerValue = q.answer.correct;
+  // Pattern 1: "a = 3, b = 4, c = ?"
+  const explicitPattern = /([abc])\s*=\s*(\?|√?\d+)/gi;
+  const matches = [...stem.matchAll(explicitPattern)];
+
+  if (matches.length >= 2) {
+    const labels = {};
+    matches.forEach(m => {
+      labels[m[1].toLowerCase()] = m[2];
+    });
+    // Fill in missing sides with default
+    if (!labels.a) labels.a = 'a';
+    if (!labels.b) labels.b = 'b';
+    if (!labels.c) labels.c = 'c';
+    return labels;
+  }
+
+  // Pattern 2: "Odvěsny 3 a 4. Přepona?" or "Odvěsna 3, přepona 5. Druhá odvěsna?"
+  const odvesny = stem.match(/[Oo]dvěsn[ya]\s+(\d+)\s+a\s+(\d+)/);
+  if (odvesny) {
+    return { a: odvesny[1], b: odvesny[2], c: '?' };
+  }
+
+  const odvesnaPrep = stem.match(/[Oo]dvěsna\s+(\d+),?\s+přepona\s+(\d+)/);
+  if (odvesnaPrep) {
+    return { a: odvesnaPrep[1], b: '?', c: odvesnaPrep[2] };
+  }
+
+  return null; // Cannot parse, use defaults
+}
+
+// ADR-022: Detect keyboard variable from question text
+// Only matches algebraic patterns like 4n, 3a, 2x (digit + letter)
+// Prevents false positives on Czech words like "opřený"
+function detectKeyboardVariable(q) {
+  const text = q.question?.stem || q.question?.context || '';
+
+  // Require digit before variable to avoid Czech word matches
+  const match = text.match(/\d+([nabxy])\b/i);
+  if (match) return match[1].toLowerCase();
+
+  return null; // No variable key for word problems
+}
+
+// ADR-022: Build modes structure based on question type
+function buildModes(q) {
+  const modes = {};
+  const hasDistractors = q.distractors && q.distractors.length >= 2;
+  const originalType = q.meta?.original_type;
+
+  if (originalType === 'problem_type') {
+    // Type recognition question - answer is the problem type name
+    modes.type_recognition = {
+      answer: q.answer.correct,
+      distractors: hasDistractors ? q.distractors.map(d => d.value) : []
+    };
+
+    // If source data has modes.numeric, include it (for questions with both)
+    if (q.modes?.numeric) {
+      modes.numeric = q.modes.numeric;
+    }
+  } else {
+    // Numeric/calculation question
+    modes.numeric = {
+      answer: q.answer.correct,
+      unit: q.answer.unit || null,
+      variants: q.answer.variants || [],
+      distractors: hasDistractors ? q.distractors.map(d => d.value) : []
+    };
+
+    // If source data has modes.type_recognition, include it
+    if (q.modes?.type_recognition) {
+      modes.type_recognition = q.modes.type_recognition;
+    }
+  }
+
+  return modes;
+}
+
+// Transform to unified output format (ADR-014, ADR-016, ADR-020, ADR-022)
+function toUnifiedFormat(q) {
+  const modes = buildModes(q);
 
   // Build base object
   const result = {
@@ -62,11 +141,10 @@ function toUnifiedFormat(q) {
       stem: q.question.stem || null,
       context: q.question.context || null
     },
-    answer: {
-      value: answerValue,
-      unit: q.answer.unit || null
+    modes: modes,
+    keyboard: {
+      variable: detectKeyboardVariable(q)
     },
-    distractors: hasDistractors ? q.distractors.map(d => d.value) : [],
     hints: q.hints ? q.hints.map(h => h.text) : [],
     solution: {
       steps: q.solution?.steps || [],
@@ -75,18 +153,26 @@ function toUnifiedFormat(q) {
     meta: {
       type_id: q.meta?.type_id || null,
       type_label: q.meta?.type_label || null,
-      original_type: q.meta?.original_type || null,
-      supports_mc: hasDistractors,
-      supports_open: hasQuestion && hasAnswer
+      original_type: q.meta?.original_type || null
     }
   };
 
   // Add diagram for pythagorean questions
   if (q.topic === 'pythagorean') {
-    result.diagram = {
-      type: 'right_triangle',
-      highlight: getPythagoreanHighlight(q.question.stem)
-    };
+    // Use source diagram if present, otherwise auto-generate
+    if (q.diagram) {
+      result.diagram = {
+        type: q.diagram.type || 'right_triangle',
+        highlight: q.diagram.highlight || getPythagoreanHighlight(q.question.stem),
+        labels: q.diagram.labels || getPythagoreanLabels(q.question.stem)
+      };
+    } else {
+      result.diagram = {
+        type: 'right_triangle',
+        highlight: getPythagoreanHighlight(q.question.stem),
+        labels: getPythagoreanLabels(q.question.stem)
+      };
+    }
   }
 
   return result;
@@ -126,14 +212,16 @@ console.log(`Loaded ${allQuestions.length} questions from source\n`);
 
 const unifiedQuestions = allQuestions.map(toUnifiedFormat);
 
-// Stats
-const mcCount = unifiedQuestions.filter(q => q.meta.supports_mc).length;
-const openCount = unifiedQuestions.filter(q => q.meta.supports_open).length;
+// Stats - ADR-022 mode-based counting
+const numericCount = unifiedQuestions.filter(q => q.modes.numeric).length;
+const typeRecogCount = unifiedQuestions.filter(q => q.modes.type_recognition).length;
+const bothModesCount = unifiedQuestions.filter(q => q.modes.numeric && q.modes.type_recognition).length;
+const withVariableCount = unifiedQuestions.filter(q => q.keyboard.variable).length;
 
 const output = {
-  version: '3.0',
+  version: '4.0',
   generated: new Date().toISOString(),
-  description: 'Unified question format - presentation layer decides MC vs open answer',
+  description: 'ADR-022: Multi-mode questions with keyboard config',
   topics: extractTopics(allQuestions),
   questions: unifiedQuestions
 };
@@ -143,9 +231,11 @@ fs.writeFileSync(
   JSON.stringify(output, null, 2)
 );
 
-console.log(`✓ questions.json`);
+console.log(`✓ questions.json (v4.0 - ADR-022)`);
 console.log(`  - ${unifiedQuestions.length} total questions`);
-console.log(`  - ${mcCount} support multiple choice`);
-console.log(`  - ${openCount} support open answer`);
+console.log(`  - ${numericCount} support numeric mode`);
+console.log(`  - ${typeRecogCount} support type_recognition mode`);
+console.log(`  - ${bothModesCount} support both modes`);
+console.log(`  - ${withVariableCount} have keyboard variable`);
 console.log(`\nGeneration complete!`);
 console.log(`Output: ${GENERATED_DIR}`);

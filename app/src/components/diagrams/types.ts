@@ -3,7 +3,7 @@
  */
 
 export interface DiagramProps {
-  labels?: Record<string, string | number>
+  labels?: Record<string, string | number> | null
   highlight?: string
   type?: string
 }

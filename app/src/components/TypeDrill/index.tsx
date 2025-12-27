@@ -70,9 +70,9 @@ function TypeDrill({ onExit, onViewProgress }: TypeDrillProps) {
 
   // Initialize questions
   const initQuestions = (): TypeDrillQuestion[] => {
-    // UNIFIED FORMAT: Filter questions with context and type_id
+    // ADR-022: Filter questions that support type_recognition mode
     const typeDrillQuestions = data.questions
-      .filter(q => q.question.context && q.meta.type_id)
+      .filter(q => q.modes.type_recognition && q.question.context)
       .map(prepareTypeDrillQuestion)
 
     const shuffled = [...typeDrillQuestions].sort(() => Math.random() - 0.5)

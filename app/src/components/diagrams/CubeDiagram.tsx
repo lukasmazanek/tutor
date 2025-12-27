@@ -1,8 +1,9 @@
 import { DiagramProps } from './types'
 
-function CubeDiagram({ labels = {}, highlight }: DiagramProps) {
-  const edge = labels.edge || 'a'
-  const diagonal = labels.diagonal || 'd'
+function CubeDiagram({ labels, highlight }: DiagramProps) {
+  const safeLabels = labels ?? {}
+  const edge = safeLabels.edge || 'a'
+  const diagonal = safeLabels.diagonal || 'd'
 
   const normalColor = '#475569'
   const highlightColor = '#7c3aed'

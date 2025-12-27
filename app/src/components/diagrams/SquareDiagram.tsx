@@ -1,8 +1,9 @@
 import { DiagramProps } from './types'
 
-function SquareDiagram({ labels = {}, highlight }: DiagramProps) {
-  const side = labels.side || 'a'
-  const diagonal = labels.diagonal || 'd'
+function SquareDiagram({ labels, highlight }: DiagramProps) {
+  const safeLabels = labels ?? {}
+  const side = safeLabels.side || 'a'
+  const diagonal = safeLabels.diagonal || 'd'
 
   const normalColor = '#475569'
   const highlightColor = '#7c3aed'

@@ -1,6 +1,9 @@
 /**
  * Data Validation Script
- * Validates source data against ADR-014 (Unified Content Format) and ADR-017 (Math Input Language)
+ * Validates source data against:
+ * - ADR-014 (Unified Content Format)
+ * - ADR-017 (Math Input Language)
+ * - ADR-022 (Multi-mode questions and keyboard enhancement)
  *
  * Run: node scripts/validate-data.js
  */
@@ -151,6 +154,52 @@ function validateMeta(q, file) {
 }
 
 /**
+ * ADR-022: Validate diagram configuration
+ */
+function validateDiagram(q, file) {
+  if (!q.diagram) return // diagram is optional
+
+  if (!q.diagram.type) {
+    error(file, q.id, 'diagram.type is required when diagram is present')
+  }
+
+  const validTypes = ['right_triangle', 'rectangle', 'cube', 'equilateral_triangle', 'ladder']
+  if (q.diagram.type && !validTypes.includes(q.diagram.type)) {
+    warn(file, q.id, `diagram.type "${q.diagram.type}" not in known types: ${validTypes.join(', ')}`)
+  }
+
+  if (q.diagram.highlight && !['a', 'b', 'c'].includes(q.diagram.highlight)) {
+    warn(file, q.id, `diagram.highlight "${q.diagram.highlight}" should be 'a', 'b', or 'c'`)
+  }
+
+  if (q.diagram.labels) {
+    const labels = q.diagram.labels
+    if (typeof labels !== 'object') {
+      error(file, q.id, 'diagram.labels must be an object')
+    }
+  }
+}
+
+/**
+ * ADR-022: Validate modes configuration (if present in source)
+ */
+function validateModes(q, file) {
+  if (!q.modes) return // modes is optional in source data
+
+  if (q.modes.numeric) {
+    if (!q.modes.numeric.answer) {
+      error(file, q.id, 'modes.numeric.answer is required')
+    }
+  }
+
+  if (q.modes.type_recognition) {
+    if (!q.modes.type_recognition.answer) {
+      error(file, q.id, 'modes.type_recognition.answer is required')
+    }
+  }
+}
+
+/**
  * Main validation function for a single question
  */
 function validateQuestion(q, file) {
@@ -159,6 +208,8 @@ function validateQuestion(q, file) {
   validateDistractors(q, file)
   validateHints(q, file)
   validateMeta(q, file)
+  validateDiagram(q, file)
+  validateModes(q, file)
 }
 
 /**

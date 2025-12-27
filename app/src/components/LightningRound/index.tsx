@@ -25,13 +25,16 @@ function shuffleAnswers(correct: string, distractors: string[]): string[] {
   return all.sort(() => Math.random() - 0.5)
 }
 
-// NO TRANSFORMATION FUNCTION - extend UnifiedQuestion inline
+// ADR-022: Extend UnifiedQuestion with display data using modes.numeric
 function prepareLightningQuestion(q: UnifiedQuestion): LightningQuestion {
-  const displayCorrect = formatAnswerValue(q.answer.value)
+  const numericMode = q.modes.numeric
+  if (!numericMode) throw new Error(`Question ${q.id} has no numeric mode`)
+
+  const displayCorrect = formatAnswerValue(numericMode.answer)
   return {
     ...q,
     displayCorrect,
-    shuffledAnswers: shuffleAnswers(displayCorrect, q.distractors)
+    shuffledAnswers: shuffleAnswers(displayCorrect, numericMode.distractors || [])
   }
 }
 
@@ -110,34 +113,14 @@ function LightningRound({ onExit, onViewProgress }: LightningRoundProps) {
 
   // Select mixed questions with guaranteed type mix
   function selectMixedQuestions(): LightningQuestion[] {
-    // UNIFIED FORMAT: Filter MC-capable questions directly
+    // ADR-022: Filter questions that have numeric mode with distractors (MC-capable)
     const mcQuestions = data.questions
-      .filter(q => q.meta.supports_mc)
+      .filter(q => q.modes.numeric && (q.modes.numeric.distractors?.length || 0) >= 2)
       .map(prepareLightningQuestion)
 
-    // Separate questions by type to ensure mix
-    const typeQuestions = mcQuestions.filter(q => {
-      const typeId = q.meta.type_id || ''
-      return typeId === 'type_recognition' || typeId === 'problem_type'
-    })
-    const calcQuestions = mcQuestions.filter(q => {
-      const typeId = q.meta.type_id || ''
-      return typeId !== 'type_recognition' && typeId !== 'problem_type'
-    })
-
-    // Shuffle each pool
-    const shuffledType = [...typeQuestions].sort(() => Math.random() - 0.5)
-    const shuffledCalc = [...calcQuestions].sort(() => Math.random() - 0.5)
-
-    // Pick 3 type questions and 7 calc questions
-    const typeCount = Math.min(3, shuffledType.length)
-    const calcCount = QUESTIONS_PER_ROUND - typeCount
-
-    const selectedType = shuffledType.slice(0, typeCount)
-    const selectedCalc = shuffledCalc.slice(0, calcCount)
-
-    // Combine and shuffle final selection
-    return [...selectedType, ...selectedCalc].sort(() => Math.random() - 0.5)
+    // Shuffle and pick
+    const shuffled = [...mcQuestions].sort(() => Math.random() - 0.5)
+    return shuffled.slice(0, QUESTIONS_PER_ROUND)
   }
 
   // Restart with new questions

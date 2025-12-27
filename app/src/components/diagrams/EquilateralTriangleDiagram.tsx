@@ -1,8 +1,9 @@
 import { DiagramProps } from './types'
 
-function EquilateralTriangleDiagram({ labels = {}, highlight }: DiagramProps) {
-  const side = labels.side || 'a'
-  const height = labels.height || 'v'
+function EquilateralTriangleDiagram({ labels, highlight }: DiagramProps) {
+  const safeLabels = labels ?? {}
+  const side = safeLabels.side || 'a'
+  const height = safeLabels.height || 'v'
 
   const normalColor = '#475569'
   const highlightColor = '#7c3aed'

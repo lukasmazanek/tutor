@@ -1406,6 +1406,15 @@
         ],
         "strategy": "Žebřík = přepona, zeď = odvěsna"
       },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "b",
+        "labels": {
+          "a": "4 m",
+          "b": "?",
+          "c": "5 m"
+        }
+      },
       "meta": {
         "type_id": "PYTH-PTYPE",
         "type_label": "Pythagorova věta",
@@ -1606,6 +1615,15 @@
         ],
         "strategy": "Pravoúhlý trojúhelník na mapě"
       },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c",
+        "labels": {
+          "a": "8 km",
+          "b": "6 km",
+          "c": "?"
+        }
+      },
       "meta": {
         "type_id": "PYTH-PTYPE",
         "type_label": "Pythagorova věta",
@@ -1655,6 +1673,15 @@
           "s = √(3² + 4²) = 5 m"
         ],
         "strategy": "Délka šikmé strany"
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c",
+        "labels": {
+          "a": "3 m",
+          "b": "4 m",
+          "c": "?"
+        }
       },
       "meta": {
         "type_id": "PYTH-PTYPE",

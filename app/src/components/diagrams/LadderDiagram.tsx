@@ -1,9 +1,10 @@
 import { DiagramProps } from './types'
 
-function LadderDiagram({ labels = {}, highlight }: DiagramProps) {
-  const wallHeight = labels.wall_height || '?'
-  const groundDistance = labels.ground_distance || '?'
-  const ladderLength = labels.ladder_length || '?'
+function LadderDiagram({ labels, highlight }: DiagramProps) {
+  const safeLabels = labels ?? {}
+  const wallHeight = safeLabels.wall_height || '?'
+  const groundDistance = safeLabels.ground_distance || '?'
+  const ladderLength = safeLabels.ladder_length || '?'
 
   const normalColor = '#475569'
   const highlightColor = '#7c3aed'

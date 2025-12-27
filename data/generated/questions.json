@@ -1,7 +1,7 @@
 {
-  "version": "3.0",
-  "generated": "2025-12-27T05:36:39.978Z",
-  "description": "Unified question format - presentation layer decides MC vs open answer",
+  "version": "4.0",
+  "generated": "2025-12-27T07:06:51.501Z",
+  "description": "ADR-022: Multi-mode questions with keyboard config",
   "topics": {
     "binomial_squares": {
       "id": "binomial_squares",
@@ -55,14 +55,22 @@
         "stem": "(x + 3)² = ?",
         "context": "Rozviň: (x + 3)²"
       },
-      "answer": {
-        "value": "x² + 6x + 9",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "x² + 6x + 9",
+          "unit": null,
+          "variants": [
+            "x^2 + 6x + 9"
+          ],
+          "distractors": [
+            "x² + 9",
+            "x² + 3x + 9"
+          ]
+        }
       },
-      "distractors": [
-        "x² + 9",
-        "x² + 3x + 9"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Vzorec: (a+b)² = a² + 2ab + b²",
         "a=x, b=3: x² + 2·x·3 + 3² = x² + 6x + 9"
@@ -77,9 +85,7 @@
       "meta": {
         "type_id": "ALG-BINOM",
         "type_label": "Umocňování",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -90,14 +96,22 @@
         "stem": "(x - 5)² = ?",
         "context": "Rozviň: (x - 5)²"
       },
-      "answer": {
-        "value": "x² - 10x + 25",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "x² - 10x + 25",
+          "unit": null,
+          "variants": [
+            "x^2 - 10x + 25"
+          ],
+          "distractors": [
+            "x² + 25",
+            "x² - 5x + 25"
+          ]
+        }
       },
-      "distractors": [
-        "x² + 25",
-        "x² - 5x + 25"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Vzorec: (a-b)² = a² - 2ab + b²",
         "a=x, b=5: x² - 2·x·5 + 5² = x² - 10x + 25"
@@ -112,9 +126,7 @@
       "meta": {
         "type_id": "ALG-BINOM",
         "type_label": "Umocňování",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -125,14 +137,22 @@
         "stem": "(2x + 1)² = ?",
         "context": "Rozviň: (2x + 1)²"
       },
-      "answer": {
-        "value": "4x² + 4x + 1",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "4x² + 4x + 1",
+          "unit": null,
+          "variants": [
+            "4x^2 + 4x + 1"
+          ],
+          "distractors": [
+            "4x² + 1",
+            "2x² + 2x + 1"
+          ]
+        }
       },
-      "distractors": [
-        "4x² + 1",
-        "2x² + 2x + 1"
-      ],
+      "keyboard": {
+        "variable": "x"
+      },
       "hints": [
         "a = 2x, b = 1",
         "(2x)² + 2·(2x)·1 + 1² = 4x² + 4x + 1"
@@ -147,9 +167,7 @@
       "meta": {
         "type_id": "ALG-BINOM",
         "type_label": "Umocňování",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -160,14 +178,22 @@
         "stem": "(3a - 2)² = ?",
         "context": "Rozviň: (3a - 2)²"
       },
-      "answer": {
-        "value": "9a² - 12a + 4",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "9a² - 12a + 4",
+          "unit": null,
+          "variants": [
+            "9a^2 - 12a + 4"
+          ],
+          "distractors": [
+            "9a² + 4",
+            "9a² - 6a + 4"
+          ]
+        }
       },
-      "distractors": [
-        "9a² + 4",
-        "9a² - 6a + 4"
-      ],
+      "keyboard": {
+        "variable": "a"
+      },
       "hints": [
         "a = 3a, b = 2, vzorec (a-b)²",
         "(3a)² - 2·(3a)·2 + 2² = 9a² - 12a + 4"
@@ -182,9 +208,7 @@
       "meta": {
         "type_id": "ALG-BINOM",
         "type_label": "Umocňování",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -195,14 +219,20 @@
         "stem": "(1/3 - 4b)² = ?",
         "context": "Rozviň: (1/3 - 4b)²"
       },
-      "answer": {
-        "value": "1/9 - 8b/3 + 16b²",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1/9 - 8b/3 + 16b²",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "1/9 + 16b²",
+            "1/9 - 4b/3 + 16b²"
+          ]
+        }
       },
-      "distractors": [
-        "1/9 + 16b²",
-        "1/9 - 4b/3 + 16b²"
-      ],
+      "keyboard": {
+        "variable": "b"
+      },
       "hints": [
         "a = 1/3, b = 4b. Nezapomeň na prostřední člen!",
         "(1/3)² - 2·(1/3)·(4b) + (4b)² = 1/9 - 8b/3 + 16b²"
@@ -217,9 +247,7 @@
       "meta": {
         "type_id": "ALG-BINOM",
         "type_label": "Umocňování",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -230,14 +258,22 @@
         "stem": "(4n - 3)² = ?",
         "context": "Rozviň: (4n - 3)²"
       },
-      "answer": {
-        "value": "16n² - 24n + 9",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "16n² - 24n + 9",
+          "unit": null,
+          "variants": [
+            "16n^2 - 24n + 9"
+          ],
+          "distractors": [
+            "16n² + 9",
+            "16n² - 12n + 9"
+          ]
+        }
       },
-      "distractors": [
-        "16n² + 9",
-        "16n² - 12n + 9"
-      ],
+      "keyboard": {
+        "variable": "n"
+      },
       "hints": [
         "a = 4n, b = 3",
         "(4n)² - 2·(4n)·3 + 3² = 16n² - 24n + 9"
@@ -252,9 +288,7 @@
       "meta": {
         "type_id": "ALG-BINOM",
         "type_label": "Umocňování",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -265,14 +299,20 @@
         "stem": "Jaký je prostřední člen v (x + 7)²?",
         "context": "Rozviň (x + 7)² a urči prostřední člen."
       },
-      "answer": {
-        "value": "14x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "14x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "7x",
+            "49x"
+          ]
+        }
       },
-      "distractors": [
-        "7x",
-        "49x"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Prostřední člen = 2ab",
         "2·x·7 = 14x"
@@ -287,9 +327,7 @@
       "meta": {
         "type_id": "ALG-BINOM",
         "type_label": "Umocňování",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -300,14 +338,20 @@
         "stem": "(x + 2)² - (x - 2)² = ?",
         "context": "Zjednodušte: (x + 2)² - (x - 2)²"
       },
-      "answer": {
-        "value": "8x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "8x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0",
+            "4x"
+          ]
+        }
       },
-      "distractors": [
-        "0",
-        "4x"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Rozviň oba členy zvlášť.",
         "(x²+4x+4) - (x²-4x+4) = 8x"
@@ -323,9 +367,7 @@
       "meta": {
         "type_id": "ALG-BINOM",
         "type_label": "Umocňování",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -336,11 +378,17 @@
         "stem": "2x + 5 = 13",
         "context": "Vyřeš rovnici: 2x + 5 = 13"
       },
-      "answer": {
-        "value": "4",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "4",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": "x"
+      },
       "hints": [
         "Nejdřív odečti 5 od obou stran.",
         "Dostaneš 2x = 8. Teď vyděl obě strany 2."
@@ -357,9 +405,7 @@
       "meta": {
         "type_id": "ALG-EQ",
         "type_label": "Lineární rovnice",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -370,11 +416,17 @@
         "stem": "3x - 7 = 11",
         "context": "Vyřeš rovnici: 3x - 7 = 11"
       },
-      "answer": {
-        "value": "6",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "6",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": "x"
+      },
       "hints": [
         "Přičti 7 k oběma stranám.",
         "Dostaneš 3x = 18. Vyděl obě strany 3."
@@ -391,9 +443,7 @@
       "meta": {
         "type_id": "ALG-EQ",
         "type_label": "Lineární rovnice",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -404,11 +454,17 @@
         "stem": "x/4 = 5",
         "context": "Vyřeš rovnici: x/4 = 5"
       },
-      "answer": {
-        "value": "20",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "20",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "x je děleno 4. Co je opak dělení?",
         "Vynásob obě strany 4."
@@ -424,9 +480,7 @@
       "meta": {
         "type_id": "ALG-EQ",
         "type_label": "Lineární rovnice",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -437,11 +491,17 @@
         "stem": "5x + 3 = 2x + 15",
         "context": "Vyřeš rovnici: 5x + 3 = 2x + 15"
       },
-      "answer": {
-        "value": "4",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "4",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": "x"
+      },
       "hints": [
         "Přesuň všechna x na jednu stranu. Odečti 2x od obou stran.",
         "Dostaneš 3x + 3 = 15. Teď odečti 3 a vyděl."
@@ -458,9 +518,7 @@
       "meta": {
         "type_id": "ALG-EQ",
         "type_label": "Lineární rovnice",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -471,11 +529,17 @@
         "stem": "4(x - 2) = 20",
         "context": "Vyřeš rovnici: 4(x - 2) = 20"
       },
-      "answer": {
-        "value": "7",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "7",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Jsou dvě cesty - obě fungují! Roznásobit závorku, nebo nejdřív vydělit obě strany. Která je kratší?",
         "Zkus vydělit obě strany 4. Co ti zbyde?"
@@ -491,9 +555,7 @@
       "meta": {
         "type_id": "ALG-EQ",
         "type_label": "Lineární rovnice",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -504,11 +566,17 @@
         "stem": "2(3x + 1) = 14",
         "context": "Vyřeš rovnici: 2(3x + 1) = 14"
       },
-      "answer": {
-        "value": "2",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "2",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": "x"
+      },
       "hints": [
         "Jsou dvě cesty - obě fungují! Roznásobit závorku, nebo nejdřív vydělit obě strany 2. Co bude jednodušší?",
         "Zkus vydělit obě strany 2. Dostaneš 3x + 1 = 7. Co dál?"
@@ -525,9 +593,7 @@
       "meta": {
         "type_id": "ALG-EQ",
         "type_label": "Lineární rovnice",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -538,11 +604,17 @@
         "stem": "x/3 + 2 = 5",
         "context": "Vyřeš rovnici: x/3 + 2 = 5"
       },
-      "answer": {
-        "value": "9",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "9",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Odečti 2 od obou stran.",
         "Dostaneš x/3 = 3. Vynásob obě strany 3."
@@ -558,9 +630,7 @@
       "meta": {
         "type_id": "ALG-EQ",
         "type_label": "Lineární rovnice",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -571,11 +641,17 @@
         "stem": "(x + 3)/2 = (x - 1)/4 + 3",
         "context": "Vyřeš rovnici: (x + 3)/2 = (x - 1)/4 + 3"
       },
-      "answer": {
-        "value": "5",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "5",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Zlomky v rovnici můžeš odstranit vynásobením. Čím vynásobíš, aby zmizely oba jmenovatele (2 a 4)?",
         "Vynásob celou rovnici 4. Dostaneš 2(x + 3) = (x - 1) + 12. Teď roznásob závorky."
@@ -592,9 +668,7 @@
       "meta": {
         "type_id": "ALG-EQ",
         "type_label": "Lineární rovnice",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -605,11 +679,17 @@
         "stem": "3(2x - 1) - 2(x + 3) = 7",
         "context": "Vyřeš rovnici: 3(2x - 1) - 2(x + 3) = 7"
       },
-      "answer": {
-        "value": "4",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "4",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": "x"
+      },
       "hints": [
         "Roznásob obě závorky: 6x - 3 a -2x - 6",
         "Spoj: 6x - 3 - 2x - 6 = 4x - 9 = 7"
@@ -627,9 +707,7 @@
       "meta": {
         "type_id": "ALG-EQ",
         "type_label": "Lineární rovnice",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -640,11 +718,17 @@
         "stem": "0,5x + 1,5 = 2x - 3",
         "context": "Vyřeš rovnici: 0,5x + 1,5 = 2x - 3"
       },
-      "answer": {
-        "value": "3",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "3",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": "x"
+      },
       "hints": [
         "Můžeš vynásobit 2, abys odstranil/a desetinná čísla: x + 3 = 4x - 6",
         "Přesuň x na jednu stranu: 3 + 6 = 4x - x"
@@ -661,9 +745,7 @@
       "meta": {
         "type_id": "ALG-EQ",
         "type_label": "Lineární rovnice",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -674,11 +756,17 @@
         "stem": "1/2 + 1/4",
         "context": "Vypočítej: 1/2 + 1/4"
       },
-      "answer": {
-        "value": "3/4",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "3/4",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Potřebuješ společného jmenovatele. Jaký je nejmenší společný násobek 2 a 4?",
         "Převeď 1/2 na ?/4. Kolik čtvrtin je polovina?"
@@ -694,9 +782,7 @@
       "meta": {
         "type_id": "NUM-ZLOM",
         "type_label": "Zlomky",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -707,11 +793,17 @@
         "stem": "2/3 - 1/6",
         "context": "Vypočítej: 2/3 - 1/6"
       },
-      "answer": {
-        "value": "1/2",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1/2",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Společný jmenovatel pro 3 a 6 je 6.",
         "2/3 = 4/6. Teď odečti 1/6."
@@ -728,9 +820,7 @@
       "meta": {
         "type_id": "NUM-ZLOM",
         "type_label": "Zlomky",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -741,11 +831,17 @@
         "stem": "3/4 × 2/5",
         "context": "Vypočítej: 3/4 × 2/5"
       },
-      "answer": {
-        "value": "3/10",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "3/10",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Jsou dvě cesty! Můžeš rovnou násobit a pak zkrátit, nebo nejdřív zkrátit křížem. Co je jednodušší?",
         "Zkus zkrátit: 4 a 2 jsou dělitelné 2. Dostaneš 3/2 × 1/5. Teď násob."
@@ -761,9 +857,7 @@
       "meta": {
         "type_id": "NUM-ZLOM",
         "type_label": "Zlomky",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -774,11 +868,17 @@
         "stem": "2/3",
         "context": "Vypočítej: 2/3 : 4"
       },
-      "answer": {
-        "value": "1/6",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1/6",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Dělení číslem = násobení převrácenou hodnotou. 4 = 4/1, převrácená je 1/4.",
         "2/3 × 1/4 = ?"
@@ -795,9 +895,7 @@
       "meta": {
         "type_id": "NUM-ZLOM",
         "type_label": "Zlomky",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -808,11 +906,17 @@
         "stem": "5/6 - 1/4 + 1/3",
         "context": "Vypočítej: 5/6 - 1/4 + 1/3"
       },
-      "answer": {
-        "value": "11/12",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "11/12",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Nejdřív najdi společného jmenovatele pro 6, 4 a 3. Je to 12.",
         "5/6 = 10/12, 1/4 = 3/12, 1/3 = 4/12"
@@ -828,9 +932,7 @@
       "meta": {
         "type_id": "NUM-ZLOM",
         "type_label": "Zlomky",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -841,11 +943,17 @@
         "stem": "(2/5)",
         "context": "Vypočítej: (2/5) : (4/15)"
       },
-      "answer": {
-        "value": "3/2",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "3/2",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Dělení zlomkem = násobení převráceným zlomkem.",
         "2/5 × 15/4 = ? Zkus před násobením zkrátit."
@@ -862,9 +970,7 @@
       "meta": {
         "type_id": "NUM-ZLOM",
         "type_label": "Zlomky",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -875,11 +981,17 @@
         "stem": "Kolik je 3/4 z 80?",
         "context": "Kolik je 3/4 z 80?"
       },
-      "answer": {
-        "value": "60",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "60",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "'Z' znamená násobení. 3/4 × 80 = ?",
         "Můžeš nejdřív vydělit 80 : 4 = 20, pak násobit 20 × 3."
@@ -895,9 +1007,7 @@
       "meta": {
         "type_id": "NUM-ZLOM",
         "type_label": "Zlomky",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -908,11 +1018,17 @@
         "stem": "24/36",
         "context": "Zjednodušte: 24/36"
       },
-      "answer": {
-        "value": "2/3",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "2/3",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Najdi největšího společného dělitele 24 a 36.",
         "Oba jsou dělitelné 12. 24:12 = 2, 36:12 = 3."
@@ -929,9 +1045,7 @@
       "meta": {
         "type_id": "NUM-ZLOM",
         "type_label": "Zlomky",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -942,11 +1056,17 @@
         "stem": "1 - 2/3 × 3/4",
         "context": "Vypočítej: 1 - 2/3 × 3/4"
       },
-      "answer": {
-        "value": "1/2",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1/2",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Pozor na pořadí operací! Nejdřív násobení, pak odčítání.",
         "2/3 × 3/4 = 6/12 = 1/2. Pak 1 - 1/2 = ?"
@@ -963,9 +1083,7 @@
       "meta": {
         "type_id": "NUM-ZLOM",
         "type_label": "Zlomky",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -976,11 +1094,17 @@
         "stem": "Třetina čísla je 15. Jaké je to číslo?",
         "context": "Třetina čísla je 15. Jaké je to číslo?"
       },
-      "answer": {
-        "value": "45",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "45",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Když třetina je 15, kolik jsou tři třetiny (celé číslo)?",
         "x/3 = 15, takže x = 15 × 3"
@@ -996,9 +1120,7 @@
       "meta": {
         "type_id": "NUM-ZLOM",
         "type_label": "Zlomky",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -1009,11 +1131,17 @@
         "stem": "Měl jsem 100 Kč. Teď mám o polovinu více. Kolik má...",
         "context": "Měl jsem 100 Kč. Teď mám o polovinu více. Kolik mám?"
       },
-      "answer": {
-        "value": "150",
-        "unit": "Kč"
+      "modes": {
+        "numeric": {
+          "answer": "150",
+          "unit": "Kč",
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "\"O polovinu více\" znamená: původní + polovina z původního.",
         "Polovina ze 100 je 50. Přičti to k původním 100."
@@ -1029,9 +1157,7 @@
       "meta": {
         "type_id": "WORD-OXVICE",
         "type_label": "o X více/méně",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -1042,11 +1168,17 @@
         "stem": "Cena byla 80 Kč. Zlevnila o čtvrtinu. Jaká je nová...",
         "context": "Cena byla 80 Kč. Zlevnila o čtvrtinu. Jaká je nová cena?"
       },
-      "answer": {
-        "value": "60",
-        "unit": "Kč"
+      "modes": {
+        "numeric": {
+          "answer": "60",
+          "unit": "Kč",
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "\"O čtvrtinu méně\" znamená: původní - čtvrtina z původního.",
         "Čtvrtina z 80 je 20. Odečti od původních 80."
@@ -1062,9 +1194,7 @@
       "meta": {
         "type_id": "WORD-OXVICE",
         "type_label": "o X více/méně",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -1075,11 +1205,17 @@
         "stem": "Táta vydělává 30 000 Kč měsíčně. Dostal přidáno o ...",
         "context": "Táta vydělává 30 000 Kč měsíčně. Dostal přidáno o třetinu. Kolik vydělává teď?"
       },
-      "answer": {
-        "value": "40000",
-        "unit": "Kč"
+      "modes": {
+        "numeric": {
+          "answer": "40000",
+          "unit": "Kč",
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "\"O třetinu více\" = původní + třetina z původního.",
         "Třetina z 30 000 je 10 000. Přičti k původnímu platu."
@@ -1095,9 +1231,7 @@
       "meta": {
         "type_id": "WORD-OXVICE",
         "type_label": "o X více/méně",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -1108,11 +1242,17 @@
         "stem": "cena je o pětinu nižší. Původní cena byla 500 Kč. Kolik zaplatíš?",
         "context": "Obchod má slevu: cena je o pětinu nižší. Původní cena byla 500 Kč. Kolik zaplatíš?"
       },
-      "answer": {
-        "value": "400",
-        "unit": "Kč"
+      "modes": {
+        "numeric": {
+          "answer": "400",
+          "unit": "Kč",
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "\"O pětinu méně\" = původní - pětina z původního.",
         "Pětina z 500 je 100. Nová cena = 500 - 100."
@@ -1128,9 +1268,7 @@
       "meta": {
         "type_id": "WORD-OXVICE",
         "type_label": "o X více/méně",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -1141,11 +1279,17 @@
         "stem": "Délka tyče je 120 cm. Prodloužili ji o čtvrtinu. J...",
         "context": "Délka tyče je 120 cm. Prodloužili ji o čtvrtinu. Jaká je nová délka?"
       },
-      "answer": {
-        "value": "150",
-        "unit": "cm"
+      "modes": {
+        "numeric": {
+          "answer": "150",
+          "unit": "cm",
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "\"O čtvrtinu více\" = původní + čtvrtina.",
         "Čtvrtina ze 120 je 30. Nová délka = 120 + 30."
@@ -1161,9 +1305,7 @@
       "meta": {
         "type_id": "WORD-OXVICE",
         "type_label": "o X více/méně",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -1174,15 +1316,21 @@
         "stem": "Co znamená \"o třetinu více\"?",
         "context": "Co znamená \"o třetinu více\"?"
       },
-      "answer": {
-        "value": "4/3x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "4/3x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "× 1/3",
+            "+ 1/3",
+            "× 3"
+          ]
+        }
       },
-      "distractors": [
-        "× 1/3",
-        "+ 1/3",
-        "× 3"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "\"O třetinu více\" = dostaneš původní + ještě třetinu navíc.",
         "Matematicky: původní × (1 + 1/3) = původní × 4/3"
@@ -1199,9 +1347,7 @@
       "meta": {
         "type_id": "WORD-OXVICE",
         "type_label": "o X více/méně",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -1212,11 +1358,17 @@
         "stem": "Po zvýšení o čtvrtinu má Jan 750 Kč. Kolik měl pův...",
         "context": "Po zvýšení o čtvrtinu má Jan 750 Kč. Kolik měl původně?"
       },
-      "answer": {
-        "value": "600",
-        "unit": "Kč"
+      "modes": {
+        "numeric": {
+          "answer": "600",
+          "unit": "Kč",
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Po zvýšení o čtvrtinu má 5/4 původní částky.",
         "750 = původní × 5/4. Původní = 750 : 5 × 4 = 750 × 4/5"
@@ -1233,9 +1385,7 @@
       "meta": {
         "type_id": "WORD-OXVICE",
         "type_label": "o X více/méně",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -1246,11 +1396,17 @@
         "stem": "Cena po slevě o třetinu je 240 Kč. Jaká byla původ...",
         "context": "Cena po slevě o třetinu je 240 Kč. Jaká byla původní cena?"
       },
-      "answer": {
-        "value": "360",
-        "unit": "Kč"
+      "modes": {
+        "numeric": {
+          "answer": "360",
+          "unit": "Kč",
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Po slevě o třetinu zbývá 2/3 původní ceny.",
         "240 = původní × 2/3. Původní = 240 : 2 × 3 = 240 × 3/2"
@@ -1267,9 +1423,7 @@
       "meta": {
         "type_id": "WORD-OXVICE",
         "type_label": "o X více/méně",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -1280,11 +1434,17 @@
         "stem": "Kniha stála 280 Kč. Nejdřív zdražila o čtvrtinu, p...",
         "context": "Kniha stála 280 Kč. Nejdřív zdražila o čtvrtinu, pak zlevnila o pětinu. Kolik stojí teď?"
       },
-      "answer": {
-        "value": "280",
-        "unit": "Kč"
+      "modes": {
+        "numeric": {
+          "answer": "280",
+          "unit": "Kč",
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Dvě změny za sebou - jak na to? Tip: rozděl na dva kroky. Nejdřív spočítej cenu po zdražení.",
         "Po zdražení o čtvrtinu: 280 + 70 = 350 Kč. Teď z této nové ceny spočítej zlevnění o pětinu."
@@ -1300,9 +1460,7 @@
       "meta": {
         "type_id": "WORD-OXVICE",
         "type_label": "o X více/méně",
-        "original_type": null,
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -1313,15 +1471,21 @@
         "stem": "Objem nádrže se zvětšil o polovinu. Původně měla 2...",
         "context": "Objem nádrže se zvětšil o polovinu. Původně měla 200 litrů. Jaký je nový objem?"
       },
-      "answer": {
-        "value": "300",
-        "unit": "l"
+      "modes": {
+        "numeric": {
+          "answer": "300",
+          "unit": "l",
+          "variants": [],
+          "distractors": [
+            "100",
+            "250",
+            "400"
+          ]
+        }
       },
-      "distractors": [
-        "100",
-        "250",
-        "400"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "\"O polovinu více\" = původní + polovina z původního.",
         "Polovina z 200 je 100. Nový objem = 200 + 100."
@@ -1337,9 +1501,7 @@
       "meta": {
         "type_id": "WORD-OXVICE",
         "type_label": "o X více/méně",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -1350,11 +1512,17 @@
         "stem": "o třetinu více než x =",
         "context": null
       },
-      "answer": {
-        "value": "x × 4/3",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "x × 4/3",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o třetinu více = násobit (1 + 1/3) = 4/3"
       ],
@@ -1367,9 +1535,7 @@
       "meta": {
         "type_id": "OXV-TYPE",
         "type_label": "o X více/méně",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       }
     },
     {
@@ -1380,11 +1546,17 @@
         "stem": "o třetinu méně než x =",
         "context": null
       },
-      "answer": {
-        "value": "x × 2/3",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "x × 2/3",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o třetinu méně = násobit (1 - 1/3) = 2/3"
       ],
@@ -1397,9 +1569,7 @@
       "meta": {
         "type_id": "OXV-TYPE",
         "type_label": "o X více/méně",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       }
     },
     {
@@ -1410,11 +1580,17 @@
         "stem": "o čtvrtinu více než x =",
         "context": null
       },
-      "answer": {
-        "value": "x × 5/4",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "x × 5/4",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o čtvrtinu více = násobit (1 + 1/4) = 5/4"
       ],
@@ -1427,9 +1603,7 @@
       "meta": {
         "type_id": "OXV-TYPE",
         "type_label": "o X více/méně",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       }
     },
     {
@@ -1440,11 +1614,17 @@
         "stem": "o čtvrtinu méně než x =",
         "context": null
       },
-      "answer": {
-        "value": "x × 3/4",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "x × 3/4",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o čtvrtinu méně = násobit (1 - 1/4) = 3/4"
       ],
@@ -1457,9 +1637,7 @@
       "meta": {
         "type_id": "OXV-TYPE",
         "type_label": "o X více/méně",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       }
     },
     {
@@ -1470,11 +1648,17 @@
         "stem": "o polovinu více než x =",
         "context": null
       },
-      "answer": {
-        "value": "x × 3/2",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "x × 3/2",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o polovinu více = násobit (1 + 1/2) = 3/2"
       ],
@@ -1487,9 +1671,7 @@
       "meta": {
         "type_id": "OXV-TYPE",
         "type_label": "o X více/méně",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       }
     },
     {
@@ -1500,11 +1682,17 @@
         "stem": "o polovinu méně než x =",
         "context": null
       },
-      "answer": {
-        "value": "x × 1/2",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "x × 1/2",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o polovinu méně = násobit (1 - 1/2) = 1/2"
       ],
@@ -1517,9 +1705,7 @@
       "meta": {
         "type_id": "OXV-TYPE",
         "type_label": "o X více/méně",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       }
     },
     {
@@ -1530,11 +1716,17 @@
         "stem": "o pětinu více než x =",
         "context": null
       },
-      "answer": {
-        "value": "x × 6/5",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "x × 6/5",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o pětinu více = násobit (1 + 1/5) = 6/5"
       ],
@@ -1547,9 +1739,7 @@
       "meta": {
         "type_id": "OXV-TYPE",
         "type_label": "o X více/méně",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       }
     },
     {
@@ -1560,11 +1750,17 @@
         "stem": "o pětinu méně než x =",
         "context": null
       },
-      "answer": {
-        "value": "x × 4/5",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "x × 4/5",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o pětinu méně = násobit (1 - 1/5) = 4/5"
       ],
@@ -1577,9 +1773,7 @@
       "meta": {
         "type_id": "OXV-TYPE",
         "type_label": "o X více/méně",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       }
     },
     {
@@ -1590,14 +1784,20 @@
         "stem": "o polovinu více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,5x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,5x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,5",
+            "2"
+          ]
+        }
       },
-      "distractors": [
-        "0,5",
-        "2"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X více = ×(1 + X)"
       ],
@@ -1610,9 +1810,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -1623,14 +1821,20 @@
         "stem": "o polovinu méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,5x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,5x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "1,5",
+            "2"
+          ]
+        }
       },
-      "distractors": [
-        "1,5",
-        "2"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X méně = ×(1 − X)"
       ],
@@ -1643,9 +1847,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -1656,14 +1858,20 @@
         "stem": "o třetinu více = ?",
         "context": null
       },
-      "answer": {
-        "value": "4/3x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "4/3x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "1/3",
+            "3"
+          ]
+        }
       },
-      "distractors": [
-        "1/3",
-        "3"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X více = ×(1 + X)"
       ],
@@ -1676,9 +1884,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -1689,14 +1895,20 @@
         "stem": "o třetinu méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "2/3x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "2/3x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "1/3",
+            "4/3"
+          ]
+        }
       },
-      "distractors": [
-        "1/3",
-        "4/3"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X méně = ×(1 − X)"
       ],
@@ -1709,9 +1921,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -1722,14 +1932,20 @@
         "stem": "o čtvrtinu více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,25x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,25x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,25",
+            "4"
+          ]
+        }
       },
-      "distractors": [
-        "0,25",
-        "4"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X více = ×(1 + X)"
       ],
@@ -1742,9 +1958,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -1755,14 +1969,20 @@
         "stem": "o čtvrtinu méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,75x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,75x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,25",
+            "1,25"
+          ]
+        }
       },
-      "distractors": [
-        "0,25",
-        "1,25"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X méně = ×(1 − X)"
       ],
@@ -1775,9 +1995,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -1788,14 +2006,20 @@
         "stem": "o pětinu více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,2x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,2x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,2",
+            "5"
+          ]
+        }
       },
-      "distractors": [
-        "0,2",
-        "5"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X více = ×(1 + X)"
       ],
@@ -1808,9 +2032,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -1821,14 +2043,20 @@
         "stem": "o pětinu méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,8x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,8x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,2",
+            "1,2"
+          ]
+        }
       },
-      "distractors": [
-        "0,2",
-        "1,2"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X méně = ×(1 − X)"
       ],
@@ -1841,9 +2069,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -1854,14 +2080,20 @@
         "stem": "o desetinu více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,1x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,1x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,1",
+            "10"
+          ]
+        }
       },
-      "distractors": [
-        "0,1",
-        "10"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X více = ×(1 + X)"
       ],
@@ -1874,9 +2106,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -1887,14 +2117,20 @@
         "stem": "o desetinu méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,9x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,9x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,1",
+            "1,1"
+          ]
+        }
       },
-      "distractors": [
-        "0,1",
-        "1,1"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X méně = ×(1 − X)"
       ],
@@ -1907,9 +2143,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -1920,14 +2154,20 @@
         "stem": "o dvě třetiny více = ?",
         "context": null
       },
-      "answer": {
-        "value": "5/3x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "5/3x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "2/3",
+            "3/2"
+          ]
+        }
       },
-      "distractors": [
-        "2/3",
-        "3/2"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X více = ×(1 + X)"
       ],
@@ -1940,9 +2180,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -1953,14 +2191,20 @@
         "stem": "o dvě třetiny méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "1/3x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1/3x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "2/3",
+            "5/3"
+          ]
+        }
       },
-      "distractors": [
-        "2/3",
-        "5/3"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X méně = ×(1 − X)"
       ],
@@ -1973,9 +2217,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -1986,14 +2228,20 @@
         "stem": "o tři čtvrtiny více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,75x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,75x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,75",
+            "4/3"
+          ]
+        }
       },
-      "distractors": [
-        "0,75",
-        "4/3"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X více = ×(1 + X)"
       ],
@@ -2006,9 +2254,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2019,14 +2265,20 @@
         "stem": "o tři čtvrtiny méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,25x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,25x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,75",
+            "1,75"
+          ]
+        }
       },
-      "distractors": [
-        "0,75",
-        "1,75"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X méně = ×(1 − X)"
       ],
@@ -2039,9 +2291,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2052,14 +2302,20 @@
         "stem": "o 10 % více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,1x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,1x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,1",
+            "10"
+          ]
+        }
       },
-      "distractors": [
-        "0,1",
-        "10"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % více = ×(1 + X/100)"
       ],
@@ -2072,9 +2328,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2085,14 +2339,20 @@
         "stem": "o 10 % méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,9x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,9x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,1",
+            "1,1"
+          ]
+        }
       },
-      "distractors": [
-        "0,1",
-        "1,1"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % méně = ×(1 − X/100)"
       ],
@@ -2105,9 +2365,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2118,14 +2376,20 @@
         "stem": "o 25 % více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,25x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,25x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,25",
+            "25"
+          ]
+        }
       },
-      "distractors": [
-        "0,25",
-        "25"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % více = ×(1 + X/100)"
       ],
@@ -2138,9 +2402,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2151,14 +2413,20 @@
         "stem": "o 25 % méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,75x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,75x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,25",
+            "1,25"
+          ]
+        }
       },
-      "distractors": [
-        "0,25",
-        "1,25"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % méně = ×(1 − X/100)"
       ],
@@ -2171,9 +2439,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2184,14 +2450,20 @@
         "stem": "o 50 % více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,5x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,5x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,5",
+            "50"
+          ]
+        }
       },
-      "distractors": [
-        "0,5",
-        "50"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % více = ×(1 + X/100)"
       ],
@@ -2204,9 +2476,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2217,14 +2487,20 @@
         "stem": "o 50 % méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,5x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,5x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "1,5",
+            "50"
+          ]
+        }
       },
-      "distractors": [
-        "1,5",
-        "50"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % méně = ×(1 − X/100)"
       ],
@@ -2237,9 +2513,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2250,14 +2524,20 @@
         "stem": "o 20 % více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,2x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,2x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,2",
+            "20"
+          ]
+        }
       },
-      "distractors": [
-        "0,2",
-        "20"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % více = ×(1 + X/100)"
       ],
@@ -2270,9 +2550,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2283,14 +2561,20 @@
         "stem": "o 20 % méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,8x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,8x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,2",
+            "1,2"
+          ]
+        }
       },
-      "distractors": [
-        "0,2",
-        "1,2"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % méně = ×(1 − X/100)"
       ],
@@ -2303,9 +2587,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2316,14 +2598,20 @@
         "stem": "o 100 % více = ?",
         "context": null
       },
-      "answer": {
-        "value": "2x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "2x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "1",
+            "100"
+          ]
+        }
       },
-      "distractors": [
-        "1",
-        "100"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % více = ×(1 + X/100)"
       ],
@@ -2336,9 +2624,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2349,14 +2635,20 @@
         "stem": "o 75 % více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,75x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,75x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,75",
+            "75"
+          ]
+        }
       },
-      "distractors": [
-        "0,75",
-        "75"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % více = ×(1 + X/100)"
       ],
@@ -2369,9 +2661,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2382,14 +2672,20 @@
         "stem": "o 75 % méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,25x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,25x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,75",
+            "1,75"
+          ]
+        }
       },
-      "distractors": [
-        "0,75",
-        "1,75"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % méně = ×(1 − X/100)"
       ],
@@ -2402,9 +2698,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2415,14 +2709,20 @@
         "stem": "o šestinu více = ?",
         "context": null
       },
-      "answer": {
-        "value": "7/6x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "7/6x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "1/6",
+            "6"
+          ]
+        }
       },
-      "distractors": [
-        "1/6",
-        "6"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X více = ×(1 + X)"
       ],
@@ -2435,9 +2735,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2448,14 +2746,20 @@
         "stem": "o šestinu méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "5/6x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "5/6x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "1/6",
+            "7/6"
+          ]
+        }
       },
-      "distractors": [
-        "1/6",
-        "7/6"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X méně = ×(1 − X)"
       ],
@@ -2468,9 +2772,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2481,14 +2783,20 @@
         "stem": "o dvě pětiny více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,4x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,4x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,4",
+            "5/2"
+          ]
+        }
       },
-      "distractors": [
-        "0,4",
-        "5/2"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X více = ×(1 + X)"
       ],
@@ -2501,9 +2809,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2514,14 +2820,20 @@
         "stem": "o dvě pětiny méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,6x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,6x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,4",
+            "1,4"
+          ]
+        }
       },
-      "distractors": [
-        "0,4",
-        "1,4"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X méně = ×(1 − X)"
       ],
@@ -2534,9 +2846,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2547,14 +2857,20 @@
         "stem": "o tři pětiny více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,6x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,6x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,6",
+            "5/3"
+          ]
+        }
       },
-      "distractors": [
-        "0,6",
-        "5/3"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X více = ×(1 + X)"
       ],
@@ -2567,9 +2883,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2580,14 +2894,20 @@
         "stem": "o tři pětiny méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,4x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,4x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,6",
+            "1,6"
+          ]
+        }
       },
-      "distractors": [
-        "0,6",
-        "1,6"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X méně = ×(1 − X)"
       ],
@@ -2600,9 +2920,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2613,14 +2931,20 @@
         "stem": "o 5 % více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,05x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,05x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,05",
+            "5"
+          ]
+        }
       },
-      "distractors": [
-        "0,05",
-        "5"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % více = ×(1 + X/100)"
       ],
@@ -2633,9 +2957,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2646,14 +2968,20 @@
         "stem": "o 5 % méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,95x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,95x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,05",
+            "1,05"
+          ]
+        }
       },
-      "distractors": [
-        "0,05",
-        "1,05"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % méně = ×(1 − X/100)"
       ],
@@ -2666,9 +2994,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2679,14 +3005,20 @@
         "stem": "o 30 % více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,3x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,3x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,3",
+            "30"
+          ]
+        }
       },
-      "distractors": [
-        "0,3",
-        "30"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % více = ×(1 + X/100)"
       ],
@@ -2699,9 +3031,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2712,14 +3042,20 @@
         "stem": "o 30 % méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,7x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,7x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,3",
+            "1,3"
+          ]
+        }
       },
-      "distractors": [
-        "0,3",
-        "1,3"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % méně = ×(1 − X/100)"
       ],
@@ -2732,9 +3068,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2745,14 +3079,20 @@
         "stem": "o čtyři pětiny více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,8x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,8x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,8",
+            "5/4"
+          ]
+        }
       },
-      "distractors": [
-        "0,8",
-        "5/4"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X více = ×(1 + X)"
       ],
@@ -2765,9 +3105,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2778,14 +3116,20 @@
         "stem": "o čtyři pětiny méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,2x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,2x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,8",
+            "1,8"
+          ]
+        }
       },
-      "distractors": [
-        "0,8",
-        "1,8"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X méně = ×(1 − X)"
       ],
@@ -2798,9 +3142,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2811,14 +3153,20 @@
         "stem": "o osminu více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,125x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,125x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,125",
+            "8"
+          ]
+        }
       },
-      "distractors": [
-        "0,125",
-        "8"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X více = ×(1 + X)"
       ],
@@ -2831,9 +3179,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2844,14 +3190,20 @@
         "stem": "o osminu méně = ?",
         "context": null
       },
-      "answer": {
-        "value": "0,875x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "0,875x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,125",
+            "1,125"
+          ]
+        }
       },
-      "distractors": [
-        "0,125",
-        "1,125"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X méně = ×(1 − X)"
       ],
@@ -2864,9 +3216,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2877,14 +3227,20 @@
         "stem": "o 40 % více = ?",
         "context": null
       },
-      "answer": {
-        "value": "1,4x",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "1,4x",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "0,4",
+            "40"
+          ]
+        }
       },
-      "distractors": [
-        "0,4",
-        "40"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "o X % více = ×(1 + X/100)"
       ],
@@ -2897,9 +3253,7 @@
       "meta": {
         "type_id": "OXV-CALC",
         "type_label": "o X více/méně",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       }
     },
     {
@@ -2910,14 +3264,20 @@
         "stem": "a = 3, b = 4, c = ?",
         "context": null
       },
-      "answer": {
-        "value": "5",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "5",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "7",
+            "12"
+          ]
+        }
       },
-      "distractors": [
-        "7",
-        "12"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "c² = a² + b²"
       ],
@@ -2930,13 +3290,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "3",
+          "b": "4",
+          "c": "?"
+        }
       }
     },
     {
@@ -2947,14 +3310,20 @@
         "stem": "a = 5, b = 12, c = ?",
         "context": null
       },
-      "answer": {
-        "value": "13",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "13",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "17",
+            "60"
+          ]
+        }
       },
-      "distractors": [
-        "17",
-        "60"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "c² = a² + b²"
       ],
@@ -2967,13 +3336,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "5",
+          "b": "12",
+          "c": "?"
+        }
       }
     },
     {
@@ -2984,14 +3356,20 @@
         "stem": "a = 6, b = 8, c = ?",
         "context": null
       },
-      "answer": {
-        "value": "10",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "10",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "14",
+            "48"
+          ]
+        }
       },
-      "distractors": [
-        "14",
-        "48"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "c² = a² + b²"
       ],
@@ -3004,13 +3382,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "6",
+          "b": "8",
+          "c": "?"
+        }
       }
     },
     {
@@ -3021,14 +3402,20 @@
         "stem": "a = 8, b = 15, c = ?",
         "context": null
       },
-      "answer": {
-        "value": "17",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "17",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "23",
+            "120"
+          ]
+        }
       },
-      "distractors": [
-        "23",
-        "120"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "c² = a² + b²"
       ],
@@ -3041,13 +3428,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "8",
+          "b": "15",
+          "c": "?"
+        }
       }
     },
     {
@@ -3058,14 +3448,20 @@
         "stem": "a = 7, b = 24, c = ?",
         "context": null
       },
-      "answer": {
-        "value": "25",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "25",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "31",
+            "168"
+          ]
+        }
       },
-      "distractors": [
-        "31",
-        "168"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "c² = a² + b²"
       ],
@@ -3078,13 +3474,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "7",
+          "b": "24",
+          "c": "?"
+        }
       }
     },
     {
@@ -3095,14 +3494,20 @@
         "stem": "a = 9, b = 40, c = ?",
         "context": null
       },
-      "answer": {
-        "value": "41",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "41",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "49",
+            "360"
+          ]
+        }
       },
-      "distractors": [
-        "49",
-        "360"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "c² = a² + b²"
       ],
@@ -3115,13 +3520,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "9",
+          "b": "40",
+          "c": "?"
+        }
       }
     },
     {
@@ -3132,14 +3540,20 @@
         "stem": "a = ?, b = 4, c = 5",
         "context": null
       },
-      "answer": {
-        "value": "3",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "3",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "1",
+            "9"
+          ]
+        }
       },
-      "distractors": [
-        "1",
-        "9"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "a² = c² - b²"
       ],
@@ -3152,13 +3566,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "?",
+          "b": "4",
+          "c": "5"
+        }
       }
     },
     {
@@ -3169,14 +3586,20 @@
         "stem": "a = 5, b = ?, c = 13",
         "context": null
       },
-      "answer": {
-        "value": "12",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "12",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "8",
+            "18"
+          ]
+        }
       },
-      "distractors": [
-        "8",
-        "18"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "b² = c² - a²"
       ],
@@ -3189,13 +3612,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "5",
+          "b": "?",
+          "c": "13"
+        }
       }
     },
     {
@@ -3206,14 +3632,20 @@
         "stem": "a = ?, b = 8, c = 10",
         "context": null
       },
-      "answer": {
-        "value": "6",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "6",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "2",
+            "18"
+          ]
+        }
       },
-      "distractors": [
-        "2",
-        "18"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "a² = c² - b²"
       ],
@@ -3226,13 +3658,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "?",
+          "b": "8",
+          "c": "10"
+        }
       }
     },
     {
@@ -3243,14 +3678,20 @@
         "stem": "a = 8, b = ?, c = 17",
         "context": null
       },
-      "answer": {
-        "value": "15",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "15",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "9",
+            "25"
+          ]
+        }
       },
-      "distractors": [
-        "9",
-        "25"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "b² = c² - a²"
       ],
@@ -3263,13 +3704,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "8",
+          "b": "?",
+          "c": "17"
+        }
       }
     },
     {
@@ -3280,14 +3724,20 @@
         "stem": "Odvěsny 3 a 4. Přepona?",
         "context": null
       },
-      "answer": {
-        "value": "5",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "5",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "7",
+            "12"
+          ]
+        }
       },
-      "distractors": [
-        "7",
-        "12"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "c² = a² + b²"
       ],
@@ -3300,13 +3750,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "3",
+          "b": "4",
+          "c": "?"
+        }
       }
     },
     {
@@ -3317,14 +3770,20 @@
         "stem": "Odvěsny 5 a 12. Přepona?",
         "context": null
       },
-      "answer": {
-        "value": "13",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "13",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "17",
+            "60"
+          ]
+        }
       },
-      "distractors": [
-        "17",
-        "60"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "c² = a² + b²"
       ],
@@ -3337,13 +3796,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "5",
+          "b": "12",
+          "c": "?"
+        }
       }
     },
     {
@@ -3354,14 +3816,20 @@
         "stem": "Odvěsna 3, přepona 5. Druhá odvěsna?",
         "context": null
       },
-      "answer": {
-        "value": "4",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "4",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "2",
+            "8"
+          ]
+        }
       },
-      "distractors": [
-        "2",
-        "8"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "b² = c² - a²"
       ],
@@ -3374,13 +3842,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "3",
+          "b": "?",
+          "c": "5"
+        }
       }
     },
     {
@@ -3391,14 +3862,20 @@
         "stem": "Odvěsna 5, přepona 13. Druhá odvěsna?",
         "context": null
       },
-      "answer": {
-        "value": "12",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "12",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "8",
+            "18"
+          ]
+        }
       },
-      "distractors": [
-        "8",
-        "18"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "b² = c² - a²"
       ],
@@ -3411,13 +3888,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "5",
+          "b": "?",
+          "c": "13"
+        }
       }
     },
     {
@@ -3428,14 +3908,20 @@
         "stem": "a = 1, b = 1, c = ?",
         "context": null
       },
-      "answer": {
-        "value": "√2",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "√2",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "2",
+            "1"
+          ]
+        }
       },
-      "distractors": [
-        "2",
-        "1"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "c² = a² + b²"
       ],
@@ -3448,13 +3934,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "1",
+          "b": "1",
+          "c": "?"
+        }
       }
     },
     {
@@ -3465,14 +3954,20 @@
         "stem": "a = 2, b = 3, c = ?",
         "context": null
       },
-      "answer": {
-        "value": "√13",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "√13",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "5",
+            "√5"
+          ]
+        }
       },
-      "distractors": [
-        "5",
-        "√5"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "c² = a² + b²"
       ],
@@ -3485,13 +3980,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "2",
+          "b": "3",
+          "c": "?"
+        }
       }
     },
     {
@@ -3502,14 +4000,20 @@
         "stem": "a = 2, b = 5, c = ?",
         "context": null
       },
-      "answer": {
-        "value": "√29",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "√29",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "7",
+            "√7"
+          ]
+        }
       },
-      "distractors": [
-        "7",
-        "√7"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "c² = a² + b²"
       ],
@@ -3522,13 +4026,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "2",
+          "b": "5",
+          "c": "?"
+        }
       }
     },
     {
@@ -3539,14 +4046,20 @@
         "stem": "a = 4, b = 5, c = ?",
         "context": null
       },
-      "answer": {
-        "value": "√41",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "√41",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "9",
+            "√9"
+          ]
+        }
       },
-      "distractors": [
-        "9",
-        "√9"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "c² = a² + b²"
       ],
@@ -3559,13 +4072,16 @@
       "meta": {
         "type_id": "PYTH-CALC",
         "type_label": "Pythagorova věta",
-        "original_type": "calculation",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "calculation"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "4",
+          "b": "5",
+          "c": "?"
+        }
       }
     },
     {
@@ -3576,11 +4092,17 @@
         "stem": "Hledám přeponu c =",
         "context": null
       },
-      "answer": {
-        "value": "√(a² + b²)",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "√(a² + b²)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Pythagorova věta: c² = a² + b²"
       ],
@@ -3593,13 +4115,12 @@
       "meta": {
         "type_id": "PYTH-TYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": null
       }
     },
     {
@@ -3610,11 +4131,17 @@
         "stem": "Hledám odvěsnu a =",
         "context": null
       },
-      "answer": {
-        "value": "√(c² - b²)",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "√(c² - b²)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Pythagorova věta: a² = c² - b²"
       ],
@@ -3627,13 +4154,12 @@
       "meta": {
         "type_id": "PYTH-TYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "a"
+        "highlight": "a",
+        "labels": null
       }
     },
     {
@@ -3644,11 +4170,17 @@
         "stem": "Hledám odvěsnu b =",
         "context": null
       },
-      "answer": {
-        "value": "√(c² - a²)",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "√(c² - a²)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Pythagorova věta: b² = c² - a²"
       ],
@@ -3661,13 +4193,12 @@
       "meta": {
         "type_id": "PYTH-TYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "b"
+        "highlight": "b",
+        "labels": null
       }
     },
     {
@@ -3678,11 +4209,17 @@
         "stem": "c² = a² + b² → c =",
         "context": null
       },
-      "answer": {
-        "value": "√(a² + b²)",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "√(a² + b²)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Odmocnina obou stran"
       ],
@@ -3695,13 +4232,12 @@
       "meta": {
         "type_id": "PYTH-TYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": null
       }
     },
     {
@@ -3712,11 +4248,17 @@
         "stem": "a² = c² - b² → a =",
         "context": null
       },
-      "answer": {
-        "value": "√(c² - b²)",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "√(c² - b²)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Odmocnina obou stran"
       ],
@@ -3729,13 +4271,12 @@
       "meta": {
         "type_id": "PYTH-TYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "a"
+        "highlight": "a",
+        "labels": null
       }
     },
     {
@@ -3746,11 +4287,17 @@
         "stem": "Přepona z odvěsen 3 a 4:",
         "context": null
       },
-      "answer": {
-        "value": "√(3² + 4²)",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "√(3² + 4²)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "c = √(a² + b²)"
       ],
@@ -3763,13 +4310,12 @@
       "meta": {
         "type_id": "PYTH-TYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": null
       }
     },
     {
@@ -3780,11 +4326,17 @@
         "stem": "Odvěsna, je-li b=4, c=5:",
         "context": null
       },
-      "answer": {
-        "value": "√(5² - 4²)",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "√(5² - 4²)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "a = √(c² - b²)"
       ],
@@ -3797,13 +4349,16 @@
       "meta": {
         "type_id": "PYTH-TYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "b": "4",
+          "c": "5",
+          "a": "a"
+        }
       }
     },
     {
@@ -3814,11 +4369,17 @@
         "stem": "V Pythagorově větě se počítá s:",
         "context": null
       },
-      "answer": {
-        "value": "čtverci stran",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "čtverci stran",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
       },
-      "distractors": [],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "c² = a² + b²"
       ],
@@ -3831,13 +4392,12 @@
       "meta": {
         "type_id": "PYTH-TYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "type_recognition",
-        "supports_mc": false,
-        "supports_open": true
+        "original_type": "type_recognition"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": null
       }
     },
     {
@@ -3848,14 +4408,18 @@
         "stem": "Odvěsny jsou 3 a 4. Jaká je přepona?",
         "context": null
       },
-      "answer": {
-        "value": "Pythagorova věta",
-        "unit": null
+      "modes": {
+        "type_recognition": {
+          "answer": "Pythagorova věta",
+          "distractors": [
+            "Obvod trojúhelníku",
+            "Obsah trojúhelníku"
+          ]
+        }
       },
-      "distractors": [
-        "Obvod trojúhelníku",
-        "Obsah trojúhelníku"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Hledáme stranu pravoúhlého trojúhelníku"
       ],
@@ -3868,13 +4432,12 @@
       "meta": {
         "type_id": "PYTH-PTYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "problem_type",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "problem_type"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": null
       }
     },
     {
@@ -3885,14 +4448,18 @@
         "stem": "Je trojúhelník se stranami 5, 12, 13 pravoúhlý?",
         "context": null
       },
-      "answer": {
-        "value": "Pythagorova věta",
-        "unit": null
+      "modes": {
+        "type_recognition": {
+          "answer": "Pythagorova věta",
+          "distractors": [
+            "Obvod/obsah",
+            "Konstrukce"
+          ]
+        }
       },
-      "distractors": [
-        "Obvod/obsah",
-        "Konstrukce"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Ověřujeme: a² + b² = c²?"
       ],
@@ -3905,13 +4472,12 @@
       "meta": {
         "type_id": "PYTH-PTYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "problem_type",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "problem_type"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": null
       }
     },
     {
@@ -3922,14 +4488,18 @@
         "stem": "Žebřík délky 5 m opřený o zeď dosahuje do výšky 4 m. Jak daleko je od zdi?",
         "context": null
       },
-      "answer": {
-        "value": "Pythagorova věta",
-        "unit": null
+      "modes": {
+        "type_recognition": {
+          "answer": "Pythagorova věta",
+          "distractors": [
+            "Přímá úměrnost",
+            "Rovnice"
+          ]
+        }
       },
-      "distractors": [
-        "Přímá úměrnost",
-        "Rovnice"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Žebřík = přepona, zeď = odvěsna"
       ],
@@ -3942,13 +4512,16 @@
       "meta": {
         "type_id": "PYTH-PTYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "problem_type",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "problem_type"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "b",
+        "labels": {
+          "a": "4 m",
+          "b": "?",
+          "c": "5 m"
+        }
       }
     },
     {
@@ -3959,14 +4532,18 @@
         "stem": "Úhlopříčka obdélníku 3×4 cm má délku:",
         "context": null
       },
-      "answer": {
-        "value": "Pythagorova věta",
-        "unit": null
+      "modes": {
+        "type_recognition": {
+          "answer": "Pythagorova věta",
+          "distractors": [
+            "Obvod obdélníku",
+            "Obsah obdélníku"
+          ]
+        }
       },
-      "distractors": [
-        "Obvod obdélníku",
-        "Obsah obdélníku"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Úhlopříčka = přepona pravoúhlého trojúhelníku"
       ],
@@ -3979,13 +4556,12 @@
       "meta": {
         "type_id": "PYTH-PTYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "problem_type",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "problem_type"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": null
       }
     },
     {
@@ -3996,14 +4572,18 @@
         "stem": "Jaká je délka prostorové úhlopříčky kvádru 3×4×12?",
         "context": null
       },
-      "answer": {
-        "value": "Pythagorova věta",
-        "unit": null
+      "modes": {
+        "type_recognition": {
+          "answer": "Pythagorova věta",
+          "distractors": [
+            "Objem kvádru",
+            "Povrch kvádru"
+          ]
+        }
       },
-      "distractors": [
-        "Objem kvádru",
-        "Povrch kvádru"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Dvakrát Pythagoras"
       ],
@@ -4016,13 +4596,12 @@
       "meta": {
         "type_id": "PYTH-PTYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "problem_type",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "problem_type"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": null
       }
     },
     {
@@ -4033,14 +4612,18 @@
         "stem": "Vypočítej výšku rovnostranného trojúhelníku se stranou 6 cm.",
         "context": null
       },
-      "answer": {
-        "value": "Pythagorova věta",
-        "unit": null
+      "modes": {
+        "type_recognition": {
+          "answer": "Pythagorova věta",
+          "distractors": [
+            "Obsah trojúhelníku",
+            "Obvod trojúhelníku"
+          ]
+        }
       },
-      "distractors": [
-        "Obsah trojúhelníku",
-        "Obvod trojúhelníku"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Výška půlí základnu"
       ],
@@ -4053,13 +4636,12 @@
       "meta": {
         "type_id": "PYTH-PTYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "problem_type",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "problem_type"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": null
       }
     },
     {
@@ -4070,14 +4652,18 @@
         "stem": "Loď pluje 6 km na východ, pak 8 km na sever. Jak daleko je od startu?",
         "context": null
       },
-      "answer": {
-        "value": "Pythagorova věta",
-        "unit": null
+      "modes": {
+        "type_recognition": {
+          "answer": "Pythagorova věta",
+          "distractors": [
+            "Součet vzdáleností",
+            "Rychlost/čas/dráha"
+          ]
+        }
       },
-      "distractors": [
-        "Součet vzdáleností",
-        "Rychlost/čas/dráha"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Pravoúhlý trojúhelník na mapě"
       ],
@@ -4090,13 +4676,16 @@
       "meta": {
         "type_id": "PYTH-PTYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "problem_type",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "problem_type"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "8 km",
+          "b": "6 km",
+          "c": "?"
+        }
       }
     },
     {
@@ -4107,14 +4696,18 @@
         "stem": "Střecha má sklon - výška 3 m, šířka 4 m. Délka střešní plochy?",
         "context": null
       },
-      "answer": {
-        "value": "Pythagorova věta",
-        "unit": null
+      "modes": {
+        "type_recognition": {
+          "answer": "Pythagorova věta",
+          "distractors": [
+            "Obsah střechy",
+            "Objem podkroví"
+          ]
+        }
       },
-      "distractors": [
-        "Obsah střechy",
-        "Objem podkroví"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Délka šikmé strany"
       ],
@@ -4127,13 +4720,16 @@
       "meta": {
         "type_id": "PYTH-PTYPE",
         "type_label": "Pythagorova věta",
-        "original_type": "problem_type",
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": "problem_type"
       },
       "diagram": {
         "type": "right_triangle",
-        "highlight": "c"
+        "highlight": "c",
+        "labels": {
+          "a": "3 m",
+          "b": "4 m",
+          "c": "?"
+        }
       }
     },
     {
@@ -4144,14 +4740,20 @@
         "stem": "Posloupnost: 2, 5, 8, 11, ... Jaký je 10. člen?",
         "context": "V posloupnosti 2, 5, 8, 11, ... najdi 10. člen."
       },
-      "answer": {
-        "value": "29",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "29",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "26",
+            "32"
+          ]
+        }
       },
-      "distractors": [
-        "26",
-        "32"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "O kolik roste každý další člen? (+3)",
         "Vzorec: aₙ = a₁ + (n-1)·d = 2 + (n-1)·3"
@@ -4167,9 +4769,7 @@
       "meta": {
         "type_id": "SEQ-NTH",
         "type_label": "Posloupnosti",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -4180,14 +4780,20 @@
         "stem": "Posloupnost: 1, 4, 9, 16, ... Jaký je 7. člen?",
         "context": "V posloupnosti 1, 4, 9, 16, ... najdi 7. člen."
       },
-      "answer": {
-        "value": "49",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "49",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "36",
+            "64"
+          ]
+        }
       },
-      "distractors": [
-        "36",
-        "64"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Co jsou tato čísla? (druhé mocniny)",
         "Vzorec: aₙ = n²"
@@ -4203,9 +4809,7 @@
       "meta": {
         "type_id": "SEQ-NTH",
         "type_label": "Posloupnosti",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -4216,14 +4820,20 @@
         "stem": "Posloupnost: 3, 6, 12, 24, ... Jaký je 6. člen?",
         "context": "V posloupnosti 3, 6, 12, 24, ... najdi 6. člen."
       },
-      "answer": {
-        "value": "96",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "96",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "48",
+            "192"
+          ]
+        }
       },
-      "distractors": [
-        "48",
-        "192"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Jak roste? (každý člen je 2× předchozí)",
         "Vzorec: aₙ = 3 · 2^(n-1)"
@@ -4239,9 +4849,7 @@
       "meta": {
         "type_id": "SEQ-NTH",
         "type_label": "Posloupnosti",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -4252,14 +4860,20 @@
         "stem": "Čtverečky: 1. obrazec má 4, 2. má 7, 3. má 10. Kolik má 10. obrazec?",
         "context": "Obrazce z čtverečků: 1. obrazec má 4 čtverečky, 2. má 7, 3. má 10. Kolik čtverečků má 10. obrazec?"
       },
-      "answer": {
-        "value": "31",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "31",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "28",
+            "34"
+          ]
+        }
       },
-      "distractors": [
-        "28",
-        "34"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "O kolik čtverečků přibývá? (+3)",
         "Vzorec: aₙ = 4 + (n-1)·3 = 3n + 1"
@@ -4275,9 +4889,7 @@
       "meta": {
         "type_id": "SEQ-PATTERN",
         "type_label": "Posloupnosti",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -4288,14 +4900,20 @@
         "stem": "Který člen posloupnosti 5, 9, 13, 17, ... je roven 101?",
         "context": "Posloupnost 5, 9, 13, 17, ... Který člen je roven 101?"
       },
-      "answer": {
-        "value": "25",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "25",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "24",
+            "26"
+          ]
+        }
       },
-      "distractors": [
-        "24",
-        "26"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Vzorec: aₙ = 5 + (n-1)·4. Dosaď aₙ = 101.",
         "101 = 5 + (n-1)·4, řeš rovnici."
@@ -4312,9 +4930,7 @@
       "meta": {
         "type_id": "SEQ-NTH",
         "type_label": "Posloupnosti",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -4325,14 +4941,22 @@
         "stem": "1 m² = ? cm²",
         "context": "Převeď: 1 m² = ? cm²"
       },
-      "answer": {
-        "value": "10000",
-        "unit": "cm²"
+      "modes": {
+        "numeric": {
+          "answer": "10000",
+          "unit": "cm²",
+          "variants": [
+            "10 000"
+          ],
+          "distractors": [
+            "100",
+            "1000"
+          ]
+        }
       },
-      "distractors": [
-        "100",
-        "1000"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "1 m = 100 cm. Ale pozor - jde o plochu!",
         "1 m² = (100 cm)² = 10 000 cm²"
@@ -4347,9 +4971,7 @@
       "meta": {
         "type_id": "UNIT-AREA",
         "type_label": "Převody jednotek",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -4360,14 +4982,22 @@
         "stem": "0,75 m² = 25 cm² + ? cm²",
         "context": "Doplň: 0,75 m² = 25 cm² + ? cm²"
       },
-      "answer": {
-        "value": "7475",
-        "unit": "cm²"
+      "modes": {
+        "numeric": {
+          "answer": "7475",
+          "unit": "cm²",
+          "variants": [
+            "7 475"
+          ],
+          "distractors": [
+            "70",
+            "750"
+          ]
+        }
       },
-      "distractors": [
-        "70",
-        "750"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Nejdřív převeď 0,75 m² na cm².",
         "0,75 m² = 7500 cm². Pak 7500 - 25 = 7475 cm²"
@@ -4382,9 +5012,7 @@
       "meta": {
         "type_id": "UNIT-AREA",
         "type_label": "Převody jednotek",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -4395,14 +5023,22 @@
         "stem": "1 dm³ = ? cm³",
         "context": "Převeď: 1 dm³ = ? cm³"
       },
-      "answer": {
-        "value": "1000",
-        "unit": "cm³"
+      "modes": {
+        "numeric": {
+          "answer": "1000",
+          "unit": "cm³",
+          "variants": [
+            "1 000"
+          ],
+          "distractors": [
+            "100",
+            "10"
+          ]
+        }
       },
-      "distractors": [
-        "100",
-        "10"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "1 dm = 10 cm. Ale jde o objem!",
         "1 dm³ = (10 cm)³ = 1000 cm³"
@@ -4417,9 +5053,7 @@
       "meta": {
         "type_id": "UNIT-VOL",
         "type_label": "Převody jednotek",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -4430,14 +5064,20 @@
         "stem": "0,2 dm³ + ? cm³ = 1 litr",
         "context": "Doplň: 0,2 dm³ + ? cm³ = 1 litr"
       },
-      "answer": {
-        "value": "800",
-        "unit": "cm³"
+      "modes": {
+        "numeric": {
+          "answer": "800",
+          "unit": "cm³",
+          "variants": [],
+          "distractors": [
+            "80",
+            "200"
+          ]
+        }
       },
-      "distractors": [
-        "80",
-        "200"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "1 litr = 1 dm³ = 1000 cm³",
         "0,2 dm³ = 200 cm³. Pak 1000 - 200 = 800 cm³"
@@ -4453,9 +5093,7 @@
       "meta": {
         "type_id": "UNIT-VOL",
         "type_label": "Převody jednotek",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -4466,14 +5104,20 @@
         "stem": "? · 20 minut = 8 · 0,75 hodiny",
         "context": "Doplň: ? · 20 minut = 8 · 0,75 hodiny"
       },
-      "answer": {
-        "value": "18",
-        "unit": null
+      "modes": {
+        "numeric": {
+          "answer": "18",
+          "unit": null,
+          "variants": [],
+          "distractors": [
+            "6",
+            "24"
+          ]
+        }
       },
-      "distractors": [
-        "6",
-        "24"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "Převeď pravou stranu na minuty.",
         "8 · 0,75 h = 6 h = 360 min. Pak 360 : 20 = 18"
@@ -4489,9 +5133,7 @@
       "meta": {
         "type_id": "UNIT-TIME",
         "type_label": "Převody jednotek",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -4502,14 +5144,20 @@
         "stem": "2,5 m² = ? dm²",
         "context": "Převeď: 2,5 m² = ? dm²"
       },
-      "answer": {
-        "value": "250",
-        "unit": "dm²"
+      "modes": {
+        "numeric": {
+          "answer": "250",
+          "unit": "dm²",
+          "variants": [],
+          "distractors": [
+            "25",
+            "2500"
+          ]
+        }
       },
-      "distractors": [
-        "25",
-        "2500"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "1 m = 10 dm",
         "1 m² = 100 dm². Pak 2,5 · 100 = 250 dm²"
@@ -4524,9 +5172,7 @@
       "meta": {
         "type_id": "UNIT-AREA",
         "type_label": "Převody jednotek",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -4537,14 +5183,20 @@
         "stem": "0,5 m³ = ? litrů",
         "context": "Převeď: 0,5 m³ = ? litrů"
       },
-      "answer": {
-        "value": "500",
-        "unit": "l"
+      "modes": {
+        "numeric": {
+          "answer": "500",
+          "unit": "l",
+          "variants": [],
+          "distractors": [
+            "50",
+            "5000"
+          ]
+        }
       },
-      "distractors": [
-        "50",
-        "5000"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "1 m³ = 1000 dm³ = 1000 litrů",
         "0,5 m³ = 0,5 · 1000 = 500 litrů"
@@ -4559,9 +5211,7 @@
       "meta": {
         "type_id": "UNIT-VOL",
         "type_label": "Převody jednotek",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     },
     {
@@ -4572,14 +5222,22 @@
         "stem": "450 cm² = ? m²",
         "context": "Převeď: 450 cm² = ? m²"
       },
-      "answer": {
-        "value": "0,045",
-        "unit": "m²"
+      "modes": {
+        "numeric": {
+          "answer": "0,045",
+          "unit": "m²",
+          "variants": [
+            "0.045"
+          ],
+          "distractors": [
+            "0,45",
+            "4,5"
+          ]
+        }
       },
-      "distractors": [
-        "0,45",
-        "4,5"
-      ],
+      "keyboard": {
+        "variable": null
+      },
       "hints": [
         "1 m² = 10 000 cm², takže dělíme 10 000",
         "450 : 10000 = 0,045 m²"
@@ -4594,9 +5252,7 @@
       "meta": {
         "type_id": "UNIT-AREA",
         "type_label": "Převody jednotek",
-        "original_type": null,
-        "supports_mc": true,
-        "supports_open": true
+        "original_type": null
       }
     }
   ]

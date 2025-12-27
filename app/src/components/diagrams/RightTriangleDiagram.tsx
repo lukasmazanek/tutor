@@ -1,10 +1,11 @@
 import { DiagramProps } from './types'
 
-function RightTriangleDiagram({ labels = {}, highlight }: DiagramProps) {
-  // Default labels
-  const a = labels.a || 'a'
-  const b = labels.b || 'b'
-  const c = labels.c || 'c'
+function RightTriangleDiagram({ labels, highlight }: DiagramProps) {
+  // Default labels with null safety
+  const safeLabels = labels ?? {}
+  const a = safeLabels.a || 'a'
+  const b = safeLabels.b || 'b'
+  const c = safeLabels.c || 'c'
 
   // Colors
   const normalColor = '#475569' // slate-600

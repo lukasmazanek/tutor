@@ -49,16 +49,16 @@ function getMasteredProblemIds(): Set<string> {
   }
 }
 
-// NO TRANSFORMATION - return UnifiedQuestion directly
-function getOpenProblems(): UnifiedQuestion[] {
-  return data.questions.filter(q => q.meta.supports_open)
+// ADR-022: Filter questions that support numeric mode (for ProblemCard)
+function getNumericProblems(): UnifiedQuestion[] {
+  return data.questions.filter(q => q.modes.numeric)
 }
 
 // Helper to generate session problems based on topic
 function generateSessionProblems(topicId: string): UnifiedQuestion[] {
   const PROBLEMS_PER_SESSION = 6
   const mastered = getMasteredProblemIds()
-  const allProblems = getOpenProblems()
+  const allProblems = getNumericProblems()
 
   // Filter out mastered problems, but keep them as fallback if not enough new ones
   const filterProblems = (problems: UnifiedQuestion[]): UnifiedQuestion[] => {

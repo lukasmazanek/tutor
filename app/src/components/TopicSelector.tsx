@@ -42,8 +42,8 @@ function TopicSelector({ onSelectTopic, lastSession, onViewProgress, onStartLigh
   const topics = Object.values(data.topics) as TopicMeta[]
   const mastered = getMasteredProblemIds()
 
-  // Get open-answer problems for counting
-  const openProblems = data.questions.filter(q => q.meta.supports_open)
+  // ADR-022: Get numeric problems for counting (problems that support open answer input)
+  const openProblems = data.questions.filter(q => q.modes.numeric)
 
   // Count problems per topic and mastered per topic
   const problemCounts = topics.reduce<Record<string, ProblemCount>>((acc, topic) => {

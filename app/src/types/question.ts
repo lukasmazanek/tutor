@@ -1,12 +1,14 @@
 /**
  * Core type definitions for the tutor app
  * Single source of truth - all components use these types directly
+ *
+ * ADR-022: Multi-mode questions with keyboard enhancement
  */
 
 // Diagram configuration for geometry problems
 export interface DiagramConfig {
   type: 'right_triangle' | 'rectangle' | 'square' | 'cube' | 'ladder' | 'equilateral_triangle'
-  labels?: Record<string, string | number>
+  labels?: Record<string, string | number> | null
   highlight?: string
   [key: string]: unknown
 }
@@ -19,9 +21,34 @@ export interface TopicMeta {
   is_critical: boolean
 }
 
+// ADR-022: Numeric mode answer
+export interface NumericMode {
+  answer: string | number
+  unit?: string | null
+  variants?: string[]
+  distractors?: string[]
+}
+
+// ADR-022: Type recognition mode answer
+export interface TypeRecognitionMode {
+  answer: string
+  distractors?: string[]
+}
+
+// ADR-022: Modes structure - one question can support multiple modes
+export interface QuestionModes {
+  numeric?: NumericMode
+  type_recognition?: TypeRecognitionMode
+}
+
+// ADR-022: Keyboard configuration
+export interface KeyboardConfig {
+  variable: string | null
+}
+
 /**
  * UnifiedQuestion - the core data type
- * All components work with this format directly, no transformations needed
+ * ADR-022: Mode-based structure replaces single answer
  */
 export interface UnifiedQuestion {
   id: string
@@ -33,12 +60,12 @@ export interface UnifiedQuestion {
     context: string | null
   }
 
-  answer: {
-    value: string | number
-    unit: string | null
-  }
+  // ADR-022: Modes replace answer + distractors
+  modes: QuestionModes
 
-  distractors: string[]
+  // ADR-022: Keyboard configuration
+  keyboard: KeyboardConfig
+
   hints: string[]
 
   solution: {
@@ -50,8 +77,6 @@ export interface UnifiedQuestion {
     type_id: string | null
     type_label: string | null
     original_type?: string | null
-    supports_mc: boolean
-    supports_open: boolean
   }
 
   diagram?: DiagramConfig
@@ -107,4 +132,27 @@ export function formatAnswerDisplay(value: string | number): string {
     return value.toLocaleString('cs-CZ')
   }
   return value
+}
+
+// ADR-022: Helper to check if question supports a mode
+export function supportsNumeric(q: UnifiedQuestion): boolean {
+  return !!q.modes.numeric
+}
+
+export function supportsTypeRecognition(q: UnifiedQuestion): boolean {
+  return !!q.modes.type_recognition
+}
+
+// ADR-022: Helper to get numeric answer (for ProblemCard, LightningRound)
+export function getNumericAnswer(q: UnifiedQuestion): { value: string | number; unit: string | null } | null {
+  if (!q.modes.numeric) return null
+  return {
+    value: q.modes.numeric.answer,
+    unit: q.modes.numeric.unit || null
+  }
+}
+
+// ADR-022: Helper to get distractors for numeric mode
+export function getNumericDistractors(q: UnifiedQuestion): string[] {
+  return q.modes.numeric?.distractors || []
 }

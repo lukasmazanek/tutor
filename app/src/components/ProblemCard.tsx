@@ -18,31 +18,8 @@ function formatAnswer(value: string | number): string {
   return value
 }
 
-// Detect variable used in question (for dynamic keyboard)
-function detectVariable(text: string): string {
-  // Look for common variable patterns: (4n - 3), 3a, 2x, etc.
-  // Order matters - check less common first
-  const patterns = [
-    /\d*[n]\b/i,  // n (as in 4n)
-    /\d*[b]\b/i,  // b (as in 4b)
-    /\d*[a]\b/i,  // a (as in 3a)
-    /\d*[y]\b/i,  // y
-    /\d*[x]\b/i,  // x (most common, check last)
-  ]
-
-  for (const pattern of patterns) {
-    if (pattern.test(text)) {
-      const match = text.match(pattern)
-      if (match) {
-        // Extract just the letter
-        const letter = match[0].replace(/\d/g, '').toLowerCase()
-        if (letter) return letter
-      }
-    }
-  }
-
-  return 'x' // default
-}
+// ADR-022: Variable detection moved to data pipeline (keyboard.variable)
+// This function is now a fallback only
 
 interface ProblemCardProps {
   problem: UnifiedQuestion
@@ -121,12 +98,17 @@ function ProblemCard({
     setProblemStartTime(Date.now())
   }, [problem.id])
 
-  // Check answer using mathParser (ADR-017)
-  // NO ADAPTER NEEDED - mathParser now infers type from answer.value
+  // Check answer using mathParser (ADR-017, ADR-022)
+  // Use modes.numeric for answer
   const checkAnswer = () => {
+    if (!problem.modes.numeric) return // Safety check
+
     const result = evaluateAnswer(userAnswer, {
       question: { originalValue: null },
-      answer: problem.answer  // Pass UnifiedQuestion.answer directly
+      answer: {
+        value: problem.modes.numeric.answer,
+        unit: problem.modes.numeric.unit || null
+      }
     })
 
     if (result.isCorrect) {
@@ -208,10 +190,10 @@ function ProblemCard({
     resetState()
   }
 
-  // UNIFIED FORMAT: Get display text
+  // ADR-022: Get display text and keyboard config
   const problemText = problem.question.context || problem.question.stem || ''
-  const answerUnit = problem.answer.unit
-  const variableKey = detectVariable(problemText)
+  const answerUnit = problem.modes.numeric?.unit || null
+  const variableKey = problem.keyboard.variable // From data, null = no variable key
 
   return (
     <div className="h-screen h-[100dvh] bg-slate-50 flex flex-col overflow-hidden">
@@ -316,10 +298,10 @@ function ProblemCard({
         )}
 
         {/* Solution revealed */}
-        {solutionRevealed && (
+        {solutionRevealed && problem.modes.numeric && (
           <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-4">
             <p className="text-green-800 font-medium">
-              Správná odpověď: {formatAnswer(problem.answer.value)}{answerUnit ? ` ${answerUnit}` : ''}
+              Správná odpověď: {formatAnswer(problem.modes.numeric.answer)}{answerUnit ? ` ${answerUnit}` : ''}
             </p>
           </div>
         )}
@@ -394,7 +376,7 @@ function ProblemCard({
                     {key === '/' ? '÷' : key}
                   </button>
                 ))}
-                {['4', '5', '6', '*', variableKey].map((key) => (
+                {['4', '5', '6', '*', ...(variableKey ? [variableKey] : [])].map((key) => (
                   <button
                     key={key}
                     type="button"
@@ -454,11 +436,11 @@ function ProblemCard({
               </div>
             )}
 
-            {/* Desktop symbol bar */}
+            {/* Desktop symbol bar - ADR-022: variableKey from data */}
             {!isMobile && !solutionRevealed && (
               <div className="flex gap-2 mb-2">
                 {[
-                  { symbol: variableKey, display: variableKey },
+                  ...(variableKey ? [{ symbol: variableKey, display: variableKey }] : []),
                   { symbol: '√(', display: '√(' },
                   { symbol: '^', display: '^' },
                   { symbol: '(', display: '(' },
