@@ -1,4 +1,6 @@
-function SquareDiagram({ labels = {}, highlight }) {
+import { DiagramProps } from './types'
+
+function SquareDiagram({ labels = {}, highlight }: DiagramProps) {
   const side = labels.side || 'a'
   const diagonal = labels.diagonal || 'd'
 
@@ -6,8 +8,8 @@ function SquareDiagram({ labels = {}, highlight }) {
   const highlightColor = '#7c3aed'
   const labelColor = '#334155'
 
-  const getColor = (part) => highlight === part ? highlightColor : normalColor
-  const getLabelColor = (part) => highlight === part ? highlightColor : labelColor
+  const getColor = (part: string) => highlight === part ? highlightColor : normalColor
+  const getLabelColor = (part: string) => highlight === part ? highlightColor : labelColor
 
   return (
     <svg

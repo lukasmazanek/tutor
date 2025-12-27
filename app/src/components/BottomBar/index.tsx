@@ -16,22 +16,29 @@
  * />
  */
 
-import { CONTAINER_CLASS, WRAPPER_CLASS, GRID_CLASS } from '../../constants/bottomBar'
+import { CONTAINER_CLASS, WRAPPER_CLASS, GRID_CLASS, SlotPosition, ActionKey } from '../../constants/bottomBar'
 import Slot from './Slot'
 
-/**
- * @param {object} props
- * @param {object} props.slots - Configuration for each slot (1-5)
- *   Each slot can be:
- *   - null/undefined: Empty slot
- *   - { onClick, disabled?, active?, action? }: Rendered slot
- * @param {boolean} props.contained - If true, renders without fixed positioning
- *   Use contained mode when BottomBar is inside another fixed container
- */
-function BottomBar({ slots = {}, contained = false }) {
+interface SlotConfig {
+  onClick?: () => void
+  disabled?: boolean
+  active?: boolean
+  action?: ActionKey
+}
+
+type SlotsConfig = Partial<Record<SlotPosition, SlotConfig | null>>
+
+interface BottomBarProps {
+  slots?: SlotsConfig
+  contained?: boolean
+}
+
+function BottomBar({ slots = {}, contained = false }: BottomBarProps) {
+  const positions: SlotPosition[] = [1, 2, 3, 4, 5]
+
   const grid = (
     <div className={GRID_CLASS}>
-      {[1, 2, 3, 4, 5].map((position) => {
+      {positions.map((position) => {
         const slotConfig = slots[position]
 
         // Empty slot

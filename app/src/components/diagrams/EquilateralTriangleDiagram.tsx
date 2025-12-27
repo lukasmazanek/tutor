@@ -1,4 +1,6 @@
-function EquilateralTriangleDiagram({ labels = {}, highlight }) {
+import { DiagramProps } from './types'
+
+function EquilateralTriangleDiagram({ labels = {}, highlight }: DiagramProps) {
   const side = labels.side || 'a'
   const height = labels.height || 'v'
 
@@ -6,8 +8,8 @@ function EquilateralTriangleDiagram({ labels = {}, highlight }) {
   const highlightColor = '#7c3aed'
   const labelColor = '#334155'
 
-  const getColor = (part) => highlight === part ? highlightColor : normalColor
-  const getLabelColor = (part) => highlight === part ? highlightColor : labelColor
+  const getColor = (part: string) => highlight === part ? highlightColor : normalColor
+  const getLabelColor = (part: string) => highlight === part ? highlightColor : labelColor
 
   // Triangle points (equilateral)
   const top = [100, 20]

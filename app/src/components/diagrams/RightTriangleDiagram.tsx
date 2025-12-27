@@ -1,4 +1,6 @@
-function RightTriangleDiagram({ labels = {}, highlight }) {
+import { DiagramProps } from './types'
+
+function RightTriangleDiagram({ labels = {}, highlight }: DiagramProps) {
   // Default labels
   const a = labels.a || 'a'
   const b = labels.b || 'b'
@@ -10,8 +12,8 @@ function RightTriangleDiagram({ labels = {}, highlight }) {
   const labelColor = '#334155' // slate-700
   const rightAngleColor = '#94a3b8' // slate-400
 
-  const getColor = (side) => highlight === side ? highlightColor : normalColor
-  const getLabelColor = (side) => highlight === side ? highlightColor : labelColor
+  const getColor = (side: string) => highlight === side ? highlightColor : normalColor
+  const getLabelColor = (side: string) => highlight === side ? highlightColor : labelColor
 
   return (
     <svg

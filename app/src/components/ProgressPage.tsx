@@ -1,14 +1,21 @@
 import { useState, useMemo } from 'react'
 import questionsData from '../data/questions.json'
 import BottomBar from './BottomBar'
+import { Session, QuestionsData } from '../types'
 
-function ProgressPage({ onBack }) {
+const data = questionsData as QuestionsData
+
+interface ProgressPageProps {
+  onBack: () => void
+}
+
+function ProgressPage({ onBack }: ProgressPageProps) {
   const [selectedTopic, setSelectedTopic] = useState('all')
 
   // Load progress data from localStorage
-  const progressData = useMemo(() => {
+  const progressData = useMemo((): Session[] => {
     try {
-      const raw = JSON.parse(localStorage.getItem('tutor_progress') || '[]')
+      const raw = JSON.parse(localStorage.getItem('tutor_progress') || '[]') as Session[]
       return raw
     } catch {
       return []
@@ -41,13 +48,13 @@ function ProgressPage({ onBack }) {
   }, [filteredSessions])
 
   // Get topic name
-  const getTopicName = (topicId) => {
+  const getTopicName = (topicId: string): string => {
     if (topicId === 'mixed') return 'Mix'
-    return questionsData.topics[topicId]?.name_cs || topicId
+    return data.topics[topicId]?.name_cs || topicId
   }
 
   // Format date for display
-  const formatDate = (dateString) => {
+  const formatDate = (dateString: string): string => {
     const date = new Date(dateString)
     return date.toLocaleDateString('cs-CZ', { day: 'numeric', month: 'short' })
   }
@@ -78,7 +85,7 @@ function ProgressPage({ onBack }) {
           >
             Vše
           </button>
-          {Object.keys(questionsData.topics).map(topicId => (
+          {Object.keys(data.topics).map(topicId => (
             <button
               key={topicId}
               onClick={() => setSelectedTopic(topicId)}
@@ -88,7 +95,7 @@ function ProgressPage({ onBack }) {
                   : 'bg-white text-slate-600 border border-slate-200'
                 }`}
             >
-              {questionsData.topics[topicId].name_cs}
+              {data.topics[topicId].name_cs}
             </button>
           ))}
         </div>
@@ -145,9 +152,6 @@ function ProgressPage({ onBack }) {
       <BottomBar
         slots={{
           1: { onClick: onBack },
-          // 2: null - we ARE the progress page
-          // 3-4: null
-          // 5: null - no action needed
         }}
       />
     </div>
@@ -155,7 +159,11 @@ function ProgressPage({ onBack }) {
 }
 
 // Progress timeline showing last 10 sessions
-function ProgressTimeline({ sessions }) {
+interface ProgressTimelineProps {
+  sessions: Session[]
+}
+
+function ProgressTimeline({ sessions }: ProgressTimelineProps) {
   const recentSessions = sessions.slice(-10)
 
   if (recentSessions.length < 2) {
@@ -216,7 +224,13 @@ function ProgressTimeline({ sessions }) {
 }
 
 // Session list
-function SessionList({ sessions, getTopicName, formatDate }) {
+interface SessionListProps {
+  sessions: Session[]
+  getTopicName: (topicId: string) => string
+  formatDate: (dateString: string) => string
+}
+
+function SessionList({ sessions, getTopicName, formatDate }: SessionListProps) {
   // Reverse to show newest first
   const orderedSessions = [...sessions].reverse()
 

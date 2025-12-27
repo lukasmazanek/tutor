@@ -1,8 +1,21 @@
 import questionsData from '../data/questions.json'
 import { TrophyIcon } from '@heroicons/react/24/outline'
 import BottomBar from './BottomBar'
+import { SessionAttempt, SessionMetrics, Session, QuestionsData } from '../types'
 
-function SessionSummary({ attempts, totalProblems, topic, sessionMetrics, onNewSession, onViewProgress, onHome }) {
+const data = questionsData as QuestionsData
+
+interface SessionSummaryProps {
+  attempts: SessionAttempt[]
+  totalProblems: number
+  topic: string | null
+  sessionMetrics: SessionMetrics
+  onNewSession: () => void
+  onViewProgress: () => void
+  onHome?: () => void
+}
+
+function SessionSummary({ attempts, totalProblems: _totalProblems, topic, sessionMetrics, onNewSession, onViewProgress, onHome }: SessionSummaryProps) {
   // Calculate total explored (not "correct" - that's judgmental)
   const totalExplored = attempts.length
   const problemsWithoutHints = sessionMetrics?.problemsWithoutHints || 0
@@ -10,12 +23,12 @@ function SessionSummary({ attempts, totalProblems, topic, sessionMetrics, onNewS
   // Get topic name for display
   const topicName = topic === 'mixed'
     ? 'Mix všeho'
-    : questionsData.topics[topic]?.name_cs || topic
+    : (topic && data.topics[topic]?.name_cs) || topic
 
   // Get comparison with previous same-topic session
-  const getComparison = () => {
+  const getComparison = (): { previousSame: Session | null; totalSessions: number } => {
     try {
-      const progress = JSON.parse(localStorage.getItem('tutor_progress') || '[]')
+      const progress = JSON.parse(localStorage.getItem('tutor_progress') || '[]') as Session[]
       // Get previous sessions of same topic (excluding current which was just saved)
       const sameTopic = progress.filter(s => s.topic === topic)
       // The last one in array is the current session, so get second to last
@@ -29,7 +42,7 @@ function SessionSummary({ attempts, totalProblems, topic, sessionMetrics, onNewS
   const comparison = getComparison()
 
   // Calculate comparison with previous session (only show positive)
-  const getComparisonMessage = () => {
+  const getComparisonMessage = (): string | null => {
     if (!comparison.previousSame?.sessionMetrics) return null
     const prevWithoutHints = comparison.previousSame.sessionMetrics.problemsWithoutHints || 0
     const diff = problemsWithoutHints - prevWithoutHints
@@ -46,9 +59,9 @@ function SessionSummary({ attempts, totalProblems, topic, sessionMetrics, onNewS
   const comparisonMessage = getComparisonMessage()
 
   // Calculate total sessions from localStorage
-  const getTotalStats = () => {
+  const getTotalStats = (): { sessions: number; problems: number; withoutHints: number } => {
     try {
-      const progress = JSON.parse(localStorage.getItem('tutor_progress') || '[]')
+      const progress = JSON.parse(localStorage.getItem('tutor_progress') || '[]') as Session[]
       const totalProblemsEver = progress.reduce((sum, s) => sum + (s.problemsExplored || 0), 0)
       const totalWithoutHints = progress.reduce(
         (sum, s) => sum + (s.sessionMetrics?.problemsWithoutHints || 0), 0

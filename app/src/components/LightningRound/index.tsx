@@ -5,53 +5,56 @@ import Question from './Question'
 import Feedback from './Feedback'
 import Summary from './Summary'
 import BottomBar from '../BottomBar'
+import { UnifiedQuestion, QuestionsData } from '../../types'
+import { LightningQuestion, LightningResult, LightningStats } from './types'
 
+const data = questionsData as QuestionsData
 const QUESTIONS_PER_ROUND = 10
 
 // Format answer value for display (Czech locale for numbers)
-function formatAnswerValue(value) {
+function formatAnswerValue(value: string | number): string {
   if (typeof value === 'number') {
     return value.toLocaleString('cs-CZ')
   }
   return value
 }
 
-// Transform unified format to Lightning format for subcomponents
-function toLightningFormat(q) {
+// Shuffle correct answer with distractors
+function shuffleAnswers(correct: string, distractors: string[]): string[] {
+  const all = [correct, ...distractors]
+  return all.sort(() => Math.random() - 0.5)
+}
+
+// NO TRANSFORMATION FUNCTION - extend UnifiedQuestion inline
+function prepareLightningQuestion(q: UnifiedQuestion): LightningQuestion {
+  const displayCorrect = formatAnswerValue(q.answer.value)
   return {
-    id: q.id,
-    question: q.question.stem || q.question.context,
-    correct: formatAnswerValue(q.answer.value),
-    distractors: q.distractors,
-    type: q.meta.original_type || 'calculation',
-    hint: {
-      rule: q.solution.strategy || '',
-      explanation: q.hints[0] || ''
-    }
+    ...q,
+    displayCorrect,
+    shuffledAnswers: shuffleAnswers(displayCorrect, q.distractors)
   }
 }
 
-function LightningRound({ onExit, onViewProgress }) {
-  const [phase, setPhase] = useState('playing') // 'playing' | 'feedback' | 'summary'
-  const [questions, setQuestions] = useState(() => selectMixedQuestions())
+interface LightningRoundProps {
+  onExit: () => void
+  onViewProgress: () => void
+}
+
+function LightningRound({ onExit, onViewProgress }: LightningRoundProps) {
+  const [phase, setPhase] = useState<'playing' | 'feedback' | 'summary'>('playing')
+  const [questions, setQuestions] = useState<LightningQuestion[]>(() => selectMixedQuestions())
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [selectedAnswer, setSelectedAnswer] = useState(null)
-  const [isCorrect, setIsCorrect] = useState(null)
-  const [results, setResults] = useState([])
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
+  const [isCorrect, setIsCorrect] = useState<boolean | null>(null)
+  const [results, setResults] = useState<LightningResult[]>([])
   const [streak, setStreak] = useState(0)
   const [bestStreak, setBestStreak] = useState(0)
   const [questionStartTime, setQuestionStartTime] = useState(() => Date.now())
 
-  // Shuffle correct answer with distractors
-  function shuffleAnswers(correct, distractors) {
-    const all = [correct, ...distractors]
-    return all.sort(() => Math.random() - 0.5)
-  }
-
   // Handle answer selection
-  const handleAnswer = (answer) => {
+  const handleAnswer = (answer: string) => {
     const currentQuestion = questions[currentIndex]
-    const correct = answer === currentQuestion.correct
+    const correct = answer === currentQuestion.displayCorrect
     const timeMs = Date.now() - questionStartTime
 
     setSelectedAnswer(answer)
@@ -106,19 +109,21 @@ function LightningRound({ onExit, onViewProgress }) {
   }
 
   // Select mixed questions with guaranteed type mix
-  function selectMixedQuestions() {
-    // Filter only MC-capable questions from unified format
-    const mcQuestions = questionsData.questions
+  function selectMixedQuestions(): LightningQuestion[] {
+    // UNIFIED FORMAT: Filter MC-capable questions directly
+    const mcQuestions = data.questions
       .filter(q => q.meta.supports_mc)
-      .map(toLightningFormat)
+      .map(prepareLightningQuestion)
 
     // Separate questions by type to ensure mix
-    const typeQuestions = mcQuestions.filter(q =>
-      q.type === 'type_recognition' || q.type === 'problem_type'
-    )
-    const calcQuestions = mcQuestions.filter(q =>
-      q.type !== 'type_recognition' && q.type !== 'problem_type'
-    )
+    const typeQuestions = mcQuestions.filter(q => {
+      const typeId = q.meta.type_id || ''
+      return typeId === 'type_recognition' || typeId === 'problem_type'
+    })
+    const calcQuestions = mcQuestions.filter(q => {
+      const typeId = q.meta.type_id || ''
+      return typeId !== 'type_recognition' && typeId !== 'problem_type'
+    })
 
     // Shuffle each pool
     const shuffledType = [...typeQuestions].sort(() => Math.random() - 0.5)
@@ -132,13 +137,7 @@ function LightningRound({ onExit, onViewProgress }) {
     const selectedCalc = shuffledCalc.slice(0, calcCount)
 
     // Combine and shuffle final selection
-    const selected = [...selectedType, ...selectedCalc].sort(() => Math.random() - 0.5)
-
-    // Shuffle answer order for each question
-    return selected.map(q => ({
-      ...q,
-      answers: shuffleAnswers(q.correct, q.distractors)
-    }))
+    return [...selectedType, ...selectedCalc].sort(() => Math.random() - 0.5)
   }
 
   // Restart with new questions
@@ -155,7 +154,7 @@ function LightningRound({ onExit, onViewProgress }) {
   }
 
   // Calculate summary stats
-  const getSummaryStats = () => {
+  const getSummaryStats = (): LightningStats => {
     const correctCount = results.filter(r => r.correct).length
     const totalTime = results.reduce((sum, r) => sum + r.timeMs, 0)
     const avgTime = results.length > 0 ? Math.round(totalTime / results.length) : 0
@@ -218,7 +217,7 @@ function LightningRound({ onExit, onViewProgress }) {
           />
         )}
 
-        {phase === 'feedback' && (
+        {phase === 'feedback' && selectedAnswer !== null && isCorrect !== null && (
           <Feedback
             question={currentQuestion}
             selectedAnswer={selectedAnswer}
@@ -243,11 +242,9 @@ function LightningRound({ onExit, onViewProgress }) {
           slots={{
             1: { onClick: onExit },
             2: { onClick: onViewProgress },
-            // 3: Toggle - not applicable
-            // 4: Hint - not applicable
             5: phase === 'feedback' && !isCorrect
               ? { action: 'continue', onClick: handleContinue }
-              : null
+              : undefined
           }}
         />
       )}

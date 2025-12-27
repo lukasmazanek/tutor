@@ -4,28 +4,14 @@ import TypeQuestion from './TypeQuestion'
 import StrategyQuestion from './StrategyQuestion'
 import Summary from './Summary'
 import BottomBar from '../BottomBar'
+import { UnifiedQuestion, QuestionsData } from '../../types'
+import { TypeDrillQuestion, TypeDrillResult, TypeOption } from './types'
 
-// Transform unified format to TypeDrill format
-function toTypeDrillFormat(q) {
-  return {
-    id: 'TD-' + q.id,
-    prompt: q.question.context,
-    type: {
-      correct: q.meta.type_id,
-      correct_label: q.meta.type_label,
-      distractors: getTypeDistractors(q.meta.type_id)
-    },
-    strategy: {
-      correct: q.solution.strategy,
-      distractors: getStrategyDistractors(q.topic)
-    },
-    explanation: q.hints[0] || ''
-  }
-}
+const data = questionsData as QuestionsData
 
-// Helper: Get type distractors
-function getTypeDistractors(typeId) {
-  const distractorMap = {
+// Helper: Get type distractors - kept as helper function, not transformation
+function getTypeDistractors(typeId: string | null): TypeOption[] {
+  const distractorMap: Record<string, TypeOption[]> = {
     'WORD-OXVICE': [
       { id: 'NUM-PROC', label: 'Procenta' },
       { id: 'ALG-EQ', label: 'Rovnice' }
@@ -43,12 +29,12 @@ function getTypeDistractors(typeId) {
       { id: 'ALG-EQ', label: 'Rovnice' }
     ]
   }
-  return distractorMap[typeId] || [{ id: 'OTHER', label: 'Jiný typ' }]
+  return distractorMap[typeId || ''] || [{ id: 'OTHER', label: 'Jiný typ' }]
 }
 
 // Helper: Get strategy distractors
-function getStrategyDistractors(topic) {
-  const map = {
+function getStrategyDistractors(topic: string): string[] {
+  const map: Record<string, string[]> = {
     'o_x_vice': ['+ zlomek', '÷ zlomek'],
     'equations': ['Vytýkej', 'Rozlož'],
     'fractions': ['Násob přímo', 'Převrať'],
@@ -57,22 +43,37 @@ function getStrategyDistractors(topic) {
   return map[topic] || ['Jiná strategie']
 }
 
-function TypeDrill({ onExit, onViewProgress }) {
-  const [questions, setQuestions] = useState([])
+// NO TRANSFORMATION FUNCTION - extend UnifiedQuestion inline
+function prepareTypeDrillQuestion(q: UnifiedQuestion): TypeDrillQuestion {
+  return {
+    ...q,
+    typeDistractors: getTypeDistractors(q.meta.type_id),
+    strategyDistractors: getStrategyDistractors(q.topic)
+  }
+}
+
+interface TypeDrillProps {
+  onExit: () => void
+  onViewProgress: () => void
+}
+
+function TypeDrill({ onExit, onViewProgress }: TypeDrillProps) {
+  const [questions, setQuestions] = useState<TypeDrillQuestion[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
   // Phase: 'type' | 'strategy' | 'feedback' | 'summary'
-  const [phase, setPhase] = useState('type')
-  const [results, setResults] = useState([])
-  const [currentResult, setCurrentResult] = useState(null)
+  const [phase, setPhase] = useState<'type' | 'strategy' | 'feedback' | 'summary'>('type')
+  const [results, setResults] = useState<TypeDrillResult[]>([])
+  const [currentResult, setCurrentResult] = useState<TypeDrillResult | null>(null)
 
   // Timing
   const [questionStartTime, setQuestionStartTime] = useState(Date.now())
 
   // Initialize questions
-  const initQuestions = () => {
-    const typeDrillQuestions = questionsData.questions
+  const initQuestions = (): TypeDrillQuestion[] => {
+    // UNIFIED FORMAT: Filter questions with context and type_id
+    const typeDrillQuestions = data.questions
       .filter(q => q.question.context && q.meta.type_id)
-      .map(toTypeDrillFormat)
+      .map(prepareTypeDrillQuestion)
 
     const shuffled = [...typeDrillQuestions].sort(() => Math.random() - 0.5)
     return shuffled.slice(0, 10)
@@ -97,12 +98,12 @@ function TypeDrill({ onExit, onViewProgress }) {
   const currentQuestion = questions[currentIndex]
 
   // Handle type answer
-  const handleTypeAnswer = (answerId, isCorrect) => {
+  const handleTypeAnswer = (answerId: string, isCorrect: boolean) => {
     setCurrentResult({
       questionId: currentQuestion.id,
       typeCorrect: isCorrect,
       typeAnswer: answerId,
-      strategyCorrect: null,
+      strategyCorrect: false,
       strategyAnswer: null,
       timeSpent: Date.now() - questionStartTime
     })
@@ -112,9 +113,9 @@ function TypeDrill({ onExit, onViewProgress }) {
   }
 
   // Handle strategy answer
-  const handleStrategyAnswer = (answer, isCorrect) => {
-    const finalResult = {
-      ...currentResult,
+  const handleStrategyAnswer = (answer: string, isCorrect: boolean) => {
+    const finalResult: TypeDrillResult = {
+      ...currentResult!,
       strategyCorrect: isCorrect,
       strategyAnswer: answer,
       timeSpent: Date.now() - questionStartTime
@@ -139,7 +140,7 @@ function TypeDrill({ onExit, onViewProgress }) {
 
   // Skip current question (records as skipped)
   const handleSkip = () => {
-    const skippedResult = {
+    const skippedResult: TypeDrillResult = {
       questionId: currentQuestion.id,
       typeCorrect: false,
       typeAnswer: null,
@@ -180,6 +181,12 @@ function TypeDrill({ onExit, onViewProgress }) {
     )
   }
 
+  // UNIFIED FORMAT: Get question context
+  const questionContext = currentQuestion.question.context || ''
+  const typeLabel = currentQuestion.meta.type_label || ''
+  const correctStrategy = currentQuestion.solution.strategy || ''
+  const explanation = currentQuestion.hints[0] || ''
+
   return (
     <div className="h-screen h-[100dvh] bg-slate-50 flex flex-col overflow-hidden">
       {/* ZONE 1: Header (fixed) */}
@@ -207,7 +214,7 @@ function TypeDrill({ onExit, onViewProgress }) {
         {/* Problem prompt */}
         <div className="bg-white rounded-2xl shadow-sm p-5 mb-6">
           <p className="text-lg text-slate-800 leading-relaxed">
-            {currentQuestion.prompt}
+            {questionContext}
           </p>
         </div>
 
@@ -219,45 +226,45 @@ function TypeDrill({ onExit, onViewProgress }) {
           />
         )}
 
-        {phase === 'strategy' && (
+        {phase === 'strategy' && currentResult && (
           <StrategyQuestion
             question={currentQuestion}
-            typeWasCorrect={currentResult?.typeCorrect}
+            typeWasCorrect={currentResult.typeCorrect}
             onAnswer={handleStrategyAnswer}
           />
         )}
 
-        {phase === 'feedback' && (
+        {phase === 'feedback' && currentResult && (
           <div className="flex-1 flex flex-col">
             {/* Feedback display */}
             <div className={`rounded-xl p-4 ${
-              currentResult?.typeCorrect && currentResult?.strategyCorrect
+              currentResult.typeCorrect && currentResult.strategyCorrect
                 ? 'bg-green-50 border border-green-200'
                 : 'bg-amber-50 border border-amber-200'
             }`}>
               <div className="space-y-3">
                 {/* Type result */}
                 <div className="flex items-start gap-2">
-                  <span className={currentResult?.typeCorrect ? 'text-green-600' : 'text-amber-600'}>
-                    {currentResult?.typeCorrect ? '✓' : '○'}
+                  <span className={currentResult.typeCorrect ? 'text-green-600' : 'text-amber-600'}>
+                    {currentResult.typeCorrect ? '✓' : '○'}
                   </span>
                   <div>
                     <span className="font-medium text-slate-700">Typ: </span>
-                    <span className={currentResult?.typeCorrect ? 'text-green-700' : 'text-amber-700'}>
-                      {currentQuestion.type.correct_label}
+                    <span className={currentResult.typeCorrect ? 'text-green-700' : 'text-amber-700'}>
+                      {typeLabel}
                     </span>
                   </div>
                 </div>
 
                 {/* Strategy result */}
                 <div className="flex items-start gap-2">
-                  <span className={currentResult?.strategyCorrect ? 'text-green-600' : 'text-amber-600'}>
-                    {currentResult?.strategyCorrect ? '✓' : '○'}
+                  <span className={currentResult.strategyCorrect ? 'text-green-600' : 'text-amber-600'}>
+                    {currentResult.strategyCorrect ? '✓' : '○'}
                   </span>
                   <div>
                     <span className="font-medium text-slate-700">Strategie: </span>
-                    <span className={currentResult?.strategyCorrect ? 'text-green-700' : 'text-amber-700'}>
-                      {currentQuestion.strategy.correct}
+                    <span className={currentResult.strategyCorrect ? 'text-green-700' : 'text-amber-700'}>
+                      {correctStrategy}
                     </span>
                   </div>
                 </div>
@@ -265,7 +272,7 @@ function TypeDrill({ onExit, onViewProgress }) {
                 {/* Explanation */}
                 <div className="pt-2 border-t border-slate-200 mt-2">
                   <p className="text-slate-600 text-sm">
-                    {currentQuestion.explanation}
+                    {explanation}
                   </p>
                 </div>
               </div>
@@ -279,8 +286,6 @@ function TypeDrill({ onExit, onViewProgress }) {
         slots={{
           1: { onClick: onExit },
           2: { onClick: onViewProgress },
-          // 3: null (empty - Tag toggle position)
-          // 4: null (empty - Hint position)
           5: {
             action: phase === 'feedback' ? 'continue' : 'skip',
             onClick: phase === 'feedback' ? handleContinue : handleSkip

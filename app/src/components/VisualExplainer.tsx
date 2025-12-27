@@ -1,27 +1,53 @@
 import { useState } from 'react'
 import { LightBulbIcon } from '@heroicons/react/24/outline'
 import BottomBar from './BottomBar'
+import { UnifiedQuestion } from '../types'
 
-function VisualExplainer({ problem, onContinue, onHome, onViewProgress }) {
+interface VisualExplainerProps {
+  problem: UnifiedQuestion
+  onContinue: () => void
+  onHome?: () => void
+  onViewProgress: () => void
+}
+
+interface FractionInfo {
+  fraction: string
+  blocks: number
+  label: string
+}
+
+interface Step {
+  title: string
+  description: string
+  showOriginal: boolean
+  showChange: boolean
+  showResult: boolean
+  highlight?: number
+}
+
+function VisualExplainer({ problem, onContinue, onHome, onViewProgress }: VisualExplainerProps) {
   const [step, setStep] = useState(0)
 
+  // UNIFIED FORMAT: Get problem text
+  const problemText = problem.question.context || problem.question.stem || ''
+
   // Parse the problem to extract key info
-  const isIncrease = problem.problem_cs.includes('více') ||
-                     problem.problem_cs.includes('zvýšení') ||
-                     problem.problem_cs.includes('přidáno') ||
-                     problem.problem_cs.includes('zdražila')
+  const isIncrease = problemText.includes('více') ||
+                     problemText.includes('zvýšení') ||
+                     problemText.includes('přidáno') ||
+                     problemText.includes('zdražila')
 
   // Extract fraction from hints (e.g., "polovinu", "třetinu", "čtvrtinu")
-  const fractionWords = {
+  const fractionWords: Record<string, FractionInfo> = {
     'polovin': { fraction: '1/2', blocks: 2, label: 'polovina' },
     'třetin': { fraction: '1/3', blocks: 3, label: 'třetina' },
     'čtvrtin': { fraction: '1/4', blocks: 4, label: 'čtvrtina' },
     'pětin': { fraction: '1/5', blocks: 5, label: 'pětina' }
   }
 
-  let fractionInfo = { fraction: '1/2', blocks: 2, label: 'polovina' }
+  let fractionInfo: FractionInfo = { fraction: '1/2', blocks: 2, label: 'polovina' }
   for (const [key, value] of Object.entries(fractionWords)) {
-    if (problem.problem_cs.toLowerCase().includes(key)) {
+    if (problemText.toLowerCase().includes(key)) {
       fractionInfo = value
       break
     }
@@ -29,9 +55,8 @@ function VisualExplainer({ problem, onContinue, onHome, onViewProgress }) {
 
   // Generate visual blocks
   const originalBlocks = Array(fractionInfo.blocks).fill('original')
-  const changeBlock = isIncrease ? 'added' : 'removed'
 
-  const steps = [
+  const steps: Step[] = [
     {
       title: 'Původní hodnota',
       description: 'Začínáme s celou hodnotou',
@@ -191,7 +216,7 @@ function VisualExplainer({ problem, onContinue, onHome, onViewProgress }) {
           2: { onClick: onViewProgress },
           4: step > 0
             ? { action: 'back', onClick: () => setStep(step - 1) }
-            : null,
+            : undefined,
           5: { action: 'continue', onClick: isLastStep ? onContinue : () => setStep(step + 1) }
         }}
       />

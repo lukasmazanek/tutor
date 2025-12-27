@@ -9,6 +9,7 @@
  * - Action variants
  */
 
+import { ComponentType, SVGProps } from 'react'
 import {
   HomeIcon,
   ChartBarIcon,
@@ -22,10 +23,36 @@ import {
 } from '@heroicons/react/24/outline'
 
 // ============================================
+// TYPE DEFINITIONS
+// ============================================
+
+export type StyleKey = 'default' | 'toggle_off' | 'toggle_on' | 'hint' | 'primary' | 'secondary' | 'disabled'
+export type ActionKey = 'submit' | 'continue' | 'skip' | 'back' | 'restart'
+export type SlotPosition = 1 | 2 | 3 | 4 | 5
+
+export type HeroIcon = ComponentType<SVGProps<SVGSVGElement>>
+
+export interface SlotConfig {
+  id: string
+  name: string
+  icon: HeroIcon | null
+  style: StyleKey
+  title: string | null
+  required: boolean
+}
+
+export interface ActionConfig {
+  id: string
+  icon: HeroIcon
+  title: string
+  style: StyleKey
+}
+
+// ============================================
 // STYLE PRESETS
 // ============================================
 
-export const STYLES = {
+export const STYLES: Record<StyleKey, string> = {
   // Navigation buttons (Home, Progress)
   default: 'bg-slate-200 text-slate-700 hover:bg-slate-300',
 
@@ -82,7 +109,7 @@ export const WRAPPER_CLASS = 'max-w-2xl mx-auto px-4 py-2'
  * └─────────────────────────────────────────────────────┘
  */
 
-export const SLOTS = {
+export const SLOTS: Record<SlotPosition, SlotConfig> = {
   1: {
     id: 'home',
     name: 'Home',
@@ -129,7 +156,7 @@ export const SLOTS = {
 // ACTION VARIANTS (for Slot 5)
 // ============================================
 
-export const ACTIONS = {
+export const ACTIONS: Record<ActionKey, ActionConfig> = {
   // Submit answer (checkmark)
   submit: {
     id: 'submit',
@@ -177,11 +204,8 @@ export const ACTIONS = {
 
 /**
  * Get combined class names for a button
- * @param {string} style - Style preset key from STYLES
- * @param {boolean} disabled - Whether button is disabled
- * @returns {string} Combined class names
  */
-export function getButtonClass(style, disabled = false) {
+export function getButtonClass(style: StyleKey, disabled = false): string {
   const styleClass = STYLES[style] || STYLES.default
   const disabledClass = disabled ? STYLES.disabled : ''
   return `${BASE_BUTTON_CLASS} ${styleClass} ${disabledClass}`.trim()
@@ -189,11 +213,8 @@ export function getButtonClass(style, disabled = false) {
 
 /**
  * Get slot configuration with action override
- * @param {number} position - Slot position (1-5)
- * @param {string} actionType - For slot 5: 'submit' | 'continue' | 'skip'
- * @returns {object} Slot configuration
  */
-export function getSlotConfig(position, actionType = null) {
+export function getSlotConfig(position: SlotPosition, actionType: ActionKey | null = null): SlotConfig | null {
   const slot = SLOTS[position]
   if (!slot) return null
 
@@ -213,9 +234,7 @@ export function getSlotConfig(position, actionType = null) {
 
 /**
  * Get toggle style based on active state
- * @param {boolean} active - Whether toggle is active
- * @returns {string} Style key
  */
-export function getToggleStyle(active) {
+export function getToggleStyle(active: boolean): StyleKey {
   return active ? 'toggle_on' : 'toggle_off'
 }

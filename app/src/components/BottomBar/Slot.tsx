@@ -11,18 +11,21 @@ import {
   ACTIONS,
   ICON_CLASS,
   getButtonClass,
-  getToggleStyle
+  getToggleStyle,
+  SlotPosition,
+  ActionKey,
+  HeroIcon
 } from '../../constants/bottomBar'
 
-/**
- * @param {object} props
- * @param {number} props.position - Slot position (1-5)
- * @param {function} props.onClick - Click handler
- * @param {boolean} props.disabled - Disabled state
- * @param {boolean} props.active - For toggle slots (position 3)
- * @param {string} props.action - For action slot (position 5): 'submit' | 'continue' | 'skip'
- */
-function Slot({ position, onClick, disabled = false, active = false, action = null }) {
+interface SlotProps {
+  position: SlotPosition
+  onClick?: () => void
+  disabled?: boolean
+  active?: boolean
+  action?: ActionKey | null
+}
+
+function Slot({ position, onClick, disabled = false, active = false, action = null }: SlotProps) {
   const slotDef = SLOTS[position]
 
   if (!slotDef) {
@@ -31,7 +34,7 @@ function Slot({ position, onClick, disabled = false, active = false, action = nu
   }
 
   // Determine icon and style based on slot type
-  let Icon = slotDef.icon
+  let Icon: HeroIcon | null = slotDef.icon
   let style = slotDef.style
   let title = slotDef.title
 
@@ -58,7 +61,7 @@ function Slot({ position, onClick, disabled = false, active = false, action = nu
       onClick={disabled ? undefined : onClick}
       disabled={disabled}
       className={getButtonClass(style, disabled)}
-      title={title}
+      title={title ?? undefined}
     >
       <Icon className={ICON_CLASS} />
     </button>

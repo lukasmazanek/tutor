@@ -4,92 +4,61 @@ import DiagramRenderer from './diagrams/DiagramRenderer'
 import BottomBar from './BottomBar'
 import topicTypeMapping from '../data/topic_type_mapping.json'
 import { evaluateAnswer } from '@lib/mathParser'
+import { UnifiedQuestion, TopicTypeMappingData } from '../types'
+import { AttemptResult, ProgressIndicator } from '../types'
+
+// Type the imported JSON
+const mappingData = topicTypeMapping as TopicTypeMappingData
 
 // Format answer for display (Czech locale for numbers)
-function formatAnswer(value) {
+function formatAnswer(value: string | number): string {
   if (typeof value === 'number') {
     return value.toLocaleString('cs-CZ')
   }
   return value
 }
 
-// Adapter: transform problem format to format expected by mathParser
-function adaptProblemForParser(problem) {
-  // Format 1: New format with explicit answer.type
-  if (problem.answer?.type) {
-    return {
-      question: {
-        originalValue: problem.question?.originalValue || problem.originalValue || null
-      },
-      answer: problem.answer
-    }
-  }
-
-  // Format 2: Unified format (has answer.value but no answer.type)
-  if (problem.answer?.value !== undefined) {
-    const value = problem.answer.value
-    // Infer type: if answer contains 'x', it's symbolic
-    const isSymbolic = typeof value === 'string' && value.toLowerCase().includes('x')
-    return {
-      question: {
-        originalValue: problem.question?.originalValue || null
-      },
-      answer: {
-        type: isSymbolic ? 'symbolic' : 'numeric',
-        value: value,
-        unit: problem.answer.unit || null
-      }
-    }
-  }
-
-  // Format 3: Old format (problem.type + problem.answer)
-  let answerType, answerValue
-
-  if (problem.type === 'text') {
-    // Check if this is actually a numeric expression vs symbolic
-    // "2/3" is numeric, but "x+1" is symbolic (contains variable x)
-    const containsVariable = typeof problem.answer === 'string' &&
-      problem.answer.toLowerCase().includes('x')
-    answerType = containsVariable ? 'symbolic' : 'numeric'
-    answerValue = problem.answer
-  } else if (problem.type === 'fraction') {
-    answerType = 'numeric'
-    answerValue = problem.answer_decimal
-  } else {
-    answerType = 'numeric'
-    answerValue = problem.answer
-  }
-
-  return {
-    question: {
-      originalValue: problem.originalValue || null
-    },
-    answer: {
-      type: answerType,
-      value: answerValue,
-      unit: problem.answer_unit || null
-    }
-  }
+interface ProblemCardProps {
+  problem: UnifiedQuestion
+  onAnswer: (result: AttemptResult) => void
+  progress?: ProgressIndicator
+  onExit: () => void
+  onViewProgress: () => void
+  typePromptEnabled: boolean
+  onToggleTypePrompt: () => void
+  skipStrategyPrompt: boolean
+  onStrategyAnswered?: (topic: string) => void
 }
 
-function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, typePromptEnabled, onToggleTypePrompt, skipStrategyPrompt, onStrategyAnswered }) {
+type FeedbackType = 'correct' | 'tryAgain' | null
+type PromptPhase = 'strategy' | 'done'
+
+function ProblemCard({
+  problem,
+  onAnswer,
+  progress,
+  onExit,
+  onViewProgress,
+  typePromptEnabled,
+  onToggleTypePrompt,
+  skipStrategyPrompt,
+  onStrategyAnswered
+}: ProblemCardProps) {
   const [userAnswer, setUserAnswer] = useState('')
-  const [revealedSteps, setRevealedSteps] = useState([]) // Progressive hints - array of revealed step indices
-  const [solutionRevealed, setSolutionRevealed] = useState(false) // All steps shown
-  const [feedback, setFeedback] = useState(null) // 'correct' | 'tryAgain' | null
-  const [wrongAttempts, setWrongAttempts] = useState(0) // Auto-hint after 3 wrong attempts
+  const [revealedSteps, setRevealedSteps] = useState<number[]>([])
+  const [solutionRevealed, setSolutionRevealed] = useState(false)
+  const [feedback, setFeedback] = useState<FeedbackType>(null)
+  const [wrongAttempts, setWrongAttempts] = useState(0)
 
   // Get type mapping for current problem
-  const typeMapping = topicTypeMapping.mappings[problem.topic] || null
+  const typeMapping = mappingData.mappings[problem.topic] || null
 
-  // Strategy prompt state (when typePromptEnabled AND mapping exists)
-  // Phase: 'strategy' | 'done' (type phase removed - user already knows type from topic selection)
-  // Skip if same strategy was already answered in this session
+  // Strategy prompt state
   const shouldShowStrategy = typePromptEnabled && typeMapping && !skipStrategyPrompt
-  const [promptPhase, setPromptPhase] = useState(
+  const [promptPhase, setPromptPhase] = useState<PromptPhase>(
     shouldShowStrategy ? 'strategy' : 'done'
   )
-  const [strategyPromptResult, setStrategyPromptResult] = useState(null) // true/false/null
+  const [strategyPromptResult, setStrategyPromptResult] = useState<boolean | null>(null)
 
   // Reset prompt phase when problem changes
   useEffect(() => {
@@ -101,14 +70,14 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
     }
   }, [problem.id, shouldShowStrategy])
 
-  // Get hint source: prefer solution_steps, fallback to hints
-  const hintSource = problem.solution_steps?.length > 0 ? problem.solution_steps : (problem.hints || [])
+  // Get hint source: prefer solution.steps, fallback to hints
+  // UNIFIED FORMAT: problem.solution.steps instead of problem.solution_steps
+  const hintSource = problem.solution.steps.length > 0 ? problem.solution.steps : problem.hints
 
   // Detect if on touch device (mobile)
   const [isMobile, setIsMobile] = useState(true)
 
   useEffect(() => {
-    // Check for touch support and screen width
     const checkMobile = () => {
       const hasTouchScreen = 'ontouchstart' in window || navigator.maxTouchPoints > 0
       const isSmallScreen = window.innerWidth < 768
@@ -122,15 +91,17 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
   // Progress tracking state
   const [problemStartTime, setProblemStartTime] = useState(Date.now())
 
-  // Reset start time when problem changes
   useEffect(() => {
     setProblemStartTime(Date.now())
   }, [problem.id])
 
   // Check answer using mathParser (ADR-017)
+  // NO ADAPTER NEEDED - mathParser now infers type from answer.value
   const checkAnswer = () => {
-    const adaptedProblem = adaptProblemForParser(problem)
-    const result = evaluateAnswer(userAnswer, adaptedProblem)
+    const result = evaluateAnswer(userAnswer, {
+      question: { originalValue: null },
+      answer: problem.answer  // Pass UnifiedQuestion.answer directly
+    })
 
     if (result.isCorrect) {
       setFeedback('correct')
@@ -147,7 +118,6 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
       const newWrongAttempts = wrongAttempts + 1
       setWrongAttempts(newWrongAttempts)
 
-      // Auto-hint after 3rd wrong attempt (if hints available and not all revealed)
       if (newWrongAttempts >= 3 && !solutionRevealed && revealedSteps.length < hintSource.length) {
         setTimeout(() => {
           setFeedback(null)
@@ -166,24 +136,20 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
     setFeedback(null)
     setWrongAttempts(0)
     setProblemStartTime(Date.now())
-    // Reset prompt phase for next problem
     if (typePromptEnabled && typeMapping) {
       setPromptPhase('strategy')
       setStrategyPromptResult(null)
     }
   }
 
-  // Handle strategy prompt answer
-  const handleStrategyPromptAnswer = (answer, isCorrect) => {
+  const handleStrategyPromptAnswer = (_answer: string, isCorrect: boolean) => {
     setStrategyPromptResult(isCorrect)
-    // Notify parent so it can skip strategy for subsequent problems with same topic
     if (onStrategyAnswered) {
       onStrategyAnswered(problem.topic)
     }
     setTimeout(() => setPromptPhase('done'), 300)
   }
 
-  // Build shuffled strategy options
   const getStrategyOptions = () => {
     if (!typeMapping) return []
     return [
@@ -200,14 +166,12 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
       const newRevealed = [...revealedSteps, nextIndex]
       setRevealedSteps(newRevealed)
 
-      // Check if this was the last hint
       if (newRevealed.length >= hintSource.length) {
         setSolutionRevealed(true)
       }
     }
   }
 
-  // Handle "Pokračovat" after solution revealed
   const handleContinueAfterSolution = () => {
     onAnswer({
       correct: false,
@@ -217,6 +181,10 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
     })
     resetState()
   }
+
+  // UNIFIED FORMAT: Get display text
+  const problemText = problem.question.context || problem.question.stem || ''
+  const answerUnit = problem.answer.unit
 
   return (
     <div className="h-screen h-[100dvh] bg-slate-50 flex flex-col overflow-hidden">
@@ -234,21 +202,19 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
 
       {/* Problem text and diagram */}
       <div className="bg-white rounded-2xl shadow-sm p-5 mb-4 mx-4">
-        {/* Diagram - if present */}
         {problem.diagram && (
           <DiagramRenderer diagram={problem.diagram} />
         )}
 
         <p className="text-lg text-slate-800 leading-relaxed">
-          {problem.problem_cs}
+          {problemText}
         </p>
       </div>
 
-      {/* Strategy prompt phase - SELECTION category */}
+      {/* Strategy prompt phase */}
       {promptPhase === 'strategy' && typeMapping && (
         <>
           <div className="flex-1 min-h-0 overflow-y-auto px-4 pb-20">
-            {/* Show type label as context */}
             <div className="flex items-center gap-2 mb-4 px-3 py-2 rounded-lg bg-indigo-50 text-indigo-700">
               <TagIcon className="w-4 h-4" />
               <span className="text-sm font-medium">{typeMapping.type_label}</span>
@@ -271,7 +237,6 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
               ))}
             </div>
           </div>
-          {/* BottomBar - ADR-015 SELECTION */}
           <BottomBar
             slots={{
               1: { onClick: onExit },
@@ -282,10 +247,10 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
         </>
       )}
 
-      {/* Content area - scrollable with padding for fixed bottom bar */}
+      {/* Content area */}
       {promptPhase === 'done' && (
       <div className="flex-1 flex flex-col overflow-auto px-4 pb-64">
-        {/* Strategy result from prompt (shown in hint style) */}
+        {/* Strategy result */}
         {typePromptEnabled && typeMapping && strategyPromptResult !== null && (
           <div className="bg-indigo-50 border border-indigo-100 rounded-xl p-4 mb-4 flex-shrink-0">
             <div className="flex items-start gap-3">
@@ -302,7 +267,7 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
           </div>
         )}
 
-        {/* Progressive hints section - cumulative display */}
+        {/* Progressive hints */}
         {revealedSteps.length > 0 && (
           <div className="bg-purple-50 border border-purple-100 rounded-xl p-4 mb-4 transition-gentle flex-shrink-0">
             <div className="flex items-start gap-3">
@@ -323,69 +288,19 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
           </div>
         )}
 
-        {/* Solution revealed - show answer (Pokračovat button is in bottom bar) */}
+        {/* Solution revealed */}
         {solutionRevealed && (
           <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-4">
             <p className="text-green-800 font-medium">
-              Správná odpověď: {formatAnswer(problem.answer)}{problem.answer_unit ? ` ${problem.answer_unit}` : ''}
+              Správná odpověď: {formatAnswer(problem.answer.value)}{answerUnit ? ` ${answerUnit}` : ''}
             </p>
           </div>
         )}
 
-        {/* Answer input - hidden when solution revealed */}
+        {/* Answer input */}
         {!solutionRevealed && (
         <div>
-        {problem.type === 'multiple_choice' ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-            {problem.options.map((option) => (
-              <button
-                key={option.id}
-                onClick={() => {
-                  setUserAnswer(option.id)
-                  // Auto-check answer for multiple choice
-                  const isCorrect = option.id === problem.answer
-                  if (isCorrect) {
-                    setFeedback('correct')
-                    setTimeout(() => {
-                      onAnswer({
-                        correct: true,
-                        hintsUsed: revealedSteps.length,
-                        timeSpent: Date.now() - problemStartTime
-                      })
-                      resetState()
-                    }, 1200)
-                  } else {
-                    setFeedback('tryAgain')
-                    const newWrongAttempts = wrongAttempts + 1
-                    setWrongAttempts(newWrongAttempts)
-
-                    // Auto-hint after 3rd wrong attempt
-                    if (newWrongAttempts >= 3 && !solutionRevealed && revealedSteps.length < hintSource.length) {
-                      setTimeout(() => {
-                        setFeedback(null)
-                        showNextHint()
-                      }, 1200)
-                    } else {
-                      setTimeout(() => setFeedback(null), 1500)
-                    }
-                  }
-                }}
-                disabled={feedback !== null}
-                className={`p-4 rounded-xl text-left transition-gentle touch-target
-                  ${userAnswer === option.id
-                    ? 'bg-safe-blue text-white'
-                    : 'bg-white border border-slate-200 text-slate-700'
-                  }
-                  disabled:opacity-50`}
-              >
-                <span className="font-medium mr-2">{option.id.toUpperCase()})</span>
-                {option.text}
-              </button>
-            ))}
-          </div>
-        ) : (
           <div className="mb-4">
-            {/* Desktop: real input with keyboard | Mobile: display only */}
             {isMobile ? (
               <div
                 className="w-full p-4 text-xl rounded-xl border-2 border-slate-200
@@ -410,52 +325,48 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
               />
             )}
 
-            {problem.answer_unit && (
+            {answerUnit && (
               <span className="text-slate-500 text-sm mt-1 block">
-                Odpověz v: {problem.answer_unit}
+                Odpověz v: {answerUnit}
               </span>
             )}
           </div>
-        )}
 
-        {/* Feedback overlay */}
-        {feedback && (
-          <div className={`mb-4 p-4 rounded-xl text-center transition-gentle
-            ${feedback === 'correct' ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'}`}
-          >
-            {feedback === 'correct' ? (
-              <span className="font-medium">Přesně tak! ✓</span>
-            ) : (
-              <span>Zkus jiný přístup</span>
-            )}
-          </div>
-        )}
-
+          {/* Feedback */}
+          {feedback && (
+            <div className={`mb-4 p-4 rounded-xl text-center transition-gentle
+              ${feedback === 'correct' ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'}`}
+            >
+              {feedback === 'correct' ? (
+                <span className="font-medium">Přesně tak! ✓</span>
+              ) : (
+                <span>Zkus jiný přístup</span>
+              )}
+            </div>
+          )}
         </div>
         )}
       </div>
       )}
 
-      {/* Fixed bottom section - keyboard + BottomBar */}
+      {/* Fixed bottom section */}
       {promptPhase === 'done' && (
         <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 safe-area-pb">
           <div className="max-w-2xl mx-auto px-4 pt-2 pb-2">
-            {/* Virtual keyboard - only on mobile, hidden when solution revealed or multiple choice */}
-            {isMobile && !solutionRevealed && problem.type !== 'multiple_choice' && (
+            {/* Virtual keyboard - mobile */}
+            {isMobile && !solutionRevealed && (
               <div className="grid grid-cols-5 gap-1 mb-2">
-                {/* Row 1: 7 8 9 ÷ [unit or √] */}
-                {['7', '8', '9', '/', problem.answer_unit || '√'].map((key) => (
+                {['7', '8', '9', '/', answerUnit || '√'].map((key) => (
                   <button
                     key={key}
                     type="button"
                     onClick={() => setUserAnswer(prev => prev + (key === '√' ? '√(' : key))}
                     className={`h-11 rounded-xl text-base font-medium transition-gentle active:scale-95
-                      ${key === '/' || key === '√' || key === problem.answer_unit ? 'bg-purple-100 text-purple-700' : 'bg-slate-100 text-slate-800'}`}
+                      ${key === '/' || key === '√' || key === answerUnit ? 'bg-purple-100 text-purple-700' : 'bg-slate-100 text-slate-800'}`}
                   >
                     {key === '/' ? '÷' : key}
                   </button>
                 ))}
-                {/* Row 2: 4 5 6 × x */}
                 {['4', '5', '6', '*', 'x'].map((key) => (
                   <button
                     key={key}
@@ -467,7 +378,6 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
                     {key === '*' ? '×' : key}
                   </button>
                 ))}
-                {/* Row 3: 1 2 3 − ( */}
                 {['1', '2', '3', '-', '('].map((key) => (
                   <button
                     key={key}
@@ -479,7 +389,6 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
                     {key === '-' ? '−' : key}
                   </button>
                 ))}
-                {/* Row 4: 0 , ⌫ + ) */}
                 <button
                   type="button"
                   onClick={() => setUserAnswer(prev => prev + '0')}
@@ -518,8 +427,8 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
               </div>
             )}
 
-            {/* Desktop symbol bar - math symbols only, hidden when solution revealed */}
-            {!isMobile && !solutionRevealed && problem.type !== 'multiple_choice' && (
+            {/* Desktop symbol bar */}
+            {!isMobile && !solutionRevealed && (
               <div className="flex gap-2 mb-2">
                 {[
                   { symbol: 'x', display: 'x' },
@@ -527,8 +436,7 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
                   { symbol: '^', display: '^' },
                   { symbol: '(', display: '(' },
                   { symbol: ')', display: ')' },
-                  // Add unit button if required
-                  ...(problem.answer_unit ? [{ symbol: problem.answer_unit, display: problem.answer_unit }] : [])
+                  ...(answerUnit ? [{ symbol: answerUnit, display: answerUnit }] : [])
                 ].map(({ symbol, display }) => (
                   <button
                     key={symbol}
@@ -543,7 +451,7 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
               </div>
             )}
 
-            {/* Action buttons - ADR-009 centralized */}
+            {/* Action buttons */}
             <BottomBar
               contained
               slots={{
@@ -551,13 +459,11 @@ function ProblemCard({ problem, onAnswer, progress, onExit, onViewProgress, type
                 2: { onClick: onViewProgress },
                 3: { onClick: onToggleTypePrompt, active: typePromptEnabled },
                 4: { onClick: showNextHint, disabled: solutionRevealed },
-                5: problem.type === 'multiple_choice'
-                  ? { action: 'continue', onClick: handleContinueAfterSolution, disabled: !solutionRevealed }
-                  : {
-                      action: solutionRevealed ? 'continue' : 'submit',
-                      onClick: solutionRevealed ? handleContinueAfterSolution : checkAnswer,
-                      disabled: !solutionRevealed && !userAnswer.trim()
-                    }
+                5: {
+                  action: solutionRevealed ? 'continue' : 'submit',
+                  onClick: solutionRevealed ? handleContinueAfterSolution : checkAnswer,
+                  disabled: !solutionRevealed && !userAnswer.trim()
+                }
               }}
             />
           </div>

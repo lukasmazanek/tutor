@@ -1,7 +1,16 @@
 import { AcademicCapIcon } from '@heroicons/react/24/outline'
 import BottomBar from '../BottomBar'
+import { TypeDrillResult, TypeDrillQuestion } from './types'
 
-function Summary({ results, questions, onExit, onViewProgress, onRestart }) {
+interface SummaryProps {
+  results: TypeDrillResult[]
+  questions: TypeDrillQuestion[]
+  onExit: () => void
+  onViewProgress: () => void
+  onRestart: () => void
+}
+
+function Summary({ results, questions: _questions, onExit, onViewProgress, onRestart }: SummaryProps) {
   // Calculate stats
   const totalQuestions = results.length
   const typeCorrect = results.filter(r => r.typeCorrect).length
@@ -16,7 +25,7 @@ function Summary({ results, questions, onExit, onViewProgress, onRestart }) {
   const avgTime = Math.round(results.reduce((sum, r) => sum + r.timeSpent, 0) / totalQuestions / 1000 * 10) / 10
 
   // Encouraging message based on performance
-  const getMessage = () => {
+  const getMessage = (): string => {
     if (overallPercentage >= 90) return 'Skvělé! Typy i strategie máš výborně.'
     if (overallPercentage >= 70) return 'Dobrá práce! Většinu typů poznáváš správně.'
     if (overallPercentage >= 50) return 'Jdeš správným směrem. Pokračuj v tréninku!'

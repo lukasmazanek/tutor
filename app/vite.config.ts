@@ -8,7 +8,8 @@ export default defineConfig({
   base: '/tutor/',
   resolve: {
     alias: {
-      '@lib': path.resolve(__dirname, '../lib')
+      '@lib': path.resolve(__dirname, '../lib'),
+      '@': path.resolve(__dirname, './src')
     }
   }
 })

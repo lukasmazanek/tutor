@@ -9,11 +9,19 @@ import ProgressPage from './components/ProgressPage'
 import LightningRound from './components/LightningRound'
 import TypeDrill from './components/TypeDrill'
 import BottomBar from './components/BottomBar'
+import { UnifiedQuestion, QuestionsData } from './types'
+import { Session, SessionAttempt, AttemptResult, SessionMetrics } from './types'
+
+// Type the imported JSON data
+const data = questionsData as QuestionsData
+
+// App states
+type AppState = 'topic_select' | 'session' | 'summary' | 'progress' | 'lightning' | 'typedrill'
 
 // Helper to get last session from localStorage
-function getLastSession() {
+function getLastSession(): Session | null {
   try {
-    const progress = JSON.parse(localStorage.getItem('tutor_progress') || '[]')
+    const progress = JSON.parse(localStorage.getItem('tutor_progress') || '[]') as Session[]
     return progress.length > 0 ? progress[progress.length - 1] : null
   } catch {
     return null
@@ -21,10 +29,10 @@ function getLastSession() {
 }
 
 // Helper to get problem IDs that have been answered correctly (mastered)
-function getMasteredProblemIds() {
+function getMasteredProblemIds(): Set<string> {
   try {
-    const progress = JSON.parse(localStorage.getItem('tutor_progress') || '[]')
-    const mastered = new Set()
+    const progress = JSON.parse(localStorage.getItem('tutor_progress') || '[]') as Session[]
+    const mastered = new Set<string>()
 
     for (const session of progress) {
       for (const attempt of session.attempts || []) {
@@ -41,36 +49,19 @@ function getMasteredProblemIds() {
   }
 }
 
-// Transform unified format to ProblemCard format
-function toProblemCardFormat(q) {
-  return {
-    id: q.id,
-    topic: q.topic,
-    difficulty: q.difficulty,
-    type: typeof q.answer.value === 'number' ? 'number' : 'text',
-    problem_cs: q.question.context || q.question.stem,
-    answer: q.answer.value,
-    answer_unit: q.answer.unit,
-    hints: q.hints,
-    solution_steps: q.solution.steps
-  }
-}
-
-// Get all problems that support open answer format
-function getOpenProblems() {
-  return questionsData.questions
-    .filter(q => q.meta.supports_open)
-    .map(toProblemCardFormat)
+// NO TRANSFORMATION - return UnifiedQuestion directly
+function getOpenProblems(): UnifiedQuestion[] {
+  return data.questions.filter(q => q.meta.supports_open)
 }
 
 // Helper to generate session problems based on topic
-function generateSessionProblems(topicId) {
+function generateSessionProblems(topicId: string): UnifiedQuestion[] {
   const PROBLEMS_PER_SESSION = 6
   const mastered = getMasteredProblemIds()
   const allProblems = getOpenProblems()
 
   // Filter out mastered problems, but keep them as fallback if not enough new ones
-  const filterProblems = (problems) => {
+  const filterProblems = (problems: UnifiedQuestion[]): UnifiedQuestion[] => {
     const unmastered = problems.filter(p => !mastered.has(p.id))
     // If we have enough unmastered, use those; otherwise include mastered too
     return unmastered.length >= PROBLEMS_PER_SESSION ? unmastered : problems
@@ -110,17 +101,16 @@ function generateSessionProblems(topicId) {
 }
 
 function App() {
-  // App state: 'topic_select' | 'session' | 'summary' | 'progress' | 'lightning' | 'typedrill'
-  const [appState, setAppState] = useState('topic_select')
-  const [selectedTopic, setSelectedTopic] = useState(null)
-  const [sessionProblems, setSessionProblems] = useState([])
+  const [appState, setAppState] = useState<AppState>('topic_select')
+  const [selectedTopic, setSelectedTopic] = useState<string | null>(null)
+  const [sessionProblems, setSessionProblems] = useState<UnifiedQuestion[]>([])
   const [currentProblemIndex, setCurrentProblemIndex] = useState(0)
-  const [attempts, setAttempts] = useState([])
-  const [lastSession, setLastSession] = useState(null)
+  const [attempts, setAttempts] = useState<SessionAttempt[]>([])
+  const [lastSession, setLastSession] = useState<Session | null>(null)
 
   // Visual explainer state
   const [showExplainer, setShowExplainer] = useState(false)
-  const [explainerShownFor, setExplainerShownFor] = useState(new Set())
+  const [explainerShownFor, setExplainerShownFor] = useState<Set<string>>(new Set())
 
   // Type prompt toggle (persisted in localStorage)
   const [typePromptEnabled, setTypePromptEnabled] = useState(() => {
@@ -132,7 +122,7 @@ function App() {
   })
 
   // Track which topic's strategy has been answered (to avoid repeating)
-  const [answeredStrategyTopic, setAnsweredStrategyTopic] = useState(null)
+  const [answeredStrategyTopic, setAnsweredStrategyTopic] = useState<string | null>(null)
 
   const handleToggleTypePrompt = () => {
     const newValue = !typePromptEnabled
@@ -152,7 +142,7 @@ function App() {
   const currentProblem = sessionProblems[currentProblemIndex]
 
   // Check if we should show visual explainer for this problem
-  const shouldShowExplainer = () => {
+  const shouldShowExplainer = (): boolean => {
     if (!currentProblem) return false
     if (currentProblem.topic !== 'o_x_vice') return false
     if (explainerShownFor.has(currentProblem.id)) return false
@@ -163,7 +153,7 @@ function App() {
     return oxViceProblemsEncountered.length === 1
   }
 
-  const handleTopicSelect = (topicId) => {
+  const handleTopicSelect = (topicId: string) => {
     setSelectedTopic(topicId)
     setSessionProblems(generateSessionProblems(topicId))
     setCurrentProblemIndex(0)
@@ -172,9 +162,11 @@ function App() {
     setAppState('session')
   }
 
-  const handleAnswer = (attemptData) => {
+  const handleAnswer = (attemptData: AttemptResult) => {
+    if (!currentProblem) return
+
     // Accept rich attempt data from ProblemCard
-    const enrichedAttempt = {
+    const enrichedAttempt: SessionAttempt = {
       problemId: currentProblem.id,
       topic: currentProblem.topic,
       correct: attemptData.correct,
@@ -195,24 +187,26 @@ function App() {
     }
   }
 
-  const saveSession = (finalAttempts) => {
+  const saveSession = (finalAttempts: SessionAttempt[]) => {
     try {
-      const existing = JSON.parse(localStorage.getItem('tutor_progress') || '[]')
+      const existing = JSON.parse(localStorage.getItem('tutor_progress') || '[]') as Session[]
 
       // Calculate session metrics for "závod sama se sebou"
-      const sessionMetrics = {
+      const sessionMetrics: SessionMetrics = {
         totalHintsUsed: finalAttempts.reduce((sum, a) => sum + (a.hintsUsed || 0), 0),
         problemsWithoutHints: finalAttempts.filter(a => (a.hintsUsed || 0) === 0).length,
         totalTimeSpent: finalAttempts.reduce((sum, a) => sum + (a.timeSpent || 0), 0)
       }
 
-      existing.push({
+      const newSession: Session = {
         date: new Date().toISOString(),
-        topic: selectedTopic,
+        topic: selectedTopic || '',
         problemsExplored: sessionProblems.length,
         sessionMetrics,
         attempts: finalAttempts
-      })
+      }
+
+      existing.push(newSession)
       localStorage.setItem('tutor_progress', JSON.stringify(existing))
     } catch (e) {
       console.error('Failed to save progress:', e)
@@ -220,7 +214,9 @@ function App() {
   }
 
   const handleContinueFromExplainer = () => {
-    setExplainerShownFor(new Set([...explainerShownFor, currentProblem.id]))
+    if (currentProblem) {
+      setExplainerShownFor(new Set([...explainerShownFor, currentProblem.id]))
+    }
     setShowExplainer(false)
   }
 
@@ -291,7 +287,7 @@ function App() {
 
   if (appState === 'summary') {
     // Calculate session metrics for display
-    const sessionMetrics = {
+    const sessionMetrics: SessionMetrics = {
       totalHintsUsed: attempts.reduce((sum, a) => sum + (a.hintsUsed || 0), 0),
       problemsWithoutHints: attempts.filter(a => (a.hintsUsed || 0) === 0).length
     }
@@ -310,7 +306,7 @@ function App() {
 
   // Session view
   // Check if we should show explainer
-  if (shouldShowExplainer() && !showExplainer && !explainerShownFor.has(currentProblem?.id)) {
+  if (shouldShowExplainer() && !showExplainer && currentProblem && !explainerShownFor.has(currentProblem.id)) {
     // First time seeing an o_x_vice problem - ask if they want help
     return (
       <div className="h-screen h-[100dvh] bg-slate-50 flex flex-col overflow-hidden">
@@ -373,6 +369,10 @@ function App() {
   // Skip strategy prompt if same topic's strategy was already answered
   const skipStrategyPrompt = answeredStrategyTopic === currentProblem?.topic
 
+  if (!currentProblem) {
+    return null
+  }
+
   return (
     <ProblemCard
       problem={currentProblem}
@@ -383,7 +383,7 @@ function App() {
       typePromptEnabled={typePromptEnabled}
       onToggleTypePrompt={handleToggleTypePrompt}
       skipStrategyPrompt={skipStrategyPrompt}
-      onStrategyAnswered={(topic) => setAnsweredStrategyTopic(topic)}
+      onStrategyAnswered={(topic: string) => setAnsweredStrategyTopic(topic)}
     />
   )
 }

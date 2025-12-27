@@ -1,15 +1,24 @@
 import { useState } from 'react'
+import { TypeDrillQuestion } from './types'
 
-function TypeQuestion({ question, onAnswer }) {
-  const [selected, setSelected] = useState(null)
+interface TypeQuestionProps {
+  question: TypeDrillQuestion
+  onAnswer: (answerId: string, isCorrect: boolean) => void
+}
 
-  // Build options: correct + distractors, shuffled
+function TypeQuestion({ question, onAnswer }: TypeQuestionProps) {
+  const [selected, setSelected] = useState<string | null>(null)
+
+  // UNIFIED FORMAT: Build options from question meta + distractors
+  const correctId = question.meta.type_id || ''
+  const correctLabel = question.meta.type_label || ''
+
   const options = [
-    { id: question.type.correct, label: question.type.correct_label, isCorrect: true },
-    ...question.type.distractors.map(d => ({ id: d.id, label: d.label, isCorrect: false }))
+    { id: correctId, label: correctLabel, isCorrect: true },
+    ...question.typeDistractors.map(d => ({ id: d.id, label: d.label, isCorrect: false }))
   ].sort(() => Math.random() - 0.5)
 
-  const handleSelect = (option) => {
+  const handleSelect = (option: { id: string; label: string; isCorrect: boolean }) => {
     setSelected(option.id)
 
     // Brief delay to show selection

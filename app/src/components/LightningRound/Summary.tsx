@@ -1,7 +1,15 @@
 import { BoltIcon, FireIcon, ClockIcon } from '@heroicons/react/24/solid'
 import BottomBar from '../BottomBar'
+import { LightningStats } from './types'
 
-function Summary({ stats, onRestart, onExit, onViewProgress }) {
+interface SummaryProps {
+  stats: LightningStats
+  onRestart: () => void
+  onExit: () => void
+  onViewProgress: () => void
+}
+
+function Summary({ stats, onRestart, onExit, onViewProgress }: SummaryProps) {
   const percentage = Math.round((stats.correct / stats.total) * 100)
   const avgTimeSeconds = (stats.avgTimeMs / 1000).toFixed(1)
 

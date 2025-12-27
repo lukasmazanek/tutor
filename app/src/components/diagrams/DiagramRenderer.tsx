@@ -1,3 +1,5 @@
+import { ComponentType } from 'react'
+import { DiagramProps, DiagramType } from './types'
 import RightTriangleDiagram from './RightTriangleDiagram'
 import LadderDiagram from './LadderDiagram'
 import RectangleDiagram from './RectangleDiagram'
@@ -5,7 +7,7 @@ import CubeDiagram from './CubeDiagram'
 import SquareDiagram from './SquareDiagram'
 import EquilateralTriangleDiagram from './EquilateralTriangleDiagram'
 
-const diagramComponents = {
+const diagramComponents: Record<DiagramType, ComponentType<DiagramProps>> = {
   right_triangle: RightTriangleDiagram,
   ladder: LadderDiagram,
   rectangle: RectangleDiagram,
@@ -14,7 +16,11 @@ const diagramComponents = {
   equilateral_triangle: EquilateralTriangleDiagram
 }
 
-function DiagramRenderer({ diagram }) {
+interface DiagramRendererProps {
+  diagram?: DiagramProps & { type?: DiagramType }
+}
+
+function DiagramRenderer({ diagram }: DiagramRendererProps) {
   if (!diagram || !diagram.type) return null
 
   const Component = diagramComponents[diagram.type]

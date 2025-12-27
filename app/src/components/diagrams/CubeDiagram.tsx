@@ -1,4 +1,6 @@
-function CubeDiagram({ labels = {}, highlight }) {
+import { DiagramProps } from './types'
+
+function CubeDiagram({ labels = {}, highlight }: DiagramProps) {
   const edge = labels.edge || 'a'
   const diagonal = labels.diagonal || 'd'
 
@@ -7,8 +9,8 @@ function CubeDiagram({ labels = {}, highlight }) {
   const labelColor = '#334155'
   const backColor = '#94a3b8'
 
-  const getColor = (part) => highlight === part ? highlightColor : normalColor
-  const getLabelColor = (part) => highlight === part ? highlightColor : labelColor
+  const getColor = (part: string) => highlight === part ? highlightColor : normalColor
+  const getLabelColor = (part: string) => highlight === part ? highlightColor : labelColor
 
   // Cube vertices (isometric-ish projection)
   const front = {

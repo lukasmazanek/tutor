@@ -1,9 +1,20 @@
 import { FireIcon } from '@heroicons/react/24/solid'
 import { TagIcon, QuestionMarkCircleIcon } from '@heroicons/react/24/outline'
+import { LightningQuestion } from './types'
 
-function Question({ question, onAnswer, streak }) {
-  const isTypeRecognition = question.type === 'type_recognition'
-  const isProblemType = question.type === 'problem_type'
+interface QuestionProps {
+  question: LightningQuestion
+  onAnswer: (answer: string) => void
+  streak: number
+}
+
+function Question({ question, onAnswer, streak }: QuestionProps) {
+  const originalType = question.meta.type_id || ''
+  const isTypeRecognition = originalType === 'type_recognition'
+  const isProblemType = originalType === 'problem_type'
+
+  // UNIFIED FORMAT: Get question text
+  const questionText = question.question.stem || question.question.context || ''
 
   return (
     <div className="p-4">
@@ -34,13 +45,13 @@ function Question({ question, onAnswer, streak }) {
       {/* Question */}
       <div className="bg-white rounded-2xl shadow-sm p-5 mb-4">
         <p className={`text-lg text-center text-slate-800 font-medium ${isTypeRecognition ? 'font-mono' : ''}`}>
-          {question.question}
+          {questionText}
         </p>
       </div>
 
       {/* Answer buttons - key on container forces remount to clear states */}
       <div key={question.id} className="space-y-2">
-        {question.answers.map((answer, index) => (
+        {question.shuffledAnswers.map((answer, index) => (
           <button
             key={`${question.id}-${index}`}
             onClick={() => onAnswer(answer)}

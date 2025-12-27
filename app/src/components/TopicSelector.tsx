@@ -1,11 +1,14 @@
 import questionsData from '../data/questions.json'
 import { SparklesIcon, LightBulbIcon, ChartBarIcon, CheckCircleIcon, BoltIcon, AcademicCapIcon } from '@heroicons/react/24/outline'
+import { Session, QuestionsData, TopicMeta } from '../types'
+
+const data = questionsData as QuestionsData
 
 // Helper to get mastered problem IDs from localStorage
-function getMasteredProblemIds() {
+function getMasteredProblemIds(): Set<string> {
   try {
-    const progress = JSON.parse(localStorage.getItem('tutor_progress') || '[]')
-    const mastered = new Set()
+    const progress = JSON.parse(localStorage.getItem('tutor_progress') || '[]') as Session[]
+    const mastered = new Set<string>()
 
     for (const session of progress) {
       for (const attempt of session.attempts || []) {
@@ -21,15 +24,29 @@ function getMasteredProblemIds() {
   }
 }
 
-function TopicSelector({ onSelectTopic, lastSession, onViewProgress, onStartLightning, onStartTypeDrill }) {
-  const topics = Object.values(questionsData.topics)
+interface TopicSelectorProps {
+  onSelectTopic: (topicId: string) => void
+  lastSession: Session | null
+  onViewProgress: () => void
+  onStartLightning: () => void
+  onStartTypeDrill: () => void
+}
+
+interface ProblemCount {
+  total: number
+  mastered: number
+  remaining: number
+}
+
+function TopicSelector({ onSelectTopic, lastSession, onViewProgress, onStartLightning, onStartTypeDrill }: TopicSelectorProps) {
+  const topics = Object.values(data.topics) as TopicMeta[]
   const mastered = getMasteredProblemIds()
 
   // Get open-answer problems for counting
-  const openProblems = questionsData.questions.filter(q => q.meta.supports_open)
+  const openProblems = data.questions.filter(q => q.meta.supports_open)
 
   // Count problems per topic and mastered per topic
-  const problemCounts = topics.reduce((acc, topic) => {
+  const problemCounts = topics.reduce<Record<string, ProblemCount>>((acc, topic) => {
     const topicProblems = openProblems.filter(p => p.topic === topic.id)
     acc[topic.id] = {
       total: topicProblems.length,

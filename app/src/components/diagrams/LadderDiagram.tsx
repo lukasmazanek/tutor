@@ -1,4 +1,6 @@
-function LadderDiagram({ labels = {}, highlight }) {
+import { DiagramProps } from './types'
+
+function LadderDiagram({ labels = {}, highlight }: DiagramProps) {
   const wallHeight = labels.wall_height || '?'
   const groundDistance = labels.ground_distance || '?'
   const ladderLength = labels.ladder_length || '?'
@@ -8,8 +10,8 @@ function LadderDiagram({ labels = {}, highlight }) {
   const labelColor = '#334155'
   const wallColor = '#64748b'
 
-  const getColor = (part) => highlight === part ? highlightColor : normalColor
-  const getLabelColor = (part) => highlight === part ? highlightColor : labelColor
+  const getColor = (part: string) => highlight === part ? highlightColor : normalColor
+  const getLabelColor = (part: string) => highlight === part ? highlightColor : labelColor
 
   return (
     <svg

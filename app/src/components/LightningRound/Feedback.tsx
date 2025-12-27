@@ -1,8 +1,21 @@
 import { CheckIcon, LightBulbIcon, FireIcon } from '@heroicons/react/24/solid'
+import { LightningQuestion } from './types'
+
+interface FeedbackProps {
+  question: LightningQuestion
+  selectedAnswer: string
+  isCorrect: boolean
+  streak: number
+}
 
 // Note: Continue button moved to BottomBar (ADR-009)
-function Feedback({ question, selectedAnswer, isCorrect, streak }) {
-  const isTypeRecognition = question.type === 'type_recognition'
+function Feedback({ question, selectedAnswer, isCorrect, streak }: FeedbackProps) {
+  const originalType = question.meta.type_id || ''
+  const isTypeRecognition = originalType === 'type_recognition'
+
+  // UNIFIED FORMAT: Get hint data
+  const hintRule = question.solution.strategy || ''
+  const hintExplanation = question.hints[0] || ''
 
   if (isCorrect) {
     // Correct answer - minimal feedback, auto-advances
@@ -12,7 +25,7 @@ function Feedback({ question, selectedAnswer, isCorrect, streak }) {
           <CheckIcon className="w-10 h-10 text-green-600" />
         </div>
         <p className={`text-2xl font-bold text-green-700 mb-2 ${isTypeRecognition ? 'font-mono' : ''}`}>
-          {question.correct}
+          {question.displayCorrect}
         </p>
         {streak >= 3 && (
           <div className="flex items-center gap-1 text-orange-500">
@@ -35,7 +48,7 @@ function Feedback({ question, selectedAnswer, isCorrect, streak }) {
         </div>
         <div className="text-center">
           <p className="text-slate-500 text-sm mb-1">Správně</p>
-          <p className={`text-2xl font-bold text-green-600 ${isTypeRecognition ? 'font-mono' : ''}`}>{question.correct}</p>
+          <p className={`text-2xl font-bold text-green-600 ${isTypeRecognition ? 'font-mono' : ''}`}>{question.displayCorrect}</p>
         </div>
       </div>
 
@@ -45,10 +58,10 @@ function Feedback({ question, selectedAnswer, isCorrect, streak }) {
           <LightBulbIcon className="w-6 h-6 text-purple-600 flex-shrink-0 mt-0.5" />
           <div>
             <p className="text-purple-800 font-medium mb-1">
-              {question.hint.rule}
+              {hintRule}
             </p>
             <p className="text-purple-600 text-sm">
-              {question.hint.explanation}
+              {hintExplanation}
             </p>
           </div>
         </div>
