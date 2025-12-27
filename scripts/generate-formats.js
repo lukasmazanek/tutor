@@ -31,6 +31,19 @@ function loadAllQuestions() {
   return questions;
 }
 
+// Determine which side of right triangle to highlight based on question stem
+function getPythagoreanHighlight(stem) {
+  if (!stem) return 'c'; // default to hypotenuse
+  const s = stem.toLowerCase();
+
+  // Check for specific side being asked
+  if (s.includes('c = ?') || s.includes('přeponu') || s.includes('c =')) return 'c';
+  if (s.includes('a = ?') || s.includes('odvěsnu a') || s.includes('a =')) return 'a';
+  if (s.includes('b = ?') || s.includes('odvěsnu b') || s.includes('b =')) return 'b';
+
+  return 'c'; // default
+}
+
 // Transform to unified output format (ADR-016, ADR-020)
 function toUnifiedFormat(q) {
   const hasDistractors = q.distractors && q.distractors.length >= 2;
@@ -40,7 +53,8 @@ function toUnifiedFormat(q) {
   // ADR-020: Always use correct - parser can evaluate expressions like "1/6"
   const answerValue = q.answer.correct;
 
-  return {
+  // Build base object
+  const result = {
     id: q.id,
     topic: q.topic,
     difficulty: q.difficulty || 1,
@@ -66,6 +80,16 @@ function toUnifiedFormat(q) {
       supports_open: hasQuestion && hasAnswer
     }
   };
+
+  // Add diagram for pythagorean questions
+  if (q.topic === 'pythagorean') {
+    result.diagram = {
+      type: 'right_triangle',
+      highlight: getPythagoreanHighlight(q.question.stem)
+    };
+  }
+
+  return result;
 }
 
 // Extract unique topics

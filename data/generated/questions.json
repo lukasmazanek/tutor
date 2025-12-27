@@ -1,6 +1,6 @@
 {
   "version": "3.0",
-  "generated": "2025-12-26T18:14:18.309Z",
+  "generated": "2025-12-27T05:36:39.978Z",
   "description": "Unified question format - presentation layer decides MC vs open answer",
   "topics": {
     "binomial_squares": {
@@ -2933,6 +2933,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -2966,6 +2970,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -2999,6 +3007,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3032,6 +3044,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3065,6 +3081,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3098,6 +3118,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3131,6 +3155,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3164,6 +3192,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3197,6 +3229,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3230,6 +3266,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3263,6 +3303,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3296,6 +3340,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3329,6 +3377,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3362,6 +3414,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3395,6 +3451,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3428,6 +3488,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3461,6 +3525,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3494,6 +3562,10 @@
         "original_type": "calculation",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3524,6 +3596,10 @@
         "original_type": "type_recognition",
         "supports_mc": false,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3554,6 +3630,10 @@
         "original_type": "type_recognition",
         "supports_mc": false,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "a"
       }
     },
     {
@@ -3584,6 +3664,10 @@
         "original_type": "type_recognition",
         "supports_mc": false,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "b"
       }
     },
     {
@@ -3614,6 +3698,10 @@
         "original_type": "type_recognition",
         "supports_mc": false,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3644,6 +3732,10 @@
         "original_type": "type_recognition",
         "supports_mc": false,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "a"
       }
     },
     {
@@ -3674,6 +3766,10 @@
         "original_type": "type_recognition",
         "supports_mc": false,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3704,6 +3800,10 @@
         "original_type": "type_recognition",
         "supports_mc": false,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3734,6 +3834,10 @@
         "original_type": "type_recognition",
         "supports_mc": false,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3767,6 +3871,10 @@
         "original_type": "problem_type",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3800,6 +3908,10 @@
         "original_type": "problem_type",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3833,6 +3945,10 @@
         "original_type": "problem_type",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3866,6 +3982,10 @@
         "original_type": "problem_type",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3899,6 +4019,10 @@
         "original_type": "problem_type",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3932,6 +4056,10 @@
         "original_type": "problem_type",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3965,6 +4093,10 @@
         "original_type": "problem_type",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
@@ -3998,6 +4130,10 @@
         "original_type": "problem_type",
         "supports_mc": true,
         "supports_open": true
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c"
       }
     },
     {
