@@ -28,9 +28,18 @@ function getTypeDistractors(typeId: string | null): TypeOption[] {
     'GEOM-PYTH': [
       { id: 'GEOM-OBSAH', label: 'Obsah/obvod' },
       { id: 'ALG-EQ', label: 'Rovnice' }
+    ],
+    'PYTH-PTYPE': [
+      { id: 'GEOM-OBSAH', label: 'Obsah/obvod' },
+      { id: 'NUM-PROC', label: 'Procenta' },
+      { id: 'ALG-EQ', label: 'Rovnice' }
     ]
   }
-  return distractorMap[typeId || ''] || [{ id: 'OTHER', label: 'Jiný typ' }]
+  // Fallback: return common types as distractors
+  return distractorMap[typeId || ''] || [
+    { id: 'NUM-PROC', label: 'Procenta' },
+    { id: 'ALG-EQ', label: 'Rovnice' }
+  ]
 }
 
 // Helper: Get strategy distractors
