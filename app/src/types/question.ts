@@ -8,6 +8,7 @@
 // Diagram configuration for geometry problems
 export interface DiagramConfig {
   type: 'right_triangle' | 'rectangle' | 'square' | 'cube' | 'ladder' | 'equilateral_triangle'
+    | 'triangle' | 'parallel_lines' | 'cylinder' | 'trapezoid' | 'prism'
   labels?: Record<string, string | number> | null
   highlight?: string
   [key: string]: unknown
@@ -46,9 +47,18 @@ export interface KeyboardConfig {
   variable: string | null
 }
 
+// ADR-033: Common error for smart feedback
+export interface CommonError {
+  value: string
+  variants: string[]
+  feedback: string
+  misconception: string | null
+}
+
 /**
  * UnifiedQuestion - the core data type
  * ADR-022: Mode-based structure replaces single answer
+ * ADR-033: Smart error feedback
  */
 export interface UnifiedQuestion {
   id: string
@@ -80,6 +90,9 @@ export interface UnifiedQuestion {
   }
 
   diagram?: DiagramConfig
+
+  // ADR-033: Common errors for targeted feedback
+  common_errors?: CommonError[]
 }
 
 // Root structure of questions.json
@@ -155,4 +168,36 @@ export function getNumericAnswer(q: UnifiedQuestion): { value: string | number; 
 // ADR-022: Helper to get distractors for numeric mode
 export function getNumericDistractors(q: UnifiedQuestion): string[] {
   return q.modes.numeric?.distractors || []
+}
+
+// ADR-033: Helper to check if answer matches a common error
+export function findMatchingCommonError(
+  userAnswer: string,
+  commonErrors?: CommonError[]
+): CommonError | null {
+  if (!commonErrors || commonErrors.length === 0) return null
+
+  const normalized = userAnswer.trim().toLowerCase().replace(',', '.')
+
+  for (const error of commonErrors) {
+    // Check main value
+    const mainValue = error.value.toLowerCase().replace(',', '.')
+    if (normalized === mainValue) return error
+
+    // Check variants
+    for (const variant of error.variants) {
+      const variantNorm = variant.toLowerCase().replace(',', '.')
+      if (normalized === variantNorm) return error
+    }
+
+    // Check numeric tolerance (within 1%)
+    const userNum = parseFloat(normalized)
+    const errorNum = parseFloat(mainValue)
+    if (!isNaN(userNum) && !isNaN(errorNum)) {
+      const tolerance = Math.abs(errorNum) * 0.01 || 0.01
+      if (Math.abs(userNum - errorNum) <= tolerance) return error
+    }
+  }
+
+  return null
 }

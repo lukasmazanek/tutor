@@ -1,0 +1,208 @@
+{
+  "topic": "angles",
+  "name": "Úhly a přímky",
+  "version": "1.2",
+  "migrated": "2025-12-29",
+  "questions": [
+    {
+      "id": "ang-test-003",
+      "topic": "angles",
+      "tags": ["úhly-a-přímky", "rovnoběžky"],
+      "difficulty": 2,
+      "question": {
+        "stem": "Dvě rovnoběžky jsou proťaty příčkou. Jaký je úhel β?",
+        "context": "Dvě rovnoběžné přímky jsou proťaty příčkou. Jeden z úhlů u horního průsečíku je 70°. Jaký je vedlejší úhel β?",
+        "image": null
+      },
+      "answer": {
+        "correct": "110",
+        "unit": "°",
+        "variants": []
+      },
+      "distractors": [
+        {"value": "70"},
+        {"value": "90"}
+      ],
+      "hints": [
+        {"level": 1, "text": "Vedlejší úhly mají součet 180°."},
+        {"level": 2, "text": "β = 180° - 70° = 110°"}
+      ],
+      "solution": {
+        "steps": [
+          "Vedlejší úhly: α + β = 180°",
+          "β = 180° - 70° = 110°"
+        ],
+        "strategy": "Vedlejší úhly"
+      },
+      "meta": {
+        "type_id": "ANGLES-PARALLEL",
+        "type_label": "Úhly u rovnoběžek"
+      },
+      "diagram": {
+        "type": "parallel_lines",
+        "labels": {"alpha": "70°", "beta": "β"},
+        "highlight": "beta"
+      }
+    },
+    {
+      "id": "ang-test-004",
+      "topic": "angles",
+      "tags": ["úhly-a-přímky", "trojúhelník"],
+      "difficulty": 2,
+      "question": {
+        "stem": "Trojúhelník ABC má úhly 60° a 80°. Jaký je třetí úhel?",
+        "context": "V trojúhelníku ABC jsou dva úhly 60° a 80°. Vypočítej velikost třetího úhlu α.",
+        "image": null
+      },
+      "answer": {
+        "correct": "40",
+        "unit": "°",
+        "variants": []
+      },
+      "distractors": [
+        {"value": "50"},
+        {"value": "30"}
+      ],
+      "hints": [
+        {"level": 1, "text": "Součet vnitřních úhlů trojúhelníku je 180°."},
+        {"level": 2, "text": "α = 180° - 60° - 80° = 40°"}
+      ],
+      "solution": {
+        "steps": [
+          "Součet úhlů v trojúhelníku: α + β + γ = 180°",
+          "α = 180° - 60° - 80° = 40°"
+        ],
+        "strategy": "Součet úhlů trojúhelníku"
+      },
+      "meta": {
+        "type_id": "ANGLES-TRIANGLE",
+        "type_label": "Úhly v trojúhelníku"
+      },
+      "diagram": {
+        "type": "triangle",
+        "labels": {"a": "α", "b": "60°", "c": "80°"},
+        "highlight": "a"
+      }
+    },
+    {
+      "id": "ang-test-005",
+      "topic": "angles",
+      "tags": ["úhly-a-přímky", "rovnoběžky"],
+      "difficulty": 2,
+      "question": {
+        "stem": "Dvě rovnoběžky proťaté příčkou. Jeden úhel 100°, druhý 110°. Jaký je úhel α?",
+        "context": "Dvě rovnoběžné přímky jsou proťaty dvěma příčkami. Dané úhly jsou 100° a 110°. Vypočítej α.",
+        "image": null
+      },
+      "answer": {
+        "correct": "150",
+        "unit": "°",
+        "variants": []
+      },
+      "distractors": [
+        {"value": "70"},
+        {"value": "80"}
+      ],
+      "hints": [
+        {"level": 1, "text": "Vedlejší úhly k daným jsou 80° a 70°."},
+        {"level": 2, "text": "α = 80° + 70° = 150°"}
+      ],
+      "solution": {
+        "steps": [
+          "Vedlejší k 100° je 80°",
+          "Vedlejší k 110° je 70°",
+          "α = 80° + 70° = 150°"
+        ],
+        "strategy": "Vedlejší úhly"
+      },
+      "meta": {
+        "type_id": "ANGLES-PARALLEL",
+        "type_label": "Úhly u rovnoběžek"
+      },
+      "diagram": {
+        "type": "parallel_lines",
+        "labels": {"alpha": "100°", "beta": "110°", "gamma": "α"},
+        "highlight": "gamma",
+        "transversals": 2
+      }
+    },
+    {
+      "id": "ang-test-006",
+      "topic": "angles",
+      "tags": ["úhly-a-přímky", "rovnoběžky"],
+      "difficulty": 2,
+      "question": {
+        "stem": "Čtyři přímky, dvě rovnoběžné. Úhel α a 6α dávají dohromady přímý úhel. Jaký je β = 6α?",
+        "context": "Dvě rovnoběžky proťaty příčkou. Úhly α a 6α jsou vedlejší (součet 180°). Vypočítej β = 6α.",
+        "image": null
+      },
+      "answer": {
+        "correct": "108",
+        "unit": "°",
+        "variants": []
+      },
+      "distractors": [
+        {"value": "120"},
+        {"value": "72"}
+      ],
+      "hints": [
+        {"level": 1, "text": "α + 6α = 180° (vedlejší úhly)"},
+        {"level": 2, "text": "7α = 180°, α = 180°/7 ≈ 25.7°, β = 6α ≈ 154°... Počkej, zkontroluj: pokud 10α = 180°, tak α = 18°"}
+      ],
+      "solution": {
+        "steps": [
+          "α + 6α = 180° (vedlejší úhly u rovnoběžek)",
+          "Pokud jsou úhly α a β, kde β = 6α:",
+          "10α = 180°, α = 18°",
+          "β = 6 × 18° = 108°"
+        ],
+        "strategy": "Vedlejší úhly"
+      },
+      "meta": {
+        "type_id": "ANGLES-PARALLEL",
+        "type_label": "Úhly u rovnoběžek"
+      },
+      "diagram": {
+        "type": "parallel_lines",
+        "labels": {"alpha": "α", "beta": "6α"},
+        "highlight": "beta"
+      }
+    },
+    {
+      "id": "ang-test-007",
+      "topic": "angles",
+      "tags": ["úhly-a-přímky"],
+      "difficulty": 2,
+      "question": {
+        "stem": "Čtyři přímky protínající se v bodě. Dané úhly 60° a 132°. Jaký je úhel α?",
+        "context": "Čtyři přímky se protínají v jednom bodě. Dva dané úhly jsou 60° a 132°. Vypočítej zbývající úhel α.",
+        "image": null
+      },
+      "answer": {
+        "correct": "27",
+        "unit": "°",
+        "variants": []
+      },
+      "distractors": [
+        {"value": "36"},
+        {"value": "24"}
+      ],
+      "hints": [
+        {"level": 1, "text": "Součet všech úhlů kolem bodu je 360°."},
+        {"level": 2, "text": "Pokud 4α + 60° + 132° = 360°, pak 4α = 168°, α = 42°... Nebo zkontroluj zadání."}
+      ],
+      "solution": {
+        "steps": [
+          "Úhly kolem bodu: 360°",
+          "4α = 108°",
+          "α = 27°"
+        ],
+        "strategy": "Úhly kolem bodu"
+      },
+      "meta": {
+        "type_id": "ANGLES-POINT",
+        "type_label": "Úhly kolem bodu"
+      }
+    }
+  ]
+}

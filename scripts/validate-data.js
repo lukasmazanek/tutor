@@ -163,13 +163,20 @@ function validateDiagram(q, file) {
     error(file, q.id, 'diagram.type is required when diagram is present')
   }
 
-  const validTypes = ['right_triangle', 'rectangle', 'cube', 'equilateral_triangle', 'ladder']
+  const validTypes = [
+    'right_triangle', 'rectangle', 'cube', 'equilateral_triangle', 'ladder', 'square',
+    'triangle',  // General triangle for angle problems
+    // New diagram types (ADR-022 expansion)
+    'parallel_lines', 'cylinder', 'trapezoid', 'prism'
+  ]
   if (q.diagram.type && !validTypes.includes(q.diagram.type)) {
     warn(file, q.id, `diagram.type "${q.diagram.type}" not in known types: ${validTypes.join(', ')}`)
   }
 
-  if (q.diagram.highlight && !['a', 'b', 'c'].includes(q.diagram.highlight)) {
-    warn(file, q.id, `diagram.highlight "${q.diagram.highlight}" should be 'a', 'b', or 'c'`)
+  // Highlight can be various values depending on diagram type
+  const validHighlights = ['a', 'b', 'c', 'alpha', 'beta', 'gamma', 'delta', 'r', 'h']
+  if (q.diagram.highlight && !validHighlights.includes(q.diagram.highlight)) {
+    warn(file, q.id, `diagram.highlight "${q.diagram.highlight}" not in known highlights: ${validHighlights.join(', ')}`)
   }
 
   if (q.diagram.labels) {

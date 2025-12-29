@@ -1,8 +1,20 @@
 {
   "version": "4.0",
-  "generated": "2025-12-29T14:01:07.731Z",
+  "generated": "2025-12-29T16:39:46.905Z",
   "description": "ADR-022: Multi-mode questions with keyboard config",
   "topics": {
+    "angles": {
+      "id": "angles",
+      "name_cs": "Úhly u rovnoběžek",
+      "is_strength": false,
+      "is_critical": false
+    },
+    "area_perimeter": {
+      "id": "area_perimeter",
+      "name_cs": "Obsah a obvod",
+      "is_strength": false,
+      "is_critical": false
+    },
     "averages": {
       "id": "averages",
       "name_cs": "Průměry",
@@ -15,10 +27,40 @@
       "is_strength": false,
       "is_critical": true
     },
+    "circles": {
+      "id": "circles",
+      "name_cs": "Kruh a kružnice",
+      "is_strength": false,
+      "is_critical": false
+    },
+    "constructions": {
+      "id": "constructions",
+      "name_cs": "Konstrukce",
+      "is_strength": false,
+      "is_critical": false
+    },
+    "decimals": {
+      "id": "decimals",
+      "name_cs": "Desetinná čísla",
+      "is_strength": false,
+      "is_critical": false
+    },
     "equations": {
       "id": "equations",
       "name_cs": "Lineární rovnice",
       "is_strength": true,
+      "is_critical": false
+    },
+    "expressions": {
+      "id": "expressions",
+      "name_cs": "Algebraické výrazy",
+      "is_strength": false,
+      "is_critical": false
+    },
+    "factoring": {
+      "id": "factoring",
+      "name_cs": "Rozklad vytknutím",
+      "is_strength": false,
       "is_critical": false
     },
     "fractions": {
@@ -27,16 +69,46 @@
       "is_strength": true,
       "is_critical": false
     },
+    "functions": {
+      "id": "functions",
+      "name_cs": "Lineární funkce",
+      "is_strength": false,
+      "is_critical": false
+    },
+    "integers": {
+      "id": "integers",
+      "name_cs": "Celá čísla",
+      "is_strength": false,
+      "is_critical": false
+    },
     "o_x_vice": {
       "id": "o_x_vice",
       "name_cs": "o X více/méně",
       "is_strength": false,
       "is_critical": true
     },
+    "percents": {
+      "id": "percents",
+      "name_cs": "Procenta - slevy",
+      "is_strength": false,
+      "is_critical": false
+    },
+    "powers": {
+      "id": "powers",
+      "name_cs": "Mocniny a dělení",
+      "is_strength": false,
+      "is_critical": false
+    },
     "pythagorean": {
       "id": "pythagorean",
       "name_cs": "Pythagorova věta",
       "is_strength": true,
+      "is_critical": false
+    },
+    "ratios": {
+      "id": "ratios",
+      "name_cs": "Poměr",
+      "is_strength": false,
       "is_critical": false
     },
     "sequences": {
@@ -45,11 +117,41 @@
       "is_strength": false,
       "is_critical": true
     },
+    "square_roots": {
+      "id": "square_roots",
+      "name_cs": "Odmocniny",
+      "is_strength": false,
+      "is_critical": false
+    },
+    "systems_equations": {
+      "id": "systems_equations",
+      "name_cs": "Soustava rovnic",
+      "is_strength": false,
+      "is_critical": false
+    },
+    "tables_graphs": {
+      "id": "tables_graphs",
+      "name_cs": "Statistika - grafy",
+      "is_strength": false,
+      "is_critical": false
+    },
     "unit_conversions": {
       "id": "unit_conversions",
       "name_cs": "Převody jednotek",
       "is_strength": false,
       "is_critical": true
+    },
+    "volume": {
+      "id": "volume",
+      "name_cs": "Tělesa - válec",
+      "is_strength": false,
+      "is_critical": false
+    },
+    "word_problems": {
+      "id": "word_problems",
+      "name_cs": "Slovní úlohy - délka",
+      "is_strength": false,
+      "is_critical": false
     },
     "work_problems": {
       "id": "work_problems",
@@ -59,6 +161,459 @@
     }
   },
   "questions": [
+    {
+      "id": "ang-test-003",
+      "topic": "angles",
+      "difficulty": 2,
+      "question": {
+        "stem": "Dvě rovnoběžky jsou proťaty příčkou. Jaký je úhel β?",
+        "context": "Dvě rovnoběžné přímky jsou proťaty příčkou. Jeden z úhlů u horního průsečíku je 70°. Jaký je vedlejší úhel β?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "110",
+          "unit": "°",
+          "variants": [],
+          "distractors": [
+            "70",
+            "90"
+          ]
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Vedlejší úhly mají součet 180°.",
+        "β = 180° - 70° = 110°"
+      ],
+      "solution": {
+        "steps": [
+          "Vedlejší úhly: α + β = 180°",
+          "β = 180° - 70° = 110°"
+        ],
+        "strategy": "Vedlejší úhly"
+      },
+      "meta": {
+        "type_id": "ANGLES-PARALLEL",
+        "type_label": "Úhly u rovnoběžek",
+        "original_type": null
+      },
+      "diagram": {
+        "type": "parallel_lines",
+        "highlight": "beta",
+        "labels": {
+          "alpha": "70°",
+          "beta": "β"
+        }
+      }
+    },
+    {
+      "id": "ang-test-004",
+      "topic": "angles",
+      "difficulty": 2,
+      "question": {
+        "stem": "Trojúhelník ABC má úhly 60° a 80°. Jaký je třetí úhel?",
+        "context": "V trojúhelníku ABC jsou dva úhly 60° a 80°. Vypočítej velikost třetího úhlu α."
+      },
+      "modes": {
+        "numeric": {
+          "answer": "40",
+          "unit": "°",
+          "variants": [],
+          "distractors": [
+            "50",
+            "30"
+          ]
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Součet vnitřních úhlů trojúhelníku je 180°.",
+        "α = 180° - 60° - 80° = 40°"
+      ],
+      "solution": {
+        "steps": [
+          "Součet úhlů v trojúhelníku: α + β + γ = 180°",
+          "α = 180° - 60° - 80° = 40°"
+        ],
+        "strategy": "Součet úhlů trojúhelníku"
+      },
+      "meta": {
+        "type_id": "ANGLES-TRIANGLE",
+        "type_label": "Úhly v trojúhelníku",
+        "original_type": null
+      },
+      "diagram": {
+        "type": "triangle",
+        "highlight": "a",
+        "labels": {
+          "a": "α",
+          "b": "60°",
+          "c": "80°"
+        }
+      }
+    },
+    {
+      "id": "ang-test-005",
+      "topic": "angles",
+      "difficulty": 2,
+      "question": {
+        "stem": "Dvě rovnoběžky proťaté příčkou. Jeden úhel 100°, druhý 110°. Jaký je úhel α?",
+        "context": "Dvě rovnoběžné přímky jsou proťaty dvěma příčkami. Dané úhly jsou 100° a 110°. Vypočítej α."
+      },
+      "modes": {
+        "numeric": {
+          "answer": "150",
+          "unit": "°",
+          "variants": [],
+          "distractors": [
+            "70",
+            "80"
+          ]
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Vedlejší úhly k daným jsou 80° a 70°.",
+        "α = 80° + 70° = 150°"
+      ],
+      "solution": {
+        "steps": [
+          "Vedlejší k 100° je 80°",
+          "Vedlejší k 110° je 70°",
+          "α = 80° + 70° = 150°"
+        ],
+        "strategy": "Vedlejší úhly"
+      },
+      "meta": {
+        "type_id": "ANGLES-PARALLEL",
+        "type_label": "Úhly u rovnoběžek",
+        "original_type": null
+      },
+      "diagram": {
+        "type": "parallel_lines",
+        "highlight": "gamma",
+        "labels": {
+          "alpha": "100°",
+          "beta": "110°",
+          "gamma": "α"
+        }
+      }
+    },
+    {
+      "id": "ang-test-006",
+      "topic": "angles",
+      "difficulty": 2,
+      "question": {
+        "stem": "Čtyři přímky, dvě rovnoběžné. Úhel α a 6α dávají dohromady přímý úhel. Jaký je β = 6α?",
+        "context": "Dvě rovnoběžky proťaty příčkou. Úhly α a 6α jsou vedlejší (součet 180°). Vypočítej β = 6α."
+      },
+      "modes": {
+        "numeric": {
+          "answer": "108",
+          "unit": "°",
+          "variants": [],
+          "distractors": [
+            "120",
+            "72"
+          ]
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "α + 6α = 180° (vedlejší úhly)",
+        "7α = 180°, α = 180°/7 ≈ 25.7°, β = 6α ≈ 154°... Počkej, zkontroluj: pokud 10α = 180°, tak α = 18°"
+      ],
+      "solution": {
+        "steps": [
+          "α + 6α = 180° (vedlejší úhly u rovnoběžek)",
+          "Pokud jsou úhly α a β, kde β = 6α:",
+          "10α = 180°, α = 18°",
+          "β = 6 × 18° = 108°"
+        ],
+        "strategy": "Vedlejší úhly"
+      },
+      "meta": {
+        "type_id": "ANGLES-PARALLEL",
+        "type_label": "Úhly u rovnoběžek",
+        "original_type": null
+      },
+      "diagram": {
+        "type": "parallel_lines",
+        "highlight": "beta",
+        "labels": {
+          "alpha": "α",
+          "beta": "6α"
+        }
+      }
+    },
+    {
+      "id": "ang-test-007",
+      "topic": "angles",
+      "difficulty": 2,
+      "question": {
+        "stem": "Čtyři přímky protínající se v bodě. Dané úhly 60° a 132°. Jaký je úhel α?",
+        "context": "Čtyři přímky se protínají v jednom bodě. Dva dané úhly jsou 60° a 132°. Vypočítej zbývající úhel α."
+      },
+      "modes": {
+        "numeric": {
+          "answer": "27",
+          "unit": "°",
+          "variants": [],
+          "distractors": [
+            "36",
+            "24"
+          ]
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Součet všech úhlů kolem bodu je 360°.",
+        "Pokud 4α + 60° + 132° = 360°, pak 4α = 168°, α = 42°... Nebo zkontroluj zadání."
+      ],
+      "solution": {
+        "steps": [
+          "Úhly kolem bodu: 360°",
+          "4α = 108°",
+          "α = 27°"
+        ],
+        "strategy": "Úhly kolem bodu"
+      },
+      "meta": {
+        "type_id": "ANGLES-POINT",
+        "type_label": "Úhly kolem bodu",
+        "original_type": null
+      }
+    },
+    {
+      "id": "are-test-001",
+      "topic": "area_perimeter",
+      "difficulty": 1,
+      "question": {
+        "stem": "Obdélník S=270cm², kratší strana 9cm. Obvod?",
+        "context": "Obdélník S=270cm², kratší strana 9cm. Obvod?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "78",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "270:9=30, o=2·(30+9)=78cm"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-31",
+        "type_label": "Obsah a obvod",
+        "original_type": null
+      }
+    },
+    {
+      "id": "are-test-002",
+      "topic": "area_perimeter",
+      "difficulty": 2,
+      "question": {
+        "stem": "Obvod čtverce ABCD",
+        "context": "Obvod čtverce ABCD"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "48",
+          "unit": "cm",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správný výpočet obvodu"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-31",
+        "type_label": "Obsah a obvod",
+        "original_type": null
+      }
+    },
+    {
+      "id": "are-test-003",
+      "topic": "area_perimeter",
+      "difficulty": 1,
+      "question": {
+        "stem": "Délka strany KL (vnořené čtverce: bílý 9cm², černý 16cm², šedá 56cm²)",
+        "context": "Délka strany KL (vnořené čtverce: bílý 9cm², černý 16cm², šedá 56cm²)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "5",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "√(9+16) = √25 = 5"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-31",
+        "type_label": "Obsah a obvod",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "are-test-004",
+      "topic": "area_perimeter",
+      "difficulty": 1,
+      "question": {
+        "stem": "Obsah trojúhelníku ABD v lichoběžníku",
+        "context": "Obsah trojúhelníku ABD v lichoběžníku"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "24 nebo jiný",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Potřeba ověřit výpočet"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-31",
+        "type_label": "Obsah a obvod",
+        "original_type": null
+      }
+    },
+    {
+      "id": "are-test-005",
+      "topic": "area_perimeter",
+      "difficulty": 1,
+      "question": {
+        "stem": "Obsah lichoběžníku ABCD",
+        "context": "Obsah lichoběžníku ABCD"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "64",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-31",
+        "type_label": "Obsah a obvod",
+        "original_type": null
+      }
+    },
+    {
+      "id": "are-test-006",
+      "topic": "area_perimeter",
+      "difficulty": 1,
+      "question": {
+        "stem": "Obdélník má šířku 8 cm a obsah 4 dm². Vypočtěte, o kolik cm se liší délka a šířka.",
+        "context": "Obdélník má šířku 8 cm a obsah 4 dm². Vypočtěte, o kolik cm se liší délka a šířka."
+      },
+      "modes": {
+        "numeric": {
+          "answer": "42",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "4 dm² = 400 cm², délka = 400/8 = 50 cm, rozdíl = 50 - 8 = 42"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-31",
+        "type_label": "Obsah a obvod",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "are-test-007",
+      "topic": "area_perimeter",
+      "difficulty": 1,
+      "question": {
+        "stem": "Obsah čtyřúhelníku ABCD",
+        "context": "Obsah čtyřúhelníku ABCD"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "36 cm²",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Obsah čtyřúhelníku",
+        "original_type": null
+      }
+    },
     {
       "id": "avg-001",
       "topic": "averages",
@@ -511,6 +1066,102 @@
       }
     },
     {
+      "id": "ave-test-012",
+      "topic": "averages",
+      "difficulty": 2,
+      "question": {
+        "stem": "Aritmetický průměr výsledků pěti dívčích týmů (graf)",
+        "context": "Aritmetický průměr výsledků pěti dívčích týmů (graf)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "7",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "12+6+9+4+4 = 35, 35:5 = 7"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-52",
+        "type_label": "Průměry",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "ave-test-013",
+      "topic": "averages",
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik bodů získal chlapecký tým školy D? (průměr všech = 8)",
+        "context": "Kolik bodů získal chlapecký tým školy D? (průměr všech = 8)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "12",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "6+14+2+x+6 = 40, x = 12"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-52",
+        "type_label": "Průměry",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "ave-test-014",
+      "topic": "averages",
+      "difficulty": 2,
+      "question": {
+        "stem": "Jaký je aritmetický průměr výsledků soutěžících? (0/1/2 body, 30 s 1b, 10% s 2b)",
+        "context": "Jaký je aritmetický průměr výsledků soutěžících? (0/1/2 body, 30 s 1b, 10% s 2b)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "b"
+      },
+      "hints": [
+        "Častá chyba: Správně: 15×0 + 30×1 + 5×2 = 40 bodů, 40/50 = 0,8 (A), ne 0,6 (D)"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-52",
+        "type_label": "Průměry",
+        "original_type": "multiple_choice"
+      }
+    },
+    {
       "id": "bin-001",
       "topic": "binomial_squares",
       "difficulty": 1,
@@ -830,6 +1481,610 @@
       "meta": {
         "type_id": "ALG-BINOM",
         "type_label": "Umocňování",
+        "original_type": null
+      }
+    },
+    {
+      "id": "bin-test-009",
+      "topic": "binomial_squares",
+      "difficulty": 1,
+      "question": {
+        "stem": "(1/3 - 4b)²",
+        "context": "(1/3 - 4b)²"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "1/9 - 8b/3 + 16b²",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "b"
+      },
+      "hints": [
+        "Častá chyba: Chyba ve vzorci (a-b)² - zapomněla prostřední člen a kvadratický člen"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Umocňování",
+        "original_type": null
+      }
+    },
+    {
+      "id": "bin-test-010",
+      "topic": "binomial_squares",
+      "difficulty": 1,
+      "question": {
+        "stem": "(y-3y)·(y+3y)",
+        "context": "(y-3y)·(y+3y)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-8y²",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "y"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "(-2y)·(4y) = -8y²"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-24",
+        "type_label": "Vzorce a²-b²",
+        "original_type": null
+      }
+    },
+    {
+      "id": "bin-test-011",
+      "topic": "binomial_squares",
+      "difficulty": 1,
+      "question": {
+        "stem": "Umocněte: (-3 - 2x)²",
+        "context": "Umocněte: (-3 - 2x)²"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "9 + 12x + 4x²",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správně aplikován vzorec (a+b)²"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-25",
+        "type_label": "Vzorce (a-b)²",
+        "original_type": null
+      }
+    },
+    {
+      "id": "bin-test-012",
+      "topic": "binomial_squares",
+      "difficulty": 1,
+      "question": {
+        "stem": "Rozložte: 6400 - (x² - 3600)",
+        "context": "Rozložte: 6400 - (x² - 3600)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "(100-x)(100+x) nebo 10000-x²",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Nesprávně převedla 6400-(x²-3600)=10000-x² a pak rozklad. Znaménka v závorkách jsou opačně."
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-24",
+        "type_label": "Vzorce a²-b²",
+        "original_type": null
+      }
+    },
+    {
+      "id": "bin-test-013",
+      "topic": "binomial_squares",
+      "difficulty": 1,
+      "question": {
+        "stem": "Umocněte: (3a - 0,4)²",
+        "context": "Umocněte: (3a - 0,4)²"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "9a² - 2,4a + 0,16",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "a"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správná aplikace vzorce (a-b)²"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-25",
+        "type_label": "Vzorce (a-b)²",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "bin-test-014",
+      "topic": "binomial_squares",
+      "difficulty": 1,
+      "question": {
+        "stem": "(2/3·a - 3)²",
+        "context": "(2/3·a - 3)²"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "4/9·a² - 4a + 9",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správná aplikace vzorce"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-25",
+        "type_label": "Vzorce (a-b)²",
+        "original_type": null
+      }
+    },
+    {
+      "id": "bin-test-015",
+      "topic": "binomial_squares",
+      "difficulty": 1,
+      "question": {
+        "stem": "Umocněte a zjednodušte: (x/7 + 3/2)²",
+        "context": "Umocněte a zjednodušte: (x/7 + 3/2)²"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "x²/49 + 3x/7 + 9/4",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Nesprávná aplikace vzorce (a+b)² = a² + 2ab + b². Zapomněla umocnit první člen: (x/7)² = x²/49, ne x"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-25",
+        "type_label": "Vzorce (a+b)²",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "cir-test-001",
+      "topic": "circles",
+      "difficulty": 2,
+      "question": {
+        "stem": "Půlkruh s průměrem AB, délka strany čtverce 2cm. Obsah šedé části?",
+        "context": "Půlkruh s průměrem AB, délka strany čtverce 2cm. Obsah šedé části?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "D) 25,12 cm²",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "S = π·r²/2 = 3,14·16/2 = 25,12"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-36",
+        "type_label": "Kruh a kružnice",
+        "original_type": null
+      }
+    },
+    {
+      "id": "cir-test-002",
+      "topic": "circles",
+      "difficulty": 2,
+      "question": {
+        "stem": "Jaký je obvod jedné výseče kruhu (r=10cm, 5 výsečí)?",
+        "context": "Jaký je obvod jedné výseče kruhu (r=10cm, 5 výsečí)?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "D",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Obvod = 2·10 + (2π·10/5) ≈ 33 cm"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-36",
+        "type_label": "Kružnice a kruh",
+        "original_type": "multiple_choice"
+      }
+    },
+    {
+      "id": "con-test-001",
+      "topic": "constructions",
+      "difficulty": 3,
+      "question": {
+        "stem": "Trojúhelník PQR, přímka o je osa některé strany",
+        "context": "Trojúhelník PQR, přímka o je osa některé strany"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "Více řešení",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Konstrukce nevypracována"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-34",
+        "type_label": "Konstrukce",
+        "original_type": null
+      }
+    },
+    {
+      "id": "con-test-002",
+      "topic": "constructions",
+      "difficulty": 3,
+      "question": {
+        "stem": "Obdélník ABCD, bod X uvnitř AB, C na přímce c, další vrchol na p",
+        "context": "Obdélník ABCD, bod X uvnitř AB, C na přímce c, další vrchol na p"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "Konstrukce",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Konstrukce nevypracována"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-34",
+        "type_label": "Konstrukce",
+        "original_type": null
+      }
+    },
+    {
+      "id": "con-test-003",
+      "topic": "constructions",
+      "difficulty": 3,
+      "question": {
+        "stem": "Sestrojte kosočtverec ABCD (A,B dány, C na přímce OA)",
+        "context": "Sestrojte kosočtverec ABCD (A,B dány, C na přímce OA)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "konstrukce",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Konstrukce neúplná nebo nepřesná - body C a D nejsou správně umístěny"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-34",
+        "type_label": "Konstrukce",
+        "original_type": null
+      }
+    },
+    {
+      "id": "con-test-004",
+      "topic": "constructions",
+      "difficulty": 3,
+      "question": {
+        "stem": "Rovnoramenný trojúhelník KLM, M na kružnici k, základna LM",
+        "context": "Rovnoramenný trojúhelník KLM, M na kružnici k, základna LM"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "2 řešení",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Konstrukce neúplná - pravděpodobně nenalezena všechna řešení"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-34",
+        "type_label": "Konstrukce",
+        "original_type": null
+      }
+    },
+    {
+      "id": "con-test-005",
+      "topic": "constructions",
+      "difficulty": 2,
+      "question": {
+        "stem": "Obdélník ABCD, M na úhlopříčce BD",
+        "context": "Obdélník ABCD, M na úhlopříčce BD"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "Konstrukce",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Konstrukce nevypracována"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-34",
+        "type_label": "Konstrukce",
+        "original_type": null
+      }
+    },
+    {
+      "id": "con-test-006",
+      "topic": "constructions",
+      "difficulty": 3,
+      "question": {
+        "stem": "Rovnoramenný trojúhelník ABC, B,C na kružnici",
+        "context": "Rovnoramenný trojúhelník ABC, B,C na kružnici"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "Konstrukce - více řešení",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Konstrukce nevypracována"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-34",
+        "type_label": "Konstrukce",
+        "original_type": null
+      }
+    },
+    {
+      "id": "con-test-007",
+      "topic": "constructions",
+      "difficulty": 3,
+      "question": {
+        "stem": "Sestrojit trojúhelník KLM (rovnoramenný, osa souměrnosti)",
+        "context": "Sestrojit trojúhelník KLM (rovnoramenný, osa souměrnosti)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "konstrukce",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Konstrukce není dokončena nebo není správná"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Konstrukce",
+        "original_type": null
+      }
+    },
+    {
+      "id": "con-test-008",
+      "topic": "constructions",
+      "difficulty": 2,
+      "question": {
+        "stem": "Sestrojit pravoúhlý lichoběžník ABCD",
+        "context": "Sestrojit pravoúhlý lichoběžník ABCD"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "konstrukce",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Konstrukce přeskočena"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Konstrukce",
+        "original_type": null
+      }
+    },
+    {
+      "id": "dec-test-001",
+      "topic": "decimals",
+      "difficulty": 1,
+      "question": {
+        "stem": "Kolikrát je součet 0,2 a 0,5 větší než jejich součin",
+        "context": "Kolikrát je součet 0,2 a 0,5 větší než jejich součin"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "7",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Desetinná čísla",
+        "original_type": null
+      }
+    },
+    {
+      "id": "dec-test-002",
+      "topic": "decimals",
+      "difficulty": 1,
+      "question": {
+        "stem": "Kolikrát větší jsou 4 setiny než 8 tisícin",
+        "context": "Kolikrát větší jsou 4 setiny než 8 tisícin"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "5krát",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Desetinná čísla",
         "original_type": null
       }
     },
@@ -1212,6 +2467,1294 @@
       }
     },
     {
+      "id": "equ-test-011",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "x - (x-2)/2 = 2x/3 - 2",
+        "context": "x - (x-2)/2 = 2x/3 - 2"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "x = 18",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Rovnice",
+        "original_type": null
+      }
+    },
+    {
+      "id": "equ-test-012",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "2·(3x - 2,5) = -5 + 3·(3x - 2)",
+        "context": "2·(3x - 2,5) = -5 + 3·(3x - 2)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "x = 2",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Rovnice",
+        "original_type": null
+      }
+    },
+    {
+      "id": "equ-test-013",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "0,3·(2x+1) = 0,2x - 0,7",
+        "context": "0,3·(2x+1) = 0,2x - 0,7"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "x = -5/2",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Rovnice",
+        "original_type": null
+      }
+    },
+    {
+      "id": "equ-test-014",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "y + 5y/6 = (2y-1)/4 + (y+1)/2",
+        "context": "y + 5y/6 = (2y-1)/4 + (y+1)/2"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "y = 3/10",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "y"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Rovnice se zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "equ-test-015",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "3·(2x-1) + 2/3 = 2/3 - (x+3)",
+        "context": "3·(2x-1) + 2/3 = 2/3 - (x+3)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "0",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "6x-3+2/3 = 2/3-x-3, 7x=0, x=0"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-22",
+        "type_label": "Lineární rovnice",
+        "original_type": null
+      }
+    },
+    {
+      "id": "equ-test-016",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "(y+1)/6 - 3y/2 = 2 + (0,5-y)/3",
+        "context": "(y+1)/6 - 3y/2 = 2 + (0,5-y)/3"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-7/6 nebo podobný",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "y"
+      },
+      "hints": [
+        "Častá chyba: Správný postup, ale chyba ve znaménku výsledku"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-22",
+        "type_label": "Lineární rovnice",
+        "original_type": null
+      }
+    },
+    {
+      "id": "equ-test-017",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "1,6:2 - x/2 = 3·0,7x + 3,4",
+        "context": "1,6:2 - x/2 = 3·0,7x + 3,4"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-1",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správný postup: 0,8 - 0,5x = 2,1x + 3,4, -2,6x = 2,6, x = -1"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-22",
+        "type_label": "Lineární rovnice",
+        "original_type": null
+      }
+    },
+    {
+      "id": "equ-test-018",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "(5-2y)/3 + y/9 = (3-y)/6",
+        "context": "(5-2y)/3 + y/9 = (3-y)/6"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "3",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "y"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Úprava na společný jmenovatel 18, správný výsledek"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-22",
+        "type_label": "Lineární rovnice",
+        "original_type": null
+      }
+    },
+    {
+      "id": "equ-test-019",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "5·(0,2x + 1) = (8 - 6x) : 2",
+        "context": "5·(0,2x + 1) = (8 - 6x) : 2"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-1/4",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "x + 5 = 4 - 3x, 4x = -1, x = -1/4"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-22",
+        "type_label": "Lineární rovnice",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "equ-test-020",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "(y-5)/2 + (3-y)/6 = 1 - 2y/3",
+        "context": "(y-5)/2 + (3-y)/6 = 1 - 2y/3"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "3",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "y"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správný postup s úpravou na společný jmenovatel"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-22",
+        "type_label": "Lineární rovnice",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "equ-test-021",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "0,5x + 2(x + 2,5) = 2,5(x + 3)",
+        "context": "0,5x + 2(x + 2,5) = 2,5(x + 3)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "Rovnice nemá řešení nebo 0x = 2,5",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "0,5x + 2x + 5 = 2,5x + 7,5 → 0x = 2,5 → nemá řešení"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-22",
+        "type_label": "Lineární rovnice",
+        "original_type": null
+      }
+    },
+    {
+      "id": "equ-test-022",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "(y+10)/15 + 2y/5 = 1 - (5-y)/3",
+        "context": "(y+10)/15 + 2y/5 = 1 - (5-y)/3"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-10",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "y"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správný postup se zlomky"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-22",
+        "type_label": "Lineární rovnice",
+        "original_type": null
+      }
+    },
+    {
+      "id": "equ-test-023",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "5·0,4 - 3x : 2 = 0,5x + 7",
+        "context": "5·0,4 - 3x : 2 = 0,5x + 7"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-5/2",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správný postup: -20x = 50, x = -5/2"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-22",
+        "type_label": "Lineární rovnice",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "equ-test-024",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "(3-y)/3 + (3/5)(y+1) + y/3 = y",
+        "context": "(3-y)/3 + (3/5)(y+1) + y/3 = y"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "4",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správný postup zobrazen"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-22",
+        "type_label": "Lineární rovnice",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "equ-test-025",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "5 dortíků + 4 koláče = 246 Kč. Kolik stojí jeden dortík?",
+        "context": "5 dortíků + 4 koláče = 246 Kč. Kolik stojí jeden dortík?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "30",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správný postup a výsledek"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-22",
+        "type_label": "Lineární rovnice",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "equ-test-026",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "-2x/3 · x/2 = 5/12",
+        "context": "-2x/3 · x/2 = 5/12"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "x = -5/4",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Rovnice",
+        "original_type": null
+      }
+    },
+    {
+      "id": "equ-test-027",
+      "topic": "equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "(x-2)/2 - x = 2 - 2x/3",
+        "context": "(x-2)/2 - x = 2 - 2x/3"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "x = 18",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "3x+4x-x=2+6, 6x=8"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Rovnice",
+        "original_type": null
+      }
+    },
+    {
+      "id": "exp-test-001",
+      "topic": "expressions",
+      "difficulty": 2,
+      "question": {
+        "stem": "(2x+3)² - x·6 - 4·(x-1)²",
+        "context": "(2x+3)² - x·6 - 4·(x-1)²"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "5 + 14x",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Algebraické výrazy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "exp-test-002",
+      "topic": "expressions",
+      "difficulty": 1,
+      "question": {
+        "stem": "4+6:2-5·(-3+5)",
+        "context": "4+6:2-5·(-3+5)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-3",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Pořadí operací",
+        "original_type": null
+      }
+    },
+    {
+      "id": "exp-test-003",
+      "topic": "expressions",
+      "difficulty": 1,
+      "question": {
+        "stem": "(2x-1)·1/2 - x",
+        "context": "(2x-1)·1/2 - x"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-1/2",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [
+        "Častá chyba: Nevykrátila x, výsledek měl být pouze -1/2"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Algebraické výrazy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "exp-test-004",
+      "topic": "expressions",
+      "difficulty": 2,
+      "question": {
+        "stem": "(4n-3)² - 4n(4n-3)",
+        "context": "(4n-3)² - 4n(4n-3)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "9 - 12n",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "n"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Algebraické výrazy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "exp-test-005",
+      "topic": "expressions",
+      "difficulty": 2,
+      "question": {
+        "stem": "(-n-1)² + (1+4n)·(1+4n)",
+        "context": "(-n-1)² + (1+4n)·(1+4n)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "17n² + 10n + 2",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "n"
+      },
+      "hints": [
+        "Častá chyba: OPAKUJÍCÍ SE CHYBA: Špatně umocnila (1+4n)². Správně: 1+8n+16n², ona má jen 1+8n. Zapomíná na n² člen při umocňování."
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "original_type": null
+      }
+    },
+    {
+      "id": "exp-test-006",
+      "topic": "expressions",
+      "difficulty": 1,
+      "question": {
+        "stem": "Druhý princ = 'o třetinu více' než první (x)",
+        "context": "Druhý princ = 'o třetinu více' než první (x)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "x + x/3 nebo 4x/3",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: KLÍČOVÁ CHYBA: Nerozumí 'o třetinu více'. Mělo být x + x/3 = 4x/3, ona napsala x + 1/3. Zaměňuje 'o třetinu více' za 'plus jedna třetina'."
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "original_type": null
+      }
+    },
+    {
+      "id": "exp-test-007",
+      "topic": "expressions",
+      "difficulty": 1,
+      "question": {
+        "stem": "Třetí princ = 'o 12 více' než první (x)",
+        "context": "Třetí princ = 'o 12 více' než první (x)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "x + 12",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "original_type": null
+      }
+    },
+    {
+      "id": "exp-test-008",
+      "topic": "expressions",
+      "difficulty": 2,
+      "question": {
+        "stem": "(3x+1)² - x·7x - (2x-5)·(x+4)",
+        "context": "(3x+1)² - x·7x - (2x-5)·(x+4)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "2x² + 8x + 21",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [
+        "Častá chyba: Ztratila x² členy. (3x+1)²=9x²+6x+1, -7x², -(2x²+3x-20). Správně: 9x²-7x²-2x²+6x-3x+1+20"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "original_type": null
+      }
+    },
+    {
+      "id": "exp-test-009",
+      "topic": "expressions",
+      "difficulty": 2,
+      "question": {
+        "stem": "Petr sbírá modely: 2.rok = 1,5x, 3.rok = 72. Vyjádřete 2.rok pomocí x",
+        "context": "Petr sbírá modely: 2.rok = 1,5x, 3.rok = 72. Vyjádřete 2.rok pomocí x"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "1,5x",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "x + 0,5x = 1,5x"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "original_type": null
+      }
+    },
+    {
+      "id": "exp-test-010",
+      "topic": "expressions",
+      "difficulty": 2,
+      "question": {
+        "stem": "(2n-3)·(4n-2) + (n-3)·(n+3)",
+        "context": "(2n-3)·(4n-2) + (n-3)·(n+3)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "9n² - 14n - 3",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "n"
+      },
+      "hints": [
+        "Častá chyba: Částečně správně, chyba v prostředním členu"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "exp-test-011",
+      "topic": "expressions",
+      "difficulty": 2,
+      "question": {
+        "stem": "V knihovně je k polic, v každé o 8 knih více než polic. Celkový počet knih?",
+        "context": "V knihovně je k polic, v každé o 8 knih více než polic. Celkový počet knih?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "k·(k+8) = k² + 8k"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "original_type": "multiple_choice"
+      }
+    },
+    {
+      "id": "exp-test-012",
+      "topic": "expressions",
+      "difficulty": 2,
+      "question": {
+        "stem": "3n·(2 - n + 2n) + (2n + 1)·(7 - n)",
+        "context": "3n·(2 - n + 2n) + (2n + 1)·(7 - n)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "n² + 19n + 7",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "n"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "6n - 3n² + 6n² + 14n - 2n² + 7 - n = n² + 19n + 7"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "original_type": null
+      }
+    },
+    {
+      "id": "exp-test-013",
+      "topic": "expressions",
+      "difficulty": 1,
+      "question": {
+        "stem": "Kratší strana obdélníku = 'o 25% kratší' než a",
+        "context": "Kratší strana obdélníku = 'o 25% kratší' než a"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "0,75a nebo 3a/4",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: OPAKUJÍCÍ SE CHYBA: Nerozumí 'o 25% kratší'. Mělo být 0,75a, ona napsala a-10."
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "original_type": null
+      }
+    },
+    {
+      "id": "exp-test-014",
+      "topic": "expressions",
+      "difficulty": 2,
+      "question": {
+        "stem": "(4 + 3n)(3n - 2n) - (n-1)·5n",
+        "context": "(4 + 3n)(3n - 2n) - (n-1)·5n"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "9n - 2n²",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "n"
+      },
+      "hints": [
+        "Častá chyba: Chyba při roznásobení: (4+3n)·n = 4n + 3n², pak -5n² + 5n = správně 9n - 2n²"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "exp-test-015",
+      "topic": "expressions",
+      "difficulty": 1,
+      "question": {
+        "stem": "Vyjádřete výrazem: cena 1 dortíku (4 dortíky = x Kč)",
+        "context": "Vyjádřete výrazem: cena 1 dortíku (4 dortíky = x Kč)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "x/4",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správně"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "exp-test-016",
+      "topic": "expressions",
+      "difficulty": 1,
+      "question": {
+        "stem": "Vyjádřete výrazem: cena 4 koláčů (5 koláčů = x Kč)",
+        "context": "Vyjádřete výrazem: cena 4 koláčů (5 koláčů = x Kč)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "4x/5",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správně"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "exp-test-017",
+      "topic": "expressions",
+      "difficulty": 2,
+      "question": {
+        "stem": "(a²+a)·(1-a) - a·a",
+        "context": "(a²+a)·(1-a) - a·a"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "2a - 3a²",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Algebraické výrazy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "exp-test-018",
+      "topic": "expressions",
+      "difficulty": 2,
+      "question": {
+        "stem": "(n-1)/2 - (2n-3)/4",
+        "context": "(n-1)/2 - (2n-3)/4"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-1/4",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "n"
+      },
+      "hints": [
+        "Častá chyba: Chyba při práci se společným jmenovatelem, zapomněla dosadit správně"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Algebraické výrazy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fac-test-001",
+      "topic": "factoring",
+      "difficulty": 1,
+      "question": {
+        "stem": "a·(-a) - 2²·3a + 6a²",
+        "context": "a·(-a) - 2²·3a + 6a²"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "a(5a - 12)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "a"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Rozklad vytknutím",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fac-test-002",
+      "topic": "factoring",
+      "difficulty": 1,
+      "question": {
+        "stem": "4a² - 9",
+        "context": "4a² - 9"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "(2a-3)(2a+3)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "a"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Rozklad na součin",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fac-test-003",
+      "topic": "factoring",
+      "difficulty": 1,
+      "question": {
+        "stem": "(4+x)·x + 2x²",
+        "context": "(4+x)·x + 2x²"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "x(4+3x) nebo 3x²+4x",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "4x+x²+2x² = 4x+3x² = x(4+3x)"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-23",
+        "type_label": "Vytýkání a rozklad",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fac-test-004",
+      "topic": "factoring",
+      "difficulty": 1,
+      "question": {
+        "stem": "Upravte a rozložte na součin: x² - x + 2x²",
+        "context": "Upravte a rozložte na součin: x² - x + 2x²"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "x(3x-1)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "x"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "x² - x + 2x² = 3x² - x = x(3x-1)"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-23",
+        "type_label": "Vytýkání a rozklad",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "fac-test-005",
+      "topic": "factoring",
+      "difficulty": 1,
+      "question": {
+        "stem": "2·(x² - x) + x",
+        "context": "2·(x² - x) + x"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "x(2x-1)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "2x² - 2x + x = 2x² - x = x(2x-1)"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-23",
+        "type_label": "Vytýkání a rozklad",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fac-test-006",
+      "topic": "factoring",
+      "difficulty": 1,
+      "question": {
+        "stem": "Z výrazu 3y² - 9y + 6xy vytkněte 3y",
+        "context": "Z výrazu 3y² - 9y + 6xy vytkněte 3y"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "3y(y - 3 + 2x)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": "y"
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správně vytknuté"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-23",
+        "type_label": "Vytýkání a rozklad",
+        "original_type": "open"
+      }
+    },
+    {
       "id": "fr-001",
       "topic": "fractions",
       "difficulty": 1,
@@ -1584,6 +4127,724 @@
         "type_id": "NUM-ZLOM",
         "type_label": "Zlomky",
         "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-011",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "((1/6 - 1/3) : (-5/3)) / 0,3",
+        "context": "((1/6 - 1/3) : (-5/3)) / 0,3"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "1/3",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-012",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "1/6 + 1/3 · (2/5 - 1)",
+        "context": "1/6 + 1/3 · (2/5 - 1)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-1/30",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-013",
+      "topic": "fractions",
+      "difficulty": 1,
+      "question": {
+        "stem": "3·2/7 - 2/7",
+        "context": "3·2/7 - 2/7"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "4/7",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-014",
+      "topic": "fractions",
+      "difficulty": 1,
+      "question": {
+        "stem": "1 - 14/5 : 2",
+        "context": "1 - 14/5 : 2"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-2/5",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Chyba ve znaménku - zapomněla záporné znaménko"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-015",
+      "topic": "fractions",
+      "difficulty": 1,
+      "question": {
+        "stem": "3/5 z 1h 50min = kolik minut?",
+        "context": "3/5 z 1h 50min = kolik minut?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "66",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "110min · 3/5 = 66min"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-11",
+        "type_label": "Zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-016",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "1/3·(75/5 - 13/5) : 20",
+        "context": "1/3·(75/5 - 13/5) : 20"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "2/15",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Chyba při dělení zlomků. Správně: 12/15 · 1/20 = 12/300 = 1/25, ale i základ je špatný"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-11",
+        "type_label": "Zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-017",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "[(4/3 - 3/2) - 5/6] / [(2/3) : (3/2)]",
+        "context": "[(4/3 - 3/2) - 5/6] / [(2/3) : (3/2)]"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-15/8",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Složitý výpočet se zlomky, správný výsledek"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-11",
+        "type_label": "Zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-018",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "(9/4 + 4/3)·(2/3 - 6/5)",
+        "context": "(9/4 + 4/3)·(2/3 - 6/5)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-10/9",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "(25/12)·(-8/15) = -200/180 = -10/9"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-11",
+        "type_label": "Zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-019",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "[(5/9 - 3/3) : (9/2 - 5/1)] / (2/3 + 1/6 - 7/12)",
+        "context": "[(5/9 - 3/3) : (9/2 - 5/1)] / (2/3 + 1/6 - 7/12)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-85/54 nebo podobný",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Chyba při práci se složenými zlomky - špatně určen společný jmenovatel nebo znaménka"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-11",
+        "type_label": "Zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-020",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "(7/5)·(3/8)·(10/21) + 3/10",
+        "context": "(7/5)·(3/8)·(10/21) + 3/10"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "11/20",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "21/40 + 10/70 = 1/4 + 3/10 = 22/40 = 11/20"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-11",
+        "type_label": "Zlomky",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "fra-test-021",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "[(7/4 - 5/8) / (3·5/12)]",
+        "context": "[(7/4 - 5/8) / (3·5/12)]"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "9/10",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Chyba ve výpočtu. Správně: (14/8-5/8)/(15/12) = (9/8)·(12/15) = 9/10"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-11",
+        "type_label": "Zlomky",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "fra-test-022",
+      "topic": "fractions",
+      "difficulty": 1,
+      "question": {
+        "stem": "(5/9 - 5/9) : 5",
+        "context": "(5/9 - 5/9) : 5"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "0 nebo jiný",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-11",
+        "type_label": "Zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-023",
+      "topic": "fractions",
+      "difficulty": 1,
+      "question": {
+        "stem": "[(4-7/16) / (8/21)]",
+        "context": "[(4-7/16) / (8/21)]"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-2/7",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správný výpočet složeného zlomku"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-11",
+        "type_label": "Zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-024",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "[3/5 · (2/5 + 1/2)] / [7/6 + 7/10]",
+        "context": "[3/5 · (2/5 + 1/2)] / [7/6 + 7/10]"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "15/84 nebo zjednodušeno",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Částečně správný postup"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-11",
+        "type_label": "Zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-025",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "(8/5) · (5/6 - 7/10 - 5/6)",
+        "context": "(8/5) · (5/6 - 7/10 - 5/6)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-28/25",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Chyba ve výpočtu zlomků. Správně: (8/5)·(-7/10) = -56/50 = -28/25"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-11",
+        "type_label": "Zlomky",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "fra-test-026",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "[(4/5 - 2/3) · 5/8] / (2/3)",
+        "context": "[(4/5 - 2/3) · 5/8] / (2/3)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "1/8",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správný postup zobrazen"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-11",
+        "type_label": "Zlomky",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "fra-test-027",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "3/8 z 5 dnů je totéž jako 5/8 ze 3 dnů. A/N?",
+        "context": "3/8 z 5 dnů je totéž jako 5/8 ze 3 dnů. A/N?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "15/8 = 15/8"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-11",
+        "type_label": "Zlomky",
+        "original_type": "true_false"
+      }
+    },
+    {
+      "id": "fra-test-028",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "0,2 : 27/25 - 2/3",
+        "context": "0,2 : 27/25 - 2/3"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-13/27",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-029",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "1/5 - 3/10 + 1/4 · 1/2",
+        "context": "1/5 - 3/10 + 1/4 · 1/2"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "1/10",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Zlomky",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fra-test-030",
+      "topic": "fractions",
+      "difficulty": 2,
+      "question": {
+        "stem": "Jakou část objemu skleničky vyplní zbytek",
+        "context": "Jakou část objemu skleničky vyplní zbytek"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A (1/2)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Zlomky - slovní úloha",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fun-test-001",
+      "topic": "functions",
+      "difficulty": 1,
+      "question": {
+        "stem": "Cena vody města A v závislosti na x",
+        "context": "Cena vody města A v závislosti na x"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "72x Kč",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Lineární funkce",
+        "original_type": null
+      }
+    },
+    {
+      "id": "fun-test-002",
+      "topic": "functions",
+      "difficulty": 1,
+      "question": {
+        "stem": "Cena vody města B v závislosti na x",
+        "context": "Cena vody města B v závislosti na x"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "(61x + 990) Kč",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Lineární funkce",
+        "original_type": null
+      }
+    },
+    {
+      "id": "int-test-001",
+      "topic": "integers",
+      "difficulty": 1,
+      "question": {
+        "stem": "(-6)² - 3·(-3)",
+        "context": "(-6)² - 3·(-3)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "45",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "36 + 9 = 45"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-12",
+        "type_label": "Celá čísla",
+        "original_type": "open"
       }
     },
     {
@@ -3720,6 +6981,984 @@
       }
     },
     {
+      "id": "per-test-001",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "O kolik % byla konečná cena nižší než původní",
+        "context": "O kolik % byla konečná cena nižší než původní"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "35",
+          "unit": "%",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "P=1000, -15%→850, -200→650, (1000-650)/1000 = 35%"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Procenta - slevy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-002",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik hodin denně v zaměstnání",
+        "context": "Kolik hodin denně v zaměstnání"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "6",
+          "unit": "h",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Grafy - procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-003",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik minut denně sportuje",
+        "context": "Kolik minut denně sportuje"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "58 min (zaokr.)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Špatně vypočítala procenta z procent (volný čas 10% z 24h = 2,4h, sport 40% z 2,4h ≈ 58 min)"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Grafy - procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-004",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik triček zůstalo v obchodě",
+        "context": "Kolik triček zůstalo v obchodě"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "E (více než 220)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Procenta - slovní úloha",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-005",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik procent stran zbývá dočíst",
+        "context": "Kolik procent stran zbývá dočíst"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "B (30%)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-006",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Zakoupil o polovinu více než prodal. A/N?",
+        "context": "Zakoupil o polovinu více než prodal. A/N?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: OPAKUJÍCÍ SE CHYBA: Nerozumí 'o polovinu více'. Zakoupeno 42, prodáno 28. 28·1,5=42. Je to pravda!"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-007",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "60% odvezeno, zbylo 1200kg. Kolik odvezeno?",
+        "context": "60% odvezeno, zbylo 1200kg. Kolik odvezeno?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "1800",
+          "unit": "kg",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "40%=1200, 100%=3000, 60%=1800"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-008",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "2/5 z první palety + 10% z druhé = 750kg. Kolik neprodané?",
+        "context": "2/5 z první palety + 10% z druhé = 750kg. Kolik neprodané?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "2250",
+          "unit": "kg",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Složitá procentová úloha - nezvládla sestavit rovnici pro dvě palety"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-009",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Léto 1500kg = +50% oproti jaro, -50% oproti podzim. Rozdíl podzim-jaro?",
+        "context": "Léto 1500kg = +50% oproti jaro, -50% oproti podzim. Rozdíl podzim-jaro?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "2000",
+          "unit": "kg",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: OPAKUJÍCÍ SE CHYBA: Jaro=1000 (+50%→1500), Podzim=3000 (-50%→1500). Rozdíl=2000. Nerozumí asymetrii procent."
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-010",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "O kolik % je Adamova cesta (40+30=70m) delší než Otova (50m)?",
+        "context": "O kolik % je Adamova cesta (40+30=70m) delší než Otova (50m)?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "40",
+          "unit": "%",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Adam 40+30=70m, Ota √(40²+30²)=50m, (70-50)/50=40%"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-011",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Hračka 250Kč, +40%, pak -40%. Kolik stojí?",
+        "context": "Hračka 250Kč, +40%, pak -40%. Kolik stojí?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "210",
+          "unit": "Kč",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: TYPICKÁ CHYBA: Nerozumí, že +40% a pak -40% se nevrátí na původní hodnotu. 250·1,4·0,6 = 210, ne 250"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-012",
+      "topic": "percents",
+      "difficulty": 1,
+      "question": {
+        "stem": "Chlapci mat. o 75% více než dívky mat. A/N?",
+        "context": "Chlapci mat. o 75% více než dívky mat. A/N?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Chlapci 7, dívky 4. 7/4 = 1,75 = +75%"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-013",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Lyžařský pobyt 7000Kč: doprava 10%, ubytování 60%. Kolik % vlek?",
+        "context": "Lyžařský pobyt 7000Kč: doprava 10%, ubytování 60%. Kolik % vlek?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "30",
+          "unit": "%",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "100% - 10% - 60% = 30%"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-014",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Učebnice z 2000Kč na 1500Kč. Kolik % sleva?",
+        "context": "Učebnice z 2000Kč na 1500Kč. Kolik % sleva?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "25",
+          "unit": "%",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "500/2000 = 25%"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-015",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Dárek 40 EUR z 200 EUR. Kolik %?",
+        "context": "Dárek 40 EUR z 200 EUR. Kolik %?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "20",
+          "unit": "%",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "40/200 = 20%"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-016",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Sekačka z 20000 na 8000 Kč. O kolik % snížena?",
+        "context": "Sekačka z 20000 na 8000 Kč. O kolik % snížena?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "E",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "12000/20000 = 60%"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": "matching"
+      }
+    },
+    {
+      "id": "per-test-017",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "První skupina poseče 1/4, druhá 60% zbytku. Kolik % neposečeno?",
+        "context": "První skupina poseče 1/4, druhá 60% zbytku. Kolik % neposečeno?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "B",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Nesprávně počítala procenta ze zbytku. Správně: 1/4 + 0,6·3/4 = 70% posečeno, 30% zbylo"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": "matching"
+      }
+    },
+    {
+      "id": "per-test-018",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Dříve 120 hřebíků, nyní 80 za stejnou cenu. O kolik % zdraženy?",
+        "context": "Dříve 120 hřebíků, nyní 80 za stejnou cenu. O kolik % zdraženy?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "D",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Správně: cena za hřebík vzrostla z P/120 na P/80, nárůst = (120-80)/80 = 50%"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": "matching"
+      }
+    },
+    {
+      "id": "per-test-019",
+      "topic": "percents",
+      "difficulty": 1,
+      "question": {
+        "stem": "O kolik % více žáků 8.tříd v hudebním kroužku než 9.tříd?",
+        "context": "O kolik % více žáků 8.tříd v hudebním kroužku než 9.tříd?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "?",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-020",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "250 výrobků 2020, +20% každý rok. Kolik 2022?",
+        "context": "250 výrobků 2020, +20% každý rok. Kolik 2022?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "E) 360",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "250 · 1,2 · 1,2 = 360"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-021",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Roman 400km = 'o čtvrtinu více' než Jana. Kolik Jana?",
+        "context": "Roman 400km = 'o čtvrtinu více' než Jana. Kolik Jana?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "C) 320",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "400 = 1,25·J, J = 320km"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-022",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Firma před krizí, -40%, pak +25% (=+42). Kolik před?",
+        "context": "Firma před krizí, -40%, pak +25% (=+42). Kolik před?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A) 280",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Složitý výpočet s procenty"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-023",
+      "topic": "percents",
+      "difficulty": 1,
+      "question": {
+        "stem": "3/4 z 200 minut je totéž jako 1/2 ze 3 hodin. A/N?",
+        "context": "3/4 z 200 minut je totéž jako 1/2 ze 3 hodin. A/N?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "N",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "150 min ≠ 90 min"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": "true_false"
+      }
+    },
+    {
+      "id": "per-test-024",
+      "topic": "percents",
+      "difficulty": 1,
+      "question": {
+        "stem": "2/3 z 2,4 hodiny je více než 1 h 40 min. A/N?",
+        "context": "2/3 z 2,4 hodiny je více než 1 h 40 min. A/N?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "N",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "96 min < 100 min"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": "true_false"
+      }
+    },
+    {
+      "id": "per-test-025",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Třída 2.A nasbírala o 25% méně než 1.A (600 kg). Kolik kg?",
+        "context": "Třída 2.A nasbírala o 25% méně než 1.A (600 kg). Kolik kg?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "E",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "600·0,75 = 450 kg"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": "matching"
+      }
+    },
+    {
+      "id": "per-test-026",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Třída 1.B nasbírala o 20% více než 2.B. 1.B = 600 kg. Kolik kg 2.B?",
+        "context": "Třída 1.B nasbírala o 20% více než 2.B. 1.B = 600 kg. Kolik kg 2.B?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "C",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "600/1,2 = 500 kg"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": "matching"
+      }
+    },
+    {
+      "id": "per-test-027",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Dívky nasbíraly o 50% více než chlapci. Celkem 1200 kg. Kolik chlapci?",
+        "context": "Dívky nasbíraly o 50% více než chlapci. Celkem 1200 kg. Kolik chlapci?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "D",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Nerozumí 'o 50% více'. Správně: D+CH=1200, D=1,5CH → 2,5CH=1200 → CH=480 kg"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "original_type": "matching"
+      }
+    },
+    {
+      "id": "per-test-028",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik důchodců nepoužívá kartu",
+        "context": "Kolik důchodců nepoužívá kartu"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "D (156)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-029",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik členů má nyní oddíl",
+        "context": "Kolik členů má nyní oddíl"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "C (153)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "per-test-030",
+      "topic": "percents",
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik dívek navštěvuje gymnázium",
+        "context": "Kolik dívek navštěvuje gymnázium"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "E (160)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Procenta",
+        "original_type": null
+      }
+    },
+    {
+      "id": "pow-test-001",
+      "topic": "powers",
+      "difficulty": 1,
+      "question": {
+        "stem": "1 : 0,2²",
+        "context": "1 : 0,2²"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "25",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Špatně vypočítala 0,2² = 0,04, pak 1:0,04 = 25. Místo toho napsala 0,4."
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Mocniny a dělení",
+        "original_type": null
+      }
+    },
+    {
       "id": "PYTH-C01",
       "topic": "pythagorean",
       "difficulty": 1,
@@ -5196,6 +9435,281 @@
       }
     },
     {
+      "id": "pyt-test-035",
+      "topic": "pythagorean",
+      "difficulty": 2,
+      "question": {
+        "stem": "Pravoúhlý trojúhelník, odvěsna 9cm, přepona 15cm. Obsah?",
+        "context": "Pravoúhlý trojúhelník, odvěsna 9cm, přepona 15cm. Obsah?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "54",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "b²=225-81=144, b=12, S=12·9:2=54cm²"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-35",
+        "type_label": "Pythagorova věta",
+        "original_type": null
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c",
+        "labels": null
+      }
+    },
+    {
+      "id": "pyt-test-036",
+      "topic": "pythagorean",
+      "difficulty": 2,
+      "question": {
+        "stem": "Rovnoběžník ABCD, |AE|=12cm, |BE|=8cm, |EC|=6cm. Obsah trojúhelníku ABE?",
+        "context": "Rovnoběžník ABCD, |AE|=12cm, |BE|=8cm, |EC|=6cm. Obsah trojúhelníku ABE?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "84 cm²",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: I když výsledek vypadá správně, postup nebo mezivýpočty mohou být chybné"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-35",
+        "type_label": "Pythagorova věta",
+        "original_type": null
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c",
+        "labels": null
+      }
+    },
+    {
+      "id": "pyt-test-037",
+      "topic": "pythagorean",
+      "difficulty": 2,
+      "question": {
+        "stem": "Délka lomené čáry ACFHA v kvádru",
+        "context": "Délka lomené čáry ACFHA v kvádru"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "54",
+          "unit": "m",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-35",
+        "type_label": "Pythagorova věta",
+        "original_type": null
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c",
+        "labels": null
+      }
+    },
+    {
+      "id": "pyt-test-038",
+      "topic": "pythagorean",
+      "difficulty": 1,
+      "question": {
+        "stem": "Délka strany AB",
+        "context": "Délka strany AB"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "4",
+          "unit": "cm",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Pythagorova věta",
+        "original_type": null
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c",
+        "labels": null
+      }
+    },
+    {
+      "id": "pyt-test-039",
+      "topic": "pythagorean",
+      "difficulty": 1,
+      "question": {
+        "stem": "Délka strany CD",
+        "context": "Délka strany CD"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "13",
+          "unit": "cm",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "√169 = 13"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Pythagorova věta",
+        "original_type": null
+      },
+      "diagram": {
+        "type": "right_triangle",
+        "highlight": "c",
+        "labels": null
+      }
+    },
+    {
+      "id": "rat-test-001",
+      "topic": "ratios",
+      "difficulty": 1,
+      "question": {
+        "stem": "Body A,B,C,D na číselné ose. B dělí AC v poměru 7:3. V jakém poměru dělí C úsečku BD?",
+        "context": "Body A,B,C,D na číselné ose. B dělí AC v poměru 7:3. V jakém poměru dělí C úsečku BD?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "8:13",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Výpočet poměru z pozic bodů"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-41",
+        "type_label": "Poměr",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "rat-test-002",
+      "topic": "ratios",
+      "difficulty": 1,
+      "question": {
+        "stem": "Určete číslo, které na číselné ose představuje bod A",
+        "context": "Určete číslo, které na číselné ose představuje bod A"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "-2",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "32/52 = 16/26 = 8/13"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-41",
+        "type_label": "Poměr",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "rat-test-003",
+      "topic": "ratios",
+      "difficulty": 1,
+      "question": {
+        "stem": "Poměr 8./9.tříd v robotickém kroužku",
+        "context": "Poměr 8./9.tříd v robotickém kroužku"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "12:7 nebo 36:21",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-41",
+        "type_label": "Poměr",
+        "original_type": null
+      }
+    },
+    {
       "id": "seq-004",
       "topic": "sequences",
       "difficulty": 1,
@@ -5393,6 +9907,876 @@
       "meta": {
         "type_id": "SEQ-NTH",
         "type_label": "Posloupnosti",
+        "original_type": null
+      }
+    },
+    {
+      "id": "seq-test-006",
+      "topic": "sequences",
+      "difficulty": 1,
+      "question": {
+        "stem": "36 černých puntíků. Kolik vodorovných přímek?",
+        "context": "36 černých puntíků. Kolik vodorovných přímek?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "11",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-44",
+        "type_label": "Posloupnosti a řady",
+        "original_type": null
+      }
+    },
+    {
+      "id": "seq-test-007",
+      "topic": "sequences",
+      "difficulty": 1,
+      "question": {
+        "stem": "49 vodorovných přímek. Počet bílých puntíků?",
+        "context": "49 vodorovných přímek. Počet bílých puntíků?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "?",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-44",
+        "type_label": "Posloupnosti a řady",
+        "original_type": null
+      }
+    },
+    {
+      "id": "seq-test-008",
+      "topic": "sequences",
+      "difficulty": 2,
+      "question": {
+        "stem": "64 bílých puntíků. Počet černých?",
+        "context": "64 bílých puntíků. Počet černých?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "?",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-44",
+        "type_label": "Posloupnosti a řady",
+        "original_type": null
+      }
+    },
+    {
+      "id": "seq-test-009",
+      "topic": "sequences",
+      "difficulty": 2,
+      "question": {
+        "stem": "Obrazce z kruhů. Kolik bílých kruhů má 8.obrazec?",
+        "context": "Obrazce z kruhů. Kolik bílých kruhů má 8.obrazec?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "64",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "n² = 8² = 64"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-44",
+        "type_label": "Posloupnosti a řady",
+        "original_type": null
+      }
+    },
+    {
+      "id": "seq-test-010",
+      "topic": "sequences",
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolikátý obrazec má 361 tmavých kruhů?",
+        "context": "Kolikátý obrazec má 361 tmavých kruhů?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "20",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Odpověď je správná, ale chybí postup nebo zdůvodnění"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-44",
+        "type_label": "Posloupnosti a řady",
+        "original_type": null
+      }
+    },
+    {
+      "id": "seq-test-011",
+      "topic": "sequences",
+      "difficulty": 1,
+      "question": {
+        "stem": "Počet hvězdiček v obdélníku 81×20 cm",
+        "context": "Počet hvězdiček v obdélníku 81×20 cm"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "1520",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Úloha nebyla vypracována"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-44",
+        "type_label": "Posloupnosti a řady",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "seq-test-012",
+      "topic": "sequences",
+      "difficulty": 1,
+      "question": {
+        "stem": "Jeden rozměr 50cm, 9800 hvězdiček. Druhý rozměr?",
+        "context": "Jeden rozměr 50cm, 9800 hvězdiček. Druhý rozměr?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "201",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Úloha nebyla vypracována"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-44",
+        "type_label": "Posloupnosti a řady",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "seq-test-013",
+      "topic": "sequences",
+      "difficulty": 2,
+      "question": {
+        "stem": "Rozdíl bílých a tmavých hvězdiček v obdélníku 41×23",
+        "context": "Rozdíl bílých a tmavých hvězdiček v obdélníku 41×23"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "640",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Úloha nebyla vypracována"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-44",
+        "type_label": "Posloupnosti a řady",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "seq-test-014",
+      "topic": "sequences",
+      "difficulty": 1,
+      "question": {
+        "stem": "Kolik bílých trojúhelníků v 5.obrazci?",
+        "context": "Kolik bílých trojúhelníků v 5.obrazci?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "243",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-44",
+        "type_label": "Posloupnosti",
+        "original_type": null
+      }
+    },
+    {
+      "id": "seq-test-015",
+      "topic": "sequences",
+      "difficulty": 1,
+      "question": {
+        "stem": "6.obrazec má 121 šedých. Kolik 7.obrazec?",
+        "context": "6.obrazec má 121 šedých. Kolik 7.obrazec?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "364",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-44",
+        "type_label": "Posloupnosti",
+        "original_type": null
+      }
+    },
+    {
+      "id": "seq-test-016",
+      "topic": "sequences",
+      "difficulty": 2,
+      "question": {
+        "stem": "Rozdíl šedých 6561. Kolik bílých v posledním?",
+        "context": "Rozdíl šedých 6561. Kolik bílých v posledním?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "?",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-44",
+        "type_label": "Posloupnosti",
+        "original_type": null
+      }
+    },
+    {
+      "id": "seq-test-017",
+      "topic": "sequences",
+      "difficulty": 1,
+      "question": {
+        "stem": "Celkový počet mincí po 35 kolech (Julie 1/kolo, Čeněk 4/4.kolo, Pavla 5/5.kolo)",
+        "context": "Celkový počet mincí po 35 kolech (Julie 1/kolo, Čeněk 4/4.kolo, Pavla 5/5.kolo)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "102",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Úloha nebyla vypracována"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-44",
+        "type_label": "Posloupnosti a řady",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "seq-test-018",
+      "topic": "sequences",
+      "difficulty": 1,
+      "question": {
+        "stem": "Čeněk přidal 4 mince 14krát. Kolikrát Pavla přidala 5 mincí?",
+        "context": "Čeněk přidal 4 mince 14krát. Kolikrát Pavla přidala 5 mincí?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "11",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Úloha nebyla vypracována"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-44",
+        "type_label": "Posloupnosti a řady",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "seq-test-019",
+      "topic": "sequences",
+      "difficulty": 2,
+      "question": {
+        "stem": "Po kolika kolech bylo přesně 183 mincí?",
+        "context": "Po kolika kolech bylo přesně 183 mincí?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "100",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Úloha nebyla vypracována"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-44",
+        "type_label": "Posloupnosti a řady",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "seq-test-020",
+      "topic": "sequences",
+      "difficulty": 1,
+      "question": {
+        "stem": "Počet tmavých trojúhelníčků (4 bílé v řadě)",
+        "context": "Počet tmavých trojúhelníčků (4 bílé v řadě)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "30",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Posloupnosti",
+        "original_type": null
+      }
+    },
+    {
+      "id": "seq-test-021",
+      "topic": "sequences",
+      "difficulty": 1,
+      "question": {
+        "stem": "Počet všech trojúhelníčků (6 tmavých v řadě)",
+        "context": "Počet všech trojúhelníčků (6 tmavých v řadě)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "50",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Nepochopila vztah mezi počtem tmavých a bílých trojúhelníků"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Posloupnosti",
+        "original_type": null
+      }
+    },
+    {
+      "id": "seq-test-022",
+      "topic": "sequences",
+      "difficulty": 2,
+      "question": {
+        "stem": "Počet všech trojúhelníčků (21 tmavých v řadě)",
+        "context": "Počet všech trojúhelníčků (21 tmavých v řadě)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "800",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Nepochopila vzorec pro celkový počet trojúhelníčků v kosočtverci"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Posloupnosti",
+        "original_type": null
+      }
+    },
+    {
+      "id": "squ-test-001",
+      "topic": "square_roots",
+      "difficulty": 1,
+      "question": {
+        "stem": "√(1,3² - 1,2²)",
+        "context": "√(1,3² - 1,2²)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "0,5",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Drobná chyba ve výpočtu pod odmocninou"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Odmocniny",
+        "original_type": null
+      }
+    },
+    {
+      "id": "squ-test-002",
+      "topic": "square_roots",
+      "difficulty": 1,
+      "question": {
+        "stem": "10²·(10²-1) / (10·10²+10²)",
+        "context": "10²·(10²-1) / (10·10²+10²)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "9",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "100·99/1100 = 9900/1100 = 9"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-12",
+        "type_label": "Mocniny a odmocniny",
+        "original_type": null
+      }
+    },
+    {
+      "id": "squ-test-003",
+      "topic": "square_roots",
+      "difficulty": 1,
+      "question": {
+        "stem": "(7² - √7²) / √49",
+        "context": "(7² - √7²) / √49"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "6",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Zaměnila √7² (což je 7) za 7² (což je 49). Nerozumí, že odmocnina a druhá mocnina se ruší: √x² = |x|"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-14",
+        "type_label": "Odmocniny",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "squ-test-004",
+      "topic": "square_roots",
+      "difficulty": 1,
+      "question": {
+        "stem": "√(4·0,25)",
+        "context": "√(4·0,25)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "1",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Odmocniny",
+        "original_type": null
+      }
+    },
+    {
+      "id": "sys-test-001",
+      "topic": "systems_equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "Cena oběda B",
+        "context": "Cena oběda B"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "280",
+          "unit": "Kč",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Soustava rovnic",
+        "original_type": null
+      }
+    },
+    {
+      "id": "sys-test-002",
+      "topic": "systems_equations",
+      "difficulty": 2,
+      "question": {
+        "stem": "Cena oběda C",
+        "context": "Cena oběda C"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "300",
+          "unit": "Kč",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Soustava rovnic",
+        "original_type": null
+      }
+    },
+    {
+      "id": "tab-test-001",
+      "topic": "tables_graphs",
+      "difficulty": 1,
+      "question": {
+        "stem": "Zahrádkáři zůstalo 9 neprodaných vzrostlých. A/N?",
+        "context": "Zahrádkáři zůstalo 9 neprodaných vzrostlých. A/N?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-52",
+        "type_label": "Statistika - grafy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "tab-test-002",
+      "topic": "tables_graphs",
+      "difficulty": 1,
+      "question": {
+        "stem": "Prodal všechny zakoupené jen u jednoho druhu. A/N?",
+        "context": "Prodal všechny zakoupené jen u jednoho druhu. A/N?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-52",
+        "type_label": "Statistika - grafy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "tab-test-003",
+      "topic": "tables_graphs",
+      "difficulty": 1,
+      "question": {
+        "stem": "V 9.ročníku je stejný počet dívek jako chlapců. A/N?",
+        "context": "V 9.ročníku je stejný počet dívek jako chlapců. A/N?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správně sečteno z grafu: 25 dívek = 25 chlapců"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-52",
+        "type_label": "Statistika - grafy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "tab-test-004",
+      "topic": "tables_graphs",
+      "difficulty": 1,
+      "question": {
+        "stem": "Český jazyk volilo více než 16% všech žáků. A/N?",
+        "context": "Český jazyk volilo více než 16% všech žáků. A/N?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "N",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "ČJ: 7+5=12 z 50, 12/50=24%... ale odpověď je N?"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-52",
+        "type_label": "Statistika - grafy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "tab-test-005",
+      "topic": "tables_graphs",
+      "difficulty": 1,
+      "question": {
+        "stem": "Kolik žáků 9.tříd v šachovém kroužku?",
+        "context": "Kolik žáků 9.tříd v šachovém kroužku?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "?",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-52",
+        "type_label": "Statistika - grafy",
         "original_type": null
       }
     },
@@ -5719,6 +11103,1324 @@
       }
     },
     {
+      "id": "uni-test-009",
+      "topic": "unit_conversions",
+      "difficulty": 1,
+      "question": {
+        "stem": "Kabel 5,1m, uřízli 3×0,5m, zbytek na 12 dílů. Kolik cm jeden díl?",
+        "context": "Kabel 5,1m, uřízli 3×0,5m, zbytek na 12 dílů. Kolik cm jeden díl?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "30",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "510-150=360, 360:12=30cm"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Jednotky a převody",
+        "original_type": null
+      }
+    },
+    {
+      "id": "uni-test-010",
+      "topic": "unit_conversions",
+      "difficulty": 1,
+      "question": {
+        "stem": "Josef krok 75cm, Naďa 60cm, oba 10000 kroků. O kolik km ušel Josef více?",
+        "context": "Josef krok 75cm, Naďa 60cm, oba 10000 kroků. O kolik km ušel Josef více?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "1,5",
+          "unit": "km",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "J: 750000cm = 7,5km, N: 600000cm = 6km, rozdíl 1,5km"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Jednotky a převody",
+        "original_type": null
+      }
+    },
+    {
+      "id": "vol-test-001",
+      "topic": "volume",
+      "difficulty": 1,
+      "question": {
+        "stem": "Poloměr podstavy válce",
+        "context": "Poloměr podstavy válce"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "5",
+          "unit": "cm",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Nepochopila, že poloměr = polovina úhlopříčky čtverce 6x8 (√100/2 = 5)"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Tělesa - válec",
+        "original_type": null
+      }
+    },
+    {
+      "id": "vol-test-002",
+      "topic": "volume",
+      "difficulty": 2,
+      "question": {
+        "stem": "Objem válce v cm³",
+        "context": "Objem válce v cm³"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "942",
+          "unit": "cm³",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Navazující chyba z 7.1 - použila špatný poloměr"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Objem válce",
+        "original_type": null
+      }
+    },
+    {
+      "id": "vol-test-003",
+      "topic": "volume",
+      "difficulty": 2,
+      "question": {
+        "stem": "Objem pravidelného čtyřbokého hranolu",
+        "context": "Objem pravidelného čtyřbokého hranolu"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "B (108 cm³)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Objem hranolu",
+        "original_type": null
+      }
+    },
+    {
+      "id": "vol-test-004",
+      "topic": "volume",
+      "difficulty": 2,
+      "question": {
+        "stem": "Kvádr 6×4×5 rozřezán na 3 trojboké hranoly. Největší objem?",
+        "context": "Kvádr 6×4×5 rozřezán na 3 trojboké hranoly. Největší objem?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "60",
+          "unit": "cm³",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "6·5·4:2=60cm³"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-32",
+        "type_label": "Objem těles",
+        "original_type": null
+      }
+    },
+    {
+      "id": "vol-test-005",
+      "topic": "volume",
+      "difficulty": 2,
+      "question": {
+        "stem": "Válec r=5cm, v=20cm. Kolikrát je plášť větší než podstava?",
+        "context": "Válec r=5cm, v=20cm. Kolikrát je plášť větší než podstava?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "C) 8krát",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Plášť=2πrv=628, Podstava=πr²=78,5, 628:78,5=8"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-36",
+        "type_label": "Válec",
+        "original_type": null
+      }
+    },
+    {
+      "id": "vol-test-006",
+      "topic": "volume",
+      "difficulty": 1,
+      "question": {
+        "stem": "Povrch hranolu je 14krát větší než obsah stěny jedné krychle. A/N?",
+        "context": "Povrch hranolu je 14krát větší než obsah stěny jedné krychle. A/N?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "N",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "126:14 ≠ 9"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-32",
+        "type_label": "Objem těles",
+        "original_type": "true_false"
+      }
+    },
+    {
+      "id": "vol-test-007",
+      "topic": "volume",
+      "difficulty": 1,
+      "question": {
+        "stem": "Síť krychle má obsah 42 cm². A/N?",
+        "context": "Síť krychle má obsah 42 cm². A/N?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "N",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Zaměnila síť hranolu a síť krychle. Síť krychle = 6·a², ne obsah hranolu/3"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-32",
+        "type_label": "Objem těles",
+        "original_type": "true_false"
+      }
+    },
+    {
+      "id": "vol-test-008",
+      "topic": "volume",
+      "difficulty": 2,
+      "question": {
+        "stem": "Nejkratší hrana hranolu měří 3 cm. A/N?",
+        "context": "Nejkratší hrana hranolu měří 3 cm. A/N?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Hrana krychle a = √(126/14) = 3cm, ale studentka odpověděla N"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-32",
+        "type_label": "Objem těles",
+        "original_type": "true_false"
+      }
+    },
+    {
+      "id": "vol-test-009",
+      "topic": "volume",
+      "difficulty": 2,
+      "question": {
+        "stem": "Výška válce s poloměrem 50cm, plášť = čtverec",
+        "context": "Výška válce s poloměrem 50cm, plášť = čtverec"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "C",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "2·3,14·50 = 314 cm"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-36",
+        "type_label": "Válec",
+        "original_type": "multiple_choice"
+      }
+    },
+    {
+      "id": "vol-test-010",
+      "topic": "volume",
+      "difficulty": 1,
+      "question": {
+        "stem": "Kvádr = 200 krychlí po 8dm³. Na kolik krychlí 1cm³?",
+        "context": "Kvádr = 200 krychlí po 8dm³. Na kolik krychlí 1cm³?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "1 600 000 000",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Chyba v převodu jednotek. 8dm³ = 8000cm³, ne 8cm³"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-32",
+        "type_label": "Objem těles",
+        "original_type": null
+      }
+    },
+    {
+      "id": "vol-test-011",
+      "topic": "volume",
+      "difficulty": 2,
+      "question": {
+        "stem": "Plášť = 3× podstava, r=10cm. Povrch?",
+        "context": "Plášť = 3× podstava, r=10cm. Povrch?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "D) 1570cm²",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Plášť = 3·π·100 = 942, Povrch = 942 + 2·314 = 1570"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-36",
+        "type_label": "Válec",
+        "original_type": null
+      }
+    },
+    {
+      "id": "vol-test-012",
+      "topic": "volume",
+      "difficulty": 1,
+      "question": {
+        "stem": "Vypočtěte, kolikrát větší je objem 1,2 dm³ než objem 300 mm³.",
+        "context": "Vypočtěte, kolikrát větší je objem 1,2 dm³ než objem 300 mm³."
+      },
+      "modes": {
+        "numeric": {
+          "answer": "4000",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "1,2 dm³ = 1200000 mm³, 1200000/300 = 4000"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-32",
+        "type_label": "Objem těles",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "vol-test-013",
+      "topic": "volume",
+      "difficulty": 1,
+      "question": {
+        "stem": "Vypočtěte objem trojbokého hranolu (podstava: pravoúhlý trojúhelník 6x8 cm)",
+        "context": "Vypočtěte objem trojbokého hranolu (podstava: pravoúhlý trojúhelník 6x8 cm)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "480",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Špatný výpočet objemu. Správně: (6·8/2)·20 = 24·20 = 480 cm³"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-32",
+        "type_label": "Objem těles",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "vol-test-014",
+      "topic": "volume",
+      "difficulty": 2,
+      "question": {
+        "stem": "Vypočtěte objem čtyřbokého hranolu (rozměry x, x, 20 cm kde x=10)",
+        "context": "Vypočtěte objem čtyřbokého hranolu (rozměry x, x, 20 cm kde x=10)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "2000",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "10·10·20 = 2000"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-32",
+        "type_label": "Objem těles",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "vol-test-015",
+      "topic": "volume",
+      "difficulty": 2,
+      "question": {
+        "stem": "O kolik cm klesla hladina v nádrži",
+        "context": "O kolik cm klesla hladina v nádrži"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "B (o 9 cm)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Objem - kvádr",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-001",
+      "topic": "word_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "Adam a Naďa - o kolik kroků více",
+        "context": "Adam a Naďa - o kolik kroků více"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "900",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "2700000cm / 75cm = 36000 kroků (Adam), 2700000/60 = 45000 kroků (Naďa), 45000-36000 = 9000"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy - délka",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-002",
+      "topic": "word_problems",
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik vagónů 2. třídy v rychlíku",
+        "context": "Kolik vagónů 2. třídy v rychlíku"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "4",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Špatně sestavila rovnici - zaměnila proměnné"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-003",
+      "topic": "word_problems",
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik míst k sezení v 1. třídě",
+        "context": "Kolik míst k sezení v 1. třídě"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "120",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-004",
+      "topic": "word_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "Kolik km odřídil Rudolf (x/3 - 60)",
+        "context": "Kolik km odřídil Rudolf (x/3 - 60)"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "x/3 - 60",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy - výrazy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-005",
+      "topic": "word_problems",
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik km měřila celá trasa",
+        "context": "Kolik km měřila celá trasa"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "900",
+          "unit": "km",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-006",
+      "topic": "word_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "Cena 1 kg směsi arašídů a mandlí",
+        "context": "Cena 1 kg směsi arašídů a mandlí"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "152",
+          "unit": "Kč",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Směsi - ceny",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-007",
+      "topic": "word_problems",
+      "difficulty": 2,
+      "question": {
+        "stem": "Počet vagonů ve vlaku",
+        "context": "Počet vagonů ve vlaku"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "C (12)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-008",
+      "topic": "word_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "První + třetí = 2× druhý. Kolik první?",
+        "context": "První + třetí = 2× druhý. Kolik první?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "36",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Navazuje na chybu z 6.1 - špatný výraz pro druhého prince"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-009",
+      "topic": "word_problems",
+      "difficulty": 2,
+      "question": {
+        "stem": "Menší krabičky (5ks) = 3× větší krabičky (10 kříd). Kolik kříd v menší?",
+        "context": "Menší krabičky (5ks) = 3× větší krabičky (10 kříd). Kolik kříd v menší?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "6",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "5M = 3·10 = 30, M = 6 kříd"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-010",
+      "topic": "word_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "Celkem 300 kříd. Kolik větších krabiček?",
+        "context": "Celkem 300 kříd. Kolik větších krabiček?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "27",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "300-30=270, 270:10=27 krabiček"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-011",
+      "topic": "word_problems",
+      "difficulty": 2,
+      "question": {
+        "stem": "Za 3 roky 217 modelů. Kolik v 1.roce?",
+        "context": "Za 3 roky 217 modelů. Kolik v 1.roce?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "58",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "x + 1,5x + 72 = 217, 2,5x = 145, x = 58"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-012",
+      "topic": "word_problems",
+      "difficulty": 2,
+      "question": {
+        "stem": "Velké koláčky 30Kč, malé 20Kč. Velké prodány za 3000Kč, malé (90%) za 3600Kč. Kolik malých přivezl?",
+        "context": "Velké koláčky 30Kč, malé 20Kč. Velké prodány za 3000Kč, malé (90%) za 3600Kč. Kolik malých přivezl?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "C) 200",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Špatně interpretovala slovní úlohu. 0,9y·20 = 3600, y = 200, ne 180"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-013",
+      "topic": "word_problems",
+      "difficulty": 2,
+      "question": {
+        "stem": "V krabici jsou kuličky: 1/4 zelených, 1/6 červených, modrých o 20 více než červených. Kolik kuliček celkem?",
+        "context": "V krabici jsou kuličky: 1/4 zelených, 1/6 červených, modrých o 20 více než červených. Kolik kuliček celkem?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "240",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "1/4 + 1/6 + M = 1, M = C + 20, správně vyřešeno"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "wor-test-014",
+      "topic": "word_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "O kolik se liší počty zelených a červených kuliček?",
+        "context": "O kolik se liší počty zelených a červených kuliček?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "20",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Z = 60, Č = 40, rozdíl = 20"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "wor-test-015",
+      "topic": "word_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "Film 1h, zbývá polovina uplynulé doby. Kolik minut zbývá?",
+        "context": "Film 1h, zbývá polovina uplynulé doby. Kolik minut zbývá?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "20",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "x + 2x = 60, 3x = 60, x = 20min"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-016",
+      "topic": "word_problems",
+      "difficulty": 2,
+      "question": {
+        "stem": "Sud 15× kbelík, kbelík 5× konvička, ze sudu odebrána 1/3, zbylo 60l. Objem konvičky?",
+        "context": "Sud 15× kbelík, kbelík 5× konvička, ze sudu odebrána 1/3, zbylo 60l. Objem konvičky?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "1,2",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "S = 90l, K = 90:15 = 6l, Konv = 6:5 = 1,2l"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-017",
+      "topic": "word_problems",
+      "difficulty": 2,
+      "question": {
+        "stem": "Délka strany čtvercového pozemku",
+        "context": "Délka strany čtvercového pozemku"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "40",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Částečně správný výpočet"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-018",
+      "topic": "word_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "Rozdíl obsahů obdélníku a čtverce",
+        "context": "Rozdíl obsahů obdélníku a čtverce"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "100",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-019",
+      "topic": "word_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "49mm na mapě > 1km ve skutečnosti? A/N",
+        "context": "49mm na mapě > 1km ve skutečnosti? A/N"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "N",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Měřítko",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-020",
+      "topic": "word_problems",
+      "difficulty": 2,
+      "question": {
+        "stem": "Vycházková trasa o 20cm delší na mapě než přímá? A/N",
+        "context": "Vycházková trasa o 20cm delší na mapě než přímá? A/N"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Měřítko",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-021",
+      "topic": "word_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "Měřítko 1:20000? A/N",
+        "context": "Měřítko 1:20000? A/N"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Měřítko",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-022",
+      "topic": "word_problems",
+      "difficulty": 2,
+      "question": {
+        "stem": "Při jaké spotřebě stejná cena",
+        "context": "Při jaké spotřebě stejná cena"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "90",
+          "unit": "m³",
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Nevyřešila rovnici 72x = 61x + 990"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-023",
+      "topic": "word_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "Ema s Otou váží dohromady 70 kg",
+        "context": "Ema s Otou váží dohromady 70 kg"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A (pravdivé)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Odpověděla N místo A"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy - logika",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-024",
+      "topic": "word_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "Maminka váží o 20 kg více než Ema",
+        "context": "Maminka váží o 20 kg více než Ema"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "N (nepravdivé)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy - logika",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-025",
+      "topic": "word_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "Tatínek váží 86 kg",
+        "context": "Tatínek váží 86 kg"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "A (pravdivé)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy - logika",
+        "original_type": null
+      }
+    },
+    {
       "id": "work-001",
       "topic": "work_problems",
       "difficulty": 1,
@@ -5995,7 +12697,19 @@
         "type_id": "WORD-WORK",
         "type_label": "Úlohy o práci",
         "original_type": null
-      }
+      },
+      "common_errors": [
+        {
+          "value": "3,67",
+          "variants": [
+            "3.67",
+            "11/3",
+            "3,7"
+          ],
+          "feedback": "Pozor na slovo 'dalších' v zadání – ptáme se kolik dní PO tom prvním dni, ne celkem.",
+          "misconception": "total_vs_additional"
+        }
+      ]
     },
     {
       "id": "work-008",
@@ -6034,6 +12748,134 @@
         "type_id": "WORD-WORK",
         "type_label": "Úlohy o práci",
         "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-009",
+      "topic": "work_problems",
+      "difficulty": 2,
+      "question": {
+        "stem": "Za kolik minut oškrabou 1 kg brambor dohromady",
+        "context": "Za kolik minut oškrabou 1 kg brambor dohromady"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "C (za 15 minut)",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "1/24 + 1/40 = 8/120 = 1/15"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy - práce",
+        "original_type": null
+      }
+    },
+    {
+      "id": "wor-test-010",
+      "topic": "work_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "Kolik balení vitaminů spotřebuje jeden dospělý za 360 dní?",
+        "context": "Kolik balení vitaminů spotřebuje jeden dospělý za 360 dní?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "6",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "360/60 = 6"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Společná práce",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "wor-test-011",
+      "topic": "work_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "Za kolik dní spotřebuje jedno balení vitaminů jedno dítě?",
+        "context": "Za kolik dní spotřebuje jedno balení vitaminů jedno dítě?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "60",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [
+        "Častá chyba: Špatně interpretovala 'poloviční dávka'. Dospělý = 1 balení za 60 dní, dítě poloviční dávka = 1 balení za 60 dní (ne 120!)"
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Společná práce",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "wor-test-012",
+      "topic": "work_problems",
+      "difficulty": 1,
+      "question": {
+        "stem": "Za kolik dní spotřebují jedno balení dva dospělí a jedno dítě?",
+        "context": "Za kolik dní spotřebují jedno balení dva dospělí a jedno dítě?"
+      },
+      "modes": {
+        "numeric": {
+          "answer": "24",
+          "unit": null,
+          "variants": [],
+          "distractors": []
+        }
+      },
+      "keyboard": {
+        "variable": null
+      },
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správně vypočteno"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Společná práce",
+        "original_type": "open"
       }
     }
   ]

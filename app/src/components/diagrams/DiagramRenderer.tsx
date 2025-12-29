@@ -6,6 +6,12 @@ import RectangleDiagram from './RectangleDiagram'
 import CubeDiagram from './CubeDiagram'
 import SquareDiagram from './SquareDiagram'
 import EquilateralTriangleDiagram from './EquilateralTriangleDiagram'
+import TriangleDiagram from './TriangleDiagram'
+// New diagram components
+import ParallelLinesDiagram from './ParallelLinesDiagram'
+import CylinderDiagram from './CylinderDiagram'
+import TrapezoidDiagram from './TrapezoidDiagram'
+import PrismDiagram from './PrismDiagram'
 
 const diagramComponents: Record<DiagramType, ComponentType<DiagramProps>> = {
   right_triangle: RightTriangleDiagram,
@@ -13,7 +19,13 @@ const diagramComponents: Record<DiagramType, ComponentType<DiagramProps>> = {
   rectangle: RectangleDiagram,
   cube: CubeDiagram,
   square: SquareDiagram,
-  equilateral_triangle: EquilateralTriangleDiagram
+  equilateral_triangle: EquilateralTriangleDiagram,
+  triangle: TriangleDiagram,
+  // New diagrams
+  parallel_lines: ParallelLinesDiagram,
+  cylinder: CylinderDiagram,
+  trapezoid: TrapezoidDiagram,
+  prism: PrismDiagram
 }
 
 interface DiagramRendererProps {
