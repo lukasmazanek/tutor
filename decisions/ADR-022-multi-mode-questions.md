@@ -1,7 +1,7 @@
 # ADR-022: Multi-Mode Questions and Keyboard Enhancement
 
 ## Status
-Proposed
+Implemented (2025-12-29)
 
 ## Date
 2025-12-27
