@@ -16,7 +16,7 @@ function Feedback({ question, selectedAnswer, isCorrect, streak }: FeedbackProps
 
   // UNIFIED FORMAT: Get hint data
   const hintRule = question.solution.strategy || ''
-  const hintExplanation = question.hints[0] || ''
+  const solutionSteps = question.solution.steps || []
 
   if (isCorrect) {
     // Correct answer - minimal feedback, auto-advances
@@ -65,7 +65,7 @@ function Feedback({ question, selectedAnswer, isCorrect, streak }: FeedbackProps
         </div>
       </div>
 
-      {/* Hint */}
+      {/* Hint + Solution Steps */}
       <div className="bg-purple-50 border border-purple-100 rounded-xl p-4 w-full max-w-sm">
         <div className="flex items-start gap-3">
           <LightBulbIcon className="w-6 h-6 text-purple-600 flex-shrink-0 mt-0.5" />
@@ -73,9 +73,11 @@ function Feedback({ question, selectedAnswer, isCorrect, streak }: FeedbackProps
             <p className="text-purple-800 font-medium mb-1">
               {hintRule}
             </p>
-            <p className="text-purple-600 text-sm">
-              {hintExplanation}
-            </p>
+            {solutionSteps.map((step, idx) => (
+              <p key={idx} className="text-purple-600 text-sm">
+                {step}
+              </p>
+            ))}
           </div>
         </div>
       </div>
