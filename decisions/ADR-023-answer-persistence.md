@@ -1,31 +1,31 @@
 # ADR-023: Answer Persistence with Supabase
 
 **Date:** 2024-12-27
-**Status:** Partially Implemented (Phase 1 only - localStorage cache)
+**Status:** Implemented (Phase 1 + Phase 2)
 **Role:** Architect
 
 ## Context
 
-Pro analýzu problémových oblastí a sledování pokroku potřebujeme ukládat odpovědi uživatelů. Aplikace bude v budoucnu podporovat více uživatelů, což vyžaduje centrální úložiště.
+Pro analýzu problémových oblastí a sledování pokroku potřebujeme ukládat odpovědi uživatelů.
 
 ## Decision
 
-### 1. Storage: Supabase
+### 1. Storage: Supabase (Simplified)
 
-- **Proč**: Multi-user podpora, synchronizace, free tier (50k MAU, 500MB)
-- **Alternativy zamítnuty**:
-  - localStorage only - bez multi-user
-  - Custom backend - zbytečná komplexita
+- **Proč**: Centrální úložiště pro sledování pokroku
+- **Zjednodušení**: Single-user setup, hardcoded `user_id = 'anezka'`
+- **Bez autentizace**: Není potřeba login - appka prostě ukládá
 
-### 2. Sync strategie: Local-first + batch sync
+### 2. Storage strategie: Direct to Supabase
 
 ```
-Uživatel odpovídá → localStorage cache → Konec session → Supabase sync
+Supabase configured? → Ano → Ukládá do Supabase
+                     → Ne  → Fallback na localStorage
 ```
 
-- Chrání před ztrátou dat (zavření prohlížeče)
-- Šetří API quota
-- Offline-first přístup
+- Env vars určují zda použít Supabase
+- Bez složité sync logiky
+- Otec vidí pokrok v Supabase dashboardu
 
 ### 3. Data struktura: Maximum pro analýzu
 
@@ -58,16 +58,14 @@ interface AttemptRecord {
 }
 ```
 
-### 4. Supabase schema
+### 4. Supabase schema (Simplified)
 
 ```sql
--- Users table (Supabase Auth handles this)
-
 -- Sessions table
 CREATE TABLE sessions (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID REFERENCES auth.users(id),
-  topic VARCHAR(50),
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id TEXT NOT NULL,  -- hardcoded 'anezka'
+  topic TEXT NOT NULL,
   started_at TIMESTAMPTZ DEFAULT NOW(),
   ended_at TIMESTAMPTZ,
   problems_count INTEGER DEFAULT 0
@@ -75,72 +73,49 @@ CREATE TABLE sessions (
 
 -- Attempts table
 CREATE TABLE attempts (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID REFERENCES auth.users(id) NOT NULL,
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id TEXT NOT NULL,  -- hardcoded 'anezka'
   session_id UUID REFERENCES sessions(id),
-
-  -- Question snapshot
-  question_id VARCHAR(50) NOT NULL,
+  question_id TEXT NOT NULL,
   question_stem TEXT NOT NULL,
   correct_answer TEXT NOT NULL,
-  topic VARCHAR(50) NOT NULL,
-  difficulty SMALLINT DEFAULT 1,
-
-  -- Answer
+  topic TEXT NOT NULL,
+  difficulty INTEGER NOT NULL,
   user_answer TEXT NOT NULL,
   is_correct BOOLEAN NOT NULL,
-  mode VARCHAR(20) NOT NULL,
-
-  -- Analysis context
-  hints_used SMALLINT DEFAULT 0,
-  hints_shown TEXT[] DEFAULT '{}',
+  mode TEXT NOT NULL,
+  hints_used INTEGER DEFAULT 0,
+  hints_shown JSONB DEFAULT '[]',
   time_spent_ms INTEGER DEFAULT 0,
-
-  -- Metadata
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- Indexes for common queries
-CREATE INDEX idx_attempts_user_id ON attempts(user_id);
-CREATE INDEX idx_attempts_question_id ON attempts(question_id);
-CREATE INDEX idx_attempts_topic ON attempts(topic);
-CREATE INDEX idx_attempts_created_at ON attempts(created_at);
-
--- RLS policies
-ALTER TABLE attempts ENABLE ROW LEVEL SECURITY;
+-- RLS policies (allow all for single-user app)
 ALTER TABLE sessions ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Users can view own attempts" ON attempts
-  FOR SELECT USING (auth.uid() = user_id);
-
-CREATE POLICY "Users can insert own attempts" ON attempts
-  FOR INSERT WITH CHECK (auth.uid() = user_id);
-
-CREATE POLICY "Users can view own sessions" ON sessions
-  FOR SELECT USING (auth.uid() = user_id);
-
-CREATE POLICY "Users can insert own sessions" ON sessions
-  FOR INSERT WITH CHECK (auth.uid() = user_id);
+ALTER TABLE attempts ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Allow all" ON sessions FOR ALL USING (true);
+CREATE POLICY "Allow all" ON attempts FOR ALL USING (true);
 ```
+
+Full schema: `lib/supabase/schema.sql`
 
 ## Implementation
 
-### Phase 1: Local cache (bez Supabase)
-1. Přidat `useAttemptCache` hook
-2. Ukládat do localStorage při každé odpovědi
-3. Rozšířit existující `saveSession()` v App.tsx
+### Phase 1: Local cache ✅
+- `lib/storage/localStorage.ts` - localStorage provider
+- `lib/storage/types.ts` - shared TypeScript types
+- Fallback když Supabase není configured
 
-### Phase 2: Supabase integration
-1. Setup Supabase projekt
-2. Vytvořit schema (SQL výše)
-3. Přidat `@supabase/supabase-js`
-4. Implementovat sync service
-5. Auth flow (magic link nebo OAuth)
+### Phase 2: Supabase integration ✅ (2024-12-29)
+- `lib/supabase/client.ts` - Supabase client (hardcoded USER_ID)
+- `lib/storage/supabase.ts` - Supabase provider
+- `lib/storage/index.ts` - auto-select provider based on config
+- `lib/supabase/schema.sql` - database schema
+- `app/.env.local` - credentials (not in git)
 
-### Phase 3: Analytics views
-1. Dashboard pro rodiče/tutora
-2. Problémové oblasti (vysoké hints_used, nízké is_correct)
-3. Časová analýza (pomalé odpovědi = nejistota)
+### Phase 3: Analytics views (TODO)
+- Dashboard pro rodiče/tutora
+- SQL queries pro analýzu v Supabase dashboard
 
 ## Affected Components
 
@@ -163,20 +138,20 @@ CREATE POLICY "Users can insert own sessions" ON sessions
 
 **Positive:**
 - Kompletní data pro analýzu problémových oblastí
-- Multi-user ready
-- Offline-first (žádná ztráta dat)
-- Synchronizace napříč zařízeními
+- Otec vidí pokrok v Supabase dashboardu
+- Anežka nic nepozná - prostě cvičí
+- Jednoduchá implementace bez auth komplexity
 
 **Negative:**
 - Závislost na externím service (Supabase)
-- Nutnost řešit auth
-- GDPR considerations (data dítěte)
+- Single-user only (hardcoded user_id)
+- Credentials v env vars (musí být při buildu)
 
-## Open Questions
+## Resolved Questions
 
-1. Auth flow - magic link vs OAuth vs parent-managed accounts?
-2. Data retention - jak dlouho uchovávat?
-3. Export format - JSON vs CSV pro analýzu?
+1. ~~Auth flow~~ → Bez auth, hardcoded user_id = 'anezka'
+2. ~~Multi-user~~ → Single-user pro teď, rozšířitelné později
+3. Dashboard → Supabase Table Editor + SQL queries
 
 ## Related
 
