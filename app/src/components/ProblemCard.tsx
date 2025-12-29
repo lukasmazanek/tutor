@@ -239,17 +239,19 @@ function ProblemCard({
         </div>
       </div>
 
-      {/* Problem text and diagram - ADR-028 */}
-      <QuestionDisplay
-        question={problem}
-        className="bg-white rounded-2xl shadow-sm p-5 mb-4 mx-4 mt-4"
-        textClassName="text-lg text-slate-800 leading-relaxed"
-      />
+      {/* Problem text and diagram - ADR-028, ADR-031: max-w-2xl for desktop */}
+      <div className="max-w-2xl mx-auto w-full">
+        <QuestionDisplay
+          question={problem}
+          className="bg-white rounded-2xl shadow-sm p-5 mb-4 mx-4 mt-4"
+          textClassName="text-lg text-slate-800 leading-relaxed"
+        />
+      </div>
 
       {/* Strategy prompt phase */}
       {promptPhase === 'strategy' && typeMapping && (
         <>
-          <div className="flex-1 min-h-0 overflow-y-auto px-4 pb-20">
+          <div className="flex-1 min-h-0 overflow-y-auto px-4 pb-20 max-w-2xl mx-auto w-full">
             <div className="flex items-center gap-2 mb-4 px-3 py-2 rounded-lg bg-indigo-50 text-indigo-700">
               <TagIcon className="w-4 h-4" />
               <span className="text-sm font-medium">{typeMapping.type_label}</span>
@@ -282,9 +284,9 @@ function ProblemCard({
         </>
       )}
 
-      {/* Content area */}
+      {/* Content area - ADR-031: max-w-2xl for desktop */}
       {promptPhase === 'done' && (
-      <div className="flex-1 min-h-0 flex flex-col overflow-auto px-4 pb-64">
+      <div className="flex-1 min-h-0 flex flex-col overflow-auto px-4 pb-64 max-w-2xl mx-auto w-full">
         {/* Strategy result */}
         {typePromptEnabled && typeMapping && strategyPromptResult !== null && (
           <div className="bg-indigo-50 border border-indigo-100 rounded-xl p-4 mb-4 flex-shrink-0">
