@@ -1,4 +1,5 @@
 import { CheckIcon, LightBulbIcon, FireIcon } from '@heroicons/react/24/solid'
+import DiagramRenderer from '../diagrams/DiagramRenderer'
 import { LightningQuestion } from './types'
 
 interface FeedbackProps {
@@ -37,9 +38,21 @@ function Feedback({ question, selectedAnswer, isCorrect, streak }: FeedbackProps
     )
   }
 
-  // Wrong answer - show hint (Continue button in BottomBar)
+  // Wrong answer - show question + hint (Continue button in BottomBar)
+  const questionText = question.question.stem || question.question.context || ''
+
   return (
-    <div className="flex-1 flex flex-col items-center justify-center p-4 pb-24">
+    <div className="flex-1 flex flex-col items-center p-4 pb-24 overflow-y-auto">
+      {/* Original question + diagram */}
+      <div className="bg-white rounded-2xl shadow-sm p-5 w-full max-w-sm mb-4">
+        {question.diagram && (
+          <DiagramRenderer diagram={question.diagram} />
+        )}
+        <p className={`text-lg text-center text-slate-800 font-medium ${isTypeRecognition ? 'font-mono' : ''}`}>
+          {questionText}
+        </p>
+      </div>
+
       {/* What was answered vs correct */}
       <div className="bg-white rounded-2xl shadow-sm p-6 w-full max-w-sm mb-4">
         <div className="text-center mb-4">
