@@ -1,14 +1,9 @@
 /**
- * ADR-023 Phase 2: Supabase Module
- *
- * Re-exports Supabase client and auth helpers.
+ * ADR-023 Phase 2: Supabase Module (Simplified)
  */
 
 export {
   getSupabaseClient,
-  getCurrentUser,
-  signInWithMagicLink,
-  signOut,
-  isAuthenticated,
-  isConfigured
+  isConfigured,
+  USER_ID
 } from './client'

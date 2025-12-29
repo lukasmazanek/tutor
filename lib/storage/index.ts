@@ -1,35 +1,34 @@
 /**
- * ADR-023: Storage Layer
+ * ADR-023: Storage Layer (Simplified)
  *
  * Unified storage interface for attempt persistence.
- * Phase 1: localStorage (offline, no auth)
- * Phase 2: Supabase (when authenticated)
+ * - Uses Supabase when configured (env variables set)
+ * - Falls back to localStorage otherwise
+ *
+ * Single-user setup - no authentication required.
  *
  * Usage:
  *   import { storage, getActiveStorage } from '@lib/storage'
  *
- *   // Sync usage (localStorage fallback)
- *   await storage.saveAttempt({ ... })
- *
- *   // Async usage (uses Supabase if authenticated)
+ *   // Get active provider (Supabase if configured, else localStorage)
  *   const activeStorage = await getActiveStorage()
  *   await activeStorage.saveAttempt({ ... })
  */
 
 import { localStorageProvider } from './localStorage'
 import { supabaseStorageProvider } from './supabase'
-import { isConfigured, isAuthenticated } from '../supabase'
+import { isConfigured } from '../supabase'
 import type { StorageProvider } from './types'
 
 // Re-export types for convenience
 export * from './types'
 
 /**
- * Get the active storage provider based on auth state.
- * Returns Supabase if configured and authenticated, otherwise localStorage.
+ * Get the active storage provider.
+ * Returns Supabase if configured, otherwise localStorage.
  */
-export async function getActiveStorage(): Promise<StorageProvider> {
-  if (isConfigured() && await isAuthenticated()) {
+export function getActiveStorage(): StorageProvider {
+  if (isConfigured()) {
     return supabaseStorageProvider
   }
   return localStorageProvider
@@ -37,53 +36,52 @@ export async function getActiveStorage(): Promise<StorageProvider> {
 
 /**
  * Sync storage - always returns localStorage.
- * Use this when you need immediate sync access.
- * Data will be synced to Supabase on next getActiveStorage() call.
+ * Use this when you need immediate sync access without Supabase.
  */
 export const storage = localStorageProvider
 
 // Convenience functions using smart provider selection
-export async function saveAttempt(...args: Parameters<StorageProvider['saveAttempt']>) {
-  const provider = await getActiveStorage()
+export function saveAttempt(...args: Parameters<StorageProvider['saveAttempt']>) {
+  const provider = getActiveStorage()
   return provider.saveAttempt(...args)
 }
 
-export async function getAttempts() {
-  const provider = await getActiveStorage()
+export function getAttempts() {
+  const provider = getActiveStorage()
   return provider.getAttempts()
 }
 
-export async function startSession(topic: string) {
-  const provider = await getActiveStorage()
+export function startSession(topic: string) {
+  const provider = getActiveStorage()
   return provider.startSession(topic)
 }
 
-export async function endSession() {
-  const provider = await getActiveStorage()
+export function endSession() {
+  const provider = getActiveStorage()
   return provider.endSession()
 }
 
 export function getCurrentSessionId() {
-  // Session ID is local only (managed per-tab)
-  return localStorageProvider.getCurrentSessionId()
+  const provider = getActiveStorage()
+  return provider.getCurrentSessionId()
 }
 
-export async function getTopicStats() {
-  const provider = await getActiveStorage()
+export function getTopicStats() {
+  const provider = getActiveStorage()
   return provider.getTopicStats()
 }
 
-export async function getAttemptsForQuestion(questionId: string) {
-  const provider = await getActiveStorage()
+export function getAttemptsForQuestion(questionId: string) {
+  const provider = getActiveStorage()
   return provider.getAttemptsForQuestion(questionId)
 }
 
-export async function getAttemptsForTopic(topic: string) {
-  const provider = await getActiveStorage()
+export function getAttemptsForTopic(topic: string) {
+  const provider = getActiveStorage()
   return provider.getAttemptsForTopic(topic)
 }
 
-export async function getRecentAttempts(days: number = 7) {
-  const provider = await getActiveStorage()
+export function getRecentAttempts(days: number = 7) {
+  const provider = getActiveStorage()
   return provider.getRecentAttempts(days)
 }

@@ -1,11 +1,11 @@
 /**
- * ADR-023 Phase 2: Supabase Storage Provider
+ * ADR-023 Phase 2: Supabase Storage Provider (Simplified)
  *
- * Implements StorageProvider interface using Supabase as backend.
- * Requires user to be authenticated.
+ * Single-user setup - uses hardcoded USER_ID.
+ * No authentication required.
  */
 
-import { getSupabaseClient, getCurrentUser } from '../supabase'
+import { getSupabaseClient, USER_ID } from '../supabase'
 import {
   AttemptRecord,
   SessionRecord,
@@ -17,12 +17,6 @@ import {
 class SupabaseStorageProvider implements StorageProvider {
   private currentSessionId: string | null = null
 
-  private async getUserId(): Promise<string> {
-    const user = await getCurrentUser()
-    if (!user) throw new Error('User not authenticated')
-    return user.id
-  }
-
   private getClient() {
     const client = getSupabaseClient()
     if (!client) throw new Error('Supabase not configured')
@@ -33,12 +27,11 @@ class SupabaseStorageProvider implements StorageProvider {
 
   async getAttempts(): Promise<AttemptRecord[]> {
     const client = this.getClient()
-    const userId = await this.getUserId()
 
     const { data, error } = await client
       .from('attempts')
       .select('*')
-      .eq('user_id', userId)
+      .eq('user_id', USER_ID)
       .order('created_at', { ascending: false })
 
     if (error) throw error
@@ -47,10 +40,9 @@ class SupabaseStorageProvider implements StorageProvider {
 
   async saveAttempt(input: SaveAttemptInput): Promise<AttemptRecord> {
     const client = this.getClient()
-    const userId = await this.getUserId()
 
     const attempt = {
-      user_id: userId,
+      user_id: USER_ID,
       session_id: this.currentSessionId,
       ...input,
       created_at: new Date().toISOString()
@@ -68,12 +60,11 @@ class SupabaseStorageProvider implements StorageProvider {
 
   async getAttemptsForQuestion(questionId: string): Promise<AttemptRecord[]> {
     const client = this.getClient()
-    const userId = await this.getUserId()
 
     const { data, error } = await client
       .from('attempts')
       .select('*')
-      .eq('user_id', userId)
+      .eq('user_id', USER_ID)
       .eq('question_id', questionId)
       .order('created_at', { ascending: false })
 
@@ -83,12 +74,11 @@ class SupabaseStorageProvider implements StorageProvider {
 
   async getAttemptsForTopic(topic: string): Promise<AttemptRecord[]> {
     const client = this.getClient()
-    const userId = await this.getUserId()
 
     const { data, error } = await client
       .from('attempts')
       .select('*')
-      .eq('user_id', userId)
+      .eq('user_id', USER_ID)
       .eq('topic', topic)
       .order('created_at', { ascending: false })
 
@@ -98,14 +88,13 @@ class SupabaseStorageProvider implements StorageProvider {
 
   async getRecentAttempts(days: number = 7): Promise<AttemptRecord[]> {
     const client = this.getClient()
-    const userId = await this.getUserId()
     const cutoff = new Date()
     cutoff.setDate(cutoff.getDate() - days)
 
     const { data, error } = await client
       .from('attempts')
       .select('*')
-      .eq('user_id', userId)
+      .eq('user_id', USER_ID)
       .gte('created_at', cutoff.toISOString())
       .order('created_at', { ascending: false })
 
@@ -117,12 +106,11 @@ class SupabaseStorageProvider implements StorageProvider {
 
   async getSessions(): Promise<SessionRecord[]> {
     const client = this.getClient()
-    const userId = await this.getUserId()
 
     const { data, error } = await client
       .from('sessions')
       .select('*')
-      .eq('user_id', userId)
+      .eq('user_id', USER_ID)
       .order('started_at', { ascending: false })
 
     if (error) throw error
@@ -131,10 +119,9 @@ class SupabaseStorageProvider implements StorageProvider {
 
   async startSession(topic: string): Promise<string> {
     const client = this.getClient()
-    const userId = await this.getUserId()
 
     const session = {
-      user_id: userId,
+      user_id: USER_ID,
       topic,
       started_at: new Date().toISOString(),
       ended_at: null,
@@ -184,9 +171,7 @@ class SupabaseStorageProvider implements StorageProvider {
 
   async getTopicStats(): Promise<TopicStats[]> {
     const client = this.getClient()
-    const userId = await this.getUserId()
 
-    // Define type for the partial attempt data we're selecting
     type AttemptStatsRow = {
       topic: string
       is_correct: boolean
@@ -194,16 +179,14 @@ class SupabaseStorageProvider implements StorageProvider {
       time_spent_ms: number
     }
 
-    // Get all attempts for user
     const { data: attempts, error } = await client
       .from('attempts')
       .select('topic, is_correct, hints_used, time_spent_ms')
-      .eq('user_id', userId)
+      .eq('user_id', USER_ID)
 
     if (error) throw error
     if (!attempts || attempts.length === 0) return []
 
-    // Group by topic and calculate stats
     const byTopic = new Map<string, AttemptStatsRow[]>()
     for (const attempt of attempts as AttemptStatsRow[]) {
       const list = byTopic.get(attempt.topic) || []
