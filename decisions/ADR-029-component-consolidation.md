@@ -1,7 +1,7 @@
 # ADR-029: Component Consolidation Refactoring
 
 ## Status
-Accepted
+Implemented (2025-12-29)
 
 ## Date
 2025-12-29
@@ -193,23 +193,22 @@ export function calculatePercentage(value: number, total: number): number {
 
 ## Implementation Plan
 
-### Phase 1 (Core - Do First)
+### Phase 1 (Core) ✅ COMPLETE
 1. ✅ ADR-028: QuestionDisplay component
-2. Create `lib/questionUtils.ts` with `getQuestionText()`
-3. Create `PageLayout` component
-4. Refactor all 9 page components to use PageLayout
+2. ✅ Create `lib/questionUtils.ts` with `getQuestionText()` and `getSolutionData()`
+3. ✅ Create `PageLayout` component
+4. ✅ Refactor ProblemCard, LightningRound, TypeDrill, VisualExplainer
 
-### Phase 2 (UI - Do Second)
-5. Create `constants/styles.ts` with CARD and BUTTON constants
-6. Create `AnswerOptions` component
-7. Add `getSolutionData()` to questionUtils
-8. Refactor components to use new constants/components
+### Phase 2 (UI) ✅ COMPLETE
+5. ✅ Create `constants/styles.ts` with CARD, BUTTON, STATUS constants
+6. ✅ Create `AnswerOptions` component
+7. ✅ Refactor TypeDrill/TypeQuestion and StrategyQuestion
 
-### Phase 3 (Hooks - Do Last)
-9. Create `useQuestionTimer` hook
-10. Create `StreakBadge` component
-11. Add `calculatePercentage` to mathUtils
-12. Refactor remaining duplications
+### Phase 3 (Hooks) ✅ COMPLETE
+8. ✅ Create `useQuestionTimer` hook
+9. ✅ Create `StreakBadge` component
+10. ✅ Create `lib/mathUtils.ts` with calculatePercentage, formatTimeSeconds, calculateAverage
+11. ✅ Refactor LightningRound and TypeDrill summaries
 
 ## File Structure After Refactoring
 
