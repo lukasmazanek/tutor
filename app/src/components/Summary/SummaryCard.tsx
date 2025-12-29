@@ -42,6 +42,9 @@ export interface SummaryCardProps {
   onExit: () => void
   onRestart: () => void
   onViewProgress: () => void
+
+  // ADR-031: Allow 'continue' action for SessionSummary
+  actionType?: 'restart' | 'continue'
 }
 
 const ICONS = {
@@ -74,7 +77,8 @@ function SummaryCard({
   encouragement,
   onExit,
   onRestart,
-  onViewProgress
+  onViewProgress,
+  actionType = 'restart'
 }: SummaryCardProps) {
   const IconComponent = ICONS[icon]
   const iconColor = ICON_COLORS[icon]
@@ -171,7 +175,7 @@ function SummaryCard({
         slots={{
           1: { onClick: onExit },
           2: { onClick: onViewProgress },
-          5: { action: 'restart', onClick: onRestart }
+          5: { action: actionType, onClick: onRestart }
         }}
       />
     </div>

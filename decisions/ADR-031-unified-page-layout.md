@@ -1,7 +1,7 @@
 # ADR-031: Unified Page Layout System
 
 **Date:** 2024-12-29
-**Status:** Proposed
+**Status:** Accepted
 **Role:** Architect
 
 ## Context
