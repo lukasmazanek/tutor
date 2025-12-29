@@ -1,5 +1,6 @@
 import { FireIcon } from '@heroicons/react/24/solid'
 import { TagIcon, QuestionMarkCircleIcon } from '@heroicons/react/24/outline'
+import DiagramRenderer from '../diagrams/DiagramRenderer'
 import { LightningQuestion } from './types'
 
 interface QuestionProps {
@@ -44,6 +45,9 @@ function Question({ question, onAnswer, streak }: QuestionProps) {
 
       {/* Question */}
       <div className="bg-white rounded-2xl shadow-sm p-5 mb-4">
+        {question.diagram && (
+          <DiagramRenderer diagram={question.diagram} />
+        )}
         <p className={`text-lg text-center text-slate-800 font-medium ${isTypeRecognition ? 'font-mono' : ''}`}>
           {questionText}
         </p>
