@@ -128,7 +128,19 @@ function buildModes(q) {
   return modes;
 }
 
-// Transform to unified output format (ADR-014, ADR-016, ADR-020, ADR-022)
+// ADR-033: Transform common_errors for output
+function transformCommonErrors(commonErrors) {
+  if (!commonErrors || commonErrors.length === 0) return undefined;
+
+  return commonErrors.map(err => ({
+    value: err.value,
+    variants: err.variants || [],
+    feedback: err.feedback,
+    misconception: err.misconception || null
+  }));
+}
+
+// Transform to unified output format (ADR-014, ADR-016, ADR-020, ADR-022, ADR-033)
 function toUnifiedFormat(q) {
   const modes = buildModes(q);
 
@@ -157,22 +169,27 @@ function toUnifiedFormat(q) {
     }
   };
 
-  // Add diagram for pythagorean questions
-  if (q.topic === 'pythagorean') {
-    // Use source diagram if present, otherwise auto-generate
-    if (q.diagram) {
-      result.diagram = {
-        type: q.diagram.type || 'right_triangle',
-        highlight: q.diagram.highlight || getPythagoreanHighlight(q.question.stem),
-        labels: q.diagram.labels || getPythagoreanLabels(q.question.stem)
-      };
-    } else {
-      result.diagram = {
-        type: 'right_triangle',
-        highlight: getPythagoreanHighlight(q.question.stem),
-        labels: getPythagoreanLabels(q.question.stem)
-      };
-    }
+  // ADR-033: Include common_errors if present
+  const commonErrors = transformCommonErrors(q.common_errors);
+  if (commonErrors) {
+    result.common_errors = commonErrors;
+  }
+
+  // Add diagram - either from source or auto-generate for pythagorean
+  if (q.diagram) {
+    // Use source diagram directly
+    result.diagram = {
+      type: q.diagram.type,
+      highlight: q.diagram.highlight || null,
+      labels: q.diagram.labels || null
+    };
+  } else if (q.topic === 'pythagorean') {
+    // Auto-generate for pythagorean questions
+    result.diagram = {
+      type: 'right_triangle',
+      highlight: getPythagoreanHighlight(q.question.stem),
+      labels: getPythagoreanLabels(q.question.stem)
+    };
   }
 
   return result;

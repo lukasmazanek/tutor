@@ -1,8 +1,8 @@
 {
   "topic": "binomial_squares",
   "name": "Umocňování (a±b)²",
-  "version": "1.0",
-  "migrated": "2025-12-25",
+  "version": "1.1",
+  "migrated": "2025-12-29",
   "questions": [
     {
       "id": "bin-001",
@@ -406,6 +406,234 @@
         "type_id": "ALG-BINOM",
         "type_label": "Umocňování",
         "source": "generated"
+      }
+    },
+    {
+      "id": "bin-test-009",
+      "topic": "binomial_squares",
+      "tags": [
+        "umocňování"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "(1/3 - 4b)²",
+        "context": "(1/3 - 4b)²",
+        "image": null
+      },
+      "answer": {
+        "correct": "1/9 - 8b/3 + 16b²",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Chyba ve vzorci (a-b)² - zapomněla prostřední člen a kvadratický člen"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Umocňování",
+        "source": "M9PDD24C0T04"
+      }
+    },
+    {
+      "id": "bin-test-010",
+      "topic": "binomial_squares",
+      "tags": [
+        "vzorce-a²-b²"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "(y-3y)·(y+3y)",
+        "context": "(y-3y)·(y+3y)",
+        "image": null
+      },
+      "answer": {
+        "correct": "-8y²",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "(-2y)·(4y) = -8y²"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-24",
+        "type_label": "Vzorce a²-b²",
+        "source": "M9PCD22C0T03"
+      }
+    },
+    {
+      "id": "bin-test-011",
+      "topic": "binomial_squares",
+      "tags": [
+        "vzorce-(a-b)²"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Umocněte: (-3 - 2x)²",
+        "context": "Umocněte: (-3 - 2x)²",
+        "image": null
+      },
+      "answer": {
+        "correct": "9 + 12x + 4x²",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správně aplikován vzorec (a+b)²"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-25",
+        "type_label": "Vzorce (a-b)²",
+        "source": "M9PBD24C0T02"
+      }
+    },
+    {
+      "id": "bin-test-012",
+      "topic": "binomial_squares",
+      "tags": [
+        "vzorce-a²-b²"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Rozložte: 6400 - (x² - 3600)",
+        "context": "Rozložte: 6400 - (x² - 3600)",
+        "image": null
+      },
+      "answer": {
+        "correct": "(100-x)(100+x) nebo 10000-x²",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Nesprávně převedla 6400-(x²-3600)=10000-x² a pak rozklad. Znaménka v závorkách jsou opačně."
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-24",
+        "type_label": "Vzorce a²-b²",
+        "source": "M9PBD24C0T02"
+      }
+    },
+    {
+      "id": "bin-test-013",
+      "topic": "binomial_squares",
+      "tags": [
+        "vzorce-(a-b)²"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Umocněte: (3a - 0,4)²",
+        "context": "Umocněte: (3a - 0,4)²",
+        "image": null
+      },
+      "answer": {
+        "correct": "9a² - 2,4a + 0,16",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správná aplikace vzorce (a-b)²"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-25",
+        "type_label": "Vzorce (a-b)²",
+        "source": "M9PBD22C0T02",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "bin-test-014",
+      "topic": "binomial_squares",
+      "tags": [
+        "vzorce-(a-b)²"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "(2/3·a - 3)²",
+        "context": "(2/3·a - 3)²",
+        "image": null
+      },
+      "answer": {
+        "correct": "4/9·a² - 4a + 9",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správná aplikace vzorce"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-25",
+        "type_label": "Vzorce (a-b)²",
+        "source": "M9PAD23C0T01"
+      }
+    },
+    {
+      "id": "bin-test-015",
+      "topic": "binomial_squares",
+      "tags": [
+        "vzorce-(a+b)²"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Umocněte a zjednodušte: (x/7 + 3/2)²",
+        "context": "Umocněte a zjednodušte: (x/7 + 3/2)²",
+        "image": null
+      },
+      "answer": {
+        "correct": "x²/49 + 3x/7 + 9/4",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Nesprávná aplikace vzorce (a+b)² = a² + 2ab + b². Zapomněla umocnit první člen: (x/7)² = x²/49, ne x"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-25",
+        "type_label": "Vzorce (a+b)²",
+        "source": "M9PAD22C0T01",
+        "original_type": "open"
       }
     }
   ]

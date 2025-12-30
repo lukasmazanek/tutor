@@ -5,124 +5,6 @@
   "migrated": "2025-12-29",
   "questions": [
     {
-      "id": "vol-test-001",
-      "topic": "volume",
-      "tags": [
-        "tělesa---válec"
-      ],
-      "difficulty": 1,
-      "question": {
-        "stem": "Poloměr podstavy válce",
-        "context": "Poloměr podstavy válce",
-        "image": null
-      },
-      "answer": {
-        "correct": "5",
-        "unit": "cm",
-        "variants": []
-      },
-      "distractors": [],
-      "hints": [
-        {
-          "level": 1,
-          "text": "Častá chyba: Nepochopila, že poloměr = polovina úhlopříčky čtverce 6x8 (√100/2 = 5)"
-        }
-      ],
-      "solution": {
-        "steps": [],
-        "strategy": null
-      },
-      "meta": {
-        "type_id": "TEST-undefined",
-        "type_label": "Tělesa - válec",
-        "source": "M9PCD23C0T03"
-      },
-      "diagram": {
-        "type": "cylinder",
-        "labels": {
-          "r": "?",
-          "h": "?"
-        },
-        "highlight": null
-      }
-    },
-    {
-      "id": "vol-test-002",
-      "topic": "volume",
-      "tags": [
-        "objem-válce"
-      ],
-      "difficulty": 2,
-      "question": {
-        "stem": "Objem válce v cm³",
-        "context": "Objem válce v cm³",
-        "image": null
-      },
-      "answer": {
-        "correct": "942",
-        "unit": "cm³",
-        "variants": []
-      },
-      "distractors": [],
-      "hints": [
-        {
-          "level": 1,
-          "text": "Častá chyba: Navazující chyba z 7.1 - použila špatný poloměr"
-        }
-      ],
-      "solution": {
-        "steps": [],
-        "strategy": null
-      },
-      "meta": {
-        "type_id": "TEST-undefined",
-        "type_label": "Objem válce",
-        "source": "M9PCD23C0T03"
-      },
-      "diagram": {
-        "type": "cylinder",
-        "labels": {
-          "r": "?",
-          "h": "?"
-        },
-        "highlight": null
-      }
-    },
-    {
-      "id": "vol-test-003",
-      "topic": "volume",
-      "tags": [
-        "objem-hranolu"
-      ],
-      "difficulty": 2,
-      "question": {
-        "stem": "Objem pravidelného čtyřbokého hranolu",
-        "context": "Objem pravidelného čtyřbokého hranolu",
-        "image": null
-      },
-      "answer": {
-        "correct": "B (108 cm³)",
-        "unit": null,
-        "variants": []
-      },
-      "distractors": [],
-      "hints": [],
-      "solution": {
-        "steps": [],
-        "strategy": null
-      },
-      "meta": {
-        "type_id": "TEST-undefined",
-        "type_label": "Objem hranolu",
-        "source": "M9PCD23C0T03"
-      },
-      "diagram": {
-        "type": "prism",
-        "labels": {},
-        "highlight": null
-      }
-    },
-    {
       "id": "vol-test-004",
       "topic": "volume",
       "tags": [
@@ -175,7 +57,7 @@
         "image": null
       },
       "answer": {
-        "correct": "C) 8krát",
+        "correct": "8",
         "unit": null,
         "variants": []
       },
@@ -410,7 +292,7 @@
         "image": null
       },
       "answer": {
-        "correct": "D) 1570cm²",
+        "correct": "1570",
         "unit": null,
         "variants": []
       },
@@ -535,35 +417,6 @@
         "type": "prism",
         "labels": {},
         "highlight": null
-      }
-    },
-    {
-      "id": "vol-test-015",
-      "topic": "volume",
-      "tags": [
-        "objem---kvádr"
-      ],
-      "difficulty": 2,
-      "question": {
-        "stem": "O kolik cm klesla hladina v nádrži",
-        "context": "O kolik cm klesla hladina v nádrži",
-        "image": null
-      },
-      "answer": {
-        "correct": "B (o 9 cm)",
-        "unit": null,
-        "variants": []
-      },
-      "distractors": [],
-      "hints": [],
-      "solution": {
-        "steps": [],
-        "strategy": null
-      },
-      "meta": {
-        "type_id": "TEST-undefined",
-        "type_label": "Objem - kvádr",
-        "source": "M9PAD17C0T01"
       }
     }
   ]

@@ -1,8 +1,8 @@
 {
   "topic": "unit_conversions",
   "name": "Převody jednotek",
-  "version": "1.0",
-  "migrated": "2025-12-25",
+  "version": "1.1",
+  "migrated": "2025-12-29",
   "questions": [
     {
       "id": "unit-001",
@@ -404,6 +404,68 @@
         "type_id": "UNIT-AREA",
         "type_label": "Převody jednotek",
         "source": "generated"
+      }
+    },
+    {
+      "id": "uni-test-009",
+      "topic": "unit_conversions",
+      "tags": [
+        "jednotky-a-převody"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Kabel 5,1m, uřízli 3×0,5m, zbytek na 12 dílů. Kolik cm jeden díl?",
+        "context": "Kabel 5,1m, uřízli 3×0,5m, zbytek na 12 dílů. Kolik cm jeden díl?",
+        "image": null
+      },
+      "answer": {
+        "correct": "30",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "510-150=360, 360:12=30cm"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Jednotky a převody",
+        "source": "M9PCD22C0T03"
+      }
+    },
+    {
+      "id": "uni-test-010",
+      "topic": "unit_conversions",
+      "tags": [
+        "jednotky-a-převody"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Josef krok 75cm, Naďa 60cm, oba 10000 kroků. O kolik km ušel Josef více?",
+        "context": "Josef krok 75cm, Naďa 60cm, oba 10000 kroků. O kolik km ušel Josef více?",
+        "image": null
+      },
+      "answer": {
+        "correct": "1,5",
+        "unit": "km",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "J: 750000cm = 7,5km, N: 600000cm = 6km, rozdíl 1,5km"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Jednotky a převody",
+        "source": "M9PBD24C0T02"
       }
     }
   ]

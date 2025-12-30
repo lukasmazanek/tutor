@@ -1,0 +1,927 @@
+{
+  "topic": "percents",
+  "name": "Procenta",
+  "version": "1.1",
+  "migrated": "2025-12-29",
+  "questions": [
+    {
+      "id": "per-test-001",
+      "topic": "percents",
+      "tags": [
+        "procenta---slevy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "O kolik % byla konečná cena nižší než původní",
+        "context": "O kolik % byla konečná cena nižší než původní",
+        "image": null
+      },
+      "answer": {
+        "correct": "35",
+        "unit": "%",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "P=1000, -15%→850, -200→650, (1000-650)/1000 = 35%"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Procenta - slevy",
+        "source": "M9PDD24C0T04"
+      }
+    },
+    {
+      "id": "per-test-002",
+      "topic": "percents",
+      "tags": [
+        "grafy---procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik hodin denně v zaměstnání",
+        "context": "Kolik hodin denně v zaměstnání",
+        "image": null
+      },
+      "answer": {
+        "correct": "6",
+        "unit": "h",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Grafy - procenta",
+        "source": "M9PDD24C0T04"
+      }
+    },
+    {
+      "id": "per-test-003",
+      "topic": "percents",
+      "tags": [
+        "grafy---procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik minut denně sportuje",
+        "context": "Kolik minut denně sportuje",
+        "image": null
+      },
+      "answer": {
+        "correct": "58 min (zaokr.)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Špatně vypočítala procenta z procent (volný čas 10% z 24h = 2,4h, sport 40% z 2,4h ≈ 58 min)"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Grafy - procenta",
+        "source": "M9PDD24C0T04"
+      }
+    },
+    {
+      "id": "per-test-004",
+      "topic": "percents",
+      "tags": [
+        "procenta---slovní-úloha"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik triček zůstalo v obchodě",
+        "context": "Kolik triček zůstalo v obchodě",
+        "image": null
+      },
+      "answer": {
+        "correct": "E (více než 220)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Procenta - slovní úloha",
+        "source": "M9PDD24C0T04"
+      }
+    },
+    {
+      "id": "per-test-005",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik procent stran zbývá dočíst",
+        "context": "Kolik procent stran zbývá dočíst",
+        "image": null
+      },
+      "answer": {
+        "correct": "B (30%)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Procenta",
+        "source": "M9PDD24C0T04"
+      }
+    },
+    {
+      "id": "per-test-006",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Zakoupil o polovinu více než prodal. A/N?",
+        "context": "Zakoupil o polovinu více než prodal. A/N?",
+        "image": null
+      },
+      "answer": {
+        "correct": "A",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: OPAKUJÍCÍ SE CHYBA: Nerozumí 'o polovinu více'. Zakoupeno 42, prodáno 28. 28·1,5=42. Je to pravda!"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PCD22C0T03"
+      }
+    },
+    {
+      "id": "per-test-007",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "60% odvezeno, zbylo 1200kg. Kolik odvezeno?",
+        "context": "60% odvezeno, zbylo 1200kg. Kolik odvezeno?",
+        "image": null
+      },
+      "answer": {
+        "correct": "1800",
+        "unit": "kg",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "40%=1200, 100%=3000, 60%=1800"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PCD22C0T03"
+      }
+    },
+    {
+      "id": "per-test-008",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "2/5 z první palety + 10% z druhé = 750kg. Kolik neprodané?",
+        "context": "2/5 z první palety + 10% z druhé = 750kg. Kolik neprodané?",
+        "image": null
+      },
+      "answer": {
+        "correct": "2250",
+        "unit": "kg",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Složitá procentová úloha - nezvládla sestavit rovnici pro dvě palety"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PCD22C0T03"
+      }
+    },
+    {
+      "id": "per-test-009",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Léto 1500kg = +50% oproti jaro, -50% oproti podzim. Rozdíl podzim-jaro?",
+        "context": "Léto 1500kg = +50% oproti jaro, -50% oproti podzim. Rozdíl podzim-jaro?",
+        "image": null
+      },
+      "answer": {
+        "correct": "2000",
+        "unit": "kg",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: OPAKUJÍCÍ SE CHYBA: Jaro=1000 (+50%→1500), Podzim=3000 (-50%→1500). Rozdíl=2000. Nerozumí asymetrii procent."
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PCD22C0T03"
+      }
+    },
+    {
+      "id": "per-test-010",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "O kolik % je Adamova cesta (40+30=70m) delší než Otova (50m)?",
+        "context": "O kolik % je Adamova cesta (40+30=70m) delší než Otova (50m)?",
+        "image": null
+      },
+      "answer": {
+        "correct": "40",
+        "unit": "%",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Adam 40+30=70m, Ota √(40²+30²)=50m, (70-50)/50=40%"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PBD24C0T02"
+      }
+    },
+    {
+      "id": "per-test-011",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Hračka 250Kč, +40%, pak -40%. Kolik stojí?",
+        "context": "Hračka 250Kč, +40%, pak -40%. Kolik stojí?",
+        "image": null
+      },
+      "answer": {
+        "correct": "210",
+        "unit": "Kč",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: TYPICKÁ CHYBA: Nerozumí, že +40% a pak -40% se nevrátí na původní hodnotu. 250·1,4·0,6 = 210, ne 250"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PBD24C0T02"
+      }
+    },
+    {
+      "id": "per-test-012",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Chlapci mat. o 75% více než dívky mat. A/N?",
+        "context": "Chlapci mat. o 75% více než dívky mat. A/N?",
+        "image": null
+      },
+      "answer": {
+        "correct": "A",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Chlapci 7, dívky 4. 7/4 = 1,75 = +75%"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PBD24C0T02"
+      }
+    },
+    {
+      "id": "per-test-013",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Lyžařský pobyt 7000Kč: doprava 10%, ubytování 60%. Kolik % vlek?",
+        "context": "Lyžařský pobyt 7000Kč: doprava 10%, ubytování 60%. Kolik % vlek?",
+        "image": null
+      },
+      "answer": {
+        "correct": "30",
+        "unit": "%",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "100% - 10% - 60% = 30%"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PBD24C0T02"
+      }
+    },
+    {
+      "id": "per-test-014",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Učebnice z 2000Kč na 1500Kč. Kolik % sleva?",
+        "context": "Učebnice z 2000Kč na 1500Kč. Kolik % sleva?",
+        "image": null
+      },
+      "answer": {
+        "correct": "25",
+        "unit": "%",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "500/2000 = 25%"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PBD24C0T02"
+      }
+    },
+    {
+      "id": "per-test-015",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Dárek 40 EUR z 200 EUR. Kolik %?",
+        "context": "Dárek 40 EUR z 200 EUR. Kolik %?",
+        "image": null
+      },
+      "answer": {
+        "correct": "20",
+        "unit": "%",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "40/200 = 20%"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PBD24C0T02"
+      }
+    },
+    {
+      "id": "per-test-016",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Sekačka z 20000 na 8000 Kč. O kolik % snížena?",
+        "context": "Sekačka z 20000 na 8000 Kč. O kolik % snížena?",
+        "image": null
+      },
+      "answer": {
+        "correct": "E",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "12000/20000 = 60%"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PBD22C0T02",
+        "original_type": "matching"
+      }
+    },
+    {
+      "id": "per-test-017",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "První skupina poseče 1/4, druhá 60% zbytku. Kolik % neposečeno?",
+        "context": "První skupina poseče 1/4, druhá 60% zbytku. Kolik % neposečeno?",
+        "image": null
+      },
+      "answer": {
+        "correct": "B",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Nesprávně počítala procenta ze zbytku. Správně: 1/4 + 0,6·3/4 = 70% posečeno, 30% zbylo"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PBD22C0T02",
+        "original_type": "matching"
+      }
+    },
+    {
+      "id": "per-test-018",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Dříve 120 hřebíků, nyní 80 za stejnou cenu. O kolik % zdraženy?",
+        "context": "Dříve 120 hřebíků, nyní 80 za stejnou cenu. O kolik % zdraženy?",
+        "image": null
+      },
+      "answer": {
+        "correct": "D",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Správně: cena za hřebík vzrostla z P/120 na P/80, nárůst = (120-80)/80 = 50%"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PBD22C0T02",
+        "original_type": "matching"
+      }
+    },
+    {
+      "id": "per-test-020",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "250 výrobků 2020, +20% každý rok. Kolik 2022?",
+        "context": "250 výrobků 2020, +20% každý rok. Kolik 2022?",
+        "image": null
+      },
+      "answer": {
+        "correct": "E) 360",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "250 · 1,2 · 1,2 = 360"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PAD23C0T01"
+      }
+    },
+    {
+      "id": "per-test-021",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Roman 400km = 'o čtvrtinu více' než Jana. Kolik Jana?",
+        "context": "Roman 400km = 'o čtvrtinu více' než Jana. Kolik Jana?",
+        "image": null
+      },
+      "answer": {
+        "correct": "C) 320",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "400 = 1,25·J, J = 320km"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PAD23C0T01"
+      }
+    },
+    {
+      "id": "per-test-022",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Firma před krizí, -40%, pak +25% (=+42). Kolik před?",
+        "context": "Firma před krizí, -40%, pak +25% (=+42). Kolik před?",
+        "image": null
+      },
+      "answer": {
+        "correct": "A) 280",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Složitý výpočet s procenty"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PAD23C0T01"
+      }
+    },
+    {
+      "id": "per-test-023",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "3/4 z 200 minut je totéž jako 1/2 ze 3 hodin. A/N?",
+        "context": "3/4 z 200 minut je totéž jako 1/2 ze 3 hodin. A/N?",
+        "image": null
+      },
+      "answer": {
+        "correct": "N",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "150 min ≠ 90 min"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PAD22C0T01",
+        "original_type": "true_false"
+      }
+    },
+    {
+      "id": "per-test-024",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "2/3 z 2,4 hodiny je více než 1 h 40 min. A/N?",
+        "context": "2/3 z 2,4 hodiny je více než 1 h 40 min. A/N?",
+        "image": null
+      },
+      "answer": {
+        "correct": "N",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "96 min < 100 min"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PAD22C0T01",
+        "original_type": "true_false"
+      }
+    },
+    {
+      "id": "per-test-025",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Třída 2.A nasbírala o 25% méně než 1.A (600 kg). Kolik kg?",
+        "context": "Třída 2.A nasbírala o 25% méně než 1.A (600 kg). Kolik kg?",
+        "image": null
+      },
+      "answer": {
+        "correct": "E",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "600·0,75 = 450 kg"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PAD22C0T01",
+        "original_type": "matching"
+      }
+    },
+    {
+      "id": "per-test-026",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Třída 1.B nasbírala o 20% více než 2.B. 1.B = 600 kg. Kolik kg 2.B?",
+        "context": "Třída 1.B nasbírala o 20% více než 2.B. 1.B = 600 kg. Kolik kg 2.B?",
+        "image": null
+      },
+      "answer": {
+        "correct": "C",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "600/1,2 = 500 kg"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PAD22C0T01",
+        "original_type": "matching"
+      }
+    },
+    {
+      "id": "per-test-027",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Dívky nasbíraly o 50% více než chlapci. Celkem 1200 kg. Kolik chlapci?",
+        "context": "Dívky nasbíraly o 50% více než chlapci. Celkem 1200 kg. Kolik chlapci?",
+        "image": null
+      },
+      "answer": {
+        "correct": "D",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Nerozumí 'o 50% více'. Správně: D+CH=1200, D=1,5CH → 2,5CH=1200 → CH=480 kg"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-13",
+        "type_label": "Procenta",
+        "source": "M9PAD22C0T01",
+        "original_type": "matching"
+      }
+    },
+    {
+      "id": "per-test-028",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik důchodců nepoužívá kartu",
+        "context": "Kolik důchodců nepoužívá kartu",
+        "image": null
+      },
+      "answer": {
+        "correct": "D (156)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Procenta",
+        "source": "M9PAD17C0T01"
+      }
+    },
+    {
+      "id": "per-test-029",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik členů má nyní oddíl",
+        "context": "Kolik členů má nyní oddíl",
+        "image": null
+      },
+      "answer": {
+        "correct": "C (153)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Procenta",
+        "source": "M9PAD17C0T01"
+      }
+    },
+    {
+      "id": "per-test-030",
+      "topic": "percents",
+      "tags": [
+        "procenta"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik dívek navštěvuje gymnázium",
+        "context": "Kolik dívek navštěvuje gymnázium",
+        "image": null
+      },
+      "answer": {
+        "correct": "E (160)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Procenta",
+        "source": "M9PAD17C0T01"
+      }
+    }
+  ]
+}

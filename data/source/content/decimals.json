@@ -1,0 +1,66 @@
+{
+  "topic": "decimals",
+  "name": "Desetinná čísla",
+  "version": "1.1",
+  "migrated": "2025-12-29",
+  "questions": [
+    {
+      "id": "dec-test-001",
+      "topic": "decimals",
+      "tags": [
+        "desetinná-čísla"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Kolikrát je součet 0,2 a 0,5 větší než jejich součin",
+        "context": "Kolikrát je součet 0,2 a 0,5 větší než jejich součin",
+        "image": null
+      },
+      "answer": {
+        "correct": "7",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Desetinná čísla",
+        "source": "M9PCD23C0T03"
+      }
+    },
+    {
+      "id": "dec-test-002",
+      "topic": "decimals",
+      "tags": [
+        "desetinná-čísla"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Kolikrát větší jsou 4 setiny než 8 tisícin",
+        "context": "Kolikrát větší jsou 4 setiny než 8 tisícin",
+        "image": null
+      },
+      "answer": {
+        "correct": "5krát",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Desetinná čísla",
+        "source": "M9PAD17C0T01"
+      }
+    }
+  ]
+}

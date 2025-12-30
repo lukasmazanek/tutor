@@ -6,7 +6,7 @@ import PageHeader from './PageHeader'
 import { getQuestionText } from '../lib/questionUtils'
 import topicTypeMapping from '../data/topic_type_mapping.json'
 import { evaluateAnswer } from '@lib/mathParser'
-import { UnifiedQuestion, TopicTypeMappingData } from '../types'
+import { UnifiedQuestion, TopicTypeMappingData, findMatchingCommonError, CommonError } from '../types'
 import { AttemptResult, ProgressIndicator } from '../types'
 import { saveAttempt } from '../hooks/useAttempts'
 
@@ -18,7 +18,28 @@ const TOPIC_LABELS: Record<string, string> = {
   'pythagorean': 'Pythagorova věta',
   'sequences': 'Posloupnosti',
   'percents': 'Procenta',
-  'geometry': 'Geometrie'
+  'geometry': 'Geometrie',
+  // New topics from test extraction
+  'angles': 'Úhly',
+  'area_perimeter': 'Obsah a obvod',
+  'volume': 'Objem těles',
+  'expressions': 'Výrazy',
+  'factoring': 'Vytýkání',
+  'binomial_squares': 'Vzorce (a±b)²',
+  'square_roots': 'Odmocniny',
+  'powers': 'Mocniny',
+  'circles': 'Kružnice',
+  'constructions': 'Konstrukce',
+  'word_problems': 'Slovní úlohy',
+  'work_problems': 'Úlohy o práci',
+  'averages': 'Průměry',
+  'unit_conversions': 'Převody jednotek',
+  'ratios': 'Poměr',
+  'tables_graphs': 'Grafy a tabulky',
+  'systems_equations': 'Soustavy rovnic',
+  'functions': 'Funkce',
+  'integers': 'Celá čísla',
+  'decimals': 'Desetinná čísla'
 }
 
 // Type the imported JSON
@@ -47,7 +68,7 @@ interface ProblemCardProps {
   onStrategyAnswered?: (topic: string) => void
 }
 
-type FeedbackType = 'correct' | 'tryAgain' | null
+type FeedbackType = 'correct' | 'tryAgain' | 'targeted' | null
 type PromptPhase = 'strategy' | 'done'
 
 function ProblemCard({
@@ -66,6 +87,8 @@ function ProblemCard({
   const [solutionRevealed, setSolutionRevealed] = useState(false)
   const [feedback, setFeedback] = useState<FeedbackType>(null)
   const [wrongAttempts, setWrongAttempts] = useState(0)
+  // ADR-033: Targeted feedback for common errors
+  const [targetedFeedback, setTargetedFeedback] = useState<CommonError | null>(null)
 
   // Get type mapping for current problem
   const typeMapping = mappingData.mappings[problem.topic] || null
@@ -150,17 +173,30 @@ function ProblemCard({
         resetState()
       }, 1500)
     } else {
-      setFeedback('tryAgain')
+      // ADR-033: Check for common errors with targeted feedback
+      const matchedError = findMatchingCommonError(userAnswer, problem.common_errors)
+      if (matchedError) {
+        setFeedback('targeted')
+        setTargetedFeedback(matchedError)
+      } else {
+        setFeedback('tryAgain')
+        setTargetedFeedback(null)
+      }
+
       const newWrongAttempts = wrongAttempts + 1
       setWrongAttempts(newWrongAttempts)
 
       if (newWrongAttempts >= 3 && !solutionRevealed && revealedSteps.length < hintSource.length) {
         setTimeout(() => {
           setFeedback(null)
+          setTargetedFeedback(null)
           showNextHint()
         }, 1500)
       } else {
-        setTimeout(() => setFeedback(null), 2000)
+        setTimeout(() => {
+          setFeedback(null)
+          setTargetedFeedback(null)
+        }, 3000) // Longer timeout for targeted feedback to read
       }
     }
   }
@@ -170,6 +206,7 @@ function ProblemCard({
     setRevealedSteps([])
     setSolutionRevealed(false)
     setFeedback(null)
+    setTargetedFeedback(null) // ADR-033
     setWrongAttempts(0)
     setProblemStartTime(Date.now())
     if (typePromptEnabled && typeMapping) {
@@ -371,15 +408,30 @@ function ProblemCard({
 
           {/* Feedback */}
           {feedback && (
-            <div className={`mb-4 p-4 rounded-xl text-center transition-gentle
-              ${feedback === 'correct' ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'}`}
-            >
-              {feedback === 'correct' ? (
-                <span className="font-medium">Přesně tak! ✓</span>
-              ) : (
-                <span>Zkus jiný přístup</span>
+            <>
+              {feedback === 'correct' && (
+                <div className="mb-4 p-4 rounded-xl text-center transition-gentle bg-green-50 text-green-700">
+                  <span className="font-medium">Přesně tak! ✓</span>
+                </div>
               )}
-            </div>
+              {feedback === 'tryAgain' && (
+                <div className="mb-4 p-4 rounded-xl text-center transition-gentle bg-amber-50 text-amber-700">
+                  <span>Zkus jiný přístup</span>
+                </div>
+              )}
+              {/* ADR-033: Targeted feedback for common errors */}
+              {feedback === 'targeted' && targetedFeedback && (
+                <div className="mb-4 p-4 rounded-xl bg-purple-50 border border-purple-100 transition-gentle">
+                  <div className="flex items-start gap-3">
+                    <LightBulbIcon className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-purple-600 text-sm font-medium mb-1">💡 Tip</p>
+                      <p className="text-purple-800">{targetedFeedback.feedback}</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </div>
         )}

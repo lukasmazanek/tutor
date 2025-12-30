@@ -1,0 +1,42 @@
+{
+  "topic": "powers",
+  "name": "Mocniny",
+  "version": "1.1",
+  "migrated": "2025-12-29",
+  "questions": [
+    {
+      "id": "pow-test-001",
+      "topic": "powers",
+      "tags": [
+        "mocniny-a-dělení"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "1 : 0,2²",
+        "context": "1 : 0,2²",
+        "image": null
+      },
+      "answer": {
+        "correct": "25",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Špatně vypočítala 0,2² = 0,04, pak 1:0,04 = 25. Místo toho napsala 0,4."
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Mocniny a dělení",
+        "source": "M9PAD17C0T01"
+      }
+    }
+  ]
+}

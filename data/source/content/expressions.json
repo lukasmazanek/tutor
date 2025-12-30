@@ -1,0 +1,585 @@
+{
+  "topic": "expressions",
+  "name": "Výrazy s proměnnou",
+  "version": "1.1",
+  "migrated": "2025-12-29",
+  "questions": [
+    {
+      "id": "exp-test-001",
+      "topic": "expressions",
+      "tags": [
+        "algebraické-výrazy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "(2x+3)² - x·6 - 4·(x-1)²",
+        "context": "(2x+3)² - x·6 - 4·(x-1)²",
+        "image": null
+      },
+      "answer": {
+        "correct": "5 + 14x",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Algebraické výrazy",
+        "source": "M9PDD24C0T04"
+      }
+    },
+    {
+      "id": "exp-test-002",
+      "topic": "expressions",
+      "tags": [
+        "pořadí-operací"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "4+6:2-5·(-3+5)",
+        "context": "4+6:2-5·(-3+5)",
+        "image": null
+      },
+      "answer": {
+        "correct": "-3",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Pořadí operací",
+        "source": "M9PCD23C0T03"
+      }
+    },
+    {
+      "id": "exp-test-003",
+      "topic": "expressions",
+      "tags": [
+        "algebraické-výrazy"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "(2x-1)·1/2 - x",
+        "context": "(2x-1)·1/2 - x",
+        "image": null
+      },
+      "answer": {
+        "correct": "-1/2",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Nevykrátila x, výsledek měl být pouze -1/2"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Algebraické výrazy",
+        "source": "M9PCD23C0T03"
+      }
+    },
+    {
+      "id": "exp-test-004",
+      "topic": "expressions",
+      "tags": [
+        "algebraické-výrazy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "(4n-3)² - 4n(4n-3)",
+        "context": "(4n-3)² - 4n(4n-3)",
+        "image": null
+      },
+      "answer": {
+        "correct": "9 - 12n",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Algebraické výrazy",
+        "source": "M9PCD23C0T03"
+      }
+    },
+    {
+      "id": "exp-test-005",
+      "topic": "expressions",
+      "tags": [
+        "výrazy-s-proměnnou"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "(-n-1)² + (1+4n)·(1+4n)",
+        "context": "(-n-1)² + (1+4n)·(1+4n)",
+        "image": null
+      },
+      "answer": {
+        "correct": "17n² + 10n + 2",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: OPAKUJÍCÍ SE CHYBA: Špatně umocnila (1+4n)². Správně: 1+8n+16n², ona má jen 1+8n. Zapomíná na n² člen při umocňování."
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "source": "M9PCD22C0T03"
+      }
+    },
+    {
+      "id": "exp-test-006",
+      "topic": "expressions",
+      "tags": [
+        "výrazy-s-proměnnou"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Druhý princ = 'o třetinu více' než první (x)",
+        "context": "Druhý princ = 'o třetinu více' než první (x)",
+        "image": null
+      },
+      "answer": {
+        "correct": "x + x/3 nebo 4x/3",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: KLÍČOVÁ CHYBA: Nerozumí 'o třetinu více'. Mělo být x + x/3 = 4x/3, ona napsala x + 1/3. Zaměňuje 'o třetinu více' za 'plus jedna třetina'."
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "source": "M9PCD22C0T03"
+      }
+    },
+    {
+      "id": "exp-test-007",
+      "topic": "expressions",
+      "tags": [
+        "výrazy-s-proměnnou"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Třetí princ = 'o 12 více' než první (x)",
+        "context": "Třetí princ = 'o 12 více' než první (x)",
+        "image": null
+      },
+      "answer": {
+        "correct": "x + 12",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "source": "M9PCD22C0T03"
+      }
+    },
+    {
+      "id": "exp-test-008",
+      "topic": "expressions",
+      "tags": [
+        "výrazy-s-proměnnou"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "(3x+1)² - x·7x - (2x-5)·(x+4)",
+        "context": "(3x+1)² - x·7x - (2x-5)·(x+4)",
+        "image": null
+      },
+      "answer": {
+        "correct": "2x² + 8x + 21",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Ztratila x² členy. (3x+1)²=9x²+6x+1, -7x², -(2x²+3x-20). Správně: 9x²-7x²-2x²+6x-3x+1+20"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "source": "M9PBD24C0T02"
+      }
+    },
+    {
+      "id": "exp-test-009",
+      "topic": "expressions",
+      "tags": [
+        "výrazy-s-proměnnou"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Petr sbírá modely: 2.rok = 1,5x, 3.rok = 72. Vyjádřete 2.rok pomocí x",
+        "context": "Petr sbírá modely: 2.rok = 1,5x, 3.rok = 72. Vyjádřete 2.rok pomocí x",
+        "image": null
+      },
+      "answer": {
+        "correct": "1,5x",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "x + 0,5x = 1,5x"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "source": "M9PBD24C0T02"
+      }
+    },
+    {
+      "id": "exp-test-010",
+      "topic": "expressions",
+      "tags": [
+        "výrazy-s-proměnnou"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "(2n-3)·(4n-2) + (n-3)·(n+3)",
+        "context": "(2n-3)·(4n-2) + (n-3)·(n+3)",
+        "image": null
+      },
+      "answer": {
+        "correct": "9n² - 14n - 3",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Částečně správně, chyba v prostředním členu"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "source": "M9PBD22C0T02",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "exp-test-011",
+      "topic": "expressions",
+      "tags": [
+        "výrazy-s-proměnnou"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "V knihovně je k polic, v každé o 8 knih více než polic. Celkový počet knih?",
+        "context": "V knihovně je k polic, v každé o 8 knih více než polic. Celkový počet knih?",
+        "image": null
+      },
+      "answer": {
+        "correct": "A",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "k·(k+8) = k² + 8k"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "source": "M9PBD22C0T02",
+        "original_type": "multiple_choice"
+      }
+    },
+    {
+      "id": "exp-test-012",
+      "topic": "expressions",
+      "tags": [
+        "výrazy-s-proměnnou"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "3n·(2 - n + 2n) + (2n + 1)·(7 - n)",
+        "context": "3n·(2 - n + 2n) + (2n + 1)·(7 - n)",
+        "image": null
+      },
+      "answer": {
+        "correct": "n² + 19n + 7",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "6n - 3n² + 6n² + 14n - 2n² + 7 - n = n² + 19n + 7"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "source": "M9PAD23C0T01"
+      }
+    },
+    {
+      "id": "exp-test-013",
+      "topic": "expressions",
+      "tags": [
+        "výrazy-s-proměnnou"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Kratší strana obdélníku = 'o 25% kratší' než a",
+        "context": "Kratší strana obdélníku = 'o 25% kratší' než a",
+        "image": null
+      },
+      "answer": {
+        "correct": "0,75a nebo 3a/4",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: OPAKUJÍCÍ SE CHYBA: Nerozumí 'o 25% kratší'. Mělo být 0,75a, ona napsala a-10."
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "source": "M9PAD23C0T01"
+      }
+    },
+    {
+      "id": "exp-test-014",
+      "topic": "expressions",
+      "tags": [
+        "výrazy-s-proměnnou"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "(4 + 3n)(3n - 2n) - (n-1)·5n",
+        "context": "(4 + 3n)(3n - 2n) - (n-1)·5n",
+        "image": null
+      },
+      "answer": {
+        "correct": "9n - 2n²",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Chyba při roznásobení: (4+3n)·n = 4n + 3n², pak -5n² + 5n = správně 9n - 2n²"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "source": "M9PAD22C0T01",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "exp-test-015",
+      "topic": "expressions",
+      "tags": [
+        "výrazy-s-proměnnou"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Vyjádřete výrazem: cena 1 dortíku (4 dortíky = x Kč)",
+        "context": "Vyjádřete výrazem: cena 1 dortíku (4 dortíky = x Kč)",
+        "image": null
+      },
+      "answer": {
+        "correct": "x/4",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správně"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "source": "M9PAD22C0T01",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "exp-test-016",
+      "topic": "expressions",
+      "tags": [
+        "výrazy-s-proměnnou"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Vyjádřete výrazem: cena 4 koláčů (5 koláčů = x Kč)",
+        "context": "Vyjádřete výrazem: cena 4 koláčů (5 koláčů = x Kč)",
+        "image": null
+      },
+      "answer": {
+        "correct": "4x/5",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správně"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-21",
+        "type_label": "Výrazy s proměnnou",
+        "source": "M9PAD22C0T01",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "exp-test-017",
+      "topic": "expressions",
+      "tags": [
+        "algebraické-výrazy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "(a²+a)·(1-a) - a·a",
+        "context": "(a²+a)·(1-a) - a·a",
+        "image": null
+      },
+      "answer": {
+        "correct": "2a - 3a²",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Algebraické výrazy",
+        "source": "M9PAD17C0T01"
+      }
+    },
+    {
+      "id": "exp-test-018",
+      "topic": "expressions",
+      "tags": [
+        "algebraické-výrazy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "(n-1)/2 - (2n-3)/4",
+        "context": "(n-1)/2 - (2n-3)/4",
+        "image": null
+      },
+      "answer": {
+        "correct": "-1/4",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Chyba při práci se společným jmenovatelem, zapomněla dosadit správně"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Algebraické výrazy",
+        "source": "M9PAD17C0T01"
+      }
+    }
+  ]
+}

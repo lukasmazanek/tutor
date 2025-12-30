@@ -1,0 +1,778 @@
+{
+  "topic": "word_problems",
+  "name": "Slovní úlohy",
+  "version": "1.1",
+  "migrated": "2025-12-29",
+  "questions": [
+    {
+      "id": "wor-test-001",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy---délka"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Adam a Naďa - o kolik kroků více",
+        "context": "Adam a Naďa - o kolik kroků více",
+        "image": null
+      },
+      "answer": {
+        "correct": "900",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "2700000cm / 75cm = 36000 kroků (Adam), 2700000/60 = 45000 kroků (Naďa), 45000-36000 = 9000"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy - délka",
+        "source": "M9PDD24C0T04"
+      }
+    },
+    {
+      "id": "wor-test-002",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik vagónů 2. třídy v rychlíku",
+        "context": "Kolik vagónů 2. třídy v rychlíku",
+        "image": null
+      },
+      "answer": {
+        "correct": "4",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Špatně sestavila rovnici - zaměnila proměnné"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy",
+        "source": "M9PDD24C0T04"
+      }
+    },
+    {
+      "id": "wor-test-003",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik míst k sezení v 1. třídě",
+        "context": "Kolik míst k sezení v 1. třídě",
+        "image": null
+      },
+      "answer": {
+        "correct": "120",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy",
+        "source": "M9PDD24C0T04"
+      }
+    },
+    {
+      "id": "wor-test-004",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy---výrazy"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Kolik km odřídil Rudolf (x/3 - 60)",
+        "context": "Kolik km odřídil Rudolf (x/3 - 60)",
+        "image": null
+      },
+      "answer": {
+        "correct": "x/3 - 60",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy - výrazy",
+        "source": "M9PCD23C0T03"
+      }
+    },
+    {
+      "id": "wor-test-005",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik km měřila celá trasa",
+        "context": "Kolik km měřila celá trasa",
+        "image": null
+      },
+      "answer": {
+        "correct": "900",
+        "unit": "km",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy",
+        "source": "M9PCD23C0T03"
+      }
+    },
+    {
+      "id": "wor-test-006",
+      "topic": "word_problems",
+      "tags": [
+        "směsi---ceny"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Cena 1 kg směsi arašídů a mandlí",
+        "context": "Cena 1 kg směsi arašídů a mandlí",
+        "image": null
+      },
+      "answer": {
+        "correct": "152",
+        "unit": "Kč",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Směsi - ceny",
+        "source": "M9PCD23C0T03"
+      }
+    },
+    {
+      "id": "wor-test-007",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Počet vagonů ve vlaku",
+        "context": "Počet vagonů ve vlaku",
+        "image": null
+      },
+      "answer": {
+        "correct": "C (12)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy",
+        "source": "M9PCD23C0T03"
+      }
+    },
+    {
+      "id": "wor-test-008",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "První + třetí = 2× druhý. Kolik první?",
+        "context": "První + třetí = 2× druhý. Kolik první?",
+        "image": null
+      },
+      "answer": {
+        "correct": "36",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Navazuje na chybu z 6.1 - špatný výraz pro druhého prince"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "source": "M9PCD22C0T03"
+      }
+    },
+    {
+      "id": "wor-test-009",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Menší krabičky (5ks) = 3× větší krabičky (10 kříd). Kolik kříd v menší?",
+        "context": "Menší krabičky (5ks) = 3× větší krabičky (10 kříd). Kolik kříd v menší?",
+        "image": null
+      },
+      "answer": {
+        "correct": "6",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "5M = 3·10 = 30, M = 6 kříd"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "source": "M9PCD22C0T03"
+      }
+    },
+    {
+      "id": "wor-test-010",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Celkem 300 kříd. Kolik větších krabiček?",
+        "context": "Celkem 300 kříd. Kolik větších krabiček?",
+        "image": null
+      },
+      "answer": {
+        "correct": "27",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "300-30=270, 270:10=27 krabiček"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "source": "M9PCD22C0T03"
+      }
+    },
+    {
+      "id": "wor-test-011",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Za 3 roky 217 modelů. Kolik v 1.roce?",
+        "context": "Za 3 roky 217 modelů. Kolik v 1.roce?",
+        "image": null
+      },
+      "answer": {
+        "correct": "58",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "x + 1,5x + 72 = 217, 2,5x = 145, x = 58"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "source": "M9PBD24C0T02"
+      }
+    },
+    {
+      "id": "wor-test-012",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Velké koláčky 30Kč, malé 20Kč. Velké prodány za 3000Kč, malé (90%) za 3600Kč. Kolik malých přivezl?",
+        "context": "Velké koláčky 30Kč, malé 20Kč. Velké prodány za 3000Kč, malé (90%) za 3600Kč. Kolik malých přivezl?",
+        "image": null
+      },
+      "answer": {
+        "correct": "C) 200",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Špatně interpretovala slovní úlohu. 0,9y·20 = 3600, y = 200, ne 180"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "source": "M9PBD24C0T02"
+      }
+    },
+    {
+      "id": "wor-test-013",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "V krabici jsou kuličky: 1/4 zelených, 1/6 červených, modrých o 20 více než červených. Kolik kuliček celkem?",
+        "context": "V krabici jsou kuličky: 1/4 zelených, 1/6 červených, modrých o 20 více než červených. Kolik kuliček celkem?",
+        "image": null
+      },
+      "answer": {
+        "correct": "240",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "1/4 + 1/6 + M = 1, M = C + 20, správně vyřešeno"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "source": "M9PBD22C0T02",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "wor-test-014",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "O kolik se liší počty zelených a červených kuliček?",
+        "context": "O kolik se liší počty zelených a červených kuliček?",
+        "image": null
+      },
+      "answer": {
+        "correct": "20",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Z = 60, Č = 40, rozdíl = 20"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "source": "M9PBD22C0T02",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "wor-test-015",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Film 1h, zbývá polovina uplynulé doby. Kolik minut zbývá?",
+        "context": "Film 1h, zbývá polovina uplynulé doby. Kolik minut zbývá?",
+        "image": null
+      },
+      "answer": {
+        "correct": "20",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "x + 2x = 60, 3x = 60, x = 20min"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "source": "M9PAD23C0T01"
+      }
+    },
+    {
+      "id": "wor-test-016",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Sud 15× kbelík, kbelík 5× konvička, ze sudu odebrána 1/3, zbylo 60l. Objem konvičky?",
+        "context": "Sud 15× kbelík, kbelík 5× konvička, ze sudu odebrána 1/3, zbylo 60l. Objem konvičky?",
+        "image": null
+      },
+      "answer": {
+        "correct": "1,2",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "S = 90l, K = 90:15 = 6l, Konv = 6:5 = 1,2l"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "source": "M9PAD23C0T01"
+      }
+    },
+    {
+      "id": "wor-test-017",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Délka strany čtvercového pozemku",
+        "context": "Délka strany čtvercového pozemku",
+        "image": null
+      },
+      "answer": {
+        "correct": "40",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Částečně správný výpočet"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "source": "M9PAD23C0T01"
+      }
+    },
+    {
+      "id": "wor-test-018",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Rozdíl obsahů obdélníku a čtverce",
+        "context": "Rozdíl obsahů obdélníku a čtverce",
+        "image": null
+      },
+      "answer": {
+        "correct": "100",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-43",
+        "type_label": "Slovní úlohy",
+        "source": "M9PAD23C0T01"
+      }
+    },
+    {
+      "id": "wor-test-019",
+      "topic": "word_problems",
+      "tags": [
+        "měřítko"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "49mm na mapě > 1km ve skutečnosti? A/N",
+        "context": "49mm na mapě > 1km ve skutečnosti? A/N",
+        "image": null
+      },
+      "answer": {
+        "correct": "N",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Měřítko",
+        "source": "M9PAD23C0T01"
+      }
+    },
+    {
+      "id": "wor-test-020",
+      "topic": "word_problems",
+      "tags": [
+        "měřítko"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Vycházková trasa o 20cm delší na mapě než přímá? A/N",
+        "context": "Vycházková trasa o 20cm delší na mapě než přímá? A/N",
+        "image": null
+      },
+      "answer": {
+        "correct": "A",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Měřítko",
+        "source": "M9PAD23C0T01"
+      }
+    },
+    {
+      "id": "wor-test-021",
+      "topic": "word_problems",
+      "tags": [
+        "měřítko"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Měřítko 1:20000? A/N",
+        "context": "Měřítko 1:20000? A/N",
+        "image": null
+      },
+      "answer": {
+        "correct": "A",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Měřítko",
+        "source": "M9PAD23C0T01"
+      }
+    },
+    {
+      "id": "wor-test-022",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Při jaké spotřebě stejná cena",
+        "context": "Při jaké spotřebě stejná cena",
+        "image": null
+      },
+      "answer": {
+        "correct": "90",
+        "unit": "m³",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Nevyřešila rovnici 72x = 61x + 990"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy",
+        "source": "M9PAD17C0T01"
+      }
+    },
+    {
+      "id": "wor-test-023",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy---logika"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Ema s Otou váží dohromady 70 kg",
+        "context": "Ema s Otou váží dohromady 70 kg",
+        "image": null
+      },
+      "answer": {
+        "correct": "A (pravdivé)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Odpověděla N místo A"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy - logika",
+        "source": "M9PAD17C0T01"
+      }
+    },
+    {
+      "id": "wor-test-024",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy---logika"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Maminka váží o 20 kg více než Ema",
+        "context": "Maminka váží o 20 kg více než Ema",
+        "image": null
+      },
+      "answer": {
+        "correct": "N (nepravdivé)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy - logika",
+        "source": "M9PAD17C0T01"
+      }
+    },
+    {
+      "id": "wor-test-025",
+      "topic": "word_problems",
+      "tags": [
+        "slovní-úlohy---logika"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Tatínek váží 86 kg",
+        "context": "Tatínek váží 86 kg",
+        "image": null
+      },
+      "answer": {
+        "correct": "A (pravdivé)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy - logika",
+        "source": "M9PAD17C0T01"
+      }
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "topic": "factoring",
+  "name": "Vytýkání a rozklad",
+  "version": "1.1",
+  "migrated": "2025-12-29",
+  "questions": [
+    {
+      "id": "fac-test-001",
+      "topic": "factoring",
+      "tags": [
+        "rozklad-vytknutím"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "a·(-a) - 2²·3a + 6a²",
+        "context": "a·(-a) - 2²·3a + 6a²",
+        "image": null
+      },
+      "answer": {
+        "correct": "a(5a - 12)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Rozklad vytknutím",
+        "source": "M9PDD24C0T04"
+      }
+    },
+    {
+      "id": "fac-test-002",
+      "topic": "factoring",
+      "tags": [
+        "rozklad-na-součin"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "4a² - 9",
+        "context": "4a² - 9",
+        "image": null
+      },
+      "answer": {
+        "correct": "(2a-3)(2a+3)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Rozklad na součin",
+        "source": "M9PCD23C0T03"
+      }
+    },
+    {
+      "id": "fac-test-003",
+      "topic": "factoring",
+      "tags": [
+        "vytýkání-a-rozklad"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "(4+x)·x + 2x²",
+        "context": "(4+x)·x + 2x²",
+        "image": null
+      },
+      "answer": {
+        "correct": "x(4+3x) nebo 3x²+4x",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "4x+x²+2x² = 4x+3x² = x(4+3x)"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-23",
+        "type_label": "Vytýkání a rozklad",
+        "source": "M9PCD22C0T03"
+      }
+    },
+    {
+      "id": "fac-test-004",
+      "topic": "factoring",
+      "tags": [
+        "vytýkání-a-rozklad"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Upravte a rozložte na součin: x² - x + 2x²",
+        "context": "Upravte a rozložte na součin: x² - x + 2x²",
+        "image": null
+      },
+      "answer": {
+        "correct": "x(3x-1)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "x² - x + 2x² = 3x² - x = x(3x-1)"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-23",
+        "type_label": "Vytýkání a rozklad",
+        "source": "M9PBD22C0T02",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "fac-test-005",
+      "topic": "factoring",
+      "tags": [
+        "vytýkání-a-rozklad"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "2·(x² - x) + x",
+        "context": "2·(x² - x) + x",
+        "image": null
+      },
+      "answer": {
+        "correct": "x(2x-1)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "2x² - 2x + x = 2x² - x = x(2x-1)"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-23",
+        "type_label": "Vytýkání a rozklad",
+        "source": "M9PAD23C0T01"
+      }
+    },
+    {
+      "id": "fac-test-006",
+      "topic": "factoring",
+      "tags": [
+        "vytýkání-a-rozklad"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Z výrazu 3y² - 9y + 6xy vytkněte 3y",
+        "context": "Z výrazu 3y² - 9y + 6xy vytkněte 3y",
+        "image": null
+      },
+      "answer": {
+        "correct": "3y(y - 3 + 2x)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správně vytknuté"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-23",
+        "type_label": "Vytýkání a rozklad",
+        "source": "M9PAD22C0T01",
+        "original_type": "open"
+      }
+    }
+  ]
+}

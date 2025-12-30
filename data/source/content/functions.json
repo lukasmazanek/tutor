@@ -1,0 +1,66 @@
+{
+  "topic": "functions",
+  "name": "Lineární funkce",
+  "version": "1.1",
+  "migrated": "2025-12-29",
+  "questions": [
+    {
+      "id": "fun-test-001",
+      "topic": "functions",
+      "tags": [
+        "lineární-funkce"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Cena vody města A v závislosti na x",
+        "context": "Cena vody města A v závislosti na x",
+        "image": null
+      },
+      "answer": {
+        "correct": "72x Kč",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Lineární funkce",
+        "source": "M9PAD17C0T01"
+      }
+    },
+    {
+      "id": "fun-test-002",
+      "topic": "functions",
+      "tags": [
+        "lineární-funkce"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Cena vody města B v závislosti na x",
+        "context": "Cena vody města B v závislosti na x",
+        "image": null
+      },
+      "answer": {
+        "correct": "(61x + 990) Kč",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Lineární funkce",
+        "source": "M9PAD17C0T01"
+      }
+    }
+  ]
+}

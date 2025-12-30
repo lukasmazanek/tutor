@@ -1,0 +1,101 @@
+{
+  "topic": "ratios",
+  "name": "Poměr",
+  "version": "1.1",
+  "migrated": "2025-12-29",
+  "questions": [
+    {
+      "id": "rat-test-001",
+      "topic": "ratios",
+      "tags": [
+        "poměr"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Body A,B,C,D na číselné ose. B dělí AC v poměru 7:3. V jakém poměru dělí C úsečku BD?",
+        "context": "Body A,B,C,D na číselné ose. B dělí AC v poměru 7:3. V jakém poměru dělí C úsečku BD?",
+        "image": null
+      },
+      "answer": {
+        "correct": "8:13",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Výpočet poměru z pozic bodů"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-41",
+        "type_label": "Poměr",
+        "source": "M9PBD22C0T02",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "rat-test-002",
+      "topic": "ratios",
+      "tags": [
+        "poměr"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Určete číslo, které na číselné ose představuje bod A",
+        "context": "Určete číslo, které na číselné ose představuje bod A",
+        "image": null
+      },
+      "answer": {
+        "correct": "-2",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "32/52 = 16/26 = 8/13"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-41",
+        "type_label": "Poměr",
+        "source": "M9PBD22C0T02",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "rat-test-003",
+      "topic": "ratios",
+      "tags": [
+        "poměr"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Poměr 8./9.tříd v robotickém kroužku",
+        "context": "Poměr 8./9.tříd v robotickém kroužku",
+        "image": null
+      },
+      "answer": {
+        "correct": "12:7 nebo 36:21",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-41",
+        "type_label": "Poměr",
+        "source": "M9PAD23C0T01"
+      }
+    }
+  ]
+}

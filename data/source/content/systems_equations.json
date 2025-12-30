@@ -1,0 +1,66 @@
+{
+  "topic": "systems_equations",
+  "name": "Soustavy rovnic",
+  "version": "1.1",
+  "migrated": "2025-12-29",
+  "questions": [
+    {
+      "id": "sys-test-001",
+      "topic": "systems_equations",
+      "tags": [
+        "soustava-rovnic"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Cena oběda B",
+        "context": "Cena oběda B",
+        "image": null
+      },
+      "answer": {
+        "correct": "280",
+        "unit": "Kč",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Soustava rovnic",
+        "source": "M9PDD24C0T04"
+      }
+    },
+    {
+      "id": "sys-test-002",
+      "topic": "systems_equations",
+      "tags": [
+        "soustava-rovnic"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Cena oběda C",
+        "context": "Cena oběda C",
+        "image": null
+      },
+      "answer": {
+        "correct": "300",
+        "unit": "Kč",
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Soustava rovnic",
+        "source": "M9PDD24C0T04"
+      }
+    }
+  ]
+}

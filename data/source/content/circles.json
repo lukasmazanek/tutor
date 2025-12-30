@@ -1,0 +1,71 @@
+{
+  "topic": "circles",
+  "name": "Kružnice a kruh",
+  "version": "1.1",
+  "migrated": "2025-12-29",
+  "questions": [
+    {
+      "id": "cir-test-001",
+      "topic": "circles",
+      "tags": [
+        "kruh-a-kružnice"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Půlkruh s průměrem AB, délka strany čtverce 2cm. Obsah šedé části?",
+        "context": "Půlkruh s průměrem AB, délka strany čtverce 2cm. Obsah šedé části?",
+        "image": null
+      },
+      "answer": {
+        "correct": "D) 25,12 cm²",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "S = π·r²/2 = 3,14·16/2 = 25,12"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-36",
+        "type_label": "Kruh a kružnice",
+        "source": "M9PBD24C0T02"
+      }
+    },
+    {
+      "id": "cir-test-002",
+      "topic": "circles",
+      "tags": [
+        "kružnice-a-kruh"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Jaký je obvod jedné výseče kruhu (r=10cm, 5 výsečí)?",
+        "context": "Jaký je obvod jedné výseče kruhu (r=10cm, 5 výsečí)?",
+        "image": null
+      },
+      "answer": {
+        "correct": "D",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Obvod = 2·10 + (2π·10/5) ≈ 33 cm"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-36",
+        "type_label": "Kružnice a kruh",
+        "source": "M9PAD22C0T01",
+        "original_type": "multiple_choice"
+      }
+    }
+  ]
+}

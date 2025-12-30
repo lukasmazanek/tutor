@@ -1,0 +1,40 @@
+{
+  "topic": "integers",
+  "name": "Celá čísla",
+  "version": "1.1",
+  "migrated": "2025-12-29",
+  "questions": [
+    {
+      "id": "int-test-001",
+      "topic": "integers",
+      "tags": [
+        "celá-čísla"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "(-6)² - 3·(-3)",
+        "context": "(-6)² - 3·(-3)",
+        "image": null
+      },
+      "answer": {
+        "correct": "45",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "36 + 9 = 45"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-12",
+        "type_label": "Celá čísla",
+        "source": "M9PBD22C0T02",
+        "original_type": "open"
+      }
+    }
+  ]
+}

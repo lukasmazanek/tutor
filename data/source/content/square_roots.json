@@ -1,0 +1,137 @@
+{
+  "topic": "square_roots",
+  "name": "Odmocniny",
+  "version": "1.1",
+  "migrated": "2025-12-29",
+  "questions": [
+    {
+      "id": "squ-test-001",
+      "topic": "square_roots",
+      "tags": [
+        "odmocniny"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "√(1,3² - 1,2²)",
+        "context": "√(1,3² - 1,2²)",
+        "image": null
+      },
+      "answer": {
+        "correct": "0,5",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Drobná chyba ve výpočtu pod odmocninou"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Odmocniny",
+        "source": "M9PCD23C0T03"
+      }
+    },
+    {
+      "id": "squ-test-002",
+      "topic": "square_roots",
+      "tags": [
+        "mocniny-a-odmocniny"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "10²·(10²-1) / (10·10²+10²)",
+        "context": "10²·(10²-1) / (10·10²+10²)",
+        "image": null
+      },
+      "answer": {
+        "correct": "9",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "100·99/1100 = 9900/1100 = 9"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-12",
+        "type_label": "Mocniny a odmocniny",
+        "source": "M9PCD22C0T03"
+      }
+    },
+    {
+      "id": "squ-test-003",
+      "topic": "square_roots",
+      "tags": [
+        "odmocniny"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "(7² - √7²) / √49",
+        "context": "(7² - √7²) / √49",
+        "image": null
+      },
+      "answer": {
+        "correct": "6",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Zaměnila √7² (což je 7) za 7² (což je 49). Nerozumí, že odmocnina a druhá mocnina se ruší: √x² = |x|"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-14",
+        "type_label": "Odmocniny",
+        "source": "M9PAD22C0T01",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "squ-test-004",
+      "topic": "square_roots",
+      "tags": [
+        "odmocniny"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "√(4·0,25)",
+        "context": "√(4·0,25)",
+        "image": null
+      },
+      "answer": {
+        "correct": "1",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Odmocniny",
+        "source": "M9PAD17C0T01"
+      }
+    }
+  ]
+}

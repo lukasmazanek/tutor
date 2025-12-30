@@ -328,6 +328,18 @@
           "value": "3"
         }
       ],
+      "common_errors": [
+        {
+          "value": "3,67",
+          "variants": [
+            "3.67",
+            "11/3",
+            "3,7"
+          ],
+          "feedback": "Pozor na slovo 'dalších' v zadání – ptáme se kolik dní PO tom prvním dni, ne celkem.",
+          "misconception": "total_vs_additional"
+        }
+      ],
       "hints": [
         {
           "level": 1,
@@ -400,6 +412,136 @@
         "type_id": "WORD-WORK",
         "type_label": "Úlohy o práci",
         "source": "generated"
+      }
+    },
+    {
+      "id": "wor-test-009",
+      "topic": "work_problems",
+      "tags": [
+        "slovní-úlohy---práce"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Za kolik minut oškrabou 1 kg brambor dohromady",
+        "context": "Za kolik minut oškrabou 1 kg brambor dohromady",
+        "image": null
+      },
+      "answer": {
+        "correct": "C (za 15 minut)",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "1/24 + 1/40 = 8/120 = 1/15"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-undefined",
+        "type_label": "Slovní úlohy - práce",
+        "source": "M9PDD24C0T04"
+      }
+    },
+    {
+      "id": "wor-test-010",
+      "topic": "work_problems",
+      "tags": [
+        "společná-práce"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Kolik balení vitaminů spotřebuje jeden dospělý za 360 dní?",
+        "context": "Kolik balení vitaminů spotřebuje jeden dospělý za 360 dní?",
+        "image": null
+      },
+      "answer": {
+        "correct": "6",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "360/60 = 6"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Společná práce",
+        "source": "M9PAD22C0T01",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "wor-test-011",
+      "topic": "work_problems",
+      "tags": [
+        "společná-práce"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Za kolik dní spotřebuje jedno balení vitaminů jedno dítě?",
+        "context": "Za kolik dní spotřebuje jedno balení vitaminů jedno dítě?",
+        "image": null
+      },
+      "answer": {
+        "correct": "60",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Častá chyba: Špatně interpretovala 'poloviční dávka'. Dospělý = 1 balení za 60 dní, dítě poloviční dávka = 1 balení za 60 dní (ne 120!)"
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Společná práce",
+        "source": "M9PAD22C0T01",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "wor-test-012",
+      "topic": "work_problems",
+      "tags": [
+        "společná-práce"
+      ],
+      "difficulty": 1,
+      "question": {
+        "stem": "Za kolik dní spotřebují jedno balení dva dospělí a jedno dítě?",
+        "context": "Za kolik dní spotřebují jedno balení dva dospělí a jedno dítě?",
+        "image": null
+      },
+      "answer": {
+        "correct": "24",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [],
+      "solution": {
+        "steps": [
+          "Správně vypočteno"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-42",
+        "type_label": "Společná práce",
+        "source": "M9PAD22C0T01",
+        "original_type": "open"
       }
     }
   ]
