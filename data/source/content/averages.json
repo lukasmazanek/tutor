@@ -1,13 +1,16 @@
 {
   "topic": "averages",
   "name": "Průměry",
-  "version": "1.0",
+  "version": "1.1",
   "migrated": "2025-12-29",
   "questions": [
     {
       "id": "avg-001",
       "topic": "averages",
-      "tags": ["average", "basic"],
+      "tags": [
+        "average",
+        "basic"
+      ],
       "difficulty": 1,
       "question": {
         "stem": "Jaký je průměr čísel 4, 8, 12?",
@@ -20,12 +23,22 @@
         "variants": []
       },
       "distractors": [
-        { "value": "12" },
-        { "value": "6" }
+        {
+          "value": "12"
+        },
+        {
+          "value": "6"
+        }
       ],
       "hints": [
-        { "level": 1, "text": "Průměr = součet všech hodnot ÷ počet hodnot." },
-        { "level": 2, "text": "(4 + 8 + 12) ÷ 3 = 24 ÷ 3 = 8." }
+        {
+          "level": 1,
+          "text": "Průměr = součet všech hodnot ÷ počet hodnot."
+        },
+        {
+          "level": 2,
+          "text": "(4 + 8 + 12) ÷ 3 = 24 ÷ 3 = 8."
+        }
       ],
       "solution": {
         "steps": [
@@ -44,7 +57,10 @@
     {
       "id": "avg-002",
       "topic": "averages",
-      "tags": ["average", "basic"],
+      "tags": [
+        "average",
+        "basic"
+      ],
       "difficulty": 1,
       "question": {
         "stem": "Petr dostal z testů známky 2, 1, 3, 2. Jaký je jeho průměr?",
@@ -57,12 +73,22 @@
         "variants": []
       },
       "distractors": [
-        { "value": "1,5" },
-        { "value": "2,5" }
+        {
+          "value": "1,5"
+        },
+        {
+          "value": "2,5"
+        }
       ],
       "hints": [
-        { "level": 1, "text": "Sečti všechny známky a vyděl počtem testů." },
-        { "level": 2, "text": "(2 + 1 + 3 + 2) ÷ 4 = 8 ÷ 4 = 2." }
+        {
+          "level": 1,
+          "text": "Sečti všechny známky a vyděl počtem testů."
+        },
+        {
+          "level": 2,
+          "text": "(2 + 1 + 3 + 2) ÷ 4 = 8 ÷ 4 = 2."
+        }
       ],
       "solution": {
         "steps": [
@@ -81,7 +107,10 @@
     {
       "id": "avg-003",
       "topic": "averages",
-      "tags": ["average", "missing-value"],
+      "tags": [
+        "average",
+        "missing-value"
+      ],
       "difficulty": 2,
       "question": {
         "stem": "Průměr tří čísel je 10. Dvě z nich jsou 8 a 12. Jaké je třetí číslo?",
@@ -94,12 +123,22 @@
         "variants": []
       },
       "distractors": [
-        { "value": "8" },
-        { "value": "12" }
+        {
+          "value": "8"
+        },
+        {
+          "value": "12"
+        }
       ],
       "hints": [
-        { "level": 1, "text": "Pokud průměr = 10 a máme 3 čísla, pak součet = 10 × 3 = 30." },
-        { "level": 2, "text": "Třetí číslo = 30 - 8 - 12 = 10." }
+        {
+          "level": 1,
+          "text": "Pokud průměr = 10 a máme 3 čísla, pak součet = 10 × 3 = 30."
+        },
+        {
+          "level": 2,
+          "text": "Třetí číslo = 30 - 8 - 12 = 10."
+        }
       ],
       "solution": {
         "steps": [
@@ -118,7 +157,10 @@
     {
       "id": "avg-004",
       "topic": "averages",
-      "tags": ["average", "missing-value"],
+      "tags": [
+        "average",
+        "missing-value"
+      ],
       "difficulty": 2,
       "question": {
         "stem": "Eva má z pěti testů průměr 3. Čtyři známky jsou 2, 3, 4, 3. Jaká je pátá známka?",
@@ -131,12 +173,22 @@
         "variants": []
       },
       "distractors": [
-        { "value": "2" },
-        { "value": "4" }
+        {
+          "value": "2"
+        },
+        {
+          "value": "4"
+        }
       ],
       "hints": [
-        { "level": 1, "text": "Celkový součet = 3 × 5 = 15." },
-        { "level": 2, "text": "Součet čtyř známek = 2 + 3 + 4 + 3 = 12. Pátá = 15 - 12 = 3." }
+        {
+          "level": 1,
+          "text": "Celkový součet = 3 × 5 = 15."
+        },
+        {
+          "level": 2,
+          "text": "Součet čtyř známek = 2 + 3 + 4 + 3 = 12. Pátá = 15 - 12 = 3."
+        }
       ],
       "solution": {
         "steps": [
@@ -155,7 +207,10 @@
     {
       "id": "avg-005",
       "topic": "averages",
-      "tags": ["average", "change"],
+      "tags": [
+        "average",
+        "change"
+      ],
       "difficulty": 2,
       "question": {
         "stem": "Průměr 4 čísel je 15. Přidáme páté číslo 25. Jaký je nový průměr?",
@@ -168,12 +223,22 @@
         "variants": []
       },
       "distractors": [
-        { "value": "20" },
-        { "value": "16" }
+        {
+          "value": "20"
+        },
+        {
+          "value": "16"
+        }
       ],
       "hints": [
-        { "level": 1, "text": "Původní součet = 15 × 4 = 60." },
-        { "level": 2, "text": "Nový součet = 60 + 25 = 85. Nový průměr = 85 ÷ 5 = 17." }
+        {
+          "level": 1,
+          "text": "Původní součet = 15 × 4 = 60."
+        },
+        {
+          "level": 2,
+          "text": "Nový součet = 60 + 25 = 85. Nový průměr = 85 ÷ 5 = 17."
+        }
       ],
       "solution": {
         "steps": [
@@ -192,7 +257,10 @@
     {
       "id": "avg-006",
       "topic": "averages",
-      "tags": ["average", "change"],
+      "tags": [
+        "average",
+        "change"
+      ],
       "difficulty": 3,
       "question": {
         "stem": "Průměrná výška 5 žáků je 160 cm. Přijde šestý žák vysoký 172 cm. Jaká je nová průměrná výška?",
@@ -205,12 +273,22 @@
         "variants": []
       },
       "distractors": [
-        { "value": "166" },
-        { "value": "164" }
+        {
+          "value": "166"
+        },
+        {
+          "value": "164"
+        }
       ],
       "hints": [
-        { "level": 1, "text": "Celková výška 5 žáků = 160 × 5 = 800 cm." },
-        { "level": 2, "text": "S novým žákem: (800 + 172) ÷ 6 = 972 ÷ 6 = 162 cm." }
+        {
+          "level": 1,
+          "text": "Celková výška 5 žáků = 160 × 5 = 800 cm."
+        },
+        {
+          "level": 2,
+          "text": "S novým žákem: (800 + 172) ÷ 6 = 972 ÷ 6 = 162 cm."
+        }
       ],
       "solution": {
         "steps": [
@@ -229,7 +307,10 @@
     {
       "id": "avg-007",
       "topic": "averages",
-      "tags": ["average", "missing-value"],
+      "tags": [
+        "average",
+        "missing-value"
+      ],
       "difficulty": 3,
       "question": {
         "stem": "Honza chce mít z matematiky průměr 2. Má známky 1, 3, 2, 3. Jakou známku musí dostat z posledního testu?",
@@ -242,12 +323,22 @@
         "variants": []
       },
       "distractors": [
-        { "value": "2" },
-        { "value": "0" }
+        {
+          "value": "2"
+        },
+        {
+          "value": "0"
+        }
       ],
       "hints": [
-        { "level": 1, "text": "Pro průměr 2 z 5 testů potřebuje součet 10." },
-        { "level": 2, "text": "Má součet 1 + 3 + 2 + 3 = 9. Potřebuje 10 - 9 = 1." }
+        {
+          "level": 1,
+          "text": "Pro průměr 2 z 5 testů potřebuje součet 10."
+        },
+        {
+          "level": 2,
+          "text": "Má součet 1 + 3 + 2 + 3 = 9. Potřebuje 10 - 9 = 1."
+        }
       ],
       "solution": {
         "steps": [
@@ -266,7 +357,10 @@
     {
       "id": "avg-008",
       "topic": "averages",
-      "tags": ["average", "basic"],
+      "tags": [
+        "average",
+        "basic"
+      ],
       "difficulty": 1,
       "question": {
         "stem": "Teploty během týdne byly: 15, 18, 20, 17, 15 °C. Jaká byla průměrná teplota?",
@@ -279,12 +373,22 @@
         "variants": []
       },
       "distractors": [
-        { "value": "18" },
-        { "value": "16" }
+        {
+          "value": "18"
+        },
+        {
+          "value": "16"
+        }
       ],
       "hints": [
-        { "level": 1, "text": "Sečti všechny teploty a vyděl počtem dní." },
-        { "level": 2, "text": "(15 + 18 + 20 + 17 + 15) ÷ 5 = 85 ÷ 5 = 17." }
+        {
+          "level": 1,
+          "text": "Sečti všechny teploty a vyděl počtem dní."
+        },
+        {
+          "level": 2,
+          "text": "(15 + 18 + 20 + 17 + 15) ÷ 5 = 85 ÷ 5 = 17."
+        }
       ],
       "solution": {
         "steps": [
@@ -303,7 +407,10 @@
     {
       "id": "avg-009",
       "topic": "averages",
-      "tags": ["average", "weighted"],
+      "tags": [
+        "average",
+        "weighted"
+      ],
       "difficulty": 2,
       "question": {
         "stem": "Školní průměr se počítá: písemky (váha 2) a ústní zkoušení (váha 1). Petr má z písemek 2 a z ústního 4. Jaký je jeho vážený průměr?",
@@ -313,15 +420,29 @@
       "answer": {
         "correct": "2,67",
         "unit": null,
-        "variants": ["8/3", "2.67", "2,7"]
+        "variants": [
+          "8/3",
+          "2.67",
+          "2,7"
+        ]
       },
       "distractors": [
-        { "value": "3" },
-        { "value": "2,5" }
+        {
+          "value": "3"
+        },
+        {
+          "value": "2,5"
+        }
       ],
       "hints": [
-        { "level": 1, "text": "Vážený průměr = (hodnota × váha + hodnota × váha) ÷ součet vah." },
-        { "level": 2, "text": "(2 × 2 + 4 × 1) ÷ (2 + 1) = (4 + 4) ÷ 3 = 8/3 ≈ 2,67." }
+        {
+          "level": 1,
+          "text": "Vážený průměr = (hodnota × váha + hodnota × váha) ÷ součet vah."
+        },
+        {
+          "level": 2,
+          "text": "(2 × 2 + 4 × 1) ÷ (2 + 1) = (4 + 4) ÷ 3 = 8/3 ≈ 2,67."
+        }
       ],
       "solution": {
         "steps": [
@@ -341,7 +462,10 @@
     {
       "id": "avg-010",
       "topic": "averages",
-      "tags": ["average", "weighted"],
+      "tags": [
+        "average",
+        "weighted"
+      ],
       "difficulty": 3,
       "question": {
         "stem": "Ve třídě A je 20 žáků s průměrem 75 bodů. Ve třídě B je 30 žáků s průměrem 85 bodů. Jaký je průměr obou tříd dohromady?",
@@ -354,12 +478,22 @@
         "variants": []
       },
       "distractors": [
-        { "value": "80" },
-        { "value": "82" }
+        {
+          "value": "80"
+        },
+        {
+          "value": "82"
+        }
       ],
       "hints": [
-        { "level": 1, "text": "Pozor! Nelze jen zprůměrovat 75 a 85. Třídy mají různý počet žáků." },
-        { "level": 2, "text": "Celkem bodů = 20×75 + 30×85 = 1500 + 2550 = 4050. Průměr = 4050 ÷ 50 = 81." }
+        {
+          "level": 1,
+          "text": "Pozor! Nelze jen zprůměrovat 75 a 85. Třídy mají různý počet žáků."
+        },
+        {
+          "level": 2,
+          "text": "Celkem bodů = 20×75 + 30×85 = 1500 + 2550 = 4050. Průměr = 4050 ÷ 50 = 81."
+        }
       ],
       "solution": {
         "steps": [
@@ -380,7 +514,10 @@
     {
       "id": "avg-011",
       "topic": "averages",
-      "tags": ["average", "weighted"],
+      "tags": [
+        "average",
+        "weighted"
+      ],
       "difficulty": 3,
       "question": {
         "stem": "Známka z testu má váhu 3, domácí úkol váhu 1. Jana má z testu 2 a z úkolu 1. Jaký je její vážený průměr?",
@@ -390,15 +527,28 @@
       "answer": {
         "correct": "1,75",
         "unit": null,
-        "variants": ["7/4", "1.75"]
+        "variants": [
+          "7/4",
+          "1.75"
+        ]
       },
       "distractors": [
-        { "value": "1,5" },
-        { "value": "2" }
+        {
+          "value": "1,5"
+        },
+        {
+          "value": "2"
+        }
       ],
       "hints": [
-        { "level": 1, "text": "Test má větší váhu, takže průměr bude blíž k 2 než k 1." },
-        { "level": 2, "text": "(2 × 3 + 1 × 1) ÷ (3 + 1) = (6 + 1) ÷ 4 = 7/4 = 1,75." }
+        {
+          "level": 1,
+          "text": "Test má větší váhu, takže průměr bude blíž k 2 než k 1."
+        },
+        {
+          "level": 2,
+          "text": "(2 × 3 + 1 × 1) ÷ (3 + 1) = (6 + 1) ÷ 4 = 7/4 = 1,75."
+        }
       ],
       "solution": {
         "steps": [
@@ -413,6 +563,131 @@
         "type_id": "CALC-AVG",
         "type_label": "Průměry",
         "source": "generated"
+      }
+    },
+    {
+      "id": "ave-test-012",
+      "topic": "averages",
+      "tags": [
+        "průměry"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Jaký je aritmetický průměr výsledků pěti dívčích týmů?",
+        "context": "Dívčí týmy škol A, B, C, D, E soutěžily v matematice. Body: A = 12, B = 6, C = 9, D = 4, E = 4.",
+        "image": null
+      },
+      "answer": {
+        "correct": "7",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Průměr = součet všech hodnot ÷ počet hodnot."
+        },
+        {
+          "level": 2,
+          "text": "(12 + 6 + 9 + 4 + 4) ÷ 5 = 35 ÷ 5 = 7."
+        }
+      ],
+      "solution": {
+        "steps": [
+          "Součet: 12 + 6 + 9 + 4 + 4 = 35",
+          "Počet týmů: 5",
+          "Průměr: 35 ÷ 5 = 7"
+        ],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-52",
+        "type_label": "Průměry",
+        "source": "M9PBD22C0T02",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "ave-test-013",
+      "topic": "averages",
+      "tags": [
+        "průměry"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Kolik bodů získal chlapecký tým školy D?",
+        "context": "Chlapecké týmy škol A, B, C, D, E soutěžily v matematice. Body: A = 6, B = 14, C = 2, D = ?, E = 6. Průměr všech pěti týmů je 8 bodů.",
+        "image": null
+      },
+      "answer": {
+        "correct": "12",
+        "unit": null,
+        "variants": []
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Průměr × počet = součet. 8 × 5 = 40 bodů celkem."
+        },
+        {
+          "level": 2,
+          "text": "Součet známých: 6 + 14 + 2 + 6 = 28. Škola D = 40 - 28 = 12."
+        }
+      ],
+      "solution": {
+        "steps": [
+          "Součet všech = průměr × počet = 8 × 5 = 40",
+          "Součet známých: 6 + 14 + 2 + 6 = 28",
+          "Škola D: 40 - 28 = 12"
+        ],
+        "strategy": "Součet = průměr × počet"
+      },
+      "meta": {
+        "type_id": "TEST-52",
+        "type_label": "Průměry",
+        "source": "M9PBD22C0T02",
+        "original_type": "open"
+      }
+    },
+    {
+      "id": "ave-test-014",
+      "topic": "averages",
+      "tags": [
+        "průměry"
+      ],
+      "difficulty": 2,
+      "question": {
+        "stem": "Jaký je aritmetický průměr výsledků soutěžících?",
+        "context": "V soutěži mohli účastníci získat 0, 1, nebo 2 body. Ze 50 soutěžících: 15 získalo 0 bodů, 30 získalo 1 bod, 5 získalo 2 body.",
+        "image": null
+      },
+      "answer": {
+        "correct": "0,8",
+        "unit": null,
+        "variants": ["0.8", "4/5"]
+      },
+      "distractors": [],
+      "hints": [
+        {
+          "level": 1,
+          "text": "Celkový počet bodů = 15×0 + 30×1 + 5×2."
+        },
+        {
+          "level": 2,
+          "text": "Celkem bodů: 0 + 30 + 10 = 40. Průměr: 40 ÷ 50 = 0,8."
+        }
+      ],
+      "solution": {
+        "steps": [],
+        "strategy": null
+      },
+      "meta": {
+        "type_id": "TEST-52",
+        "type_label": "Průměry",
+        "source": "M9PAD22C0T01",
+        "original_type": "multiple_choice"
       }
     }
   ]

@@ -1,6 +1,6 @@
 {
   "version": "4.0",
-  "generated": "2025-12-29T17:00:44.697Z",
+  "generated": "2025-12-30T04:14:45.681Z",
   "description": "ADR-022: Multi-mode questions with keyboard config",
   "topics": {
     "angles": {
@@ -1102,8 +1102,8 @@
       "topic": "averages",
       "difficulty": 2,
       "question": {
-        "stem": "Aritmetický průměr výsledků pěti dívčích týmů (graf)",
-        "context": "Aritmetický průměr výsledků pěti dívčích týmů (graf)"
+        "stem": "Jaký je aritmetický průměr výsledků pěti dívčích týmů?",
+        "context": "Dívčí týmy škol A, B, C, D, E soutěžily v matematice. Body: A = 12, B = 6, C = 9, D = 4, E = 4."
       },
       "modes": {
         "numeric": {
@@ -1116,10 +1116,15 @@
       "keyboard": {
         "variable": null
       },
-      "hints": [],
+      "hints": [
+        "Průměr = součet všech hodnot ÷ počet hodnot.",
+        "(12 + 6 + 9 + 4 + 4) ÷ 5 = 35 ÷ 5 = 7."
+      ],
       "solution": {
         "steps": [
-          "12+6+9+4+4 = 35, 35:5 = 7"
+          "Součet: 12 + 6 + 9 + 4 + 4 = 35",
+          "Počet týmů: 5",
+          "Průměr: 35 ÷ 5 = 7"
         ],
         "strategy": null
       },
@@ -1134,8 +1139,8 @@
       "topic": "averages",
       "difficulty": 2,
       "question": {
-        "stem": "Kolik bodů získal chlapecký tým školy D? (průměr všech = 8)",
-        "context": "Kolik bodů získal chlapecký tým školy D? (průměr všech = 8)"
+        "stem": "Kolik bodů získal chlapecký tým školy D?",
+        "context": "Chlapecké týmy škol A, B, C, D, E soutěžily v matematice. Body: A = 6, B = 14, C = 2, D = ?, E = 6. Průměr všech pěti týmů je 8 bodů."
       },
       "modes": {
         "numeric": {
@@ -1148,12 +1153,17 @@
       "keyboard": {
         "variable": null
       },
-      "hints": [],
+      "hints": [
+        "Průměr × počet = součet. 8 × 5 = 40 bodů celkem.",
+        "Součet známých: 6 + 14 + 2 + 6 = 28. Škola D = 40 - 28 = 12."
+      ],
       "solution": {
         "steps": [
-          "6+14+2+x+6 = 40, x = 12"
+          "Součet všech = průměr × počet = 8 × 5 = 40",
+          "Součet známých: 6 + 14 + 2 + 6 = 28",
+          "Škola D: 40 - 28 = 12"
         ],
-        "strategy": null
+        "strategy": "Součet = průměr × počet"
       },
       "meta": {
         "type_id": "TEST-52",
@@ -1166,22 +1176,26 @@
       "topic": "averages",
       "difficulty": 2,
       "question": {
-        "stem": "Jaký je aritmetický průměr výsledků soutěžících? (0/1/2 body, 30 s 1b, 10% s 2b)",
-        "context": "Jaký je aritmetický průměr výsledků soutěžících? (0/1/2 body, 30 s 1b, 10% s 2b)"
+        "stem": "Jaký je aritmetický průměr výsledků soutěžících?",
+        "context": "V soutěži mohli účastníci získat 0, 1, nebo 2 body. Ze 50 soutěžících: 15 získalo 0 bodů, 30 získalo 1 bod, 5 získalo 2 body."
       },
       "modes": {
         "numeric": {
-          "answer": "A",
+          "answer": "0,8",
           "unit": null,
-          "variants": [],
+          "variants": [
+            "0.8",
+            "4/5"
+          ],
           "distractors": []
         }
       },
       "keyboard": {
-        "variable": "b"
+        "variable": null
       },
       "hints": [
-        "Častá chyba: Správně: 15×0 + 30×1 + 5×2 = 40 bodů, 40/50 = 0,8 (A), ne 0,6 (D)"
+        "Celkový počet bodů = 15×0 + 30×1 + 5×2.",
+        "Celkem bodů: 0 + 30 + 10 = 40. Průměr: 40 ÷ 50 = 0,8."
       ],
       "solution": {
         "steps": [],
