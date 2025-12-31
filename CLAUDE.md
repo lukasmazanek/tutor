@@ -1,5 +1,7 @@
 # Tutor Project - CERMAT Math Test Analysis
 
+<!-- Last updated: 2025-12-31 -->
+
 ## Ultimate Goal
 **Create an application that helps Anezka Mazankova improve her math skills** for CERMAT entrance exams, based on psychological principles and error pattern analysis.
 
