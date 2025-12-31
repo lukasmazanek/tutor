@@ -9,7 +9,7 @@ import PageHeader from '../PageHeader'
 import { UnifiedQuestion, QuestionsData } from '../../types'
 import { TypeDrillQuestion, TypeDrillResult, TypeOption } from './types'
 import { getQuestionText, getSolutionData } from '../../lib/questionUtils'
-import { saveAttempt, startSession, endSession } from '../../hooks/useAttempts'
+import { saveAttempt, saveError, startSession, endSession } from '../../hooks/useAttempts'
 
 const data = questionsData as QuestionsData
 
@@ -202,6 +202,25 @@ function TypeDrill({ onExit, onViewProgress }: TypeDrillProps) {
     handleContinue()
   }
 
+  // Report error - save to queue and skip
+  const handleReportError = async () => {
+    const questionText = currentQuestion.question.context || currentQuestion.question.stem || ''
+
+    await saveError({
+      question_id: currentQuestion.id,
+      question_stem: questionText,
+      correct_answer: currentQuestion.meta.type_label || '',
+      topic: currentQuestion.topic,
+      difficulty: currentQuestion.difficulty,
+      user_answer: null,
+      hints_shown: [],
+      time_spent_ms: Date.now() - questionStartTime
+    })
+
+    // Skip to next question
+    handleSkip()
+  }
+
   // Auto-advance on correct answers
   useEffect(() => {
     if (phase === 'feedback' && currentResult?.typeCorrect && currentResult?.strategyCorrect) {
@@ -251,6 +270,7 @@ function TypeDrill({ onExit, onViewProgress }: TypeDrillProps) {
       bottomBar={{
         1: { onClick: onExit },
         2: { onClick: onViewProgress },
+        3: { action: 'error', onClick: handleReportError },
         5: {
           action: phase === 'feedback' ? 'continue' : 'skip',
           onClick: phase === 'feedback' ? handleContinue : handleSkip
