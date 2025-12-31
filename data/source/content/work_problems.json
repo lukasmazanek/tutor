@@ -51,6 +51,15 @@
         "type_id": "WORD-WORK",
         "type_label": "Úlohy o práci",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Úlohy o práci",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -100,6 +109,15 @@
         "type_id": "WORD-WORK",
         "type_label": "Úlohy o práci",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Úlohy o práci",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -149,6 +167,15 @@
         "type_id": "WORD-WORK",
         "type_label": "Úlohy o práci",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Úlohy o práci",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -198,6 +225,15 @@
         "type_id": "WORD-WORK",
         "type_label": "Úlohy o práci",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Úlohy o práci",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -247,6 +283,15 @@
         "type_id": "WORD-WORK",
         "type_label": "Úlohy o práci",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Úlohy o práci",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {

@@ -31,6 +31,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Algebraické výrazy",
         "source": "M9PDD24C0T04"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Algebraické výrazy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -60,6 +69,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Pořadí operací",
         "source": "M9PCD23C0T03"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Algebraické výrazy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -94,6 +112,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Algebraické výrazy",
         "source": "M9PCD23C0T03"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Algebraické výrazy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -123,6 +150,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Algebraické výrazy",
         "source": "M9PCD23C0T03"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Algebraické výrazy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -157,6 +193,15 @@
         "type_id": "TEST-21",
         "type_label": "Výrazy s proměnnou",
         "source": "M9PCD22C0T03"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Algebraické výrazy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {

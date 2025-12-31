@@ -31,6 +31,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Desetinná čísla",
         "source": "M9PCD23C0T03"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Desetinná čísla",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -60,6 +69,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Desetinná čísla",
         "source": "M9PAD17C0T01"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Desetinná čísla",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     }
   ]

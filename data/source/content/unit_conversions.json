@@ -53,6 +53,15 @@
         "type_id": "UNIT-AREA",
         "type_label": "Převody jednotek",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Převody jednotek",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -104,6 +113,15 @@
         "type_id": "UNIT-AREA",
         "type_label": "Převody jednotek",
         "source": "M9PAD17C0T01-7.1"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Převody jednotek",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -155,6 +173,15 @@
         "type_id": "UNIT-VOL",
         "type_label": "Převody jednotek",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Převody jednotek",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -205,6 +232,15 @@
         "type_id": "UNIT-VOL",
         "type_label": "Převody jednotek",
         "source": "M9PAD17C0T01-7.2"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Převody jednotek",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -255,6 +291,15 @@
         "type_id": "UNIT-TIME",
         "type_label": "Převody jednotek",
         "source": "M9PAD17C0T01-7.3"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Převody jednotek",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {

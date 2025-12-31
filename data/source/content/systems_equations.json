@@ -31,6 +31,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Soustava rovnic",
         "source": "M9PDD24C0T04"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Soustavy rovnic",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -60,6 +69,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Soustava rovnic",
         "source": "M9PDD24C0T04"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Soustavy rovnic",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     }
   ]

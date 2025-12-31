@@ -31,6 +31,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Rozklad vytknutím",
         "source": "M9PDD24C0T04"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Rozklad",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -60,6 +69,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Rozklad na součin",
         "source": "M9PCD23C0T03"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Rozklad",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -91,6 +109,15 @@
         "type_id": "TEST-23",
         "type_label": "Vytýkání a rozklad",
         "source": "M9PCD22C0T03"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Rozklad",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -123,6 +150,15 @@
         "type_label": "Vytýkání a rozklad",
         "source": "M9PBD22C0T02",
         "original_type": "open"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Rozklad",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -154,6 +190,15 @@
         "type_id": "TEST-23",
         "type_label": "Vytýkání a rozklad",
         "source": "M9PAD23C0T01"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Rozklad",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {

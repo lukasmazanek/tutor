@@ -33,6 +33,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Procenta - slevy",
         "source": "M9PDD24C0T04"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Procenta",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
+          ]
+        }
       }
     },
     {
@@ -62,6 +71,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Grafy - procenta",
         "source": "M9PDD24C0T04"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Procenta",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
+          ]
+        }
       }
     },
     {
@@ -96,6 +114,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Grafy - procenta",
         "source": "M9PDD24C0T04"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Procenta",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
+          ]
+        }
       }
     },
     {
@@ -125,6 +152,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Procenta - slovní úloha",
         "source": "M9PDD24C0T04"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Procenta",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
+          ]
+        }
       }
     },
     {
@@ -154,6 +190,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Procenta",
         "source": "M9PDD24C0T04"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Procenta",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
+          ]
+        }
       }
     },
     {

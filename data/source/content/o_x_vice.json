@@ -46,6 +46,15 @@
         ],
         "strategy": "× (1 + zlomek)"
       },
+      "modes": {
+        "type_recognition": {
+          "answer": "o X více/méně",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
+      },
       "meta": {
         "type_id": "WORD-OXVICE",
         "type_label": "o X více/méně",
@@ -94,6 +103,15 @@
           "O čtvrtinu méně: 80 - 20 = 60"
         ],
         "strategy": null
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "o X více/méně",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       },
       "meta": {
         "type_id": "WORD-OXVICE",
@@ -149,6 +167,15 @@
         "type_label": "o X více/méně",
         "source": "problem_bank",
         "migrated": "2025-12-25"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "o X více/méně",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -198,6 +225,15 @@
         "type_label": "o X více/méně",
         "source": "problem_bank",
         "migrated": "2025-12-25"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "o X více/méně",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -241,6 +277,15 @@
         "type_label": "o X více/méně",
         "source": "problem_bank",
         "migrated": "2025-12-25"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "o X více/méně",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -301,6 +346,15 @@
         "type_label": "o X více/méně",
         "source": "problem_bank",
         "migrated": "2025-12-25"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "o X více/méně",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -351,6 +405,15 @@
         "type_label": "o X více/méně",
         "source": "problem_bank",
         "migrated": "2025-12-25"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "o X více/méně",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {

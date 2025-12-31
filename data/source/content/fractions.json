@@ -45,6 +45,15 @@
         "type_label": "Zlomky",
         "source": "problem_bank",
         "migrated": "2025-12-25"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Zlomky",
+          "distractors": [
+            "Lineární rovnice",
+            "Procenta"
+          ]
+        }
       }
     },
     {
@@ -89,6 +98,15 @@
         "type_label": "Zlomky",
         "source": "problem_bank",
         "migrated": "2025-12-25"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Zlomky",
+          "distractors": [
+            "Lineární rovnice",
+            "Procenta"
+          ]
+        }
       }
     },
     {
@@ -132,6 +150,15 @@
         "type_label": "Zlomky",
         "source": "problem_bank",
         "migrated": "2025-12-25"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Zlomky",
+          "distractors": [
+            "Lineární rovnice",
+            "Procenta"
+          ]
+        }
       }
     },
     {
@@ -176,6 +203,15 @@
         "type_label": "Zlomky",
         "source": "problem_bank",
         "migrated": "2025-12-25"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Zlomky",
+          "distractors": [
+            "Lineární rovnice",
+            "Procenta"
+          ]
+        }
       }
     },
     {
@@ -219,6 +255,15 @@
         "type_label": "Zlomky",
         "source": "problem_bank",
         "migrated": "2025-12-25"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Zlomky",
+          "distractors": [
+            "Lineární rovnice",
+            "Procenta"
+          ]
+        }
       }
     },
     {

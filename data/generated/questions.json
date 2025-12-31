@@ -1,6 +1,6 @@
 {
   "version": "4.0",
-  "generated": "2025-12-31T10:21:46.153Z",
+  "generated": "2025-12-31T10:53:09.115Z",
   "description": "ADR-022: Multi-mode questions with keyboard config",
   "topics": {
     "angles": {
@@ -178,6 +178,13 @@
             "70",
             "90"
           ]
+        },
+        "type_recognition": {
+          "answer": "Úhly",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -224,6 +231,13 @@
           "distractors": [
             "50",
             "30"
+          ]
+        },
+        "type_recognition": {
+          "answer": "Úhly",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
           ]
         }
       },
@@ -272,6 +286,13 @@
           "distractors": [
             "70",
             "80"
+          ]
+        },
+        "type_recognition": {
+          "answer": "Úhly",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
           ]
         }
       },
@@ -322,6 +343,13 @@
             "120",
             "72"
           ]
+        },
+        "type_recognition": {
+          "answer": "Úhly",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -371,6 +399,13 @@
             "42",
             "90"
           ]
+        },
+        "type_recognition": {
+          "answer": "Úhly",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -409,6 +444,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Obsah a obvod",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -446,6 +488,13 @@
           "unit": "cm",
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Obsah a obvod",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -483,6 +532,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Obsah a obvod",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -522,6 +578,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Obsah a obvod",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -559,6 +622,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Obsah a obvod",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -664,6 +734,13 @@
             "12",
             "6"
           ]
+        },
+        "type_recognition": {
+          "answer": "Průměry",
+          "distractors": [
+            "Procenta",
+            "Zlomky"
+          ]
         }
       },
       "keyboard": {
@@ -703,6 +780,13 @@
           "distractors": [
             "1,5",
             "2,5"
+          ]
+        },
+        "type_recognition": {
+          "answer": "Průměry",
+          "distractors": [
+            "Procenta",
+            "Zlomky"
           ]
         }
       },
@@ -744,6 +828,13 @@
             "8",
             "12"
           ]
+        },
+        "type_recognition": {
+          "answer": "Průměry",
+          "distractors": [
+            "Procenta",
+            "Zlomky"
+          ]
         }
       },
       "keyboard": {
@@ -784,6 +875,13 @@
             "2",
             "4"
           ]
+        },
+        "type_recognition": {
+          "answer": "Průměry",
+          "distractors": [
+            "Procenta",
+            "Zlomky"
+          ]
         }
       },
       "keyboard": {
@@ -823,6 +921,13 @@
           "distractors": [
             "20",
             "16"
+          ]
+        },
+        "type_recognition": {
+          "answer": "Průměry",
+          "distractors": [
+            "Procenta",
+            "Zlomky"
           ]
         }
       },
@@ -1227,6 +1332,13 @@
             "x² + 9",
             "x² + 3x + 9"
           ]
+        },
+        "type_recognition": {
+          "answer": "Umocňování (a±b)²",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
+          ]
         }
       },
       "keyboard": {
@@ -1267,6 +1379,13 @@
           "distractors": [
             "x² + 25",
             "x² - 5x + 25"
+          ]
+        },
+        "type_recognition": {
+          "answer": "Umocňování (a±b)²",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
           ]
         }
       },
@@ -1309,6 +1428,13 @@
             "4x² + 1",
             "2x² + 2x + 1"
           ]
+        },
+        "type_recognition": {
+          "answer": "Umocňování (a±b)²",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
+          ]
         }
       },
       "keyboard": {
@@ -1350,6 +1476,13 @@
             "9a² + 4",
             "9a² - 6a + 4"
           ]
+        },
+        "type_recognition": {
+          "answer": "Umocňování (a±b)²",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
+          ]
         }
       },
       "keyboard": {
@@ -1388,6 +1521,13 @@
           "distractors": [
             "1/9 + 16b²",
             "1/9 - 4b/3 + 16b²"
+          ]
+        },
+        "type_recognition": {
+          "answer": "Umocňování (a±b)²",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
           ]
         }
       },
@@ -2166,6 +2306,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Kruhy a kružnice",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -2198,6 +2345,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Kruhy a kružnice",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -2230,6 +2384,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Konstrukce",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -2262,6 +2423,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Konstrukce",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -2294,6 +2462,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Konstrukce",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -2326,6 +2501,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Konstrukce",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -2358,6 +2540,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Konstrukce",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -2486,6 +2675,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Desetinná čísla",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -2516,6 +2712,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Desetinná čísla",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -2546,6 +2749,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Lineární rovnice",
+          "distractors": [
+            "Zlomky",
+            "Procenta"
+          ]
         }
       },
       "keyboard": {
@@ -2584,6 +2794,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Lineární rovnice",
+          "distractors": [
+            "Zlomky",
+            "Procenta"
+          ]
         }
       },
       "keyboard": {
@@ -2622,6 +2839,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Lineární rovnice",
+          "distractors": [
+            "Zlomky",
+            "Procenta"
+          ]
         }
       },
       "keyboard": {
@@ -2659,6 +2883,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Lineární rovnice",
+          "distractors": [
+            "Zlomky",
+            "Procenta"
+          ]
         }
       },
       "keyboard": {
@@ -2697,6 +2928,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Lineární rovnice",
+          "distractors": [
+            "Zlomky",
+            "Procenta"
+          ]
         }
       },
       "keyboard": {
@@ -3458,6 +3696,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Algebraické výrazy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -3488,6 +3733,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Algebraické výrazy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -3518,6 +3770,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Algebraické výrazy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -3550,6 +3809,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Algebraické výrazy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -3580,6 +3846,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Algebraické výrazy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -4024,6 +4297,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Rozklad",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -4054,6 +4334,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Rozklad",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -4084,6 +4371,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Rozklad",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -4116,6 +4410,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Rozklad",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -4148,6 +4449,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Rozklad",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -4212,6 +4520,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Zlomky",
+          "distractors": [
+            "Lineární rovnice",
+            "Procenta"
+          ]
         }
       },
       "keyboard": {
@@ -4249,6 +4564,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Zlomky",
+          "distractors": [
+            "Lineární rovnice",
+            "Procenta"
+          ]
         }
       },
       "keyboard": {
@@ -4287,6 +4609,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Zlomky",
+          "distractors": [
+            "Lineární rovnice",
+            "Procenta"
+          ]
         }
       },
       "keyboard": {
@@ -4324,6 +4653,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Zlomky",
+          "distractors": [
+            "Lineární rovnice",
+            "Procenta"
+          ]
         }
       },
       "keyboard": {
@@ -4362,6 +4698,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Zlomky",
+          "distractors": [
+            "Lineární rovnice",
+            "Procenta"
+          ]
         }
       },
       "keyboard": {
@@ -5213,6 +5556,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Funkce",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -5243,6 +5593,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Funkce",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -5273,6 +5630,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Celá čísla",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -5305,6 +5669,13 @@
           "unit": "Kč",
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "o X více/méně",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -5342,6 +5713,13 @@
           "unit": "Kč",
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "o X více/méně",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -5379,6 +5757,13 @@
           "unit": "Kč",
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "o X více/méně",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -5416,6 +5801,13 @@
           "unit": "Kč",
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "o X více/méně",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -5453,6 +5845,13 @@
           "unit": "cm",
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "o X více/méně",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -5494,6 +5893,13 @@
             "+ 1/3",
             "× 3"
           ]
+        },
+        "type_recognition": {
+          "answer": "o X více/méně",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -5532,6 +5938,13 @@
           "unit": "Kč",
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "o X více/méně",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -7438,6 +7851,13 @@
           "unit": "%",
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Procenta",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
+          ]
         }
       },
       "keyboard": {
@@ -7470,6 +7890,13 @@
           "unit": "h",
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Procenta",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
+          ]
         }
       },
       "keyboard": {
@@ -7500,6 +7927,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Procenta",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
+          ]
         }
       },
       "keyboard": {
@@ -7532,6 +7966,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Procenta",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
+          ]
         }
       },
       "keyboard": {
@@ -7562,6 +8003,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Procenta",
+          "distractors": [
+            "Lineární rovnice",
+            "Zlomky"
+          ]
         }
       },
       "keyboard": {
@@ -8354,6 +8802,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Mocniny",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10104,6 +10559,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Poměry",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10136,6 +10598,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Poměry",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10168,6 +10637,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Poměry",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10200,6 +10676,13 @@
           "distractors": [
             "26",
             "32"
+          ]
+        },
+        "type_recognition": {
+          "answer": "Posloupnosti",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
           ]
         }
       },
@@ -10241,6 +10724,13 @@
             "36",
             "64"
           ]
+        },
+        "type_recognition": {
+          "answer": "Posloupnosti",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10280,6 +10770,13 @@
           "distractors": [
             "48",
             "192"
+          ]
+        },
+        "type_recognition": {
+          "answer": "Posloupnosti",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
           ]
         }
       },
@@ -10321,6 +10818,13 @@
             "28",
             "34"
           ]
+        },
+        "type_recognition": {
+          "answer": "Posloupnosti",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10360,6 +10864,13 @@
           "distractors": [
             "24",
             "26"
+          ]
+        },
+        "type_recognition": {
+          "answer": "Posloupnosti",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
           ]
         }
       },
@@ -10495,6 +11006,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Odmocniny",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10527,6 +11045,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Odmocniny",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10559,6 +11084,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Odmocniny",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10591,6 +11123,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Odmocniny",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10621,6 +11160,13 @@
           "unit": "Kč",
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Soustavy rovnic",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10651,6 +11197,13 @@
           "unit": "Kč",
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Soustavy rovnic",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10686,6 +11239,13 @@
             "a"
           ],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Tabulky a grafy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10728,6 +11288,13 @@
             "a"
           ],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Tabulky a grafy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10770,6 +11337,13 @@
             "a"
           ],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Tabulky a grafy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10812,6 +11386,13 @@
             "n"
           ],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Tabulky a grafy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10854,6 +11435,13 @@
             "100",
             "1000"
           ]
+        },
+        "type_recognition": {
+          "answer": "Převody jednotek",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10894,6 +11482,13 @@
           "distractors": [
             "70",
             "750"
+          ]
+        },
+        "type_recognition": {
+          "answer": "Převody jednotek",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
           ]
         }
       },
@@ -10936,6 +11531,13 @@
             "100",
             "10"
           ]
+        },
+        "type_recognition": {
+          "answer": "Převody jednotek",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -10974,6 +11576,13 @@
           "distractors": [
             "80",
             "200"
+          ]
+        },
+        "type_recognition": {
+          "answer": "Převody jednotek",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
           ]
         }
       },
@@ -11014,6 +11623,13 @@
           "distractors": [
             "6",
             "24"
+          ]
+        },
+        "type_recognition": {
+          "answer": "Převody jednotek",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
           ]
         }
       },
@@ -11235,6 +11851,13 @@
           "unit": "cm³",
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Objem těles",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -11276,6 +11899,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Objem těles",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -11316,6 +11946,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Objem těles",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -11353,6 +11990,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Objem těles",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -11390,6 +12034,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Objem těles",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -11642,6 +12293,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Slovní úlohy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -11674,6 +12332,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Slovní úlohy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -11706,6 +12371,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Slovní úlohy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -11736,6 +12408,13 @@
           "unit": null,
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Slovní úlohy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -11766,6 +12445,13 @@
           "unit": "km",
           "variants": [],
           "distractors": []
+        },
+        "type_recognition": {
+          "answer": "Slovní úlohy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -12423,6 +13109,13 @@
             "18",
             "3"
           ]
+        },
+        "type_recognition": {
+          "answer": "Úlohy o práci",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -12461,6 +13154,13 @@
           "distractors": [
             "24",
             "3"
+          ]
+        },
+        "type_recognition": {
+          "answer": "Úlohy o práci",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
           ]
         }
       },
@@ -12501,6 +13201,13 @@
             "20",
             "8"
           ]
+        },
+        "type_recognition": {
+          "answer": "Úlohy o práci",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -12540,6 +13247,13 @@
             "16",
             "2"
           ]
+        },
+        "type_recognition": {
+          "answer": "Úlohy o práci",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
         }
       },
       "keyboard": {
@@ -12578,6 +13292,13 @@
           "distractors": [
             "25",
             "6"
+          ]
+        },
+        "type_recognition": {
+          "answer": "Úlohy o práci",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
           ]
         }
       },

@@ -52,6 +52,15 @@
         "type_id": "CALC-AVG",
         "type_label": "Průměry",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Průměry",
+          "distractors": [
+            "Procenta",
+            "Zlomky"
+          ]
+        }
       }
     },
     {
@@ -102,6 +111,15 @@
         "type_id": "CALC-AVG",
         "type_label": "Průměry",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Průměry",
+          "distractors": [
+            "Procenta",
+            "Zlomky"
+          ]
+        }
       }
     },
     {
@@ -152,6 +170,15 @@
         "type_id": "CALC-AVG",
         "type_label": "Průměry",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Průměry",
+          "distractors": [
+            "Procenta",
+            "Zlomky"
+          ]
+        }
       }
     },
     {
@@ -202,6 +229,15 @@
         "type_id": "CALC-AVG",
         "type_label": "Průměry",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Průměry",
+          "distractors": [
+            "Procenta",
+            "Zlomky"
+          ]
+        }
       }
     },
     {
@@ -252,6 +288,15 @@
         "type_id": "CALC-AVG",
         "type_label": "Průměry",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Průměry",
+          "distractors": [
+            "Procenta",
+            "Zlomky"
+          ]
+        }
       }
     },
     {
@@ -666,7 +711,10 @@
       "answer": {
         "correct": "0,8",
         "unit": null,
-        "variants": ["0.8", "4/5"]
+        "variants": [
+          "0.8",
+          "4/5"
+        ]
       },
       "distractors": [],
       "hints": [

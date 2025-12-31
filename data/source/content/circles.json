@@ -33,6 +33,15 @@
         "type_id": "TEST-36",
         "type_label": "Kruh a kružnice",
         "source": "M9PBD24C0T02"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Kruhy a kružnice",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -65,6 +74,15 @@
         "type_label": "Kružnice a kruh",
         "source": "M9PAD22C0T01",
         "original_type": "multiple_choice"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Kruhy a kružnice",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     }
   ]

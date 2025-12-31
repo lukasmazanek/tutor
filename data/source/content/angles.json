@@ -7,7 +7,10 @@
     {
       "id": "ang-test-003",
       "topic": "angles",
-      "tags": ["úhly-a-přímky", "rovnoběžky"],
+      "tags": [
+        "úhly-a-přímky",
+        "rovnoběžky"
+      ],
       "difficulty": 2,
       "question": {
         "stem": "Dvě rovnoběžky jsou proťaty příčkou. Jaký je úhel β?",
@@ -20,12 +23,22 @@
         "variants": []
       },
       "distractors": [
-        {"value": "70"},
-        {"value": "90"}
+        {
+          "value": "70"
+        },
+        {
+          "value": "90"
+        }
       ],
       "hints": [
-        {"level": 1, "text": "Vedlejší úhly mají součet 180°."},
-        {"level": 2, "text": "β = 180° - 70° = 110°"}
+        {
+          "level": 1,
+          "text": "Vedlejší úhly mají součet 180°."
+        },
+        {
+          "level": 2,
+          "text": "β = 180° - 70° = 110°"
+        }
       ],
       "solution": {
         "steps": [
@@ -40,14 +53,29 @@
       },
       "diagram": {
         "type": "parallel_lines",
-        "labels": {"alpha": "70°", "beta": "β"},
+        "labels": {
+          "alpha": "70°",
+          "beta": "β"
+        },
         "highlight": "beta"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Úhly",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
       "id": "ang-test-004",
       "topic": "angles",
-      "tags": ["úhly-a-přímky", "trojúhelník"],
+      "tags": [
+        "úhly-a-přímky",
+        "trojúhelník"
+      ],
       "difficulty": 2,
       "question": {
         "stem": "Trojúhelník ABC má úhly 60° a 80°. Jaký je třetí úhel?",
@@ -60,12 +88,22 @@
         "variants": []
       },
       "distractors": [
-        {"value": "50"},
-        {"value": "30"}
+        {
+          "value": "50"
+        },
+        {
+          "value": "30"
+        }
       ],
       "hints": [
-        {"level": 1, "text": "Součet vnitřních úhlů trojúhelníku je 180°."},
-        {"level": 2, "text": "α = 180° - 60° - 80° = 40°"}
+        {
+          "level": 1,
+          "text": "Součet vnitřních úhlů trojúhelníku je 180°."
+        },
+        {
+          "level": 2,
+          "text": "α = 180° - 60° - 80° = 40°"
+        }
       ],
       "solution": {
         "steps": [
@@ -80,14 +118,30 @@
       },
       "diagram": {
         "type": "triangle",
-        "labels": {"a": "α", "b": "60°", "c": "80°"},
+        "labels": {
+          "a": "α",
+          "b": "60°",
+          "c": "80°"
+        },
         "highlight": "a"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Úhly",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
       "id": "ang-test-005",
       "topic": "angles",
-      "tags": ["úhly-a-přímky", "rovnoběžky"],
+      "tags": [
+        "úhly-a-přímky",
+        "rovnoběžky"
+      ],
       "difficulty": 2,
       "question": {
         "stem": "Dvě rovnoběžky proťaté příčkou. Jeden úhel 100°, druhý 110°. Jaký je úhel α?",
@@ -100,12 +154,22 @@
         "variants": []
       },
       "distractors": [
-        {"value": "70"},
-        {"value": "80"}
+        {
+          "value": "70"
+        },
+        {
+          "value": "80"
+        }
       ],
       "hints": [
-        {"level": 1, "text": "Vedlejší úhly k daným jsou 80° a 70°."},
-        {"level": 2, "text": "α = 80° + 70° = 150°"}
+        {
+          "level": 1,
+          "text": "Vedlejší úhly k daným jsou 80° a 70°."
+        },
+        {
+          "level": 2,
+          "text": "α = 80° + 70° = 150°"
+        }
       ],
       "solution": {
         "steps": [
@@ -121,15 +185,31 @@
       },
       "diagram": {
         "type": "parallel_lines",
-        "labels": {"alpha": "100°", "beta": "110°", "gamma": "α"},
+        "labels": {
+          "alpha": "100°",
+          "beta": "110°",
+          "gamma": "α"
+        },
         "highlight": "gamma",
         "transversals": 2
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Úhly",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
       "id": "ang-test-006",
       "topic": "angles",
-      "tags": ["úhly-a-přímky", "rovnoběžky"],
+      "tags": [
+        "úhly-a-přímky",
+        "rovnoběžky"
+      ],
       "difficulty": 2,
       "question": {
         "stem": "Dvě rovnoběžky proťaty příčkou. Úhly α a 9α jsou vedlejší. Jaký je úhel β = 6α?",
@@ -142,12 +222,22 @@
         "variants": []
       },
       "distractors": [
-        {"value": "120"},
-        {"value": "72"}
+        {
+          "value": "120"
+        },
+        {
+          "value": "72"
+        }
       ],
       "hints": [
-        {"level": 1, "text": "Vedlejší úhly mají součet 180°: α + 9α = 180°"},
-        {"level": 2, "text": "10α = 180° → α = 18°, takže β = 6α = ?"}
+        {
+          "level": 1,
+          "text": "Vedlejší úhly mají součet 180°: α + 9α = 180°"
+        },
+        {
+          "level": 2,
+          "text": "10α = 180° → α = 18°, takže β = 6α = ?"
+        }
       ],
       "solution": {
         "steps": [
@@ -164,14 +254,28 @@
       },
       "diagram": {
         "type": "parallel_lines",
-        "labels": {"alpha": "α", "beta": "9α"},
+        "labels": {
+          "alpha": "α",
+          "beta": "9α"
+        },
         "highlight": "beta"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Úhly",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
       "id": "ang-test-007",
       "topic": "angles",
-      "tags": ["úhly-a-přímky"],
+      "tags": [
+        "úhly-a-přímky"
+      ],
       "difficulty": 2,
       "question": {
         "stem": "Čtyři úhly kolem bodu: 60°, 132° a dva stejné úhly α. Jaký je α?",
@@ -184,12 +288,22 @@
         "variants": []
       },
       "distractors": [
-        {"value": "42"},
-        {"value": "90"}
+        {
+          "value": "42"
+        },
+        {
+          "value": "90"
+        }
       ],
       "hints": [
-        {"level": 1, "text": "Součet všech úhlů kolem bodu je 360°."},
-        {"level": 2, "text": "60° + 132° + 2α = 360°"}
+        {
+          "level": 1,
+          "text": "Součet všech úhlů kolem bodu je 360°."
+        },
+        {
+          "level": 2,
+          "text": "60° + 132° + 2α = 360°"
+        }
       ],
       "solution": {
         "steps": [
@@ -203,6 +317,15 @@
       "meta": {
         "type_id": "ANGLES-POINT",
         "type_label": "Úhly kolem bodu"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Úhly",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     }
   ]

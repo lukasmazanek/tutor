@@ -36,6 +36,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Odmocniny",
         "source": "M9PCD23C0T03"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Odmocniny",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -67,6 +76,15 @@
         "type_id": "TEST-12",
         "type_label": "Mocniny a odmocniny",
         "source": "M9PCD22C0T03"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Odmocniny",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -102,6 +120,15 @@
         "type_label": "Odmocniny",
         "source": "M9PAD22C0T01",
         "original_type": "open"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Odmocniny",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -131,6 +158,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Odmocniny",
         "source": "M9PAD17C0T01"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Odmocniny",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     }
   ]

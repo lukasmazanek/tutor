@@ -7,7 +7,10 @@
     {
       "id": "tab-test-001",
       "topic": "tables_graphs",
-      "tags": ["statistika", "tabulky"],
+      "tags": [
+        "statistika",
+        "tabulky"
+      ],
       "difficulty": 1,
       "question": {
         "stem": "Zahrádkáři zůstalo 9 neprodaných vzrostlých stromků. Ano nebo Ne?",
@@ -17,7 +20,12 @@
       "answer": {
         "correct": "A",
         "unit": null,
-        "variants": ["Ano", "ano", "ANO", "a"]
+        "variants": [
+          "Ano",
+          "ano",
+          "ANO",
+          "a"
+        ]
       },
       "distractors": [],
       "hints": [
@@ -42,12 +50,24 @@
         "type_id": "TEST-52",
         "type_label": "Statistika - tabulky",
         "source": "M9PCD22C0T03"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Tabulky a grafy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
       "id": "tab-test-002",
       "topic": "tables_graphs",
-      "tags": ["statistika", "tabulky"],
+      "tags": [
+        "statistika",
+        "tabulky"
+      ],
       "difficulty": 1,
       "question": {
         "stem": "Prodal všechny zakoupené jen u jednoho druhu stromků. Ano nebo Ne?",
@@ -57,7 +77,12 @@
       "answer": {
         "correct": "A",
         "unit": null,
-        "variants": ["Ano", "ano", "ANO", "a"]
+        "variants": [
+          "Ano",
+          "ano",
+          "ANO",
+          "a"
+        ]
       },
       "distractors": [],
       "hints": [
@@ -82,12 +107,24 @@
         "type_id": "TEST-52",
         "type_label": "Statistika - tabulky",
         "source": "M9PCD22C0T03"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Tabulky a grafy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
       "id": "tab-test-003",
       "topic": "tables_graphs",
-      "tags": ["statistika", "grafy"],
+      "tags": [
+        "statistika",
+        "grafy"
+      ],
       "difficulty": 1,
       "question": {
         "stem": "V 9. ročníku je stejný počet dívek jako chlapců. Ano nebo Ne?",
@@ -97,7 +134,12 @@
       "answer": {
         "correct": "A",
         "unit": null,
-        "variants": ["Ano", "ano", "ANO", "a"]
+        "variants": [
+          "Ano",
+          "ano",
+          "ANO",
+          "a"
+        ]
       },
       "distractors": [],
       "hints": [
@@ -122,12 +164,24 @@
         "type_id": "TEST-52",
         "type_label": "Statistika - grafy",
         "source": "M9PBD24C0T02"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Tabulky a grafy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
       "id": "tab-test-004",
       "topic": "tables_graphs",
-      "tags": ["statistika", "procenta"],
+      "tags": [
+        "statistika",
+        "procenta"
+      ],
       "difficulty": 2,
       "question": {
         "stem": "Český jazyk volilo více než 16% všech žáků. Ano nebo Ne?",
@@ -137,7 +191,12 @@
       "answer": {
         "correct": "N",
         "unit": null,
-        "variants": ["Ne", "ne", "NE", "n"]
+        "variants": [
+          "Ne",
+          "ne",
+          "NE",
+          "n"
+        ]
       },
       "distractors": [],
       "hints": [
@@ -162,6 +221,15 @@
         "type_id": "TEST-52",
         "type_label": "Statistika - grafy",
         "source": "M9PBD24C0T02"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Tabulky a grafy",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     }
   ]

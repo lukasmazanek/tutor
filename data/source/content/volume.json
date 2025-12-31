@@ -42,6 +42,15 @@
           "c": "5"
         },
         "highlight": null
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Objem těles",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -81,6 +90,15 @@
           "h": "20"
         },
         "highlight": null
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Objem těles",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -118,6 +136,15 @@
         "type": "prism",
         "labels": {},
         "highlight": null
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Objem těles",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -158,6 +185,15 @@
         "type": "cube",
         "labels": {},
         "highlight": null
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Objem těles",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -198,6 +234,15 @@
         "type": "prism",
         "labels": {},
         "highlight": null
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Objem těles",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {

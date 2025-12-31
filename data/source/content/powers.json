@@ -36,6 +36,15 @@
         "type_id": "TEST-undefined",
         "type_label": "Mocniny a dělení",
         "source": "M9PAD17C0T01"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Mocniny",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     }
   ]

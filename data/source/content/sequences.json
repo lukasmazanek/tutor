@@ -52,6 +52,15 @@
         "type_id": "SEQ-NTH",
         "type_label": "Posloupnosti",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Posloupnosti",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -102,6 +111,15 @@
         "type_id": "SEQ-NTH",
         "type_label": "Posloupnosti",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Posloupnosti",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -152,6 +170,15 @@
         "type_id": "SEQ-NTH",
         "type_label": "Posloupnosti",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Posloupnosti",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -202,6 +229,15 @@
         "type_id": "SEQ-PATTERN",
         "type_label": "Posloupnosti",
         "source": "M9PCD23C0T03-16"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Posloupnosti",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -253,6 +289,15 @@
         "type_id": "SEQ-NTH",
         "type_label": "Posloupnosti",
         "source": "generated"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Posloupnosti",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {

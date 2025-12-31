@@ -38,6 +38,15 @@
         "type": "rectangle",
         "labels": {},
         "highlight": null
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Obsah a obvod",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -74,6 +83,15 @@
         "type": "square",
         "labels": {},
         "highlight": null
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Obsah a obvod",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -113,6 +131,15 @@
           "a": "9"
         },
         "highlight": null
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Obsah a obvod",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -152,6 +179,15 @@
         "type": "right_triangle",
         "labels": {},
         "highlight": null
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Obsah a obvod",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -186,6 +222,15 @@
         "type": "trapezoid",
         "labels": {},
         "highlight": null
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Obsah a obvod",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {

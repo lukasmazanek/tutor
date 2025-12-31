@@ -36,6 +36,15 @@
         "type_id": "TEST-34",
         "type_label": "Konstrukce",
         "source": "M9PCD22C0T03"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Konstrukce",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -70,6 +79,15 @@
         "type_id": "TEST-34",
         "type_label": "Konstrukce",
         "source": "M9PCD22C0T03"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Konstrukce",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -104,6 +122,15 @@
         "type_id": "TEST-34",
         "type_label": "Konstrukce",
         "source": "M9PBD24C0T02"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Konstrukce",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -138,6 +165,15 @@
         "type_id": "TEST-34",
         "type_label": "Konstrukce",
         "source": "M9PBD24C0T02"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Konstrukce",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
@@ -172,6 +208,15 @@
         "type_id": "TEST-34",
         "type_label": "Konstrukce",
         "source": "M9PAD23C0T01"
+      },
+      "modes": {
+        "type_recognition": {
+          "answer": "Konstrukce",
+          "distractors": [
+            "Procenta",
+            "Lineární rovnice"
+          ]
+        }
       }
     },
     {
