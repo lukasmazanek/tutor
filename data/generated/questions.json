@@ -1,6 +1,6 @@
 {
   "version": "4.0",
-  "generated": "2026-01-01T09:40:38.261Z",
+  "generated": "2026-01-01T09:49:37.794Z",
   "description": "ADR-022: Multi-mode questions with keyboard config",
   "topics": {
     "angles": {
@@ -1051,8 +1051,8 @@
       "topic": "averages",
       "difficulty": 2,
       "question": {
-        "stem": "Školní průměr se počítá: písemky (váha 2) a ústní zkoušení (váha 1). Petr má z písemek 2 a z ústního 4. Jaký je jeho vážený průměr?",
-        "context": "Školní průměr se počítá: písemky (váha 2) a ústní zkoušení (váha 1). Petr má z písemek 2 a z ústního 4. Jaký je jeho vážený průměr?"
+        "stem": "Školní průměr: písemka (váha 2), ústní (váha 1). Petr dostal z písemky známku 2, z ústního známku 4. Jaký je jeho vážený průměr?",
+        "context": "Školní průměr se počítá z písemky (váha 2) a ústního zkoušení (váha 1). Petr dostal z písemky známku 2 a z ústního zkoušení známku 4. Vypočítej jeho vážený průměr."
       },
       "modes": {
         "numeric": {
