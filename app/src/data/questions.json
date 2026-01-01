@@ -1,6 +1,6 @@
 {
   "version": "4.0",
-  "generated": "2026-01-01T09:01:54.312Z",
+  "generated": "2026-01-01T09:09:59.481Z",
   "description": "ADR-022: Multi-mode questions with keyboard config",
   "topics": {
     "angles": {
@@ -522,12 +522,6 @@
         "context": "Délka strany KL (vnořené čtverce: bílý 9cm², černý 16cm², šedá 56cm²)"
       },
       "modes": {
-        "numeric": {
-          "answer": "5",
-          "unit": null,
-          "variants": [],
-          "distractors": []
-        },
         "type_recognition": {
           "answer": "Obsah a obvod",
           "distractors": [
@@ -557,7 +551,8 @@
         "labels": {
           "a": "9"
         }
-      }
+      },
+      "requires_image": true
     },
     {
       "id": "are-test-004",

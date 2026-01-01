@@ -102,6 +102,7 @@
         "obsah-a-obvod"
       ],
       "difficulty": 1,
+      "requires_image": true,
       "question": {
         "stem": "Délka strany KL (vnořené čtverce: bílý 9cm², černý 16cm², šedá 56cm²)",
         "context": "Délka strany KL (vnořené čtverce: bílý 9cm², černý 16cm², šedá 56cm²)",
