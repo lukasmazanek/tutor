@@ -188,13 +188,13 @@ Analysis of Anezka's app usage from December 29-31, 2025. Identified learning pa
 1. ~~**Fix duplicate saving**~~ ✅ Fixed in `103795e`
 2. ~~**Fix user_id in error_queue**~~ ✅ Fixed in `103795e`
 
-### Short-term (Content) - Partially Done
+### Short-term (Content) ✅ DONE
 
-1. **Add `requires_image` flag** to questions that need diagrams
-2. **Hide/disable constructions** topic until digital solution exists
+1. ~~**Add `requires_image` flag**~~ ✅ Added to 13 questions in `556b8e4`
+2. ~~**Hide/disable constructions**~~ ✅ Constructions excluded from numeric mode via requires_image
 3. ~~**Fix PYTH-P01 answer**~~ ✅ Verified: correctly uses type_recognition mode
 4. ~~**Fix letter answers**~~ ✅ Fixed 13 questions in `87e1a11`
-5. **Review tables_graphs** - tables in context OK, only type_recognition mode
+5. ~~**Review tables_graphs**~~ ✅ Tables in context OK, only type_recognition mode
 
 ### Medium-term (Learning)
 
