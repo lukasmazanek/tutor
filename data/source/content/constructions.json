@@ -11,6 +11,7 @@
         "konstrukce"
       ],
       "difficulty": 3,
+      "requires_image": true,
       "question": {
         "stem": "Trojúhelník PQR, přímka o je osa některé strany",
         "context": "Trojúhelník PQR, přímka o je osa některé strany",
@@ -54,6 +55,7 @@
         "konstrukce"
       ],
       "difficulty": 3,
+      "requires_image": true,
       "question": {
         "stem": "Obdélník ABCD, bod X uvnitř AB, C na přímce c, další vrchol na p",
         "context": "Obdélník ABCD, bod X uvnitř AB, C na přímce c, další vrchol na p",
@@ -97,6 +99,7 @@
         "konstrukce"
       ],
       "difficulty": 3,
+      "requires_image": true,
       "question": {
         "stem": "Sestrojte kosočtverec ABCD (A,B dány, C na přímce OA)",
         "context": "Sestrojte kosočtverec ABCD (A,B dány, C na přímce OA)",
@@ -140,6 +143,7 @@
         "konstrukce"
       ],
       "difficulty": 3,
+      "requires_image": true,
       "question": {
         "stem": "Rovnoramenný trojúhelník KLM, M na kružnici k, základna LM",
         "context": "Rovnoramenný trojúhelník KLM, M na kružnici k, základna LM",
@@ -183,6 +187,7 @@
         "konstrukce"
       ],
       "difficulty": 2,
+      "requires_image": true,
       "question": {
         "stem": "Obdélník ABCD, M na úhlopříčce BD",
         "context": "Obdélník ABCD, M na úhlopříčce BD",
@@ -226,6 +231,7 @@
         "konstrukce"
       ],
       "difficulty": 3,
+      "requires_image": true,
       "question": {
         "stem": "Rovnoramenný trojúhelník ABC, B,C na kružnici",
         "context": "Rovnoramenný trojúhelník ABC, B,C na kružnici",
@@ -260,6 +266,7 @@
         "konstrukce"
       ],
       "difficulty": 3,
+      "requires_image": true,
       "question": {
         "stem": "Sestrojit trojúhelník KLM (rovnoramenný, osa souměrnosti)",
         "context": "Sestrojit trojúhelník KLM (rovnoramenný, osa souměrnosti)",
@@ -294,6 +301,7 @@
         "konstrukce"
       ],
       "difficulty": 2,
+      "requires_image": true,
       "question": {
         "stem": "Sestrojit pravoúhlý lichoběžník ABCD",
         "context": "Sestrojit pravoúhlý lichoběžník ABCD",

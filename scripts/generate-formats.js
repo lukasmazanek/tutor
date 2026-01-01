@@ -94,10 +94,12 @@ function detectKeyboardVariable(q) {
 }
 
 // ADR-022: Build modes structure based on question type
+// ISS-001: Skip numeric mode for questions that require images
 function buildModes(q) {
   const modes = {};
   const hasDistractors = q.distractors && q.distractors.length >= 2;
   const originalType = q.meta?.original_type;
+  const requiresImage = q.requires_image === true;
 
   if (originalType === 'problem_type') {
     // Type recognition question - answer is the problem type name
@@ -107,17 +109,20 @@ function buildModes(q) {
     };
 
     // If source data has modes.numeric, include it (for questions with both)
-    if (q.modes?.numeric) {
+    // But skip if question requires image
+    if (q.modes?.numeric && !requiresImage) {
       modes.numeric = q.modes.numeric;
     }
   } else {
-    // Numeric/calculation question
-    modes.numeric = {
-      answer: q.answer.correct,
-      unit: q.answer.unit || null,
-      variants: q.answer.variants || [],
-      distractors: hasDistractors ? q.distractors.map(d => d.value) : []
-    };
+    // Numeric/calculation question - skip numeric mode if requires image
+    if (!requiresImage) {
+      modes.numeric = {
+        answer: q.answer.correct,
+        unit: q.answer.unit || null,
+        variants: q.answer.variants || [],
+        distractors: hasDistractors ? q.distractors.map(d => d.value) : []
+      };
+    }
 
     // If source data has modes.type_recognition, include it
     if (q.modes?.type_recognition) {
@@ -190,6 +195,11 @@ function toUnifiedFormat(q) {
       highlight: getPythagoreanHighlight(q.question.stem),
       labels: getPythagoreanLabels(q.question.stem)
     };
+  }
+
+  // ISS-001: Pass through requires_image flag
+  if (q.requires_image) {
+    result.requires_image = true;
   }
 
   return result;

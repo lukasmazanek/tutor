@@ -56,6 +56,7 @@
         "obsah-a-obvod"
       ],
       "difficulty": 2,
+      "requires_image": true,
       "question": {
         "stem": "Obvod čtverce ABCD",
         "context": "Obvod čtverce ABCD",
@@ -149,6 +150,7 @@
         "obsah-a-obvod"
       ],
       "difficulty": 1,
+      "requires_image": true,
       "question": {
         "stem": "Obsah trojúhelníku ABD v lichoběžníku",
         "context": "Obsah trojúhelníku ABD v lichoběžníku",
@@ -197,6 +199,7 @@
         "obsah-a-obvod"
       ],
       "difficulty": 1,
+      "requires_image": true,
       "question": {
         "stem": "Obsah lichoběžníku ABCD",
         "context": "Obsah lichoběžníku ABCD",
@@ -277,6 +280,7 @@
         "obsah-čtyřúhelníku"
       ],
       "difficulty": 1,
+      "requires_image": true,
       "question": {
         "stem": "Obsah čtyřúhelníku ABCD",
         "context": "Obsah čtyřúhelníku ABCD",

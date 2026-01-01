@@ -11,6 +11,7 @@
         "kruh-a-kružnice"
       ],
       "difficulty": 2,
+      "requires_image": true,
       "question": {
         "stem": "Půlkruh s průměrem AB, délka strany čtverce 2cm. Obsah šedé části?",
         "context": "Půlkruh s průměrem AB, délka strany čtverce 2cm. Obsah šedé části?",

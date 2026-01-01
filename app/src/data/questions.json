@@ -1,6 +1,6 @@
 {
   "version": "4.0",
-  "generated": "2026-01-01T06:58:59.812Z",
+  "generated": "2026-01-01T07:11:22.788Z",
   "description": "ADR-022: Multi-mode questions with keyboard config",
   "topics": {
     "angles": {
@@ -483,12 +483,6 @@
         "context": "Obvod čtverce ABCD"
       },
       "modes": {
-        "numeric": {
-          "answer": "48",
-          "unit": "cm",
-          "variants": [],
-          "distractors": []
-        },
         "type_recognition": {
           "answer": "Obsah a obvod",
           "distractors": [
@@ -516,7 +510,8 @@
         "type": "square",
         "highlight": null,
         "labels": {}
-      }
+      },
+      "requires_image": true
     },
     {
       "id": "are-test-003",
@@ -573,12 +568,6 @@
         "context": "Obsah trojúhelníku ABD v lichoběžníku"
       },
       "modes": {
-        "numeric": {
-          "answer": "24 nebo jiný",
-          "unit": null,
-          "variants": [],
-          "distractors": []
-        },
         "type_recognition": {
           "answer": "Obsah a obvod",
           "distractors": [
@@ -606,7 +595,8 @@
         "type": "right_triangle",
         "highlight": null,
         "labels": {}
-      }
+      },
+      "requires_image": true
     },
     {
       "id": "are-test-005",
@@ -617,12 +607,6 @@
         "context": "Obsah lichoběžníku ABCD"
       },
       "modes": {
-        "numeric": {
-          "answer": "64",
-          "unit": null,
-          "variants": [],
-          "distractors": []
-        },
         "type_recognition": {
           "answer": "Obsah a obvod",
           "distractors": [
@@ -648,7 +632,8 @@
         "type": "trapezoid",
         "highlight": null,
         "labels": {}
-      }
+      },
+      "requires_image": true
     },
     {
       "id": "are-test-006",
@@ -695,14 +680,7 @@
         "stem": "Obsah čtyřúhelníku ABCD",
         "context": "Obsah čtyřúhelníku ABCD"
       },
-      "modes": {
-        "numeric": {
-          "answer": "36 cm²",
-          "unit": null,
-          "variants": [],
-          "distractors": []
-        }
-      },
+      "modes": {},
       "keyboard": {
         "variable": null
       },
@@ -715,7 +693,8 @@
         "type_id": "TEST-undefined",
         "type_label": "Obsah čtyřúhelníku",
         "original_type": null
-      }
+      },
+      "requires_image": true
     },
     {
       "id": "avg-001",
@@ -2301,12 +2280,6 @@
         "context": "Půlkruh s průměrem AB, délka strany čtverce 2cm. Obsah šedé části?"
       },
       "modes": {
-        "numeric": {
-          "answer": "25,12",
-          "unit": null,
-          "variants": [],
-          "distractors": []
-        },
         "type_recognition": {
           "answer": "Kruhy a kružnice",
           "distractors": [
@@ -2329,7 +2302,8 @@
         "type_id": "TEST-36",
         "type_label": "Kruh a kružnice",
         "original_type": null
-      }
+      },
+      "requires_image": true
     },
     {
       "id": "cir-test-002",
@@ -2379,12 +2353,6 @@
         "context": "Trojúhelník PQR, přímka o je osa některé strany"
       },
       "modes": {
-        "numeric": {
-          "answer": "Více řešení",
-          "unit": null,
-          "variants": [],
-          "distractors": []
-        },
         "type_recognition": {
           "answer": "Konstrukce",
           "distractors": [
@@ -2407,7 +2375,8 @@
         "type_id": "TEST-34",
         "type_label": "Konstrukce",
         "original_type": null
-      }
+      },
+      "requires_image": true
     },
     {
       "id": "con-test-002",
@@ -2418,12 +2387,6 @@
         "context": "Obdélník ABCD, bod X uvnitř AB, C na přímce c, další vrchol na p"
       },
       "modes": {
-        "numeric": {
-          "answer": "Konstrukce",
-          "unit": null,
-          "variants": [],
-          "distractors": []
-        },
         "type_recognition": {
           "answer": "Konstrukce",
           "distractors": [
@@ -2446,7 +2409,8 @@
         "type_id": "TEST-34",
         "type_label": "Konstrukce",
         "original_type": null
-      }
+      },
+      "requires_image": true
     },
     {
       "id": "con-test-003",
@@ -2457,12 +2421,6 @@
         "context": "Sestrojte kosočtverec ABCD (A,B dány, C na přímce OA)"
       },
       "modes": {
-        "numeric": {
-          "answer": "konstrukce",
-          "unit": null,
-          "variants": [],
-          "distractors": []
-        },
         "type_recognition": {
           "answer": "Konstrukce",
           "distractors": [
@@ -2485,7 +2443,8 @@
         "type_id": "TEST-34",
         "type_label": "Konstrukce",
         "original_type": null
-      }
+      },
+      "requires_image": true
     },
     {
       "id": "con-test-004",
@@ -2496,12 +2455,6 @@
         "context": "Rovnoramenný trojúhelník KLM, M na kružnici k, základna LM"
       },
       "modes": {
-        "numeric": {
-          "answer": "2 řešení",
-          "unit": null,
-          "variants": [],
-          "distractors": []
-        },
         "type_recognition": {
           "answer": "Konstrukce",
           "distractors": [
@@ -2524,7 +2477,8 @@
         "type_id": "TEST-34",
         "type_label": "Konstrukce",
         "original_type": null
-      }
+      },
+      "requires_image": true
     },
     {
       "id": "con-test-005",
@@ -2535,12 +2489,6 @@
         "context": "Obdélník ABCD, M na úhlopříčce BD"
       },
       "modes": {
-        "numeric": {
-          "answer": "Konstrukce",
-          "unit": null,
-          "variants": [],
-          "distractors": []
-        },
         "type_recognition": {
           "answer": "Konstrukce",
           "distractors": [
@@ -2563,7 +2511,8 @@
         "type_id": "TEST-34",
         "type_label": "Konstrukce",
         "original_type": null
-      }
+      },
+      "requires_image": true
     },
     {
       "id": "con-test-006",
@@ -2573,14 +2522,7 @@
         "stem": "Rovnoramenný trojúhelník ABC, B,C na kružnici",
         "context": "Rovnoramenný trojúhelník ABC, B,C na kružnici"
       },
-      "modes": {
-        "numeric": {
-          "answer": "Konstrukce - více řešení",
-          "unit": null,
-          "variants": [],
-          "distractors": []
-        }
-      },
+      "modes": {},
       "keyboard": {
         "variable": null
       },
@@ -2595,7 +2537,8 @@
         "type_id": "TEST-34",
         "type_label": "Konstrukce",
         "original_type": null
-      }
+      },
+      "requires_image": true
     },
     {
       "id": "con-test-007",
@@ -2605,14 +2548,7 @@
         "stem": "Sestrojit trojúhelník KLM (rovnoramenný, osa souměrnosti)",
         "context": "Sestrojit trojúhelník KLM (rovnoramenný, osa souměrnosti)"
       },
-      "modes": {
-        "numeric": {
-          "answer": "konstrukce",
-          "unit": null,
-          "variants": [],
-          "distractors": []
-        }
-      },
+      "modes": {},
       "keyboard": {
         "variable": null
       },
@@ -2627,7 +2563,8 @@
         "type_id": "TEST-undefined",
         "type_label": "Konstrukce",
         "original_type": null
-      }
+      },
+      "requires_image": true
     },
     {
       "id": "con-test-008",
@@ -2637,14 +2574,7 @@
         "stem": "Sestrojit pravoúhlý lichoběžník ABCD",
         "context": "Sestrojit pravoúhlý lichoběžník ABCD"
       },
-      "modes": {
-        "numeric": {
-          "answer": "konstrukce",
-          "unit": null,
-          "variants": [],
-          "distractors": []
-        }
-      },
+      "modes": {},
       "keyboard": {
         "variable": null
       },
@@ -2659,7 +2589,8 @@
         "type_id": "TEST-undefined",
         "type_label": "Konstrukce",
         "original_type": null
-      }
+      },
+      "requires_image": true
     },
     {
       "id": "dec-test-001",
