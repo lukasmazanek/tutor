@@ -13,7 +13,7 @@
       "difficulty": 2,
       "question": {
         "stem": "O kolik % byla konečná cena nižší než původní",
-        "context": "O kolik % byla konečná cena nižší než původní",
+        "context": "Reproduktor stál původně 1000 Kč. Nejprve byl zlevněn o 15 %, poté ještě o 200 Kč.",
         "image": null
       },
       "answer": {
@@ -53,7 +53,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Kolik hodin denně v zaměstnání",
-        "context": "Kolik hodin denně v zaměstnání",
+        "context": "Koláčový graf 'Denní činnosti (24 hodin)': zaměstnání 25%, spánek 35%, denní povinnosti 30%, volný čas 10%.",
         "image": null
       },
       "answer": {
@@ -91,7 +91,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Kolik minut denně sportuje",
-        "context": "Kolik minut denně sportuje",
+        "context": "Dva koláčové grafy: (1) 'Denní činnosti (24 hodin)': zaměstnání 25%, spánek 35%, denní povinnosti 30%, volný čas 10%. (2) 'Volný čas': TV 25%, sport 40%, četba 35%.",
         "image": null
       },
       "answer": {
@@ -134,7 +134,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Kolik triček zůstalo v obchodě",
-        "context": "Kolik triček zůstalo v obchodě",
+        "context": "Do obchodu přivezli 500 triček. Třetinu prodali za plnou cenu, 30 % se slevou, zbytek neprodali.",
         "image": null
       },
       "answer": {
@@ -172,7 +172,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Kolik procent stran zbývá dočíst",
-        "context": "Kolik procent stran zbývá dočíst",
+        "context": "Kniha má 200 stran. Marek přečetl prvních 25 % a dalších 45 stran.",
         "image": null
       },
       "answer": {
@@ -209,8 +209,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Zakoupil o polovinu více než prodal. A/N?",
-        "context": "Zakoupil o polovinu více než prodal. A/N?",
+        "stem": "Zahrádkář zakoupil o polovinu více kusů rostlin, než jich prodal. A/N?",
+        "context": "Zahrádkář zakoupil rostliny čtyř druhů A, B, C, D. Některé uschly, ostatní vzrostly. Většinu vzrostlých prodal. Graf: A (zakoupeno 14, vzrostlo 7, prodáno 5), B (23, 9, 7), C (31, 8, 4), D (11, 8, 8).",
         "image": null
       },
       "answer": {
@@ -243,8 +243,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "60% odvezeno, zbylo 1200kg. Kolik odvezeno?",
-        "context": "60% odvezeno, zbylo 1200kg. Kolik odvezeno?",
+        "stem": "Kolik kg odpadu firma odvezla do spalovny?",
+        "context": "Když firma odvezla do spalovny 60 % odpadu, zbylo jí ještě 1 200 kg odpadu.",
         "image": null
       },
       "answer": {
@@ -274,8 +274,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "2/5 z první palety + 10% z druhé = 750kg. Kolik neprodané?",
-        "context": "2/5 z první palety + 10% z druhé = 750kg. Kolik neprodané?",
+        "stem": "Kolik kg váží dosud neprodané dlaždice z obou palet?",
+        "context": "Stejné dlaždice byly umístěny ve stejném počtu na dvou paletách. Již se prodaly dvě pětiny dlaždic z první palety a 10 % dlaždic z druhé palety. Hmotnost všech těchto prodaných dlaždic byla 750 kg.",
         "image": null
       },
       "answer": {
@@ -308,8 +308,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Léto 1500kg = +50% oproti jaro, -50% oproti podzim. Rozdíl podzim-jaro?",
-        "context": "Léto 1500kg = +50% oproti jaro, -50% oproti podzim. Rozdíl podzim-jaro?",
+        "stem": "O kolik kg kovů vykoupili na podzim více než na jaře?",
+        "context": "Ve sběrných surovinách vykoupili v létě 1 500 kg kovů, což je o 50 % více než na jaře a o 50 % méně než na podzim.",
         "image": null
       },
       "answer": {
@@ -342,8 +342,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "O kolik % je Adamova cesta (40+30=70m) delší než Otova (50m)?",
-        "context": "O kolik % je Adamova cesta (40+30=70m) delší než Otova (50m)?",
+        "stem": "O kolik procent je Adamova cesta delší než cesta, kterou jde Ota?",
+        "context": "Adam a Ota jdou z místa A do místa C. Každý jde jinou cestou. Adam jde z místa A do místa C po rovných silnicích přes místo B (pravoúhlý trojúhelník). Ota jde zkratkou přímo z A do C. |AB| = 40 m, |BC| = 30 m.",
         "image": null
       },
       "answer": {
@@ -373,8 +373,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Hračka 250Kč, +40%, pak -40%. Kolik stojí?",
-        "context": "Hračka 250Kč, +40%, pak -40%. Kolik stojí?",
+        "stem": "Kolik stála hračka po této dvojí úpravě cen?",
+        "context": "Hračka stála 250 korun. Nejdříve byla zdražena o 40 % oproti původní ceně, po měsíci pak byla zlevněna o 40 % z nové ceny.",
         "image": null
       },
       "answer": {
@@ -407,8 +407,8 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "Chlapci mat. o 75% více než dívky mat. A/N?",
-        "context": "Chlapci mat. o 75% více než dívky mat. A/N?",
+        "stem": "Počet chlapců, kteří volili matematiku, je o 75 % větší než počet děvčat, která volila také matematiku. A/N?",
+        "context": "Žáci 9. ročníku provedli statistický průzkum nejoblíbenějších předmětů. Výsledky v grafu: M (chlapci 7, dívky 4), ČJ (ch. 5, d. 5), AJ (ch. 8, d. 6), TV (ch. 7, d. 5), VV (ch. 4, d. 2).",
         "image": null
       },
       "answer": {
@@ -438,8 +438,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Lyžařský pobyt 7000Kč: doprava 10%, ubytování 60%. Kolik % vlek?",
-        "context": "Lyžařský pobyt 7000Kč: doprava 10%, ubytování 60%. Kolik % vlek?",
+        "stem": "Kolik procent ceny pobytu tvořila cena lístku na vlek?",
+        "context": "Lyžařský pobyt stál celkem 7 000 Kč. Cena zahrnovala dopravu, ubytování a lístek na vlek. Doprava tvořila desetinu celkové ceny, 60 % ceny stálo ubytování.",
         "image": null
       },
       "answer": {
@@ -469,8 +469,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Učebnice z 2000Kč na 1500Kč. Kolik % sleva?",
-        "context": "Učebnice z 2000Kč na 1500Kč. Kolik % sleva?",
+        "stem": "Kolik procent činila sleva?",
+        "context": "Cena učebnice matematiky se snížila na částku 1 500 Kč z původních 2 000 Kč.",
         "image": null
       },
       "answer": {
@@ -500,8 +500,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Dárek 40 EUR z 200 EUR. Kolik %?",
-        "context": "Dárek 40 EUR z 200 EUR. Kolik %?",
+        "stem": "Kolik procent z vyměněných EUR tvořila cena dárku?",
+        "context": "Petr přivezl nemocnému kamarádovi dárek ze zahraničního zájezdu za 40 EUR. Celkem měl vyměněno 200 EUR.",
         "image": null
       },
       "answer": {
@@ -531,8 +531,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Sekačka z 20000 na 8000 Kč. O kolik % snížena?",
-        "context": "Sekačka z 20000 na 8000 Kč. O kolik % snížena?",
+        "stem": "O kolik procent byla snížena cena sekačky?",
+        "context": "Včera stála sekačka 20 000 korun a dnes je její cena pouze 8 000 korun.",
         "image": null
       },
       "answer": {
@@ -563,8 +563,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "První skupina poseče 1/4, druhá 60% zbytku. Kolik % neposečeno?",
-        "context": "První skupina poseče 1/4, druhá 60% zbytku. Kolik % neposečeno?",
+        "stem": "Kolik procent louky zůstane neposečeno?",
+        "context": "První skupina poseče čtvrtinu louky a druhá skupina 60% zbývající části louky. Poslední část louky zůstane neposečená.",
         "image": null
       },
       "answer": {
@@ -598,8 +598,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Dříve 120 hřebíků, nyní 80 za stejnou cenu. O kolik % zdraženy?",
-        "context": "Dříve 120 hřebíků, nyní 80 za stejnou cenu. O kolik % zdraženy?",
+        "stem": "O kolik procent byly hřebíky zdraženy?",
+        "context": "Nedávno byly zdraženy hřebíky. Částka, za kterou jsme dříve koupili 120 hřebíků, nyní vystačí jen na 80 hřebíků.",
         "image": null
       },
       "answer": {
@@ -633,8 +633,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "250 výrobků 2020, +20% každý rok. Kolik 2022?",
-        "context": "250 výrobků 2020, +20% každý rok. Kolik 2022?",
+        "stem": "Kolik výrobků vyrobila firma v roce 2022?",
+        "context": "V roce 2020 firma vyrobila 250 výrobků. Jak v roce 2021, tak v roce 2022 vyrobila firma vždy o 20 % výrobků více než v předchozím roce.",
         "image": null
       },
       "answer": {
@@ -664,8 +664,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Roman 400km = 'o čtvrtinu více' než Jana. Kolik Jana?",
-        "context": "Roman 400km = 'o čtvrtinu více' než Jana. Kolik Jana?",
+        "stem": "Kolik km ujela na kole během dovolené Jana?",
+        "context": "Roman i Jana jezdili během dovolené na kole. Roman ujel 400 km, což bylo o čtvrtinu více, než ujela Jana.",
         "image": null
       },
       "answer": {
@@ -695,8 +695,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Firma před krizí, -40%, pak +25% (=+42). Kolik před?",
-        "context": "Firma před krizí, -40%, pak +25% (=+42). Kolik před?",
+        "stem": "Kolik zaměstnanců měla firma před krizí?",
+        "context": "Firma během krize propouštěla zaměstnance, takže jich měla na konci krize o 40 % méně než před krizí. Když firma po odeznění krize přijala 42 nových zaměstnanců, měla jich o 25 % více než na konci krize.",
         "image": null
       },
       "answer": {
@@ -791,7 +791,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Třída 2.A nasbírala o 25% méně než 1.A (600 kg). Kolik kg?",
-        "context": "Třída 2.A nasbírala o 25% méně než 1.A (600 kg). Kolik kg?",
+        "context": "Ve škole proběhla soutěž ve sběru papíru. Tabulka: 1.A = 600 kg, 1.B = 600 kg, celkem 1. ročník = 1200 kg. 2. ročník: 2.A = ?, 2.B = ?",
         "image": null
       },
       "answer": {
@@ -823,7 +823,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Třída 1.B nasbírala o 20% více než 2.B. 1.B = 600 kg. Kolik kg 2.B?",
-        "context": "Třída 1.B nasbírala o 20% více než 2.B. 1.B = 600 kg. Kolik kg 2.B?",
+        "context": "Ve škole proběhla soutěž ve sběru papíru. Tabulka: 1.A = 600 kg, 1.B = 600 kg, celkem 1. ročník = 1200 kg. 2. ročník: 2.A = ?, 2.B = ?",
         "image": null
       },
       "answer": {
@@ -855,7 +855,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Dívky nasbíraly o 50% více než chlapci. Celkem 1200 kg. Kolik chlapci?",
-        "context": "Dívky nasbíraly o 50% více než chlapci. Celkem 1200 kg. Kolik chlapci?",
+        "context": "Ve škole proběhla soutěž ve sběru papíru. 1. ročník celkem = 1200 kg (dívky + chlapci).",
         "image": null
       },
       "answer": {
@@ -889,8 +889,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Kolik důchodců nepoužívá kartu",
-        "context": "Kolik důchodců nepoužívá kartu",
+        "stem": "Kolik důchodců nepoužívá kartu do bankomatu?",
+        "context": "Celkem 70 % z 520 důchodců používá kartu do bankomatu.",
         "image": null
       },
       "answer": {
@@ -918,8 +918,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Kolik členů má nyní oddíl",
-        "context": "Kolik členů má nyní oddíl",
+        "stem": "Kolik členů má nyní oddíl?",
+        "context": "Do oddílu přibyli 3 noví členové a počet členů se tak zvýšil o 2 %.",
         "image": null
       },
       "answer": {
@@ -947,8 +947,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Kolik dívek navštěvuje gymnázium",
-        "context": "Kolik dívek navštěvuje gymnázium",
+        "stem": "Kolik dívek navštěvuje sportovní gymnázium?",
+        "context": "Ve sportovním gymnáziu hraje 20 % chlapců hokej a zbývajících 192 chlapců florbal. Chlapci tvoří 60 % všech žáků tohoto gymnázia.",
         "image": null
       },
       "answer": {

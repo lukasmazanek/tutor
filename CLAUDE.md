@@ -1,6 +1,6 @@
 # Tutor Project - CERMAT Math Test Analysis
 
-<!-- Last updated: 2025-12-31 -->
+<!-- Last updated: 2026-01-01 -->
 
 ## Ultimate Goal
 **Create an application that helps Anezka Mazankova improve her math skills** for CERMAT entrance exams, based on psychological principles and error pattern analysis.
@@ -169,6 +169,10 @@ decisions/           # Educational Decision Records (EDRs)
   EDR-001-*.md       # Individual decision records
   ADR-001-*.md       # Architecture Decision Records
   PDR-001-*.md       # Psychological Decision Records
+
+issues/              # Bug reports and session analyses
+  README.md          # Index with issue template
+  ISS-001-*.md       # Individual issue reports
 
 data/
   source/content/    # Source JSON files (single source of truth)

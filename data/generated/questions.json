@@ -1,6 +1,6 @@
 {
   "version": "4.0",
-  "generated": "2025-12-31T11:02:46.770Z",
+  "generated": "2026-01-01T06:29:28.685Z",
   "description": "ADR-022: Multi-mode questions with keyboard config",
   "topics": {
     "angles": {
@@ -7843,7 +7843,7 @@
       "difficulty": 2,
       "question": {
         "stem": "O kolik % byla konečná cena nižší než původní",
-        "context": "O kolik % byla konečná cena nižší než původní"
+        "context": "Reproduktor stál původně 1000 Kč. Nejprve byl zlevněn o 15 %, poté ještě o 200 Kč."
       },
       "modes": {
         "numeric": {
@@ -7882,7 +7882,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Kolik hodin denně v zaměstnání",
-        "context": "Kolik hodin denně v zaměstnání"
+        "context": "Koláčový graf 'Denní činnosti (24 hodin)': zaměstnání 25%, spánek 35%, denní povinnosti 30%, volný čas 10%."
       },
       "modes": {
         "numeric": {
@@ -7919,7 +7919,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Kolik minut denně sportuje",
-        "context": "Kolik minut denně sportuje"
+        "context": "Dva koláčové grafy: (1) 'Denní činnosti (24 hodin)': zaměstnání 25%, spánek 35%, denní povinnosti 30%, volný čas 10%. (2) 'Volný čas': TV 25%, sport 40%, četba 35%."
       },
       "modes": {
         "numeric": {
@@ -7958,7 +7958,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Kolik triček zůstalo v obchodě",
-        "context": "Kolik triček zůstalo v obchodě"
+        "context": "Do obchodu přivezli 500 triček. Třetinu prodali za plnou cenu, 30 % se slevou, zbytek neprodali."
       },
       "modes": {
         "numeric": {
@@ -7995,7 +7995,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Kolik procent stran zbývá dočíst",
-        "context": "Kolik procent stran zbývá dočíst"
+        "context": "Kniha má 200 stran. Marek přečetl prvních 25 % a dalších 45 stran."
       },
       "modes": {
         "numeric": {
@@ -8031,8 +8031,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "Zakoupil o polovinu více než prodal. A/N?",
-        "context": "Zakoupil o polovinu více než prodal. A/N?"
+        "stem": "Zahrádkář zakoupil o polovinu více kusů rostlin, než jich prodal. A/N?",
+        "context": "Zahrádkář zakoupil rostliny čtyř druhů A, B, C, D. Některé uschly, ostatní vzrostly. Většinu vzrostlých prodal. Graf: A (zakoupeno 14, vzrostlo 7, prodáno 5), B (23, 9, 7), C (31, 8, 4), D (11, 8, 8)."
       },
       "modes": {
         "numeric": {
@@ -8063,8 +8063,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "60% odvezeno, zbylo 1200kg. Kolik odvezeno?",
-        "context": "60% odvezeno, zbylo 1200kg. Kolik odvezeno?"
+        "stem": "Kolik kg odpadu firma odvezla do spalovny?",
+        "context": "Když firma odvezla do spalovny 60 % odpadu, zbylo jí ještě 1 200 kg odpadu."
       },
       "modes": {
         "numeric": {
@@ -8095,8 +8095,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "2/5 z první palety + 10% z druhé = 750kg. Kolik neprodané?",
-        "context": "2/5 z první palety + 10% z druhé = 750kg. Kolik neprodané?"
+        "stem": "Kolik kg váží dosud neprodané dlaždice z obou palet?",
+        "context": "Stejné dlaždice byly umístěny ve stejném počtu na dvou paletách. Již se prodaly dvě pětiny dlaždic z první palety a 10 % dlaždic z druhé palety. Hmotnost všech těchto prodaných dlaždic byla 750 kg."
       },
       "modes": {
         "numeric": {
@@ -8127,8 +8127,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "Léto 1500kg = +50% oproti jaro, -50% oproti podzim. Rozdíl podzim-jaro?",
-        "context": "Léto 1500kg = +50% oproti jaro, -50% oproti podzim. Rozdíl podzim-jaro?"
+        "stem": "O kolik kg kovů vykoupili na podzim více než na jaře?",
+        "context": "Ve sběrných surovinách vykoupili v létě 1 500 kg kovů, což je o 50 % více než na jaře a o 50 % méně než na podzim."
       },
       "modes": {
         "numeric": {
@@ -8159,8 +8159,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "O kolik % je Adamova cesta (40+30=70m) delší než Otova (50m)?",
-        "context": "O kolik % je Adamova cesta (40+30=70m) delší než Otova (50m)?"
+        "stem": "O kolik procent je Adamova cesta delší než cesta, kterou jde Ota?",
+        "context": "Adam a Ota jdou z místa A do místa C. Každý jde jinou cestou. Adam jde z místa A do místa C po rovných silnicích přes místo B (pravoúhlý trojúhelník). Ota jde zkratkou přímo z A do C. |AB| = 40 m, |BC| = 30 m."
       },
       "modes": {
         "numeric": {
@@ -8191,8 +8191,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "Hračka 250Kč, +40%, pak -40%. Kolik stojí?",
-        "context": "Hračka 250Kč, +40%, pak -40%. Kolik stojí?"
+        "stem": "Kolik stála hračka po této dvojí úpravě cen?",
+        "context": "Hračka stála 250 korun. Nejdříve byla zdražena o 40 % oproti původní ceně, po měsíci pak byla zlevněna o 40 % z nové ceny."
       },
       "modes": {
         "numeric": {
@@ -8223,8 +8223,8 @@
       "topic": "percents",
       "difficulty": 1,
       "question": {
-        "stem": "Chlapci mat. o 75% více než dívky mat. A/N?",
-        "context": "Chlapci mat. o 75% více než dívky mat. A/N?"
+        "stem": "Počet chlapců, kteří volili matematiku, je o 75 % větší než počet děvčat, která volila také matematiku. A/N?",
+        "context": "Žáci 9. ročníku provedli statistický průzkum nejoblíbenějších předmětů. Výsledky v grafu: M (chlapci 7, dívky 4), ČJ (ch. 5, d. 5), AJ (ch. 8, d. 6), TV (ch. 7, d. 5), VV (ch. 4, d. 2)."
       },
       "modes": {
         "numeric": {
@@ -8255,8 +8255,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "Lyžařský pobyt 7000Kč: doprava 10%, ubytování 60%. Kolik % vlek?",
-        "context": "Lyžařský pobyt 7000Kč: doprava 10%, ubytování 60%. Kolik % vlek?"
+        "stem": "Kolik procent ceny pobytu tvořila cena lístku na vlek?",
+        "context": "Lyžařský pobyt stál celkem 7 000 Kč. Cena zahrnovala dopravu, ubytování a lístek na vlek. Doprava tvořila desetinu celkové ceny, 60 % ceny stálo ubytování."
       },
       "modes": {
         "numeric": {
@@ -8287,8 +8287,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "Učebnice z 2000Kč na 1500Kč. Kolik % sleva?",
-        "context": "Učebnice z 2000Kč na 1500Kč. Kolik % sleva?"
+        "stem": "Kolik procent činila sleva?",
+        "context": "Cena učebnice matematiky se snížila na částku 1 500 Kč z původních 2 000 Kč."
       },
       "modes": {
         "numeric": {
@@ -8319,8 +8319,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "Dárek 40 EUR z 200 EUR. Kolik %?",
-        "context": "Dárek 40 EUR z 200 EUR. Kolik %?"
+        "stem": "Kolik procent z vyměněných EUR tvořila cena dárku?",
+        "context": "Petr přivezl nemocnému kamarádovi dárek ze zahraničního zájezdu za 40 EUR. Celkem měl vyměněno 200 EUR."
       },
       "modes": {
         "numeric": {
@@ -8351,8 +8351,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "Sekačka z 20000 na 8000 Kč. O kolik % snížena?",
-        "context": "Sekačka z 20000 na 8000 Kč. O kolik % snížena?"
+        "stem": "O kolik procent byla snížena cena sekačky?",
+        "context": "Včera stála sekačka 20 000 korun a dnes je její cena pouze 8 000 korun."
       },
       "modes": {
         "numeric": {
@@ -8383,8 +8383,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "První skupina poseče 1/4, druhá 60% zbytku. Kolik % neposečeno?",
-        "context": "První skupina poseče 1/4, druhá 60% zbytku. Kolik % neposečeno?"
+        "stem": "Kolik procent louky zůstane neposečeno?",
+        "context": "První skupina poseče čtvrtinu louky a druhá skupina 60% zbývající části louky. Poslední část louky zůstane neposečená."
       },
       "modes": {
         "numeric": {
@@ -8415,8 +8415,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "Dříve 120 hřebíků, nyní 80 za stejnou cenu. O kolik % zdraženy?",
-        "context": "Dříve 120 hřebíků, nyní 80 za stejnou cenu. O kolik % zdraženy?"
+        "stem": "O kolik procent byly hřebíky zdraženy?",
+        "context": "Nedávno byly zdraženy hřebíky. Částka, za kterou jsme dříve koupili 120 hřebíků, nyní vystačí jen na 80 hřebíků."
       },
       "modes": {
         "numeric": {
@@ -8447,8 +8447,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "250 výrobků 2020, +20% každý rok. Kolik 2022?",
-        "context": "250 výrobků 2020, +20% každý rok. Kolik 2022?"
+        "stem": "Kolik výrobků vyrobila firma v roce 2022?",
+        "context": "V roce 2020 firma vyrobila 250 výrobků. Jak v roce 2021, tak v roce 2022 vyrobila firma vždy o 20 % výrobků více než v předchozím roce."
       },
       "modes": {
         "numeric": {
@@ -8479,8 +8479,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "Roman 400km = 'o čtvrtinu více' než Jana. Kolik Jana?",
-        "context": "Roman 400km = 'o čtvrtinu více' než Jana. Kolik Jana?"
+        "stem": "Kolik km ujela na kole během dovolené Jana?",
+        "context": "Roman i Jana jezdili během dovolené na kole. Roman ujel 400 km, což bylo o čtvrtinu více, než ujela Jana."
       },
       "modes": {
         "numeric": {
@@ -8511,8 +8511,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "Firma před krizí, -40%, pak +25% (=+42). Kolik před?",
-        "context": "Firma před krizí, -40%, pak +25% (=+42). Kolik před?"
+        "stem": "Kolik zaměstnanců měla firma před krizí?",
+        "context": "Firma během krize propouštěla zaměstnance, takže jich měla na konci krize o 40 % méně než před krizí. Když firma po odeznění krize přijala 42 nových zaměstnanců, měla jich o 25 % více než na konci krize."
       },
       "modes": {
         "numeric": {
@@ -8608,7 +8608,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Třída 2.A nasbírala o 25% méně než 1.A (600 kg). Kolik kg?",
-        "context": "Třída 2.A nasbírala o 25% méně než 1.A (600 kg). Kolik kg?"
+        "context": "Ve škole proběhla soutěž ve sběru papíru. Tabulka: 1.A = 600 kg, 1.B = 600 kg, celkem 1. ročník = 1200 kg. 2. ročník: 2.A = ?, 2.B = ?"
       },
       "modes": {
         "numeric": {
@@ -8640,7 +8640,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Třída 1.B nasbírala o 20% více než 2.B. 1.B = 600 kg. Kolik kg 2.B?",
-        "context": "Třída 1.B nasbírala o 20% více než 2.B. 1.B = 600 kg. Kolik kg 2.B?"
+        "context": "Ve škole proběhla soutěž ve sběru papíru. Tabulka: 1.A = 600 kg, 1.B = 600 kg, celkem 1. ročník = 1200 kg. 2. ročník: 2.A = ?, 2.B = ?"
       },
       "modes": {
         "numeric": {
@@ -8672,7 +8672,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Dívky nasbíraly o 50% více než chlapci. Celkem 1200 kg. Kolik chlapci?",
-        "context": "Dívky nasbíraly o 50% více než chlapci. Celkem 1200 kg. Kolik chlapci?"
+        "context": "Ve škole proběhla soutěž ve sběru papíru. 1. ročník celkem = 1200 kg (dívky + chlapci)."
       },
       "modes": {
         "numeric": {
@@ -8703,8 +8703,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "Kolik důchodců nepoužívá kartu",
-        "context": "Kolik důchodců nepoužívá kartu"
+        "stem": "Kolik důchodců nepoužívá kartu do bankomatu?",
+        "context": "Celkem 70 % z 520 důchodců používá kartu do bankomatu."
       },
       "modes": {
         "numeric": {
@@ -8733,8 +8733,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "Kolik členů má nyní oddíl",
-        "context": "Kolik členů má nyní oddíl"
+        "stem": "Kolik členů má nyní oddíl?",
+        "context": "Do oddílu přibyli 3 noví členové a počet členů se tak zvýšil o 2 %."
       },
       "modes": {
         "numeric": {
@@ -8763,8 +8763,8 @@
       "topic": "percents",
       "difficulty": 2,
       "question": {
-        "stem": "Kolik dívek navštěvuje gymnázium",
-        "context": "Kolik dívek navštěvuje gymnázium"
+        "stem": "Kolik dívek navštěvuje sportovní gymnázium?",
+        "context": "Ve sportovním gymnáziu hraje 20 % chlapců hokej a zbývajících 192 chlapců florbal. Chlapci tvoří 60 % všech žáků tohoto gymnázia."
       },
       "modes": {
         "numeric": {
@@ -11842,8 +11842,8 @@
       "topic": "volume",
       "difficulty": 2,
       "question": {
-        "stem": "Kvádr 6×4×5 rozřezán na 3 trojboké hranoly. Největší objem?",
-        "context": "Kvádr 6×4×5 rozřezán na 3 trojboké hranoly. Největší objem?"
+        "stem": "Jaký je objem vybraného trojbokého hranolu?",
+        "context": "Kvádr o rozměrech 6 cm, 4 cm a 5 cm jsme dvěma svislými řezy rozdělili na tři kolmé trojboké hranoly. Z těchto trojbokých hranolů vybereme ten, který má největší objem."
       },
       "modes": {
         "numeric": {
@@ -11890,8 +11890,8 @@
       "topic": "volume",
       "difficulty": 2,
       "question": {
-        "stem": "Válec r=5cm, v=20cm. Kolikrát je plášť větší než podstava?",
-        "context": "Válec r=5cm, v=20cm. Kolikrát je plášť větší než podstava?"
+        "stem": "Kolikrát větší je obsah pláště válce než obsah jedné podstavy?",
+        "context": "Penál má tvar rotačního válce. Poloměr podstavy válce je 5 cm a výška válce 20 cm. Obě podstavy válce jsou bílé a plášť válce je tmavý."
       },
       "modes": {
         "numeric": {
@@ -11938,7 +11938,7 @@
       "difficulty": 1,
       "question": {
         "stem": "Povrch hranolu je 14krát větší než obsah stěny jedné krychle. A/N?",
-        "context": "Povrch hranolu je 14krát větší než obsah stěny jedné krychle. A/N?"
+        "context": "Ze tří stejných dřevěných krychlí byl slepen čtyřboký hranol, jehož síť má obsah 126 cm². Obrázek ukazuje síť hranolu ve tvaru kříže."
       },
       "modes": {
         "numeric": {
@@ -11982,7 +11982,7 @@
       "difficulty": 1,
       "question": {
         "stem": "Síť krychle má obsah 42 cm². A/N?",
-        "context": "Síť krychle má obsah 42 cm². A/N?"
+        "context": "Ze tří stejných dřevěných krychlí byl slepen čtyřboký hranol, jehož síť má obsah 126 cm². Obrázek ukazuje síť hranolu ve tvaru kříže."
       },
       "modes": {
         "numeric": {
@@ -12026,7 +12026,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Nejkratší hrana hranolu měří 3 cm. A/N?",
-        "context": "Nejkratší hrana hranolu měří 3 cm. A/N?"
+        "context": "Ze tří stejných dřevěných krychlí byl slepen čtyřboký hranol, jehož síť má obsah 126 cm². Obrázek ukazuje síť hranolu ve tvaru kříže."
       },
       "modes": {
         "numeric": {
@@ -12069,8 +12069,8 @@
       "topic": "volume",
       "difficulty": 2,
       "question": {
-        "stem": "Výška válce s poloměrem 50cm, plášť = čtverec",
-        "context": "Výška válce s poloměrem 50cm, plášť = čtverec"
+        "stem": "Jaká je výška válce?",
+        "context": "Reklamní plochu pro vylepování plakátů tvoří plášť rotačního válce. Podstava válce má poloměr 50 cm. Plakát, který přesně pokryje celou reklamní plochu, má tvar čtverce. Výsledek je zaokrouhlen na celé cm."
       },
       "modes": {
         "numeric": {
@@ -12109,8 +12109,8 @@
       "topic": "volume",
       "difficulty": 1,
       "question": {
-        "stem": "Kvádr = 200 krychlí po 8dm³. Na kolik krychlí 1cm³?",
-        "context": "Kvádr = 200 krychlí po 8dm³. Na kolik krychlí 1cm³?"
+        "stem": "Vypočtěte, na kolik krychliček o objemu 1 cm³ lze tento kvádr beze zbytku rozřezat.",
+        "context": "Kvádr je možné beze zbytku rozřezat na 200 krychlí, z nichž každá má objem 8 dm³."
       },
       "modes": {
         "numeric": {
@@ -12146,8 +12146,8 @@
       "topic": "volume",
       "difficulty": 2,
       "question": {
-        "stem": "Plášť = 3× podstava, r=10cm. Povrch?",
-        "context": "Plášť = 3× podstava, r=10cm. Povrch?"
+        "stem": "Jaký je povrch válce?",
+        "context": "Obsah pláště rotačního válce je třikrát větší než obsah jedné podstavy tohoto válce. Poloměr podstavy válce je 10 cm. Výsledek je zaokrouhlen na desítky cm²."
       },
       "modes": {
         "numeric": {
@@ -12284,8 +12284,8 @@
       "topic": "word_problems",
       "difficulty": 1,
       "question": {
-        "stem": "Adam a Naďa - o kolik kroků více",
-        "context": "Adam a Naďa - o kolik kroků více"
+        "stem": "O kolik kroků udělala Naďa více?",
+        "context": "Adam a Naďa šli spolu z Heraltic do Hvězdoňovic trasou dlouhou 2,7 km. Adam má délku každého kroku 75 cm, Naďa má každý krok dlouhý 60 cm."
       },
       "modes": {
         "numeric": {
@@ -12323,8 +12323,8 @@
       "topic": "word_problems",
       "difficulty": 2,
       "question": {
-        "stem": "Kolik vagónů 2. třídy v rychlíku",
-        "context": "Kolik vagónů 2. třídy v rychlíku"
+        "stem": "Kolik vagónů 2. třídy je součástí rychlíku?",
+        "context": "Ve vnitrostátním rychlíku jsou řazeny vagóny 1. a 2. třídy. Vagónů 2. třídy je dvakrát více než vagónů 1. třídy. V každém vagónu je 10 kupé. Ve vagónech 1. třídy je v každém kupé 6 míst k sezení, ve vagónech 2. třídy 8 míst. Ve všech kupé rychlíku je dohromady 440 míst k sezení."
       },
       "modes": {
         "numeric": {
@@ -12362,8 +12362,8 @@
       "topic": "word_problems",
       "difficulty": 2,
       "question": {
-        "stem": "Kolik míst k sezení v 1. třídě",
-        "context": "Kolik míst k sezení v 1. třídě"
+        "stem": "Kolik míst k sezení je dohromady ve vagónech 1. třídy?",
+        "context": "Ve vnitrostátním rychlíku jsou řazeny vagóny 1. a 2. třídy. Vagónů 2. třídy je dvakrát více než vagónů 1. třídy. V každém vagónu je 10 kupé. Ve vagónech 1. třídy je v každém kupé 6 míst k sezení, ve vagónech 2. třídy 8 míst. Ve všech kupé rychlíku je dohromady 440 míst k sezení."
       },
       "modes": {
         "numeric": {
@@ -12399,8 +12399,8 @@
       "topic": "word_problems",
       "difficulty": 1,
       "question": {
-        "stem": "Kolik km odřídil Rudolf (x/3 - 60)",
-        "context": "Kolik km odřídil Rudolf (x/3 - 60)"
+        "stem": "Vyjádřete výrazem s proměnnou x, kolik km trasy odřídil Rudolf.",
+        "context": "Vítek, Rudolf a Ondra jeli společně autem k moři. Každý z nich odřídil část trasy. Vítek odřídil třetinu celé trasy, Rudolf odřídil o 60 km méně než Vítek a Ondra odřídil zbývající dvě pětiny celé trasy. Celá trasa měřila x km."
       },
       "modes": {
         "numeric": {
@@ -12436,8 +12436,8 @@
       "topic": "word_problems",
       "difficulty": 2,
       "question": {
-        "stem": "Kolik km měřila celá trasa",
-        "context": "Kolik km měřila celá trasa"
+        "stem": "Vypočtěte, kolik km měřila celá trasa.",
+        "context": "Vítek, Rudolf a Ondra jeli společně autem k moři. Každý z nich odřídil část trasy. Vítek odřídil třetinu celé trasy, Rudolf odřídil o 60 km méně než Vítek a Ondra odřídil zbývající dvě pětiny celé trasy."
       },
       "modes": {
         "numeric": {
@@ -12473,8 +12473,8 @@
       "topic": "word_problems",
       "difficulty": 1,
       "question": {
-        "stem": "Cena 1 kg směsi arašídů a mandlí",
-        "context": "Cena 1 kg směsi arašídů a mandlí"
+        "stem": "Vypočtěte, kolik korun stojí jeden kilogram této směsi.",
+        "context": "V obchodě s oříšky prodávají různé směsi. Ceny za 1 kg: Arašídy 80 Kč, Kešu 280 Kč, Mandle 200 Kč. Dvoukilogramové balení směsi arašídů a mandlí obsahuje 800 gramů arašídů a 1200 gramů mandlí."
       },
       "modes": {
         "numeric": {
@@ -12503,8 +12503,8 @@
       "topic": "word_problems",
       "difficulty": 2,
       "question": {
-        "stem": "Počet vagonů ve vlaku",
-        "context": "Počet vagonů ve vlaku"
+        "stem": "Kolik vagonů je celkem ve vlakové soupravě?",
+        "context": "Ve vlakové soupravě jsou pouze stejně dlouhé vagony a jedna lokomotiva. Lokomotiva je o čtvrtinu kratší než jeden vagon a její délka tvoří jednu sedmnáctinu délky celé vlakové soupravy."
       },
       "modes": {
         "numeric": {
@@ -12629,8 +12629,8 @@
       "topic": "word_problems",
       "difficulty": 2,
       "question": {
-        "stem": "Za 3 roky 217 modelů. Kolik v 1.roce?",
-        "context": "Za 3 roky 217 modelů. Kolik v 1.roce?"
+        "stem": "Kolik modelů nasbíral Petr během prvního roku, pokud za tři roky nasbíral 217 modelů?",
+        "context": "Petr sbírá modely aut. Druhý rok nasbíral o polovinu počtu modelů aut více než první rok. Třetí rok nasbíral 72 modelů."
       },
       "modes": {
         "numeric": {
@@ -12661,8 +12661,8 @@
       "topic": "word_problems",
       "difficulty": 2,
       "question": {
-        "stem": "Velké koláčky 30Kč, malé 20Kč. Velké prodány za 3000Kč, malé (90%) za 3600Kč. Kolik malých přivezl?",
-        "context": "Velké koláčky 30Kč, malé 20Kč. Velké prodány za 3000Kč, malé (90%) za 3600Kč. Kolik malých přivezl?"
+        "stem": "Kolik pekař původně přivezl na trh malých koláčků?",
+        "context": "Pekař na trhu prodával malé a velké koláčky. Velký koláček byl o polovinu dražší než malý koláček a stál 30 Kč. Velké koláčky prodal všechny a utržil za ně 3000 Kč. Desetinu malých koláčků neprodal a za prodané malé koláčky utržil 3600 Kč."
       },
       "modes": {
         "numeric": {
@@ -12693,8 +12693,8 @@
       "topic": "word_problems",
       "difficulty": 2,
       "question": {
-        "stem": "V krabici jsou kuličky: 1/4 zelených, 1/6 červených, modrých o 20 více než červených. Kolik kuliček celkem?",
-        "context": "V krabici jsou kuličky: 1/4 zelených, 1/6 červených, modrých o 20 více než červených. Kolik kuliček celkem?"
+        "stem": "Kolik kuliček je v krabici?",
+        "context": "V krabici jsou pouze jednobarevné kuličky: zelené, červené a modré. Čtvrtina všech kuliček je zelených, šestina všech kuliček je červených, modrých kuliček je o 20 více než červených."
       },
       "modes": {
         "numeric": {
@@ -12725,8 +12725,8 @@
       "topic": "word_problems",
       "difficulty": 1,
       "question": {
-        "stem": "O kolik se liší počty zelených a červených kuliček?",
-        "context": "O kolik se liší počty zelených a červených kuliček?"
+        "stem": "O kolik se liší počty zelených a červených kuliček v krabici?",
+        "context": "V krabici jsou pouze jednobarevné kuličky: zelené, červené a modré. Čtvrtina všech kuliček je zelených, šestina všech kuliček je červených, modrých kuliček je o 20 více než červených."
       },
       "modes": {
         "numeric": {
@@ -12973,8 +12973,8 @@
       "topic": "word_problems",
       "difficulty": 2,
       "question": {
-        "stem": "Při jaké spotřebě stejná cena",
-        "context": "Při jaké spotřebě stejná cena"
+        "stem": "Při jaké roční spotřebě vody (v m³) by zaplatila za vodu domácnost v městech A a B stejně?",
+        "context": "Výpočet ceny, kterou domácnosti zaplatí za vodu, se ve městech A a B liší. Město A: 0 Kč ročně za přípojku + 72 Kč/m³. Město B: 990 Kč ročně za přípojku + 61 Kč/m³. Celkový počet m³ vody, kterou spotřebuje domácnost za rok, označte x."
       },
       "modes": {
         "numeric": {
@@ -13005,8 +13005,8 @@
       "topic": "word_problems",
       "difficulty": 1,
       "question": {
-        "stem": "Ema s Otou váží dohromady 70 kg",
-        "context": "Ema s Otou váží dohromady 70 kg"
+        "stem": "Ema s Otou váží dohromady 70 kg. A/N?",
+        "context": "Maminka, tatínek, Ema a Ota váží dohromady 210 kg. Maminka s tatínkem dohromady váží dvakrát více než Ema s Otou dohromady. Ota váží 45 kg a maminka váží o pětinu více než Ota."
       },
       "modes": {
         "numeric": {
@@ -13037,8 +13037,8 @@
       "topic": "word_problems",
       "difficulty": 1,
       "question": {
-        "stem": "Maminka váží o 20 kg více než Ema",
-        "context": "Maminka váží o 20 kg více než Ema"
+        "stem": "Maminka váží o 20 kg více než Ema. A/N?",
+        "context": "Maminka, tatínek, Ema a Ota váží dohromady 210 kg. Maminka s tatínkem dohromady váží dvakrát více než Ema s Otou dohromady. Ota váží 45 kg a maminka váží o pětinu více než Ota."
       },
       "modes": {
         "numeric": {
@@ -13067,8 +13067,8 @@
       "topic": "word_problems",
       "difficulty": 1,
       "question": {
-        "stem": "Tatínek váží 86 kg",
-        "context": "Tatínek váží 86 kg"
+        "stem": "Tatínek váží 86 kg. A/N?",
+        "context": "Maminka, tatínek, Ema a Ota váží dohromady 210 kg. Maminka s tatínkem dohromady váží dvakrát více než Ema s Otou dohromady. Ota váží 45 kg a maminka váží o pětinu více než Ota."
       },
       "modes": {
         "numeric": {

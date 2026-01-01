@@ -12,8 +12,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Kvádr 6×4×5 rozřezán na 3 trojboké hranoly. Největší objem?",
-        "context": "Kvádr 6×4×5 rozřezán na 3 trojboké hranoly. Největší objem?",
+        "stem": "Jaký je objem vybraného trojbokého hranolu?",
+        "context": "Kvádr o rozměrech 6 cm, 4 cm a 5 cm jsme dvěma svislými řezy rozdělili na tři kolmé trojboké hranoly. Z těchto trojbokých hranolů vybereme ten, který má největší objem.",
         "image": null
       },
       "answer": {
@@ -61,8 +61,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Válec r=5cm, v=20cm. Kolikrát je plášť větší než podstava?",
-        "context": "Válec r=5cm, v=20cm. Kolikrát je plášť větší než podstava?",
+        "stem": "Kolikrát větší je obsah pláště válce než obsah jedné podstavy?",
+        "context": "Penál má tvar rotačního válce. Poloměr podstavy válce je 5 cm a výška válce 20 cm. Obě podstavy válce jsou bílé a plášť válce je tmavý.",
         "image": null
       },
       "answer": {
@@ -110,7 +110,7 @@
       "difficulty": 1,
       "question": {
         "stem": "Povrch hranolu je 14krát větší než obsah stěny jedné krychle. A/N?",
-        "context": "Povrch hranolu je 14krát větší než obsah stěny jedné krychle. A/N?",
+        "context": "Ze tří stejných dřevěných krychlí byl slepen čtyřboký hranol, jehož síť má obsah 126 cm². Obrázek ukazuje síť hranolu ve tvaru kříže.",
         "image": null
       },
       "answer": {
@@ -156,7 +156,7 @@
       "difficulty": 1,
       "question": {
         "stem": "Síť krychle má obsah 42 cm². A/N?",
-        "context": "Síť krychle má obsah 42 cm². A/N?",
+        "context": "Ze tří stejných dřevěných krychlí byl slepen čtyřboký hranol, jehož síť má obsah 126 cm². Obrázek ukazuje síť hranolu ve tvaru kříže.",
         "image": null
       },
       "answer": {
@@ -205,7 +205,7 @@
       "difficulty": 2,
       "question": {
         "stem": "Nejkratší hrana hranolu měří 3 cm. A/N?",
-        "context": "Nejkratší hrana hranolu měří 3 cm. A/N?",
+        "context": "Ze tří stejných dřevěných krychlí byl slepen čtyřboký hranol, jehož síť má obsah 126 cm². Obrázek ukazuje síť hranolu ve tvaru kříže.",
         "image": null
       },
       "answer": {
@@ -253,8 +253,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Výška válce s poloměrem 50cm, plášť = čtverec",
-        "context": "Výška válce s poloměrem 50cm, plášť = čtverec",
+        "stem": "Jaká je výška válce?",
+        "context": "Reklamní plochu pro vylepování plakátů tvoří plášť rotačního válce. Podstava válce má poloměr 50 cm. Plakát, který přesně pokryje celou reklamní plochu, má tvar čtverce. Výsledek je zaokrouhlen na celé cm.",
         "image": null
       },
       "answer": {
@@ -293,8 +293,8 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "Kvádr = 200 krychlí po 8dm³. Na kolik krychlí 1cm³?",
-        "context": "Kvádr = 200 krychlí po 8dm³. Na kolik krychlí 1cm³?",
+        "stem": "Vypočtěte, na kolik krychliček o objemu 1 cm³ lze tento kvádr beze zbytku rozřezat.",
+        "context": "Kvádr je možné beze zbytku rozřezat na 200 krychlí, z nichž každá má objem 8 dm³.",
         "image": null
       },
       "answer": {
@@ -332,8 +332,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Plášť = 3× podstava, r=10cm. Povrch?",
-        "context": "Plášť = 3× podstava, r=10cm. Povrch?",
+        "stem": "Jaký je povrch válce?",
+        "context": "Obsah pláště rotačního válce je třikrát větší než obsah jedné podstavy tohoto válce. Poloměr podstavy válce je 10 cm. Výsledek je zaokrouhlen na desítky cm².",
         "image": null
       },
       "answer": {

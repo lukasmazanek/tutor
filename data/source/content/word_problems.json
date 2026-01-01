@@ -12,8 +12,8 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "Adam a Naďa - o kolik kroků více",
-        "context": "Adam a Naďa - o kolik kroků více",
+        "stem": "O kolik kroků udělala Naďa více?",
+        "context": "Adam a Naďa šli spolu z Heraltic do Hvězdoňovic trasou dlouhou 2,7 km. Adam má délku každého kroku 75 cm, Naďa má každý krok dlouhý 60 cm.",
         "image": null
       },
       "answer": {
@@ -52,8 +52,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Kolik vagónů 2. třídy v rychlíku",
-        "context": "Kolik vagónů 2. třídy v rychlíku",
+        "stem": "Kolik vagónů 2. třídy je součástí rychlíku?",
+        "context": "Ve vnitrostátním rychlíku jsou řazeny vagóny 1. a 2. třídy. Vagónů 2. třídy je dvakrát více než vagónů 1. třídy. V každém vagónu je 10 kupé. Ve vagónech 1. třídy je v každém kupé 6 míst k sezení, ve vagónech 2. třídy 8 míst. Ve všech kupé rychlíku je dohromady 440 míst k sezení.",
         "image": null
       },
       "answer": {
@@ -95,8 +95,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Kolik míst k sezení v 1. třídě",
-        "context": "Kolik míst k sezení v 1. třídě",
+        "stem": "Kolik míst k sezení je dohromady ve vagónech 1. třídy?",
+        "context": "Ve vnitrostátním rychlíku jsou řazeny vagóny 1. a 2. třídy. Vagónů 2. třídy je dvakrát více než vagónů 1. třídy. V každém vagónu je 10 kupé. Ve vagónech 1. třídy je v každém kupé 6 míst k sezení, ve vagónech 2. třídy 8 míst. Ve všech kupé rychlíku je dohromady 440 míst k sezení.",
         "image": null
       },
       "answer": {
@@ -133,8 +133,8 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "Kolik km odřídil Rudolf (x/3 - 60)",
-        "context": "Kolik km odřídil Rudolf (x/3 - 60)",
+        "stem": "Vyjádřete výrazem s proměnnou x, kolik km trasy odřídil Rudolf.",
+        "context": "Vítek, Rudolf a Ondra jeli společně autem k moři. Každý z nich odřídil část trasy. Vítek odřídil třetinu celé trasy, Rudolf odřídil o 60 km méně než Vítek a Ondra odřídil zbývající dvě pětiny celé trasy. Celá trasa měřila x km.",
         "image": null
       },
       "answer": {
@@ -171,8 +171,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Kolik km měřila celá trasa",
-        "context": "Kolik km měřila celá trasa",
+        "stem": "Vypočtěte, kolik km měřila celá trasa.",
+        "context": "Vítek, Rudolf a Ondra jeli společně autem k moři. Každý z nich odřídil část trasy. Vítek odřídil třetinu celé trasy, Rudolf odřídil o 60 km méně než Vítek a Ondra odřídil zbývající dvě pětiny celé trasy.",
         "image": null
       },
       "answer": {
@@ -209,8 +209,8 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "Cena 1 kg směsi arašídů a mandlí",
-        "context": "Cena 1 kg směsi arašídů a mandlí",
+        "stem": "Vypočtěte, kolik korun stojí jeden kilogram této směsi.",
+        "context": "V obchodě s oříšky prodávají různé směsi. Ceny za 1 kg: Arašídy 80 Kč, Kešu 280 Kč, Mandle 200 Kč. Dvoukilogramové balení směsi arašídů a mandlí obsahuje 800 gramů arašídů a 1200 gramů mandlí.",
         "image": null
       },
       "answer": {
@@ -238,8 +238,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Počet vagonů ve vlaku",
-        "context": "Počet vagonů ve vlaku",
+        "stem": "Kolik vagonů je celkem ve vlakové soupravě?",
+        "context": "Ve vlakové soupravě jsou pouze stejně dlouhé vagony a jedna lokomotiva. Lokomotiva je o čtvrtinu kratší než jeden vagon a její délka tvoří jednu sedmnáctinu délky celé vlakové soupravy.",
         "image": null
       },
       "answer": {
@@ -363,8 +363,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Za 3 roky 217 modelů. Kolik v 1.roce?",
-        "context": "Za 3 roky 217 modelů. Kolik v 1.roce?",
+        "stem": "Kolik modelů nasbíral Petr během prvního roku, pokud za tři roky nasbíral 217 modelů?",
+        "context": "Petr sbírá modely aut. Druhý rok nasbíral o polovinu počtu modelů aut více než první rok. Třetí rok nasbíral 72 modelů.",
         "image": null
       },
       "answer": {
@@ -394,8 +394,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Velké koláčky 30Kč, malé 20Kč. Velké prodány za 3000Kč, malé (90%) za 3600Kč. Kolik malých přivezl?",
-        "context": "Velké koláčky 30Kč, malé 20Kč. Velké prodány za 3000Kč, malé (90%) za 3600Kč. Kolik malých přivezl?",
+        "stem": "Kolik pekař původně přivezl na trh malých koláčků?",
+        "context": "Pekař na trhu prodával malé a velké koláčky. Velký koláček byl o polovinu dražší než malý koláček a stál 30 Kč. Velké koláčky prodal všechny a utržil za ně 3000 Kč. Desetinu malých koláčků neprodal a za prodané malé koláčky utržil 3600 Kč.",
         "image": null
       },
       "answer": {
@@ -428,8 +428,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "V krabici jsou kuličky: 1/4 zelených, 1/6 červených, modrých o 20 více než červených. Kolik kuliček celkem?",
-        "context": "V krabici jsou kuličky: 1/4 zelených, 1/6 červených, modrých o 20 více než červených. Kolik kuliček celkem?",
+        "stem": "Kolik kuliček je v krabici?",
+        "context": "V krabici jsou pouze jednobarevné kuličky: zelené, červené a modré. Čtvrtina všech kuliček je zelených, šestina všech kuliček je červených, modrých kuliček je o 20 více než červených.",
         "image": null
       },
       "answer": {
@@ -460,8 +460,8 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "O kolik se liší počty zelených a červených kuliček?",
-        "context": "O kolik se liší počty zelených a červených kuliček?",
+        "stem": "O kolik se liší počty zelených a červených kuliček v krabici?",
+        "context": "V krabici jsou pouze jednobarevné kuličky: zelené, červené a modré. Čtvrtina všech kuliček je zelených, šestina všech kuliček je červených, modrých kuliček je o 20 více než červených.",
         "image": null
       },
       "answer": {
@@ -701,8 +701,8 @@
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Při jaké spotřebě stejná cena",
-        "context": "Při jaké spotřebě stejná cena",
+        "stem": "Při jaké roční spotřebě vody (v m³) by zaplatila za vodu domácnost v městech A a B stejně?",
+        "context": "Výpočet ceny, kterou domácnosti zaplatí za vodu, se ve městech A a B liší. Město A: 0 Kč ročně za přípojku + 72 Kč/m³. Město B: 990 Kč ročně za přípojku + 61 Kč/m³. Celkový počet m³ vody, kterou spotřebuje domácnost za rok, označte x.",
         "image": null
       },
       "answer": {
@@ -735,8 +735,8 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "Ema s Otou váží dohromady 70 kg",
-        "context": "Ema s Otou váží dohromady 70 kg",
+        "stem": "Ema s Otou váží dohromady 70 kg. A/N?",
+        "context": "Maminka, tatínek, Ema a Ota váží dohromady 210 kg. Maminka s tatínkem dohromady váží dvakrát více než Ema s Otou dohromady. Ota váží 45 kg a maminka váží o pětinu více než Ota.",
         "image": null
       },
       "answer": {
@@ -769,8 +769,8 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "Maminka váží o 20 kg více než Ema",
-        "context": "Maminka váží o 20 kg více než Ema",
+        "stem": "Maminka váží o 20 kg více než Ema. A/N?",
+        "context": "Maminka, tatínek, Ema a Ota váží dohromady 210 kg. Maminka s tatínkem dohromady váží dvakrát více než Ema s Otou dohromady. Ota váží 45 kg a maminka váží o pětinu více než Ota.",
         "image": null
       },
       "answer": {
@@ -798,8 +798,8 @@
       ],
       "difficulty": 1,
       "question": {
-        "stem": "Tatínek váží 86 kg",
-        "context": "Tatínek váží 86 kg",
+        "stem": "Tatínek váží 86 kg. A/N?",
+        "context": "Maminka, tatínek, Ema a Ota váží dohromady 210 kg. Maminka s tatínkem dohromady váží dvakrát více než Ema s Otou dohromady. Ota váží 45 kg a maminka váží o pětinu více než Ota.",
         "image": null
       },
       "answer": {
