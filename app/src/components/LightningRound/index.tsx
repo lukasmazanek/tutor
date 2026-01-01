@@ -8,7 +8,7 @@ import PageLayout from '../PageLayout'
 import PageHeader from '../PageHeader'
 import { UnifiedQuestion, QuestionsData } from '../../types'
 import { LightningQuestion, LightningResult, LightningStats } from './types'
-import { saveAttempt, startSession, endSession } from '../../hooks/useAttempts'
+import { saveAttempt, saveError, startSession, endSession } from '../../hooks/useAttempts'
 
 const data = questionsData as QuestionsData
 const QUESTIONS_PER_ROUND = 10
@@ -134,6 +134,26 @@ function LightningRound({ onExit, onViewProgress }: LightningRoundProps) {
     advanceToNext()
   }
 
+  // Report error - save to queue and skip to next question
+  const handleReportError = async () => {
+    const currentQuestion = questions[currentIndex]
+    const questionText = currentQuestion.question.context || currentQuestion.question.stem || ''
+
+    await saveError({
+      question_id: currentQuestion.id,
+      question_stem: questionText,
+      correct_answer: currentQuestion.displayCorrect,
+      topic: currentQuestion.topic,
+      difficulty: currentQuestion.difficulty,
+      user_answer: selectedAnswer,
+      hints_shown: [],
+      time_spent_ms: Date.now() - questionStartTime
+    })
+
+    // Skip to next question
+    advanceToNext()
+  }
+
   // Select mixed questions with guaranteed type mix
   function selectMixedQuestions(): LightningQuestion[] {
     // ADR-022: Filter questions that have numeric mode with distractors (MC-capable)
@@ -213,6 +233,7 @@ function LightningRound({ onExit, onViewProgress }: LightningRoundProps) {
       bottomBar={{
         1: { onClick: onExit },
         2: { onClick: onViewProgress },
+        3: { action: 'error', onClick: handleReportError },
         5: phase === 'feedback' && !isCorrect
           ? { action: 'continue', onClick: handleContinue }
           : undefined
