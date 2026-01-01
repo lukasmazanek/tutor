@@ -2,7 +2,7 @@
 
 **Date:** 2026-01-01
 **Type:** Analysis
-**Status:** Open
+**Status:** Bugs Resolved (2026-01-01)
 **Reporter:** System (Supabase data analysis)
 **Session Period:** 2025-12-29 to 2025-12-31
 
@@ -81,7 +81,7 @@ Analysis of Anezka's app usage from December 29-31, 2025. Identified learning pa
 
 ## Application Bugs
 
-### BUG-1: Duplicate Attempt Records (HIGH)
+### BUG-1: Duplicate Attempt Records (HIGH) ✅ RESOLVED
 
 **Description:** Same question saved multiple times with identical answers and timestamps.
 
@@ -92,9 +92,13 @@ Analysis of Anezka's app usage from December 29-31, 2025. Identified learning pa
 
 **Impact:** Inflates attempt counts, skews statistics.
 
-**Location:** Likely in `saveAttempt()` function or event handler.
+**Root Cause:** Submit button was not disabled during 'correct' feedback phase (1.5s timeout). User could click multiple times.
 
-### BUG-2: Wrong user_id in error_queue (MEDIUM)
+**Fix:** Added `feedback === 'correct'` to disabled condition in `ProblemCard.tsx:586`.
+
+**Commit:** `103795e` (2026-01-01)
+
+### BUG-2: Wrong user_id in error_queue (MEDIUM) ✅ RESOLVED
 
 **Description:** Error queue saves `user_id: "local"` instead of actual user ID (e.g., "anezka").
 
@@ -102,7 +106,11 @@ Analysis of Anezka's app usage from December 29-31, 2025. Identified learning pa
 
 **Impact:** Cannot filter error reports by user.
 
-**Location:** `lib/storage/supabase.ts` or `lib/storage/localStorage.ts` - `saveError()` function.
+**Root Cause:** When app loaded with stored profile, `setCurrentUserId()` wasn't called. Storage layer kept default `'local'` value.
+
+**Fix:** Added useEffect in `App.tsx:143-147` to call `setCurrentUserId(storedUser)` on mount.
+
+**Commit:** `103795e` (2026-01-01)
 
 ---
 
