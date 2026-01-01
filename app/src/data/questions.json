@@ -1,6 +1,6 @@
 {
   "version": "4.0",
-  "generated": "2026-01-01T06:29:28.685Z",
+  "generated": "2026-01-01T06:58:59.812Z",
   "description": "ADR-022: Multi-mode questions with keyboard config",
   "topics": {
     "angles": {
@@ -2302,7 +2302,7 @@
       },
       "modes": {
         "numeric": {
-          "answer": "D) 25,12 cm²",
+          "answer": "25,12",
           "unit": null,
           "variants": [],
           "distractors": []
@@ -2341,7 +2341,7 @@
       },
       "modes": {
         "numeric": {
-          "answer": "D",
+          "answer": "33",
           "unit": null,
           "variants": [],
           "distractors": []
@@ -8356,7 +8356,7 @@
       },
       "modes": {
         "numeric": {
-          "answer": "E",
+          "answer": "60",
           "unit": null,
           "variants": [],
           "distractors": []
@@ -8388,7 +8388,7 @@
       },
       "modes": {
         "numeric": {
-          "answer": "B",
+          "answer": "30",
           "unit": null,
           "variants": [],
           "distractors": []
@@ -8420,7 +8420,7 @@
       },
       "modes": {
         "numeric": {
-          "answer": "D",
+          "answer": "50",
           "unit": null,
           "variants": [],
           "distractors": []
@@ -8452,7 +8452,7 @@
       },
       "modes": {
         "numeric": {
-          "answer": "E) 360",
+          "answer": "360",
           "unit": null,
           "variants": [],
           "distractors": []
@@ -8484,7 +8484,7 @@
       },
       "modes": {
         "numeric": {
-          "answer": "C) 320",
+          "answer": "320",
           "unit": null,
           "variants": [],
           "distractors": []
@@ -8516,7 +8516,7 @@
       },
       "modes": {
         "numeric": {
-          "answer": "A) 280",
+          "answer": "280",
           "unit": null,
           "variants": [],
           "distractors": []
@@ -8612,7 +8612,7 @@
       },
       "modes": {
         "numeric": {
-          "answer": "E",
+          "answer": "450",
           "unit": null,
           "variants": [],
           "distractors": []
@@ -8644,7 +8644,7 @@
       },
       "modes": {
         "numeric": {
-          "answer": "C",
+          "answer": "500",
           "unit": null,
           "variants": [],
           "distractors": []
@@ -8676,7 +8676,7 @@
       },
       "modes": {
         "numeric": {
-          "answer": "D",
+          "answer": "480",
           "unit": null,
           "variants": [],
           "distractors": []
@@ -12074,7 +12074,7 @@
       },
       "modes": {
         "numeric": {
-          "answer": "C",
+          "answer": "314",
           "unit": null,
           "variants": [],
           "distractors": []
@@ -12666,7 +12666,7 @@
       },
       "modes": {
         "numeric": {
-          "answer": "C) 200",
+          "answer": "200",
           "unit": null,
           "variants": [],
           "distractors": []
