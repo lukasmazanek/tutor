@@ -274,12 +274,13 @@
       "id": "ang-test-007",
       "topic": "angles",
       "tags": [
-        "úhly-a-přímky"
+        "úhly-a-přímky",
+        "úhly-kolem-bodu"
       ],
       "difficulty": 2,
       "question": {
-        "stem": "Čtyři úhly kolem bodu: 60°, 132° a dva stejné úhly α. Jaký je α?",
-        "context": "Kolem bodu jsou čtyři úhly: 60°, 132° a dva stejné úhly α. Vypočítej α.",
+        "stem": "Jaká je velikost úhlu α?",
+        "context": "Čtyři přímky se protínají v jednom bodě a tvoří čtyři úhly. Velikosti úhlů jsou: 60°, 132°, α a α (dva úhly jsou stejné). Součet všech úhlů kolem bodu je vždy 360°.",
         "image": null
       },
       "answer": {

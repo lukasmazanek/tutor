@@ -346,7 +346,55 @@ npm run deploy  # Deploy to GitHub Pages
 ### Supabase Integration
 - **All user answers are saved to Supabase** in real-time
 - Use Supabase dashboard or SQL queries to analyze answer patterns
-- Flagged/problematic questions can be identified through answer data
+
+#### Error Reporting System
+Users can report problematic questions by clicking the **⚠️ triangle button** in the app.
+
+**Supabase connection:**
+```
+URL: https://abqtfngdvpkfurrodumv.supabase.co
+API Key: stored in app/.env.local as VITE_SUPABASE_ANON_KEY
+```
+
+**Table: `error_queue`**
+| Column | Type | Description |
+|--------|------|-------------|
+| id | uuid | Primary key |
+| user_id | text | User identifier (e.g., "host") |
+| question_id | text | Question ID (e.g., "equ-test-025") |
+| question_stem | text | Question text |
+| correct_answer | text | Expected answer |
+| topic | text | Topic name |
+| difficulty | int | Difficulty level |
+| status | text | "pending" or "reviewed" |
+| created_at | timestamp | When reported |
+| reviewed_at | timestamp | When reviewed |
+
+**Query pending errors:**
+```bash
+curl -s "https://abqtfngdvpkfurrodumv.supabase.co/rest/v1/error_queue?status=eq.pending&order=created_at.desc" \
+  -H "apikey: $SUPABASE_KEY" \
+  -H "Authorization: Bearer $SUPABASE_KEY" | python3 -m json.tool
+```
+
+**Mark as reviewed:**
+```bash
+curl -X PATCH "https://abqtfngdvpkfurrodumv.supabase.co/rest/v1/error_queue?id=eq.<UUID>" \
+  -H "apikey: $SUPABASE_KEY" \
+  -H "Authorization: Bearer $SUPABASE_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"status": "reviewed", "reviewed_at": "<ISO_DATE>"}'
+```
+
+**Workflow for fixing reported errors:**
+1. Query `error_queue` for pending errors
+2. Find question in `data/source/content/*.json` by `question_id`
+3. Check original test in `data/tests/*.json` for context
+4. Fix the question (add context, fix answer, mark requires_image)
+5. Run `node scripts/generate-formats.js` to regenerate
+6. Copy to `app/src/data/questions.json`
+7. Mark error as reviewed in Supabase
+8. Deploy with `npm run deploy`
 
 ### Breakpoints
 | Breakpoint | Width | Priority |

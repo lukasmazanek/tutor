@@ -1,6 +1,6 @@
 {
   "version": "4.0",
-  "generated": "2026-01-01T08:53:23.292Z",
+  "generated": "2026-01-01T09:01:54.312Z",
   "description": "ADR-022: Multi-mode questions with keyboard config",
   "topics": {
     "angles": {
@@ -387,8 +387,8 @@
       "topic": "angles",
       "difficulty": 2,
       "question": {
-        "stem": "Čtyři úhly kolem bodu: 60°, 132° a dva stejné úhly α. Jaký je α?",
-        "context": "Kolem bodu jsou čtyři úhly: 60°, 132° a dva stejné úhly α. Vypočítej α."
+        "stem": "Jaká je velikost úhlu α?",
+        "context": "Čtyři přímky se protínají v jednom bodě a tvoří čtyři úhly. Velikosti úhlů jsou: 60°, 132°, α a α (dva úhly jsou stejné). Součet všech úhlů kolem bodu je vždy 360°."
       },
       "modes": {
         "numeric": {
